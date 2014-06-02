@@ -1,0 +1,19 @@
+HPS run   | svt run
+1309         225    | wrong latency in svt
+1313         231    | right latency in svt
+1342         240    | top or bottom
+1343         241    | top only
+1344         242    | bottom only
+1345         243    | top or bottom; 30nA; svt latency 3.35; 500Kevents
+1347         245    | top or bottom; 30nA; svt latency 3.375; 200kevents
+1349         247    | top or botton; 60nA; 1Mevents
+1351         249    | top or bottom; 90nA  0.5MMevents
+1353         251    | top or bottom; 90nA 1Mevents
+1354         252    | top or bottom; 90nA 1Mevents
+1358         255    | top or bottom; 90nA empty target
+1359         256    | top or bottom; 90nA empty target, reversed ps field
+1360         257    | top or bottom; 90nA .18% target, reversed ps field
+1362         259    | top or bottom; 90nA 1.6% target, reversed ps field
+
+
+

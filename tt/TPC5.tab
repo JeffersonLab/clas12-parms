@@ -1,0 +1,20 @@
+#
+# croctest5, crate 5 (test setup)
+#
+#bankname banknum   1st_pad_on_cable   crate   slot      1st_channel_on_        cable
+TPC        5             5000            5       3                0            R-00-0
+TPC        5             5016            5       3               16            R-00-0
+TPC        5             5032            5       3               32            R-00-0
+TPC        5             5048            5       3               48            R-00-0
+TPC        5             5064            5       3               64            R-00-0
+TPC        5             5080            5       3               80            R-00-0
+TPC        5             5096            5       3               96            R-00-0
+TPC        5             5112            5       3              112            R-00-0
+TPC        5             5156            5      22                0            R-00-0
+TPC        5             5172            5      22               16            R-00-0
+TPC        5             5188            5      22               32            R-00-0
+TPC        5             5204            5      22               48            R-00-0
+TPC        5             5236            5      22               64            R-00-0
+TPC        5             5252            5      22               80            R-00-0
+TPC        5             5240            5      22               96            R-00-0
+TPC        5             5284            5      22              112            R-00-0

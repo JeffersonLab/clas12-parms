@@ -1,0 +1,35 @@
+TDC1190_ALLSLOTS
+
+TDC1190_BERR_FIFO  1
+
+TDC1190_BLT_EVENTS 1
+TDC1190_N_HITS     64
+TDC1190_ALMOSTFULL 16384
+TDC1190_OUT_PROG   2
+
+
+##TDC1190_W_WIDTH    400
+##TDC1190_W_OFFSET -1050
+#TDC1190_W_WIDTH   1500
+#TDC1190_W_OFFSET -1550
+TDC1190_W_WIDTH   2550
+TDC1190_W_OFFSET -2550
+
+
+TDC1190_W_EXTRA    25
+TDC1190_W_REJECT   50
+
+TDC1190_EDGE       2
+
+#                 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 - channels ##
+TDC1190_MASK1     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK2     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK3     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK4     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK5     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK6     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK7     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK8     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+
+

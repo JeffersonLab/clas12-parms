@@ -1,0 +1,38 @@
+#
+# dsc2 config file - example
+#
+# this file contains settings  for JLAB VME Discriminators DSC2
+# thresholds, widths, delays and masks
+#
+#
+##CRATE      <tdcecal1>
+#
+#               slot   
+DSC2_SLOT         2
+#
+#     channel   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+DSC2_TDCMASK    1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+DSC2_TRGMASK    1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+DSC2_TDCORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+DSC2_TRGORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+#
+#           TDC_width(ns)  TRG_width(ns)
+DSC2_WIDTH     20             40
+#
+#               TDC_threshold(mV)  TRG_threshold(mV)
+DSC2_THRESHOLD     20                 50
+#
+#                   channel  TDC_threshold(mV)  TRG_threshold(mV)
+DSC2_CH_THRESHOLD     0         20                 60
+DSC2_CH_THRESHOLD     3         20                 60
+#
+#               width(ns)  delay(ns)
+DSC2_TRGDIGITAL    40         64
+#
+#                  channel width(ns) delay(ns)
+DSC2_CH_TRGDIGITAL    5      30         60
+DSC2_CH_TRGDIGITAL    7      30         60
+#
+# End
+#
+#

@@ -1,0 +1,18 @@
+#
+#
+#
+#TAG_CALIB status tage      384 int
+#TAG_CALIB status tagt_left  61 int
+#TAG_CALIB status tagt_right 61 int
+#
+#  map     set    subset    dim  type  hist   nbin   xmin   xmax
+# name    name     name                 id
+#
+TAG_CALIB tag_t slope_left   61  float  1101      0    0.0    0.0
+TAG_CALIB tag_t slope_right  61  float  1301      0    0.0    0.0
+TAG_CALIB tag_t dt_left      61  float  1001    300   20.0   50.0
+TAG_CALIB tag_t dt_right     61  float  1201    300   20.0   50.0
+TAG_CALIB tag_t ci          121  float  1401      0    0.0    0.0
+TAG_CALIB tag_e slope         1  float  1991      0    0.0    0.0
+TAG_CALIB tag_e dt          384  float  1601    300  -10.0   80.0
+#

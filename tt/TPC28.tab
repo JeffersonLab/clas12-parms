@@ -1,0 +1,23 @@
+#
+# bonuspc3
+#
+# only first pin on 16-pin connector is described, other 15 pins will
+# be filled by program
+#
+#bankname banknum   1st_pad_on_cable   crate   slot      1st_channel_on_        cable
+TPC        2             4760            4       3                0            R-02-0
+TPC        2             4776            4       3               16            R-02-1
+TPC        2             4792            4       3               32            R-02-2
+TPC        2             4808            4       3               48            R-02-3
+TPC        2             4824            4       3               64            R-02-4
+TPC        2             4840            4       3               80            R-03-0
+TPC        2             4856            4       3               96            R-03-1
+TPC        2             4872            4       3              112            R-03-2
+TPC        2             4056            4      22                0            R-18-1
+TPC        2             4072            4      22               16            R-18-2
+TPC        2             4088            4      22               32            R-18-3
+TPC        2             4104            4      22               48            R-18-4
+TPC        2             4136            4      22               64            R-19-1
+TPC        2             4152            4      22               80            R-19-2
+TPC        2             4168            4      22               96            R-19-3
+TPC        2             4184            4      22              112            R-19-4

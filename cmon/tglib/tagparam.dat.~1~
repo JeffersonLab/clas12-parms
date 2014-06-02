@@ -1,0 +1,12 @@
+   10.00  ! adajcent T coincidence window (ns)
+   20.00  ! adajcent E coincidence window (ns)
+   20.00  ! E/T coincidence window (ns)
+  700.00  ! minimum accepted value for E-counters TDC 
+ 1400.00  ! maximum accepted value for E-counters TDC
+  200.00  ! DSD normalisation window
+   15.00  ! Tagger/ST window
+   30.00  ! normalisation window Xtra sinze for accidentals
+   30.00  ! Tagger/ST window Xtra size for accidentals
+   30.00  ! Inner Pair spectrometer coincidence window.
+   10.00  ! TLR window.
+
