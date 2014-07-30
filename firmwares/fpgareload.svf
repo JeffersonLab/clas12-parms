@@ -1,0 +1,21 @@
+RUNTEST 50 TCK;
+// Loading device with a 'config' instruction. 
+SIR 16 TDI (00ee) ;
+TIR 0 ;
+HIR 0 ;
+HDR 0 ;
+TDR 0 ;
+TIR 0 ;
+HIR 0 ;
+TDR 0 ;
+HDR 0 ;
+TIR 0 ;
+HIR 0 ;
+HDR 0 ;
+TDR 0 ;
+TIR 0 ;
+HIR 0 ;
+TDR 0 ;
+HDR 0 ;
+SIR 16 TDI (ffff) ;
+SDR 1 TDI (00) SMASK (01) ;
