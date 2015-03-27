@@ -71,77 +71,77 @@ VSCM_TRIG_WINDOW     256       256        16
 
 
 # Set discriminator 0 on all FSSR2 chips to 20
-FSSR_ADDR_REG_DISC_THR        0        0        10
-FSSR_ADDR_REG_DISC_THR        1        0        10
-FSSR_ADDR_REG_DISC_THR        2        0        10
-FSSR_ADDR_REG_DISC_THR        3        0        10
-FSSR_ADDR_REG_DISC_THR        4        0        10
-FSSR_ADDR_REG_DISC_THR        5        0        10
-FSSR_ADDR_REG_DISC_THR        6        0        10
-FSSR_ADDR_REG_DISC_THR        7        0        10
+FSSR_ADDR_REG_DISC_THR        0        0        30
+FSSR_ADDR_REG_DISC_THR        1        0        30
+FSSR_ADDR_REG_DISC_THR        2        0        30
+FSSR_ADDR_REG_DISC_THR        3        0        30
+FSSR_ADDR_REG_DISC_THR        4        0        30
+FSSR_ADDR_REG_DISC_THR        5        0        30
+FSSR_ADDR_REG_DISC_THR        6        0        30
+FSSR_ADDR_REG_DISC_THR        7        0        30
 
-FSSR_ADDR_REG_DISC_THR        0        1        15
-FSSR_ADDR_REG_DISC_THR        1        1        15
-FSSR_ADDR_REG_DISC_THR        2        1        15
-FSSR_ADDR_REG_DISC_THR        3        1        15
-FSSR_ADDR_REG_DISC_THR        4        1        15
-FSSR_ADDR_REG_DISC_THR        5        1        15
-FSSR_ADDR_REG_DISC_THR        6        1        15
-FSSR_ADDR_REG_DISC_THR        7        1        15
+FSSR_ADDR_REG_DISC_THR        0        1        45
+FSSR_ADDR_REG_DISC_THR        1        1        45
+FSSR_ADDR_REG_DISC_THR        2        1        45
+FSSR_ADDR_REG_DISC_THR        3        1        45
+FSSR_ADDR_REG_DISC_THR        4        1        45
+FSSR_ADDR_REG_DISC_THR        5        1        45
+FSSR_ADDR_REG_DISC_THR        6        1        45
+FSSR_ADDR_REG_DISC_THR        7        1        45
 
-FSSR_ADDR_REG_DISC_THR        0        2        20
-FSSR_ADDR_REG_DISC_THR        1        2        20
-FSSR_ADDR_REG_DISC_THR        2        2        20
-FSSR_ADDR_REG_DISC_THR        3        2        20
-FSSR_ADDR_REG_DISC_THR        4        2        20
-FSSR_ADDR_REG_DISC_THR        5        2        20
-FSSR_ADDR_REG_DISC_THR        6        2        20
-FSSR_ADDR_REG_DISC_THR        7        2        20
+FSSR_ADDR_REG_DISC_THR        0        2        60
+FSSR_ADDR_REG_DISC_THR        1        2        60
+FSSR_ADDR_REG_DISC_THR        2        2        60
+FSSR_ADDR_REG_DISC_THR        3        2        60
+FSSR_ADDR_REG_DISC_THR        4        2        60
+FSSR_ADDR_REG_DISC_THR        5        2        60
+FSSR_ADDR_REG_DISC_THR        6        2        60
+FSSR_ADDR_REG_DISC_THR        7        2        60
 
-FSSR_ADDR_REG_DISC_THR        0        3        25
-FSSR_ADDR_REG_DISC_THR        1        3        25
-FSSR_ADDR_REG_DISC_THR        2        3        25
-FSSR_ADDR_REG_DISC_THR        3        3        25
-FSSR_ADDR_REG_DISC_THR        4        3        25
-FSSR_ADDR_REG_DISC_THR        5        3        25
-FSSR_ADDR_REG_DISC_THR        6        3        25
-FSSR_ADDR_REG_DISC_THR        7        3        25
+FSSR_ADDR_REG_DISC_THR        0        3        75
+FSSR_ADDR_REG_DISC_THR        1        3        75
+FSSR_ADDR_REG_DISC_THR        2        3        75
+FSSR_ADDR_REG_DISC_THR        3        3        75
+FSSR_ADDR_REG_DISC_THR        4        3        75
+FSSR_ADDR_REG_DISC_THR        5        3        75
+FSSR_ADDR_REG_DISC_THR        6        3        75
+FSSR_ADDR_REG_DISC_THR        7        3        75
 
-FSSR_ADDR_REG_DISC_THR        0        4        30
-FSSR_ADDR_REG_DISC_THR        1        4        30
-FSSR_ADDR_REG_DISC_THR        2        4        30
-FSSR_ADDR_REG_DISC_THR        3        4        30
-FSSR_ADDR_REG_DISC_THR        4        4        30
-FSSR_ADDR_REG_DISC_THR        5        4        30
-FSSR_ADDR_REG_DISC_THR        6        4        30
-FSSR_ADDR_REG_DISC_THR        7        4        30
+FSSR_ADDR_REG_DISC_THR        0        4        90
+FSSR_ADDR_REG_DISC_THR        1        4        90
+FSSR_ADDR_REG_DISC_THR        2        4        90
+FSSR_ADDR_REG_DISC_THR        3        4        90
+FSSR_ADDR_REG_DISC_THR        4        4        90
+FSSR_ADDR_REG_DISC_THR        5        4        90
+FSSR_ADDR_REG_DISC_THR        6        4        90
+FSSR_ADDR_REG_DISC_THR        7        4        90
 
-FSSR_ADDR_REG_DISC_THR        0        5        35
-FSSR_ADDR_REG_DISC_THR        1        5        35
-FSSR_ADDR_REG_DISC_THR        2        5        35
-FSSR_ADDR_REG_DISC_THR        3        5        35
-FSSR_ADDR_REG_DISC_THR        4        5        35
-FSSR_ADDR_REG_DISC_THR        5        5        35
-FSSR_ADDR_REG_DISC_THR        6        5        35
-FSSR_ADDR_REG_DISC_THR        7        5        35
+FSSR_ADDR_REG_DISC_THR        0        5        105
+FSSR_ADDR_REG_DISC_THR        1        5        105
+FSSR_ADDR_REG_DISC_THR        2        5        105
+FSSR_ADDR_REG_DISC_THR        3        5        105
+FSSR_ADDR_REG_DISC_THR        4        5        105
+FSSR_ADDR_REG_DISC_THR        5        5        105
+FSSR_ADDR_REG_DISC_THR        6        5        105
+FSSR_ADDR_REG_DISC_THR        7        5        105
 
-FSSR_ADDR_REG_DISC_THR        0        6        40
-FSSR_ADDR_REG_DISC_THR        1        6        40
-FSSR_ADDR_REG_DISC_THR        2        6        40
-FSSR_ADDR_REG_DISC_THR        3        6        40
-FSSR_ADDR_REG_DISC_THR        4        6        40
-FSSR_ADDR_REG_DISC_THR        5        6        40
-FSSR_ADDR_REG_DISC_THR        6        6        40
-FSSR_ADDR_REG_DISC_THR        7        6        40
+FSSR_ADDR_REG_DISC_THR        0        6        120
+FSSR_ADDR_REG_DISC_THR        1        6        120
+FSSR_ADDR_REG_DISC_THR        2        6        120
+FSSR_ADDR_REG_DISC_THR        3        6        120
+FSSR_ADDR_REG_DISC_THR        4        6        120
+FSSR_ADDR_REG_DISC_THR        5        6        120
+FSSR_ADDR_REG_DISC_THR        6        6        120
+FSSR_ADDR_REG_DISC_THR        7        6        120
 
-FSSR_ADDR_REG_DISC_THR        0        7        45
-FSSR_ADDR_REG_DISC_THR        1        7        45
-FSSR_ADDR_REG_DISC_THR        2        7        45
-FSSR_ADDR_REG_DISC_THR        3        7        45
-FSSR_ADDR_REG_DISC_THR        4        7        45
-FSSR_ADDR_REG_DISC_THR        5        7        45
-FSSR_ADDR_REG_DISC_THR        6        7        45
-FSSR_ADDR_REG_DISC_THR        7        7        45
+FSSR_ADDR_REG_DISC_THR        0        7        135
+FSSR_ADDR_REG_DISC_THR        1        7        135
+FSSR_ADDR_REG_DISC_THR        2        7        135
+FSSR_ADDR_REG_DISC_THR        3        7        135
+FSSR_ADDR_REG_DISC_THR        4        7        135
+FSSR_ADDR_REG_DISC_THR        5        7        135
+FSSR_ADDR_REG_DISC_THR        6        7        135
+FSSR_ADDR_REG_DISC_THR        7        7        135
 
 # Enable all channels on all FSSR2 chips
 FSSR_ADDR_REG_KILL        0        0x00000000        0x00000000        0x00000000        0x00000000

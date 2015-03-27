@@ -1,0 +1,12 @@
+# asymmetric timing coincidence for clusters (0-3: in 4ns) before, after seed hit
+
+GTP_CRATE all
+
+GTP_CLUSTER_PULSE_COIN      2    2
+
+# SEED thrershold in MeV (0-8191)
+#GTP_CLUSTER_PULSE_THRESHOLD 500
+#GTP_CLUSTER_PULSE_THRESHOLD 200
+GTP_CLUSTER_PULSE_THRESHOLD 100
+
+GTP_CRATE end

@@ -1,6 +1,6 @@
 <xmlDict>
 
-	<dictEntry name="FADC250 Window Raw Data" tag="0xe101" num="0" type="composite">
+	<dictEntry name="FADC250 Window Raw Data (mode 1)" tag="0xe101" num="0" type="composite">
 		<description format="c,i,l,N(c,Ns)">
 			c	"slot number"
 			i	"trigger number"
@@ -12,7 +12,35 @@
 		</description>
 	</dictEntry>
 
-	<dictEntry name="FADC250 Pulse Raw Data" tag="0xe102" num="0" type="composite">
+	<dictEntry name="FADC250 Pulse Integral Data with Timing (mode 7)" tag="0xe102" num="0" type="composite">
+		<description format="c,i,l,N(c,N(s,i,s,s))">
+			c	"slot number"
+			i	"trigger number"
+			l	"time stamp"
+			N	"number of channels fired"
+			c	"channel number"
+			N	"number of pulses"
+			s	"tdc value"
+			i	"adc value"
+			s	"pulse min (4-tick average)"
+			s	"pulse max"
+		</description>
+	</dictEntry>
+
+	<dictEntry name="FADC250 Pulse Integral Data (mode 3)" tag="0xe103" num="0" type="composite">
+		<description format="c,i,l,N(c,N(s,i))">
+			c	"slot number"
+			i	"trigger number"
+			l	"time stamp"
+			N	"number of channels fired"
+			c	"channel number"
+			N	"number of pulses"
+			s	"tdc value"
+			i	"adc value"
+		</description>
+	</dictEntry>
+
+	<dictEntry name="FADC250 Pulse Raw Data (mode 2)" tag="0xe110" num="0" type="composite">
 		<description format="c,i,l,N(c,N(c,Ns))">
 			c	"slot number"
 			i	"trigger number"
@@ -23,19 +51,6 @@
 			c	"first sample"
 			N	"number of adc samples"
 			s	"adc value"
-		</description>
-	</dictEntry>
-
-	<dictEntry name="FADC250 Pulse Integral Data" tag="0xe103" num="0" type="composite">
-		<description format="c,i,l,N(c,N(s,i))">
-			c	"slot number"
-			i	"trigger number"
-			l	"time stamp"
-			N	"number of channels fired"
-			c	"channel number"
-			N	"number of pulses"
-			s	"tdc value"
-			i	"adc value"
 		</description>
 	</dictEntry>
 
@@ -177,7 +192,127 @@
 		</description>
 	</dictEntry>
 
-	<dictEntry name="SSP Hadrware Data" tag="0xe10B" num="0" type="uint32">
+	<dictEntry name="V1190/V1290 Hadrware Data" tag="0xe10B" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+	<dictEntry name="SSP Hadrware Data" tag="0xe10C" num="0" type="uint32">
+		<description>
+
+            0(31:27)=0x10+0x00 "BLKHDR"
+               0(26:22)        "SLOTID"
+               0(17:08)        "BLOCK_NUMBER"
+               0(07:00)        "BLOCK_LEVEL"
+
+            0(31:27)=0x10+0x01 "BLKTLR"
+               0(26:22)        "SLOTID"
+               0(21:0)         "NWORDS"
+
+            0(31:27)=0x10+0x02 "EVTHDR"
+		       0(26:0)         "EVENTNUM"
+
+            0(31:27)=0x10+0x03 "TRGTIME"
+		       0(23:0)         "TIMEL"
+		       1(23:0)         "TIMEH"
+
+            0(31:27)=0x10+0x04 "HPS_CLUSTER"
+               0(26:23)        "CLUSTER_N"
+               0(22:10)        "CLUSTER_E"
+               0(09:06)        "CLUSTER_Y"
+               0(05:00)        "CLUSTER_X"
+               1(09:00)        "CLUSTER_T"
+
+            0(31:27)=0x10+0x05 "HPS_TRIGGER"
+               0(26:23)        "TYPE"
+               0(22:16)        "DATA"
+               0(09:00)        "TIME"
+
+            0(31:27)=0x10+0x0E "DNV"
+            0(31:27)=0x10+0x0F "FILLER"
+
+		</description>
+	</dictEntry>
+
+
+	<dictEntry name="GTP Hadrware Data" tag="0xe10D" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+
+	<dictEntry name="Run Config File" tag="0xe10E" num="0" type="char">
+		<description>
+		</description>
+	</dictEntry>
+
+
+
+	<dictEntry name="HEAD bank" tag="0xe10F" num="0" type="uint32">
+		<description>
+            0(31:0)  "version number"
+            1(31:0)  "run number"
+            2(31:0)  "event number"
+            3(31:0)  "event unix time"
+            4(31:0)  "event type"
+            5(31:0)  "roc pattern"
+            6(31:0)  "event classification (17,18,20 etc)"
+            7(31:0)  "trigger bits"
+		</description>
+	</dictEntry>
+
+
+	<dictEntry name="SVT Composite Data" tag="0xe111" num="0" type="composite">
+		<description format="c,i,l,N(c,c,c,c)">
+			c	"slot number"
+			i	"trigger number"
+			l	"time stamp"
+			N	"number of channels fired"
+			c	"half/chip number"
+			c	"channel number"
+			c	"tdc value"
+			c	"adc value"
+		</description>
+	</dictEntry>
+
+
+	<dictEntry name="HEAD bank raw format" tag="0xe112" num="0" type="uint32">
+		<description>
+            0(31:27)=0x10+0x00 "BLKHDR"
+               0(07:00)        "BLOCK_LEVEL"
+
+            0(31:27)=0x10+0x01 "BLKTLR"
+               0(21:0)         "NWORDS"
+
+            0(31:27)=0x10+0x02 "EVTHDR"
+		       0(26:0)         "EVENTNUM"
+
+            0(31:27)=0x10+0x04 "HEAD_DATA"
+               0(07:0)  "the number of following words"
+               1(31:0)  "version number"
+               2(31:0)  "run number"
+               3(31:0)  "event number"
+               4(31:0)  "event unix time"
+               5(31:0)  "event type"
+
+		</description>
+	</dictEntry>
+
+
+
+	<dictEntry name="SLAC SVT before disent" tag="0xe113" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+
+	<dictEntry name="EPICS data" tag="0xe114" num="0" type="char">
+		<description>
+		</description>
+	</dictEntry>
+
+
+	<dictEntry name="DSC2 Scalers raw format" tag="0xe115" num="0" type="uint32">
 		<description>
 
 		</description>

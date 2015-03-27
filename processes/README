@@ -1,0 +1,34 @@
+============
+
+cron job - running following perl scripts (config file names contains word 'critical'):
+
+checks for remote processes using ps, generates alarm if missing:
+
+ process_monitor -p \$CLON_PARMS/processes/sys10_critical_processes.cfg -l \$CLON_PARMS/processes/sys10_critical_processes.txt -wf 3
+ process_monitor -p \$CLON_PARMS/processes/remote_critical_processes.cfg -l \$CLON_PARMS/processes/remote_critical_processes.txt -wf 3
+ process_monitor -p \$CLON_PARMS/processes/critical_processes.cfg -l \$CLON_PARMS/processes/critical_processes.txt -wf 3
+
+checks for ipc processes using ipc_check and ipc process list, generates alarm if missing:
+
+ ipc_process_monitor -p \$CLON_PARMS/processes/ipc_critical_processes.cfg -a clasprod -l \$CLON_PARMS/processes/ipc_critical_processes.txt -wf 3
+
+
+
+================
+
+main script to start/stop processes:
+
+ start_process_management
+ stop_process_management
+
+
+3 scripts inside:
+
+ control_process_manager     start           >& /dev/null &  ========= starts perl script 'process_manager' with config file "$CLON_PARMS/processes/process_manager.cfg"
+ control_procmgr_manager     start           >& /dev/null &  ========= starts perl script 'procmgr_manager', checking 'process_manager' and restarting it if needed
+
+ control_ipc_process_manager start clasprod  >& /dev/null &  ========= starts perl script 'ipc_process_manager' with config file "$CLON_PARMS/processes/ipc_process_manager.cfg"
+
+
+
+

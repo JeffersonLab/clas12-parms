@@ -1,3 +1,6 @@
+
+TDC1190_CRATE ftof1
+
 TDC1190_ALLSLOTS
 
 TDC1190_BERR_FIFO  1
@@ -33,3 +36,5 @@ TDC1190_MASK8     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 
 
 
+
+TDC1190_CRATE end

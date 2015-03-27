@@ -28,6 +28,8 @@
 # DSC2_CH_TRGDIGITAL   0   40  64    <- channel digital TRG output: channel#, width (ns), delay (ns)
 #
 #
+DSC2_CRATE     tdcftof3
+
 #DSC2_SLOT       all
 #DSC2_WIDTH       20     40
 #DSC2_THRESHOLD   20  20
@@ -38,3 +40,4 @@ DSC2_WIDTH       40     40
 DSC2_THRESHOLD   10  1023
 DSC2_TRGDIGITAL 60     32
 #
+DSC2_CRATE     end

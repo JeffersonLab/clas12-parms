@@ -1,0 +1,588 @@
+    Token Type: Input Name: never_comes
+Input Element Components:
+    Token Type: Input Name: scaler_server/data
+Input Element Components:
+    Token Type: Input Name: scaler_server/hardware
+Input Element Components:
+    Token Type: Input Name: event_statistics_monitor
+Input Element Components:
+    Token Type: Input Name: evt_status_monitor
+Input Element Components:
+    Token Type: Integer Name: evt_status_monitor::nstd
+Value = 13
+    Token Type: String Name: evt_status_monitor::id1
+Value = ipcbank2et_10_clasprod
+    Token Type: String Name: evt_status_monitor::node1
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode1
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name1
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec1
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate1
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc1
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate1
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag1
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow1
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id2
+Value = coda_l3_clasprod
+    Token Type: String Name: evt_status_monitor::node2
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode2
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name2
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec2
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate2
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc2
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate2
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag2
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow2
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id3
+Value = scaler_server_clasprod
+    Token Type: String Name: evt_status_monitor::node3
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode3
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name3
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec3
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate3
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc3
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate3
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag3
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow3
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id4
+Value = et2et_daq_mon_clasprod
+    Token Type: String Name: evt_status_monitor::node4
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode4
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name4
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec4
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate4
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc4
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate4
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag4
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow4
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id5
+Value = coda_pr_clasprod
+    Token Type: String Name: evt_status_monitor::node5
+Value = clon00
+    Token Type: String Name: evt_status_monitor::srvnode5
+Value = clon10
+    Token Type: String Name: evt_status_monitor::name5
+Value = clasprod
+    Token Type: Integer Name: evt_status_monitor::nevt_rec5
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate5
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc5
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate5
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag5
+Value = 1
+    Token Type: String Name: evt_status_monitor::flow5
+Value = et:PRLIB
+    Token Type: String Name: evt_status_monitor::id6
+Value = coda_tr_clasprod
+    Token Type: String Name: evt_status_monitor::node6
+Value = clon00
+    Token Type: String Name: evt_status_monitor::srvnode6
+Value = clon10
+    Token Type: String Name: evt_status_monitor::name6
+Value = clasprod
+    Token Type: Integer Name: evt_status_monitor::nevt_rec6
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate6
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc6
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate6
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag6
+Value = 1
+    Token Type: String Name: evt_status_monitor::flow6
+Value = et:TRLIB
+    Token Type: String Name: evt_status_monitor::id7
+Value = et2et_daq_mon2_clasprod
+    Token Type: String Name: evt_status_monitor::node7
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode7
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name7
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec7
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate7
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc7
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate7
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag7
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow7
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id8
+Value = evstatmon_clasprod
+    Token Type: String Name: evt_status_monitor::node8
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode8
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name8
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec8
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate8
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc8
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate8
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag8
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow8
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id9
+Value = mon_clasprod
+    Token Type: String Name: evt_status_monitor::node9
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode9
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name9
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec9
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate9
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc9
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate9
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag9
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow9
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id10
+Value = recsis_clasprod
+    Token Type: String Name: evt_status_monitor::node10
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode10
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name10
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec10
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate10
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc10
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate10
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag10
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow10
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id11
+Value = scstatmon_clasprod
+    Token Type: String Name: evt_status_monitor::node11
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode11
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name11
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec11
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate11
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc11
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate11
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag11
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow11
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id12
+Value = et2et_eb_clondaq2-daq2_clasprod
+    Token Type: String Name: evt_status_monitor::node12
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode12
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name12
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec12
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate12
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc12
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate12
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag12
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow12
+Value = unknown
+    Token Type: String Name: evt_status_monitor::id13
+Value = et2et_er_clon10-daq1_clasprod
+    Token Type: String Name: evt_status_monitor::node13
+Value = unknown
+    Token Type: String Name: evt_status_monitor::srvnode13
+Value = unknown
+    Token Type: String Name: evt_status_monitor::name13
+Value = unknown
+    Token Type: Integer Name: evt_status_monitor::nevt_rec13
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::rec_rate13
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::nevt_proc13
+Value = 0
+    Token Type: Floating Name: evt_status_monitor::proc_rate13
+Value = 0
+    Token Type: Integer Name: evt_status_monitor::flag13
+Value = 0
+    Token Type: String Name: evt_status_monitor::flow13
+Value = unknown
+    Token Type: Input Name: run_log_begin
+Input Element Components:
+    Token Type: Input Name: run_log_comment
+Input Element Components:
+    Token Type: Input Name: run_log_photon
+Input Element Components:
+    Token Type: Input Name: run_log_files
+Input Element Components:
+    Token Type: Input Name: run_log_end
+Input Element Components:
+    Token Type: Input Name: epics_monitor
+Input Element Components:
+    Token Type: Tagged Name: epics_monitor::mbsy1c_energy
+Tagged array
+Array Type : floating
+1103.53 
+    Token Type: Tagged Name: epics_monitor::mbsy2c_energy
+Tagged array
+Array Type : floating
+2710.03 
+    Token Type: Tagged Name: epics_monitor::mbsy3c_energy
+Tagged array
+Array Type : floating
+2720.58 
+    Token Type: Tagged Name: epics_monitor::ibc1h03aavg
+Tagged array
+Array Type : floating
+-9999 
+    Token Type: Tagged Name: epics_monitor::ibc2c24avg
+Tagged array
+Array Type : floating
+-9999 
+    Token Type: Tagged Name: epics_monitor::ibc3h00avg
+Tagged array
+Array Type : floating
+-9999 
+    Token Type: Tagged Name: epics_monitor::igl1i00halladf
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::igl1i00hallbdf
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::igl1i00hallcdf
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::smrposa
+Tagged array
+Array Type : floating
+8 
+    Token Type: Tagged Name: epics_monitor::smrposb
+Tagged array
+Array Type : floating
+8 
+    Token Type: Tagged Name: epics_monitor::smrposc
+Tagged array
+Array Type : floating
+8 
+    Token Type: Tagged Name: epics_monitor::igl1i00dac0
+Tagged array
+Array Type : floating
+100 
+    Token Type: Tagged Name: epics_monitor::igl1i00dac2
+Tagged array
+Array Type : floating
+100 
+    Token Type: Tagged Name: epics_monitor::igl1i00dac4
+Tagged array
+Array Type : floating
+100 
+    Token Type: Tagged Name: epics_monitor::igt0i00biaset
+Tagged array
+Array Type : floating
+-9999 
+    Token Type: Tagged Name: epics_monitor::igl1i00od16_16
+Tagged array
+Array Type : floating
+1 
+    Token Type: Tagged Name: epics_monitor::ibc2c24avg
+Tagged array
+Array Type : floating
+-9999 
+    Token Type: Tagged Name: epics_monitor::mtseti
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::mtirbck
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::mtvrbck
+Tagged array
+Array Type : floating
+0.1 
+    Token Type: Tagged Name: epics_monitor::tmseti
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::tmirbck
+Tagged array
+Array Type : floating
+0.9 
+    Token Type: Tagged Name: epics_monitor::tmvrbck
+Tagged array
+Array Type : floating
+0.1 
+    Token Type: Tagged Name: epics_monitor::scalers1o
+Tagged array
+Array Type : floating
+1e+07 
+    Token Type: Tagged Name: epics_monitor::scaler_calc1
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::scalers2o
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::scalers3o
+Tagged array
+Array Type : floating
+7 
+    Token Type: Tagged Name: epics_monitor::scalers4o
+Tagged array
+Array Type : floating
+178 
+    Token Type: Tagged Name: epics_monitor::scalers5o
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::scalers6o
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::scalers7o
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::scalers8o
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::scalers9o
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::cc_o2_ref
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::cc_o2_sig
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_6
+Tagged array
+Array Type : floating
+2.83639 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_7
+Tagged array
+Array Type : floating
+1.27106 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_8
+Tagged array
+Array Type : floating
+4.7619 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_9
+Tagged array
+Array Type : floating
+2.03785 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_10
+Tagged array
+Array Type : floating
+79.243 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_11
+Tagged array
+Array Type : floating
+96.8254 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_12
+Tagged array
+Array Type : floating
+-3.00147 
+    Token Type: Tagged Name: epics_monitor::vmp2c24spd
+Tagged array
+Array Type : floating
+99.6825 
+    Token Type: Tagged Name: epics_monitor::vcg2c21
+Tagged array
+Array Type : floating
+1.21809e-06 
+    Token Type: Tagged Name: epics_monitor::vcg2c24
+Tagged array
+Array Type : floating
+0.0341011 
+    Token Type: Tagged Name: epics_monitor::vcg2h01
+Tagged array
+Array Type : floating
+0.0929525 
+    Token Type: Tagged Name: epics_monitor::vip2h01dv
+Tagged array
+Array Type : floating
+5.97314 
+    Token Type: Tagged Name: epics_monitor::vip2h01di
+Tagged array
+Array Type : floating
+0.15873 
+    Token Type: Tagged Name: epics_monitor::ipm2h01
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::ipm2c24a
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::ipm2c21a
+Tagged array
+Array Type : floating
+0 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_14
+Tagged array
+Array Type : floating
+-1.9536 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_18
+Tagged array
+Array Type : floating
+-1.9536 
+    Token Type: Tagged Name: epics_monitor::hallb_sf_xy560_0_19
+Tagged array
+Array Type : floating
+0.161118 
+    Token Type: Input Name: dclaser
+Input Element Components:
+    Token Type: Input Name: polarized_target
+Input Element Components:
+    Token Type: Input Name: beam_monitor
+Input Element Components:
+    Token Type: Input Name: hardware_monitor/eber
+Input Element Components:
+    Token Type: Input Name: hardware_monitor/ts
+Input Element Components:
+    Token Type: Input Name: hardware_monitor/roc
+Input Element Components:
+    Token Type: Input Name: diskcheck/raid
+Input Element Components:
+    Token Type: Input Name: diskcheck/clon00
+Input Element Components:
+    Token Type: Input Name: diskcheck/clon10
+Input Element Components:
+    Token Type: Input Name: systats/clon00
+Input Element Components:
+    Token Type: Input Name: systats/clon10
+Input Element Components:
+    Token Type: Input Name: run_control/clasprod
+Input Element Components:
+    Token Type: Input Name: update_run_control/clasprod
+Input Element Components:
+    Token Type: Integer Name: update_run_control/clasprod::run
+Value = 55446
+    Token Type: String Name: update_run_control/clasprod::config
+Value = PROD
+    Token Type: String Name: update_run_control/clasprod::state
+Value = go
+    Token Type: Input Name: event_monitor
+Input Element Components:
+    Token Type: Floating Name: event_monitor::ntrig
+Value = 5220
+    Token Type: Floating Name: event_monitor::trig_evt_mean
+Value = 402.546
+    Token Type: Floating Name: event_monitor::trig_evt_mean_err
+Value = 3.06919
+    Token Type: Floating Name: event_monitor::trig_evt_width
+Value = 221.748
+    Token Type: Floating Name: event_monitor::trig_evt_width_err
+Value = 2.17045
+    Token Type: Array Name: event_monitor::trig_mean
+Array Type : floating
+86.9393 8.26877 7.63831 0.465517 63.0272 1.78582 5.75364 5.76571
+0.327011 0.601533 0.0536398 4.65977 0.123755 0 22.6852 2.25709
+1.93448 0 16.8316 1.66207 0 17.2153 1.58467 1.60096
+0 14.0297 0 0 7.36705 0.221839 0.536015 0.399617
+6.20958 0 0 16.8667 2.20402 1.60038 0.0113027 13.051
+0 0 11.2856 1.67414 1.36494 0.000957854 8.24559 0
+0 
+    Token Type: Array Name: event_monitor::trig_mean_err
+Array Type : floating
+1.01887 0.114697 0.160183 0.0127431 0.923707 0.0724438 0.0699858 0.383596
+0.03228 0.039187 0.00447219 0.351989 0.0218576 0 0.415668 0.036826
+0.0840605 0 0.379116 0.0692332 0 0.267698 0.0345612 0.0721828
+0 0.23784 0 0 0.201903 0.0214928 0.0276369 0.0114501
+0.187062 0 0 0.253797 0.0350463 0.0716579 0.00210146 0.22852
+0 0 0.24663 0.0357405 0.0683765 0.000690591 0.219306 0
+0 
+    Token Type: Array Name: event_monitor::trig_width
+Array Type : floating
+73.6128 8.28683 11.5731 0.920685 66.7375 5.23404 5.05645 27.7146
+2.33222 2.83124 0.323114 25.4311 1.5792 0 30.0319 2.66066
+6.07333 0 27.3909 5.00207 0 19.3411 2.49703 5.21517
+0 17.1838 0 0 14.5874 1.55284 1.99675 0.827265
+13.5151 0 0 18.3367 2.53208 5.17725 0.15183 16.5105
+0 0 17.8189 2.58224 4.94017 0.0498949 15.8447 0
+0 
+    Token Type: Array Name: event_monitor::trig_width_err
+Array Type : floating
+0.720518 0.0811111 0.113277 0.00901161 0.653222 0.0512304 0.0494922 0.271269
+0.0228276 0.027712 0.00316262 0.248918 0.0154571 0 0.29395 0.0260424
+0.0594454 0 0.268101 0.0489599 0 0.189309 0.0244408 0.0510458
+0 0.168194 0 0 0.142781 0.0151991 0.0195441 0.00809722
+0.132285 0 0 0.179479 0.0247839 0.0506746 0.0014861 0.161603
+0 0 0.174411 0.0252748 0.0483541 0.000488369 0.155087 0
+0 
+    Token Type: Input Name: alarm_checker
+Input Element Components:
+    Token Type: Input Name: trigmon
+Input Element Components:

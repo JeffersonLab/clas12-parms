@@ -80,13 +80,13 @@ DSC2_THRESHOLD   10  10
 # FADC250_ID        0xfadc     <- board type         (0x0 Bits:31-16)
 #
 # FADC250_MODE      1   <- process mode: 1-4  (0x10C Bits:2-0)
-# FADC250_W_OFFSET  50  <- number of sample back from trigger point. (0x120)
+# FADC250_W_OFFSET  50  <- number of ns back from trigger point. (0x120)
 #                            (in Manual it is  PL=Trigger_Window(ns) * 250MHz)
-# FADC250_W_WIDTH   49  <- number of ADC sample to include in trigger window. (0x11C)
+# FADC250_W_WIDTH   49  <- number of ns to include in trigger window. (0x11C)
 #                            (in M:  PTW=Trigger_Window(ns) * 250MHz, minimum is 6)
-# FADC250_NSB       3   <- number of sample before trigger point to include in data processing. (0x124)
+# FADC250_NSB       3   <- number of ns before trigger point to include in data processing. (0x124)
 #                            This include the trigger Point. (minimum is 2 in all mode)
-# FADC250_NSA       6   <- number of sample after trigger point to include in data processing. (0x128)
+# FADC250_NSA       6   <- number of ns after trigger point to include in data processing. (0x128)
 #                            Minimum is (6 in mode 2) and ( 3 in mode 0 and 1).
 #                            Number of sample report is 1 more for odd and 2 more for even NSA number.
 # FADC250_NPEAK     1   <- number of Pulses in Mode 2 and 3.  (0x10C Bits:6-5)
@@ -107,6 +107,10 @@ DSC2_THRESHOLD   10  10
 # FADC250_PED       210        <- board Pedestals, same for all channels
 # FADC250_CH_PED    0    210   <- channel# and Pedestal_value for this channel
 # FADC250_ALLCH_PED 210  220  210  215  215  220  220  210  210  215  215  220  220  210  215  220  <- 16 PEDs
+#
+# FADC250_GAIN       210        <- board Gains, same for all channels
+# FADC250_CH_GAIN    0    210   <- channel# and Gain_value for this channel
+# FADC250_ALLCH_GAIN 210  220  210  215  215  220  220  210  210  215  215  220  220  210  215  220  <- 16 GAINs
 
 
 FADC250_SLOT all
@@ -131,6 +135,8 @@ FADC250_NPEAK     1
 #       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
 FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_TET 400
 
 # include tdc1190/clasdev.cnf
 

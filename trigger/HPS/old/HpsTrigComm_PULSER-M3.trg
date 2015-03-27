@@ -1,0 +1,1 @@
+include ssp/hps_trigger_commissioning_PULSER.cnf

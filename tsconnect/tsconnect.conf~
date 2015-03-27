@@ -1,0 +1,537 @@
+#
+# 1 - cua device port number
+# 2 - location code
+# 3 - <device>
+# 4 - connection speed
+#
+0001   fc1     <scaler1>      9600
+0002   fc2     <scaler2>      9600
+0003   fc3     <scaler4>      9600
+0004   fc4     <ec1>          9600
+0005   fc5     <ec2>          9600
+0006   fc6     <cc1>          9600
+0007   fc7     <sc1>          9600
+0008   fc8     <pretrig2>     9600
+0009   fc9     <sc2>          9600
+0010   fc10    <lecroyhv2>    9600
+0011   fc11    <lecroyhv6>    9600
+0012   fc12    <lecroyhv10>   9600
+0013   fc13    <pretrig1>     9600
+0014   fc14    <lecroyhv7>    9600
+0015   fc15    <bethsw1>      9600
+0016   fc16    <classc8_old>      9600
+0017   fc17    <lecroyhv4>    9600
+0018   fc18    <lecroyhv3>    9600
+0019   fc19    <lecroyhv1>   57600
+0020   fc20    <lecroyhv9>    9600
+0021   fc21    <lecroyhv8>    9600
+0022   fc22    <clastrig2>    9600
+0023   fc23    <hallb-c2-ei2402> 9600
+0024   fc24    <tlv1>         9600
+0025   fc25    <classc4_old>      9600
+0026   fc26    <bdcaen1>      9600
+0027   fc27    <lecroyhv5>    9600
+0028   fc28    <ec4>          9600
+0029   fc29    <classc5>      9600
+0030   fc30    <classc7_hide>      9600
+0031   fc31    <ec3>          9600
+0032   fc32    <scaler3pmc1>  9600
+#
+1001   res1    <reset1>       2400
+1002   res11
+#
+2001  sfs1 <adcecal5>  9600
+2002  sfs2 <adcpcal5>  9600
+2003  sfs3 <adcftof5>  9600
+2004  sfs4 <tdcecal5>  9600
+2005  sfs5 <tdcpcal5>  9600
+2006  sfs6 <tdcftof5>  9600
+#2001   sfs1    <tage>         9600
+#2002   sfs2    <tagger_mac>   9600
+#2003   sfs3    <tagehv1>      9600
+#2004   sfs4    <tagthv>       9600
+#2005   sfs5    <dc3>          9600
+#2006   sfs6    <dc4>          9600
+2007   sfs7    <dc9>          9600
+2008   sfs8    <dc10>         9600
+2009   sfs9    <classc2>      9600
+2010   sfs10   <dccntrl>      9600
+2011   sfs11   <torus_rga>    9600
+2012   sfs12   <iocptarg>     9600
+2013   sfs13   <schv>         9600
+2014   sfs14   <tagehv2>      9600
+2015   sfs15   <pshv>         9600
+2016   sfs16
+2017   sfs17   <bethsw3sc>    9600
+###2018   sfs18   <primexts>     9600
+2018   sfs18   <dvcs2>        9600
+2019   sfs19
+2020   sfs20   <tage2>        9600
+2021   sfs21   <taggeror>     9600
+2022   sfs22   <bethsw2>      9600
+2023   sfs23   <dc9pmc1>     38400
+2024   sfs24   <dc10pmc1>    38400
+2025   sfs25   <tage2pmc1>   38400
+2026   sfs26   <tagepmc1>    38400
+2027   sfs27   <dc3pmc1>     38400
+2028   sfs28   <dc4pmc1>     38400
+2029   sfs29   <hallb-l1-ei24ga>    9600
+2030   sfs30   <hallb-l1-ei2402>    9600
+2031   sfs31   <hallb-l1-ei24ga-2>  9600
+2032   sfs32   <gmeter1>      9600
+#
+03001   res3    <reset3>      2400
+03002   res31
+#
+4001   res5    <reset5>       2400
+4002   res51
+5001   res2    <reset2>       2400
+5002   res21
+6001   res4    <reset4>       2400
+6002   res41
+7001   res6    <reset6>       2400
+7002   res61
+#
+#
+#???
+8001  sfn1  <adcecal3>     9600
+8002  sfn2  <adcpcal3>     9600
+8003  sfn3  <adcftof3>     9600
+8004  sfn4  <tdcecal3>     9600
+8005  sfn5  <tdcpcal3>     9600
+8006  sfn6  <tdcftof3>     9600
+#
+#8001   sfn1    <dc1>          9600
+#8002   sfn2    <dc2>          9600
+#8003   sfn3    <sc-laser1>    9600
+#8004   sfn4    <dc7>          9600
+#8005   sfn5    <dc8>          9600
+#8006   sfn6    <dc11>         9600
+8007   sfn7    <l2cntrl>      9600
+8008   sfn8    <classc3_old>      9600
+8009   sfn9    <dc5>          9600
+8010   sfn10   <dc6>          9600
+8011   sfn11   <polar>        9600
+8012   sfn12   <classc12_old>     9600
+8013   sfn13   <classc1_old>      9600
+8014   sfn14   <ioctorus1>    9600
+8015   sfn15   <classc6_old>      9600
+8016   sfn16   <polarpmc1>    9600
+8017   sfn17   <caenhv4>      9600
+8018   sfn18   <ncslecroy1>   9600
+8019   sfn19   <dvcstrig>     9600
+8020   sfn20   <pretrig3oldold>     9600
+8021   sfn21
+8022   sfn22   <dc1pmc1>     38400
+8023   sfn23   <dc2pmc1>     38400
+8024   sfn24   <dc11pmc1>    38400
+8025   sfn25   <dc5pmc1>     38400
+8026   sfn26   <dc6pmc1>     38400
+8027   sfn27   <dc8pmc1>     38400
+8028   sfn28   <dc7pmc1>     38400
+##8029   sfn29   <dvcs2old>        9600
+8029   sfn29   <pretrig3old>        9600
+8030   sfn30   <dvcs2pmc1>   38400
+8031   sfn31   <dc0>          9600
+8032   sfn32
+#
+9001   scs1    <camac2>       9600
+9002   scs2    <scscaen3>     9600
+9003   scs3    <lac1>         9600
+9004   scs4    <scscaen1>     9600
+9005   scs5    <scscaen2>     9600
+9006   scs6    <scscaen4>     9600
+9007   scs7    <scslecroy1>   9600
+9008   scs8    <nmr>          9600
+9009   scs9    <lac2>         9600
+9010   scs10   <lac1pmc1>    38400
+9011   scs11   <lac2pmc1>    38400
+9012   scs12
+9013   scs13
+9014   scs14
+9015   scs15
+9016   scs16
+9017   scs17
+9018   scs18
+9019   scs19
+9020   scs20
+9021   scs21
+9022   scs22
+9023   scs23
+9024   scs24
+9025   scs25
+9026   scs26
+9027   scs27
+9028   scs28
+9029   scs29
+9030   scs30
+9031   scs31
+9032   scs32
+#
+09001   tidf1  <wolfram1>     9600
+09002   tidf2  <ltcc0>        9600
+09003   tidf3  <pcal0>        9600
+#
+a001   gs1     <clasgas>      9600
+a002   gs2
+#
+b001   cr1     <classc1>     9600
+b002   cr2     <classc3>     9600
+b003   cr3     <classc6>     9600
+b004   cr4     <classc12>    9600
+#b001   cr1     <croctest1>    9600
+#b002   cr2     <croctest2>    9600
+#b003   cr3     <croctest3>    9600
+#b004   cr4     <croctest4>    9600
+#
+b005   cr5     <croctest5>    9600
+b006   cr6
+b007   cr7     <primexioc1>   9600
+b008   cr8     <primexioc2>   9600
+b009   cr9     <primexroc4>   9600
+b010   cr10    <primexroc5>   9600
+#
+b011   cr11    <primexroc6>   9600
+b012   cr12                   9600
+b013   cr13                   9600
+b014   cr14                   9600
+#b011   cr11    <croctest11>  38400
+#b012   cr12    <croctest12>  38400
+#b013   cr13    <croctest13>  38400
+#b014   cr14    <croctest14>   9600
+#
+b015   cr15    <primexts2>   9600
+b016   cr16
+b017   cr17    <classc0>      9600
+b018   cr18    <hvtest1>      9600
+b019   cr19    <hvtest2>      9600
+b020   cr20    <hvtest3>      9600
+b021   cr21    <hvtest4>      9600
+b022   cr22    <hvtest5>      9600
+b023   cr23    <hvtest6>      9600
+b024   cr24    <hvtest7>      9600
+b025   cr25    <wasupstearshallb-p1-ei24ga>    9600
+b026   cr26
+b027   cr27
+b028   cr28
+b029   cr29
+b030   cr30    <recycle1>     9600
+b031   cr31
+b032   cr32    <test-reset>   2400
+#
+c001   fcl1    <scaler1pmc1>  9600
+c002   fcl2    <scaler2pmc1>  9600
+c003   fcl3    <scaler4pmc1>  9600
+c004   fcl4    <sc1pmc1>     38400
+c005   fcl5    <sc2pmc1>     38400
+c006   fcl6    <cc1pmc1>     38400
+c007   fcl7    <ec3pmc1>     38400
+c008   fcl8    <ec1pmc1>     38400
+c009   fcl9    <ec2pmc1>     38400
+c010   fcl10   <ec4pmc1>     38400
+c011   fcl11
+c012   fcl12
+c013   fcl13
+c014   fcl14
+c015   fcl15
+c016   fcl16    <classc7>  9600
+c017   fcl17
+c018   fcl18
+c019   fcl19
+c020   fcl20
+c021   fcl21
+c022   fcl22
+c023   fcl23
+c024   fcl24
+c025   fcl25
+c026   fcl26
+c027   fcl27
+c028   fcl28
+c029   fcl29
+c030   fcl30
+c031   fcl31
+c032   fcl32  <hallb-p1-ei24ga>      9600
+#
+0c001  fcsec61 <adcecal6>  9600
+0c002  fcsec62 <adcpcal6>  9600
+0c003  fcsec63 <adcftof6>  9600
+0c004  fcsec64 <tdcecal6>  9600
+0c005  fcsec65 <tdcpcal6>  9600
+0c006  fcsec66 <tdcftof6>  9600
+#
+d001   pcl1   <vmetest0>      9600
+d002   pcl2   <vxstest0>      9600
+d003   pcl3   <classc8>       9600
+d004   pcl4   <classc4>       9600
+d005   pcl5   <trig1>         9600
+d006   pcl6   <trig1pmc1>    38400
+d007   pcl7   <pi7>      9600
+d008   pcl8   <pi8>      9600
+d009   pcl9   <pi9>      9600
+d010   pcl10   <pi10>     9600
+d011   pcl11   <pi11>     9600
+d012   pcl12   <pi12>     9600
+d013   pcl13   <pi13>     9600
+d014   pcl14   <pi14>     9600
+d015   pcl15   <pi15>     9600
+d016   pcl16   <pi16>     9600
+d017   pcl17   <gluex_ts2>    9600
+d018   pcl18   <gluex_vme1>   9600
+d019   pcl19   <gluex_hv>     9600
+d020   pcl20   <gluex_sc>     9600
+d021   pcl21   <gluex_misc>   9600
+d022   pcl22   <reset7>       2400
+d023   pcl23
+d024   pcl24
+d025   pcl25
+d026   pcl26
+d027   pcl27
+d028   pcl28
+d029   pcl29
+d030   pcl30
+d031   pcl31
+d032   pcl32
+#
+# test on Concurrent VME controller
+# 115200 - works as 38400
+# 57600 - works as 38400
+# 38400 - works
+# 19200 - works
+# 9600 - works
+#
+e001   f3l1    <adcecal1>     9600
+e002   f3l2    <adcpcal1>     115200
+e003   f3l3    <adcftof1>     9600
+e004   f3l4    <tdcecal1>     9600
+e005   f3l5    <tdcpcal1>     9600
+e006   f3l6    <tdcftof1>     9600
+e007   f3l7
+e008   f3l8
+e009   f3l9
+e010   f3l10
+e011   f3l11
+e012   f3l12
+e013   f3l13
+e014   f3l14
+e015   f3l15    <camac1>       9600
+e016   f3l16
+e017   f3l17    <hps1>         9600
+e018   f3l18    <hps2>         9600
+e019   f3l19    <hps11>        9600
+e020   f3l20    <hps12>        9600
+e021   f3l21    <atca1>      115200
+e022   f3l22
+e023   f3l23    <scaler3>      9600
+e024   f3l24
+e025   f3l25
+e026   f3l26
+e027   f3l27
+e028   f3l28
+e029   f3l29
+e030   f3l30
+e031   f3l31
+e032   f3l32
+#
+f001  ff3l1    <adcecal4>          9600
+f002  ff3l2    <adcpcal4>          9600
+f003  ff3l3    <adcftof4>          9600
+f004  ff3l4    <tdcecal4>          9600
+f005  ff3l5    <tdcpcal4>          9600
+f006  ff3l6    <tdcftof4>          9600
+#f001   ff3l1   <caenhv1>           9600
+#f002   ff3l2   <pretrig3>          9600
+#f003   ff3l3   <torus-l1-cat2950>  9600
+#f004   ff3l4   <tage3>             9600
+#f005   ff3l5   <tage3pmc1>        38400
+#f006   ff3l6   <roc1>   9600
+f007   ff3l7   <hpsioc1>           9600
+f008   ff3l8   <markiocold>   9600
+f009   ff3l9   <primextdc1_old>        9600
+f010   ff3l10  <primextdc1pmc1>   38400
+f011   ff3l11  <hpsdev_p1>         9600
+f012   ff3l12  <hpshv2>            9600
+f013   ff3l13  <iockbb2>           9600
+f014   ff3l14  <solidvme>          9600
+f015   ff3l15  <solidhv>           9600
+f016   ff3l16  <dc12>              9600
+f017   ff3l17  <hpshv1>            9600
+f018   ff3l18
+f019   ff3l19
+f020   ff3l20
+f021   ff3l21
+f022   ff3l22
+f023   ff3l23
+f024   ff3l24
+f025   ff3l25
+f026   ff3l26
+f027   ff3l27
+f028   ff3l28
+f029   ff3l29
+f030   ff3l30
+f031   ff3l31
+f032   ff3l32  <recycle2>      9600
+#
+10001   1f3l1  <adcecal2>      9600
+10002   1f3l2  <adcpcal2>      9600
+10003   1f3l3  <adcftof2>      9600
+10004   1f3l4  <tdcecal2>      9600
+10005   1f3l5  <tdcpcal2>      9600
+10006   1f3l6  <tdcftof2>      9600
+10007   1f3l7
+10008   1f3l8
+10009   1f3l9
+10010   1f3l10
+10011   1f3l11
+10012   1f3l12
+10013   1f3l13
+10014   1f3l14
+10015   1f3l15
+10016   1f3l16
+10017   1f3l17  <caenhv3>    9600
+10018   1f3l18
+10019   1f3l19
+10020   1f3l20
+10021   1f3l21
+10022   1f3l22
+10023   1f3l23
+10024   1f3l24
+10025   1f3l25   <primexts2_old>    9600
+10026   1f3l26   <primexroc4_old>   9600
+10027   1f3l27   <primexroc5_old>   9600
+10028   1f3l28   <primexroc6_old>   9600
+10029   1f3l29   <primexioc2_old>   9600
+10030   1f3l30   <primexioc1_old>   9600
+10031   1f3l31
+10032   1f3l32
+#
+11001   ell1     <ctoftest1>    9600
+11002   ell2     <hvctoftest1>  9600
+11003   ell3
+11004   ell4
+11005   ell5
+11006   ell6
+11007   ell7
+11008   ell8
+11009   ell9
+11010   ell10
+11011   ell11
+11012   ell12
+11013   ell13
+11014   ell14
+11015   ell15
+11016   ell16
+11017   ell17
+11018   ell18
+11019   ell19
+11020   ell20
+11021   ell21
+11022   ell22
+11023   ell23
+11024   ell24
+11025   ell25
+11026   ell26
+11027   ell27
+11028   ell28
+11029   ell29
+11030   ell30
+11031   ell31
+11032   ell32
+#
+12001   pcal1  <pcalfb>   9600
+12002   pcal2  <pcalvme>  9600
+12003   pcal3  <pcal0_old>    9600
+12004   pcal4  <dcrb1>    9600
+12005   pcal5
+12006   pcal6
+12007   pcal7
+12008   pcal8
+12009   pcal9
+12010   pcal10
+12011   pcal11
+12012   pcal12
+12013   pcal13
+12014   pcal14
+12015   pcal15
+12016   pcal16
+12017   pcal17
+12018   pcal18
+12019   pcal19
+12020   pcal20
+12021   pcal21
+12022   pcal22
+12023   pcal23
+12024   pcal24
+12025   pcal25
+12026   pcal26
+12027   pcal27
+12028   pcal28
+12029   pcal29
+12030   pcal30
+12031   pcal31
+12032   pcal32
+#
+13001   svt1     <hpshv1eel>  9600
+13002   svt2     <hpshv2eel>  9600
+13003   svt3     <markioc>    9600
+13004   svt4     <svt1>       9600
+13005   svt5     <svt2>       9600
+13006   svt6     <prbsvtsc3>  9600
+13007   svt7
+13008   svt8
+13009   svt9
+13010   svt10
+13011   svt11
+13012   svt12
+13013   svt13
+13014   svt14
+13015   svt15
+13016   svt16
+13017   svt17
+13018   svt18
+13019   svt19
+13020   svt20
+13021   svt21
+13022   svt22
+13023   svt23
+13024   svt24
+13025   svt25
+13026   svt26
+13027   svt27
+13028   svt28
+13029   svt29
+13030   svt30
+13031   svt31
+13032   svt32
+#
+14001   dcrb1     <dcrb0>     9600
+14002   dcrb2     <hvdcrb>    9600
+14003   dcrb3     <hvdcrb3>   9600
+14004   dcrb4
+14005   dcrb5
+14006   dcrb6
+14007   dcrb7
+14008   dcrb8
+14009   dcrb9
+14010   dcrb10
+14011   dcrb11
+14012   dcrb12
+14013   dcrb13
+14014   dcrb14
+14015   dcrb15
+14016   dcrb16
+14017   dcrb17
+14018   dcrb18
+14019   dcrb19
+14020   dcrb20
+14021   dcrb21
+14022   dcrb22
+14023   dcrb23
+14024   dcrb24
+14025   dcrb25
+14026   dcrb26
+14027   dcrb27
+14028   dcrb28
+14029   dcrb29
+14030   dcrb30
+14031   dcrb31
+14032   dcrb32

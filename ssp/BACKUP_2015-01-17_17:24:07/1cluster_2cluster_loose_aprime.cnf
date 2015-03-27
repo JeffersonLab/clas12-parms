@@ -1,0 +1,232 @@
+#
+# ssp config file
+#
+# this file contains settings for SSP
+#
+# format:
+# ~~~~~~~
+# CRATE             rocbcal1   <- ROC/crate name, usually IP name
+#
+# SSP_ALLSLOTS             <- just keyword - all settings after this line will be implemented
+#                                                for all slots, till SSP_SLOTS will be met
+#
+# SSP_SLOTS     3  8  19   <- slot_numbers - in which next settings will be implemented
+#                                                till file ends or next SSP_SLOTS will be met
+#
+# SSP_BERR  1   <- DMA Nwords method readout: 1 - enable VME BUS error
+#                                             0 - disable VME BUS error
+#
+# SSP_BLOCK_LEVEL 1      <- to set block level
+#
+# SSP_W_WIDTH    N
+#    N: 0 to 1023 - Trigger Window Width, in 4ns ticks
+#
+# SSP_W_OFFSET   N
+#    N: 0 to 1023 - Trigger Window Offset, in 4ns ticks
+#
+# SSP_HPS_LATENCY  LATENCY
+#    LATENCY: 0 to 511 - sets trigger latency (in 4ns ticks)
+#
+# SSP_HPS_SINGLES:
+# ----------------
+# SSP_HPS_SINGLES_EMIN  N  EMIN   EN
+#    N:    0 or 1 - selects the hps singles trigger bit
+#    EMIN: 0 to 8191MeV - cluster energies below this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_SINGLES_EMAX  N  EMAX   EN
+#    N:    0 or 1 - selects the hps singles trigger bit
+#    EMAX: 0 to 8191MeV - cluster energies above this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_SINGLES_NMIN  N  NMIN   EN
+#    N:    0 or 1 - selects the hps singles trigger bit
+#    NMIN: 0 to 9 - cluster with #hits below this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_COSMICS:
+# ----------------
+# SSP_HPS_COSMIC_TIMECOINCIDENCE  T
+#    T:    0 to 255 - sets cosmic hit coincidence time (in 4ns ticks)
+#
+# SSP_HPS_COSMIC_PATTERNCOINCIDENCE  pattern
+#    pattern  - 3:1 LUT definition for scintillator coincidence pattern that is accepted/rejected
+#                Scintillator channels are the last 3 channels (14-16) of FADC in slot 20
+#                pattern = 254 will trigger on any hit channels
+#                pattern = 128 will trigger when all 3 channels hit
+#                pattern = 136 will trigger when channels 14&15 are hit
+#                pattern = 232 will trigger when any 2 channels hit
+#
+# SSP_HPS_PAIRS:
+# ----------------
+# SSP_HPS_PAIRS_TIMECOINCIDENCE  N   T
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    T:    0 to 15 - sets cluster pair hit coincidence time (in +/-4ns ticks)
+#
+# SSP_HPS_PAIRS_EMIN  N   EMIN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    EMIN: 0 to 8191MeV - clusters energies below this threshold are cut
+#
+# SSP_HPS_PAIRS_EMAX  N   EMAX
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    EMAX: 0 to 8191MeV - clusters energies above this threshold are cut
+#
+# SSP_HPS_PAIRS_NMIN  N   NMIN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    NMIN: 0 to 9 - cluster with #hits below this threshold are cut
+#
+# SSP_HPS_PAIRS_SUMMAX  N   MAX   EN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    MAX:  0 to 8191MeV - cluster pairs energy sums above this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_PAIRS_DIFFMAX  N  MAX   EN 
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    MAX:  0 to 8191MeV - cluster pairs energy differences above this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_PAIRS_COPLANARITY  N   ANGLE  EN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    ANGLE: 0 to 180 - cluster pair coplanarity with photon beam must be < +/-ANGLE (in degress)
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_PAIRS_ENERGYDIST  N   F  MIN  EN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    F:    0 to 8191 - conversion factor in MeV/mm to compensate cluster energy by radial distance from photon beam
+#    MIN:  0 to 8191 - minimum threshold in MeV to accept cluster pair.
+#          For each pair, the cluster with the smallest energy, Emin, is used in this cut.
+#          That cluster's minimum distance to photon beam is computed, R, and tested in the equation:
+#              MIN < Emin + F * R
+#          When the above is true the cluster pair passes this cut, otherwise it is cut.
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_PULSER   F
+#    F:     Pulser frequency (0 to 125MHz)
+#
+# SSP_HPS_SET_IO_SRC   OUTPUT_PIN     SIGNAL_SEL
+#    OUTPUT_PIN selection:
+#       LVDSOUT0        0
+#       LVDSOUT1        1
+#       LVDSOUT2        2
+#       LVDSOUT3        3
+#       LVDSOUT4        4
+#       GPIO0           5
+#       GPIO1           6
+#       P2_LVDSOUT0     7
+#       P2_LVDSOUT1     8
+#       P2_LVDSOUT2     9
+#       P2_LVDSOUT3     10
+#       P2_LVDSOUT4     11
+#       P2_LVDSOUT5     12
+#       P2_LVDSOUT6     13
+#       P2_LVDSOUT7     14
+#       TRIG            15
+#       SYNC            16
+#
+#    SIGNAL_SEL selection:
+#       0          0
+#       1          1
+#       SYNC       2
+#       TRIG1      3
+#       TRIG2      4
+#       LVDSIN0    5
+#       LVDSIN1    6
+#       LVDSIN2    7
+#       LVDSIN3    8
+#       LVDSIN4    9
+#       P2LVDSIN0  10
+#       P2LVDSIN1  11
+#       P2LVDSIN2  12
+#       P2LVDSIN3  13
+#       P2LVDSIN4  14
+#       P2LVDSIN5  15
+#       P2LVDSIN6  16
+#       P2LVDSIN7  17
+#       PULSER     18
+#       BUSY       19
+#       TRIGGER0   20   (HPS SINGLES 0)
+#       TRIGGER1   21   (HPS SINGLES 1)
+#       TRIGGER2   22   (HPS PAIRS 0)
+#       TRIGGER3   23   (HPS PAIRS 1)
+#       TRIGGER4   24   (HPS LED)
+#       TRIGGER5   25   (HPS COSMIC)
+#       TRIGGER6   26
+#       TRIGGER7   27
+
+SSP_ALLSLOTS
+
+SSP_BERR  1
+
+SSP_BLOCK_LEVEL 1
+
+SSP_W_WIDTH   100
+SSP_W_OFFSET  735
+
+SSP_HPS_PULSER 1         # 1Hz pulser period
+
+SSP_HPS_SET_IO_SRC    7     20   # HPS SINGLES 0 -> TI TS1
+#SSP_HPS_SET_IO_SRC    8     21   # HPS SINGLES 1 -> TI TS2
+SSP_HPS_SET_IO_SRC    9     22   # HPS PAIRS 0   -> TI TS3
+SSP_HPS_SET_IO_SRC    10    23   # HPS PAIRS 1   -> TI TS4
+
+# try to disable ecal triggers:
+#SSP_HPS_SET_IO_SRC    7     0   # HPS SINGLES 0 -> TI TS1
+SSP_HPS_SET_IO_SRC    8     0   # HPS SINGLES 1 -> TI TS2
+#SSP_HPS_SET_IO_SRC    9     0   # HPS PAIRS 0   -> TI TS3
+#SSP_HPS_SET_IO_SRC    10    0   # HPS PAIRS 1   -> TI TS4
+
+# calibration triggers:
+SSP_HPS_SET_IO_SRC    11    0   # HPS LED/COSMIC    -> TI TS5
+#SSP_HPS_SET_IO_SRC    11    24   # HPS LED       -> TI TS5
+#SSP_HPS_SET_IO_SRC    11    25   # HPS COSMIC    -> TI TS5
+SSP_HPS_SET_IO_SRC    12    18   # PULSER        -> TI TS6
+
+
+# coinc time 10=40 ns
+SSP_HPS_COSMIC_TIMECOINCIDENCE  10
+
+# cosmic: (B2 or B1) & B0 - two upper scintillators partially overlaped in coinc with bottom one
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE  168
+
+# cosmic: B2 or B1 or B0 - or of all scintillators
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE  254
+
+# cosmic: B0 - bottom scintillator only
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE  170
+
+# cosmic: B0 and B1
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE 136
+
+# led trigger
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE  254
+
+# cosmic B0 and B1 (136<<8) + led trigger (254<<0)
+SSP_HPS_COSMIC_PATTERNCOINCIDENCE   35070
+
+SSP_HPS_LATENCY 475
+
+# Singles 0 trigger
+SSP_HPS_SINGLES_EMIN  0  1000   1
+SSP_HPS_SINGLES_EMAX  0  8191   1
+SSP_HPS_SINGLES_NMIN  0  4 	  1
+
+# Pairs 0 trigger
+SSP_HPS_PAIRS_TIMECOINCIDENCE  0  4
+SSP_HPS_PAIRS_EMIN             0  200
+SSP_HPS_PAIRS_EMAX             0  8191
+SSP_HPS_PAIRS_NMIN             0  1
+SSP_HPS_PAIRS_SUMMAX_MIN       0  2000 0    0
+SSP_HPS_PAIRS_DIFFMAX          0  1200      0
+SSP_HPS_PAIRS_COPLANARITY      0  40        0
+SSP_HPS_PAIRS_ENERGYDIST       0  5.5  400  0
+
+# Pairs 1 trigger
+SSP_HPS_PAIRS_TIMECOINCIDENCE  1  4
+SSP_HPS_PAIRS_EMIN             1  200
+SSP_HPS_PAIRS_EMAX             1  1800
+SSP_HPS_PAIRS_NMIN             1  2
+SSP_HPS_PAIRS_SUMMAX_MIN       1  2000 400  1
+SSP_HPS_PAIRS_DIFFMAX          1  1200      1
+SSP_HPS_PAIRS_COPLANARITY      1  40        1
+SSP_HPS_PAIRS_ENERGYDIST       1  5.5  400  1
+

@@ -1,0 +1,54 @@
+#
+# hps2
+#
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+#FADC250_W_OFFSET  1200
+#FADC250_W_WIDTH   400
+
+
+#FADC250_W_OFFSET  3300
+# COSMICS:
+#FADC250_W_OFFSET  3420
+# LED:
+FADC250_W_OFFSET 3180
+
+FADC250_W_WIDTH 400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       240
+FADC250_NPEAK     1
+
+#pulse mode
+#FADC250_MODE      7
+#FADC250_NSB       16
+#FADC250_NSA       100
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#
+# in range (0-4095) inclusuve
+FADC250_TET 0
+
+# This was supposed to set high threshold on all channels,
+# then to be overwritten by pmt channels below in order to
+# decrease data size by factor of two by ignoring the bottom
+# ecal.  Result was instead zero triggers (except for 1Hz pulser).
+#FADC250_TET 3500
+
+# Set cosmic system trigger threshold
+# 12bit -> 1V: 40 = ~10mV threshold
+# relative to pedestal
+#FADC250_SLOT      20
+#FADC250_CH_TET    13   40
+#FADC250_CH_TET    14   40
+#FADC250_CH_TET    15   40
+

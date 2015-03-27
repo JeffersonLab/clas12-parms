@@ -42,6 +42,8 @@
 # TDC1190_MASK8   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.112-127
 
 
+TDC1190_CRATE hps11
+
 TDC1190_ALLSLOTS
 
 #TDC1190_A24_A32    2
@@ -77,3 +79,5 @@ TDC1190_MASK6     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 TDC1190_MASK7     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 TDC1190_MASK8     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 
+
+TDC1190_CRATE end

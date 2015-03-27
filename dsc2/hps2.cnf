@@ -1,0 +1,50 @@
+#
+# dsc2 config file for expid=clondev
+#
+# this file contains settings  for JLAB VME Discriminators DSC2
+#
+# CRATE      <tdcecal1>     <- crate name, usually IP name
+#
+# DSC2_SLOT  2   <- slot#
+#
+# DSC2_WIDTH  20  40   <- TDC width (ns), TRG width (ns)
+#
+# DSC2_TDCMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TDC enable mask
+#
+# DSC2_TRGMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TRG enable mask
+#
+# DSC2_TDCORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TDC OR mask
+#
+# DSC2_TRGORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TRG OR mask
+#
+# DSC2_THRESHOLD  20  50   <- board threshold: TDC threshold (mV), TRG threshold (mV)
+#
+# DSC2_CH_THRESHOLD    0  20   50   <- channel threshold: channel#, TDC threshold (mV), TRG threshold (mV)
+#
+#    following, if used, will supersede TRG width:
+#
+# DSC2_TRGDIGITAL   40  64    <- board digital TRG output: width (ns), delay (ns)
+#
+# DSC2_CH_TRGDIGITAL   0   40  64    <- channel digital TRG output: channel#, width (ns), delay (ns)
+#
+#
+DSC2_CRATE     hps2
+
+DSC2_SLOT       all
+
+# DSC2_SCALER_REFPRESCALE=1250 => 100kHz Reference clock
+DSC2_SCALER_REFPRESCALE 1250
+
+# FARADAY CUP (HPS2, SLOT 2):
+DSC2_WIDTH       20   40
+DSC2_THRESHOLD   400  500
+#DSC2_TRGDIGITAL 140      0
+#
+
+
+#DSC2_SCALER_FLAGS=1 => Allows overflow
+DSC2_SLOT       2
+DSC2_ENABLE_DAQ_READOUT 2
+DSC2_SCALER_FLAGS 1
+
+DSC2_CRATE     end

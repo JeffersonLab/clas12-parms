@@ -1,0 +1,40 @@
+
+#  epics GAMMA summary created by epics_monitor on Fri Mar 27 10:30:26 2015
+
+#     xxx, 17-Oct-07
+
+
+*epics*
+
+#Channel name              Channel value       
+#------------              -------------       
+Hall B energy              2010.35             
+pair spec current          0.00000             
+HPS:LS450_2:FIELD          -3.81000            
+HPS:LS450_1:FIELD          -20.0400            
+mini current readback      -2.00000            
+Moeller vacuum (V)         3.16258             
+VCG2C21A                   4.67689             
+VCG2C24A                   6.83726             
+VCG2H00A                   5.15358             
+VCG2H01A                   4.25330             
+VCG2H02A                   9.65316             
+Faraday cup                0.217454            
+scalerS12b                 0.00000             
+scalerS13b                 1.00000             
+scalerS14b                 0.00000             
+scalerS15b                 0.500000            
+hallb_IPM2C21A_XPOS        0.00000             
+hallb_IPM2C21A_YPOS        0.00000             
+hallb_IPM2C21A_CUR         0.00000             
+hallb_IPM2C24A_XPOS        0.00000             
+hallb_IPM2C24A_YPOS        0.00000             
+hallb_IPM2C24A_CUR         0.00000             
+hallb_IPM2H00_XPOS         0.00000             
+hallb_IPM2H00_YPOS         0.00000             
+hallb_IPM2H00_XPOS         0.00000             
+hallb_IPM2H00_XPOS         0.00000             
+hallb_IPM2H00_CUR          0.00000             
+hallb_IPM2H02_YPOS         0.00000             
+hallb_IPM2H02_XPOS         0.00000             
+

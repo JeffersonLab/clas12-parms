@@ -1,0 +1,73 @@
+Separately:
+
+
+hps12 (concurrent)
+
+Tasks: 196 total,   2 running, 194 sleeping,   0 stopped,   0 zombie
+Cpu(s): 11.8%us,  5.9%sy,  0.0%ni, 81.8%id,  0.0%wa,  0.2%hi,  0.3%si,  0.0%st
+Mem:   8194044k total,   316076k used,  7877968k free,        0k buffers
+Swap:        0k total,        0k used,        0k free,    52504k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 4401 clasrun   16   0  423m  51m 2956 R 80.1  0.6   1:25.41 coda_rols          
+ 4406 clasrun   16   0  423m  51m 2956 S 59.3  0.6   0:46.69 coda_proc          
+ 4405 clasrun   15   0  423m  51m 2956 S  2.6  0.6   0:02.51 coda_net           
+
+
+
+hps2 (GE old)
+
+Tasks: 124 total,   3 running, 121 sleeping,   0 stopped,   0 zombie
+Cpu(s): 26.2%us, 16.5%sy,  0.0%ni, 55.9%id,  0.2%wa,  0.3%hi,  0.9%si,  0.0%st
+Mem:   4004516k total,   270824k used,  3733692k free,        0k buffers
+Swap:        0k total,        0k used,        0k free,   105860k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 6684 clasrun   16   0  423m  51m 2856 R 89.4  1.3   0:38.48 coda_proc          
+ 6676 clasrun   16   0  423m  51m 2856 R 76.5  1.3   0:52.73 coda_rols          
+ 6683 clasrun   15   0  423m  51m 2856 S  7.3  1.3   0:02.96 coda_net           
+
+
+
+evrate 1500x20 Hz, datarate 100MB/sec
+
+
+
+
+
+
+
+
+Together:
+
+Tasks: 196 total,   2 running, 194 sleeping,   0 stopped,   0 zombie
+Cpu(s): 10.8%us,  6.7%sy,  0.0%ni, 82.2%id,  0.0%wa,  0.1%hi,  0.2%si,  0.0%st
+Mem:   8194044k total,   316904k used,  7877140k free,        0k buffers
+Swap:        0k total,        0k used,        0k free,    52532k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 4441 clasrun   18   0  424m  51m 2956 R 96.7  0.6   1:11.83 coda_rols          
+ 4446 clasrun   16   0  424m  51m 2956 S 41.4  0.6   0:21.65 coda_proc          
+ 4445 clasrun   15   0  424m  51m 2956 S  2.0  0.6   0:01.03 coda_net           
+
+
+
+Tasks: 124 total,   2 running, 122 sleeping,   0 stopped,   0 zombie
+Cpu(s): 22.1%us, 13.4%sy,  0.0%ni, 63.6%id,  0.0%wa,  0.2%hi,  0.7%si,  0.0%st
+Mem:   4004516k total,   271792k used,  3732724k free,        0k buffers
+Swap:        0k total,        0k used,        0k free,   105876k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            
+ 6701 clasrun   16   0  424m  51m 2856 S 69.7  1.3   0:34.88 coda_proc          
+ 6696 clasrun   16   0  424m  51m 2856 R 67.7  1.3   0:55.91 coda_rols          
+ 6700 clasrun   15   0  424m  51m 2856 S  6.3  1.3   0:02.67 coda_net           
+
+
+EB:
+
+ 19279 clasrun  2403M  330M cpu2    42    0   0:00:43  20% coda_ebc/41
+ 19279 clasrun  2403M  330M cpu3    20    0   0:00:15 7.1% coda_ebc/39
+ 19279 clasrun  2403M  330M sleep   32    0   0:00:09 4.5% coda_ebc/40
+
+
+evrate 1250x20 Hz, datarate about 85MB/s each

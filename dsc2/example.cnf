@@ -5,7 +5,7 @@
 # thresholds, widths, delays and masks
 #
 #
-##CRATE      <tdcecal1>
+DSC2_CRATE     all
 #
 #               slot   
 DSC2_SLOT         2
@@ -36,3 +36,4 @@ DSC2_CH_TRGDIGITAL    7      30         60
 # End
 #
 #
+DSC2_CRATE     end

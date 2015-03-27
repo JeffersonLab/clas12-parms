@@ -1,0 +1,96 @@
+#
+# hps2
+#
+FADC250_CRATE hps2
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+#FADC250_W_OFFSET  1200
+#FADC250_W_WIDTH   400
+
+
+# COSMICS:
+#FADC250_W_OFFSET  3420
+
+#FADC250_W_OFFSET 3180
+#FADC250_W_WIDTH   400
+
+FADC250_W_OFFSET 3008
+FADC250_W_WIDTH 400
+
+#raw mode
+#FADC250_MODE      1
+
+#pulse mode
+FADC250_MODE      3 
+FADC250_NPEAK     3
+# units: nanoseconds
+#FADC250_NSB       16
+#FADC250_NSA       84
+FADC250_NSB 20
+FADC250_NSA 100
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#
+# in range (0-4095) inclusuve
+#FADC250_TET 5
+#FADC250_TET 10
+#FADC250_TET 50
+#FADC250_TET 25
+#FADC250_TET 20
+#FADC250_TET 0
+FADC250_TET 12
+
+# This was supposed to set high threshold on all channels,
+# then to be overwritten by pmt channels below in order to
+# decrease data size by factor of two by ignoring the bottom
+# ecal.  Result was instead zero triggers (except for 1Hz pulser).
+#FADC250_TET 3500
+
+# Set cosmic system trigger threshold
+# 12bit -> 1V: 40 = ~10mV threshold
+# relative to pedestal
+FADC250_SLOT      20
+FADC250_CH_TET    13   40
+FADC250_CH_TET    14   40
+#FADC250_CH_TET    15   40
+
+
+
+FADC250_SLOT  3
+FADC250_ALLCH_GAIN    0.290   0.224   0.217   0.284   0.246   0.227   0.262   0.220   0.244   0.214   0.220   0.191   0.208   0.214   0.226   0.214
+FADC250_SLOT  4
+FADC250_ALLCH_GAIN    0.202   0.206   0.232   0.239   0.209   0.234   0.203   0.196   0.202   0.221   0.219   0.240   0.209   0.230   0.210   0.193
+FADC250_SLOT  5
+FADC250_ALLCH_GAIN    0.208   0.200   0.194   0.203   0.197   0.200   0.208   0.209   0.203   0.218   0.200   0.202   0.199   0.213   0.213   0.190
+FADC250_SLOT  6
+FADC250_ALLCH_GAIN    0.194   0.182   0.195   0.184   0.188   0.210   0.218   0.237   0.213   0.211   0.203   0.185   0.221   0.206   0.212   0.202
+FADC250_SLOT  7
+FADC250_ALLCH_GAIN    0.200   0.218   0.214   0.180   0.217   0.201   0.227   0.221   0.221   0.236   0.217   0.209   0.228   0.213   0.207   0.229
+FADC250_SLOT  8
+FADC250_ALLCH_GAIN    0.201   0.194   0.297   0.202   0.211   0.238   0.189   0.204   0.203   0.223   0.219   0.194   0.211   0.202   0.194   0.209
+FADC250_SLOT  9
+FADC250_ALLCH_GAIN    0.194   0.200   0.199   0.204   0.221   0.180   0.204   0.217   0.213   0.207   0.186   0.182   0.201   0.205   0.202   0.215
+FADC250_SLOT  14
+FADC250_ALLCH_GAIN    0.215   0.209   0.196   0.206   0.189   0.209   0.196   0.237   0.208   0.214   0.151   0.211   0.183   0.207   0.223   0.239
+FADC250_SLOT  15
+FADC250_ALLCH_GAIN    0.212   0.208   0.215   0.207   0.215   0.191   0.191   0.202   0.192   0.220   0.190   0.188   0.212   0.190   0.205   0.198
+FADC250_SLOT  16
+FADC250_ALLCH_GAIN    0.224   0.219   0.185   0.220   0.215   0.191   0.200   0.222   0.214   0.226   0.229   0.237   0.220   0.225   0.205   0.209
+FADC250_SLOT  17
+FADC250_ALLCH_GAIN    0.189   0.188   0.186   0.209   0.190   0.190   0.221   0.193   0.212   0.211   0.197   0.204   0.233   0.191   0.193   0.189
+FADC250_SLOT  18
+FADC250_ALLCH_GAIN    0.204   0.213   0.218   0.212   0.199   0.197   0.219   0.190   0.200   0.220   0.208   0.211   0.210   0.202   0.228   0.268
+FADC250_SLOT  19
+FADC250_ALLCH_GAIN    0.202   0.251   0.194   0.197   0.243   0.217   0.214   0.208   0.227   0.202   0.204   0.198   0.201   0.219   0.215   0.199
+FADC250_SLOT  20
+FADC250_ALLCH_GAIN    0.241   0.216   0.219   0.199   0.204   0.206   0.212   0.209   0.213   0.222   0.212   0.221   0.226   1.000   1.000   1.000
+
+
+FADC250_CRATE end

@@ -28,8 +28,16 @@
 # DSC2_CH_TRGDIGITAL   0   40  64    <- channel digital TRG output: channel#, width (ns), delay (ns)
 #
 #
+DSC2_CRATE     hps1
+
 DSC2_SLOT       all
+
+# DSC2_SCALER_REFPRESCALE=1250 => 100kHz Reference clock
+DSC2_SCALER_REFPRESCALE 1250
+
 DSC2_WIDTH       20     40
 DSC2_THRESHOLD   5  5
 #DSC2_TRGDIGITAL 140      0
 #
+
+DSC2_CRATE     end

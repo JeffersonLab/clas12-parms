@@ -5,7 +5,7 @@
 #
 # format:
 # ~~~~~~~
-# CRATE             rocbcal1   <- ROC/crate name, usually IP name
+# TDC1190_CRATE             rocbcal1   <- ROC/crate name, usually IP name
 #
 # TDC1190_ALLSLOTS             <- just keyword - all settings after this line will be implemented
 #                                                for all slots, till TDC1190_SLOTS will be met
@@ -41,6 +41,7 @@
 #....
 # TDC1190_MASK8   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.112-127
 
+TDC1190_CRATE tdcpcal5
 
 TDC1190_ALLSLOTS
 
@@ -78,3 +79,4 @@ TDC1190_MASK6     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 TDC1190_MASK7     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 TDC1190_MASK8     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 
+TDC1190_CRATE end

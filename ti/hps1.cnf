@@ -5,10 +5,8 @@
 #
 #TI_FIBER_DELAY_OFFSET 0x80 0xcf    # fiber delay and offsets (in HEX)
 #
-#TI_BLOCK_LEVEL 1                   # the number of events in readout block
-#
-#TI_BUFFER_LEVEL 1                  # 0 - pipeline mode, 1 - ROC Lock mode, >=2 - buffered mode
-#
+TI_CRATE hps1
 
-TI_FIBER_DELAY_OFFSET 0x80 0xcf
-TI_BLOCK_LEVEL 50
+TI_FIBER_DELAY_OFFSET 0x80 0xc9
+
+TI_CRATE end
