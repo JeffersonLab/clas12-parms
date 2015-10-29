@@ -1,5 +1,5 @@
 
-#  epics EPIC summary created by epics_monitor on Fri Mar 27 10:30:17 2015
+#  epics EPIC summary created by epics_monitor on Mon Oct 12 13:51:06 2015
 
 #     xxx, 17-Oct-07
 
@@ -8,17 +8,19 @@
 
 #Channel name              Channel value       Channel description
 #------------              -------------       -------------------
-SMRPOSB                    -0.999023           B slit position
-hps_collimator.RBV         6.15000             hps_collimator.RBV
-hps_target.RBV             -9999.00            hps_target.RBV
+SMRPOSB                    0.00000             B slit position
+hps_collimator.RBV         0.00000             hps_collimator.RBV
+hps:target:motor.RBV       0.00000             hps:target:motor.RBV
 beam_stop.RBV              0.00000             beam_stop.RBV
+hps:svt_top:motor.RBV      0.00000             hps:svt_top:motor.RBV
+hps:svt_bot:motor.RBV      0.00000             hps:svt_bot:motor.RBV
 scaler_cS3b                0.00000             scaler_cS3b
-scaler_cS4b                1.00000             scaler_cS4b
+scaler_cS4b                0.00000             scaler_cS4b
 scalerS8b                  0.00000             scalerS8b
-scalerS9b                  0.500000            scalerS9b
-scalerS10b                 2.00000             scalerS10b
-scalerS11b                 1.00000             scalerS11b
+scalerS9b                  0.00000             scalerS9b
+scalerS10b                 0.00000             scalerS10b
+scalerS11b                 0.00000             scalerS11b
 scaler_cS5b                0.00000             scaler_cS5b
-scaler_cS6b                2.00000             scaler_cS6b
-scaler_cS7b                1.00000             scaler_cS7b
+scaler_cS6b                0.00000             scaler_cS6b
+scaler_cS7b                0.00000             scaler_cS7b
 

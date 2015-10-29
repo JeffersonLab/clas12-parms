@@ -318,4 +318,36 @@
 		</description>
 	</dictEntry>
 
+	<dictEntry name="DC Composite Data" tag="0xe116" num="0" type="composite">
+		<description format="c,i,l,N(c,s)">
+			c	"slot number"
+			i	"trigger number"
+			l	"time stamp"
+			N	"number of channels fired"
+			c	"channel number"
+			s	"tdc value"
+		</description>
+	</dictEntry>
+
+	<dictEntry name="ADC v792 raw format" tag="0xe117" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+	<dictEntry name="MVT raw format" tag="0xe118" num="0" type="uint32">
+		<description>
+
+		</description>
+	</dictEntry>
+
+	<dictEntry name="FTT raw format" tag="0xe119" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+	<dictEntry name="TDC v775 raw format" tag="0xe11a" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
 </xmlDict>

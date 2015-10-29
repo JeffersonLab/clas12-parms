@@ -1,7 +1,7 @@
 #
-# hps1
+# hps12
 #
-FADC250_CRATE hps1
+FADC250_CRATE hps12
 
 
 FADC250_SLOT all

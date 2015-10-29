@@ -1,0 +1,11 @@
+#
+# DAQ config file
+#
+#  
+#
+
+DAQ_CRATE svt4
+
+DAQ_REPORT_RAW_DATA 1
+
+DAQ_CRATE end

@@ -1,0 +1,14 @@
+SSP_CRATE hps11
+SSP_ALLSLOTS
+SSP_HPS_PULSER 170
+SSP_CRATE end
+
+TI_CRATE all
+TI_BLOCK_LEVEL 10
+TI_BUFFER_LEVEL 5
+TI_RANDOM_TRIGGER 1 15 
+TI_CRATE end
+
+include dpm/dpm-default.trg
+include dpm/dpm-3sam-3rms.trg
+

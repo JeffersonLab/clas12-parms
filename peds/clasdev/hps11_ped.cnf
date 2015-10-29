@@ -1,0 +1,7 @@
+#
+# File generated automatically by DAQ running in RAW mode at Wed Jul 15 16:24:02 2015
+#
+FADC250_CRATE hps11
+FADC250_SLOT 13
+FADC250_ALLCH_PED   432.332  401.008    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000
+FADC250_CRATE end

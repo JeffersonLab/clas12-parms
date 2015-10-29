@@ -16,10 +16,16 @@
 #TI_BUFFER_LEVEL 1                              # 0 - pipeline mode, 1 - ROC Lock mode, >=2 - buffered mode
 #
 
+TI_CRATE all
+
 ###TI_ADD_SLAVE 1
 TI_FIBER_DELAY_OFFSET 0x80 0xcf
 TI_BLOCK_LEVEL 1
 TI_BUFFER_LEVEL 1
+
+TI_INPUT_PRESCALE 1  0
+
+TI_CRATE end
 
 # include dsc2/clasdev.cnf
 
@@ -53,11 +59,14 @@ TI_BUFFER_LEVEL 1
 # DSC2_CH_TRGDIGITAL   0   40  64    <- channel digital TRG output: channel#, width (ns), delay (ns)
 #
 #
+DSC2_CRATE     all
+
 DSC2_SLOT       all
 DSC2_WIDTH       20     40
 DSC2_THRESHOLD   10  10
 #DSC2_TRGDIGITAL 140      0
 #
+DSC2_CRATE     end
 
 # include fadc250/clasdev.cnf
 
@@ -69,7 +78,7 @@ DSC2_THRESHOLD   10  10
 #
 # format:
 # ~~~~~~~
-# CRATE             rocbcal1   <- ROC name, crate name, usually IP name
+# FADC250_CRATE     rocbcal1   <- ROC name, crate name, usually IP name
 # FADC250_ALLSLOTS             <- just keyword - all settings after this line will be implemented
 #                                                for all slots, till FADC250_SLOTS will be met
 # FADC250_SLOTS     3  8  15   <- slot_numbers - in which next settings will be implemented
@@ -112,6 +121,8 @@ DSC2_THRESHOLD   10  10
 # FADC250_CH_GAIN    0    210   <- channel# and Gain_value for this channel
 # FADC250_ALLCH_GAIN 210  220  210  215  215  220  220  210  210  215  215  220  220  210  215  220  <- 16 GAINs
 
+FADC250_CRATE all
+
 
 FADC250_SLOT all
 
@@ -138,6 +149,8 @@ FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 
 FADC250_TET 400
 
+FADC250_CRATE end
+
 # include tdc1190/clasdev.cnf
 
 #
@@ -149,11 +162,9 @@ FADC250_TET 400
 # ~~~~~~~
 # CRATE             rocbcal1   <- ROC/crate name, usually IP name
 #
-# TDC1190_ALLSLOTS             <- just keyword - all settings after this line will be implemented
-#                                                for all slots, till TDC1190_SLOTS will be met
 #
-# TDC1190_SLOTS     3  8  19   <- slot_numbers - in which next settings will be implemented
-#                                                till file ends or next TDC1190_SLOTS will be met
+# TDC1190_SLOT     3   <- slot_number - in which next settings will be implemented
+#                         till file ends or next TDC1190_SLOT will be met, can be 'all' for all slots
 #
 # TDC1190_BERR_FIFO  1   <- DMA Nwords method readout: 0 - use VME BUS error
 #                                                      1 - use event fifo
@@ -183,19 +194,18 @@ FADC250_TET 400
 #....
 # TDC1190_MASK8   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.112-127
 
+TDC1190_CRATE all
 
-TDC1190_ALLSLOTS
+TDC1190_SLOT all
 
-#TDC1190_A24_A32    2
-#TDC1190_SNGL_BLT   3
-#TDC1190_SST_RATE   0
 
 TDC1190_BERR_FIFO  1
-
 TDC1190_BLT_EVENTS 1
 TDC1190_N_HITS     64
 TDC1190_ALMOSTFULL 16384
 TDC1190_OUT_PROG   2
+
+
 
 #TDC1190_W_WIDTH    400
 #TDC1190_W_OFFSET -1050
@@ -218,3 +228,5 @@ TDC1190_MASK6     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 TDC1190_MASK7     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 TDC1190_MASK8     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 
+
+TDC1190_CRATE end

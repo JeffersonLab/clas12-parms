@@ -1,5 +1,5 @@
 
-#  epics GAMMA summary created by epics_monitor on Fri Mar 27 10:30:26 2015
+#  epics GAMMA summary created by epics_monitor on Mon Oct 12 13:51:21 2015
 
 #     xxx, 17-Oct-07
 
@@ -8,28 +8,28 @@
 
 #Channel name              Channel value       
 #------------              -------------       
-Hall B energy              2010.35             
+Hall B energy              1058.57             
 pair spec current          0.00000             
-HPS:LS450_2:FIELD          -3.81000            
-HPS:LS450_1:FIELD          -20.0400            
-mini current readback      -2.00000            
-Moeller vacuum (V)         3.16258             
-VCG2C21A                   4.67689             
-VCG2C24A                   6.83726             
-VCG2H00A                   5.15358             
-VCG2H01A                   4.25330             
-VCG2H02A                   9.65316             
-Faraday cup                0.217454            
+HPS:LS450_2:FIELD          6.28000             
+HPS:LS450_1:FIELD          -20.2700            
+mini current readback      0.00000             
+Moeller vacuum (V)         -9999.00            
+VCG2C21A                   -9999.00            
+VCG2C24A                   -9999.00            
+VCG2H00A                   -9999.00            
+VCG2H01A                   -9999.00            
+VCG2H02A                   -9999.00            
+Faraday cup                0.00000             
 scalerS12b                 0.00000             
-scalerS13b                 1.00000             
+scalerS13b                 0.00000             
 scalerS14b                 0.00000             
-scalerS15b                 0.500000            
-hallb_IPM2C21A_XPOS        0.00000             
-hallb_IPM2C21A_YPOS        0.00000             
-hallb_IPM2C21A_CUR         0.00000             
-hallb_IPM2C24A_XPOS        0.00000             
-hallb_IPM2C24A_YPOS        0.00000             
-hallb_IPM2C24A_CUR         0.00000             
+scalerS15b                 0.00000             
+hallb_IPM2C21A_XPOS        0.366116            
+hallb_IPM2C21A_YPOS        0.415226            
+hallb_IPM2C21A_CUR         0.149664            
+hallb_IPM2C24A_XPOS        46.1871             
+hallb_IPM2C24A_YPOS        36.5961             
+hallb_IPM2C24A_CUR         0.147184            
 hallb_IPM2H00_XPOS         0.00000             
 hallb_IPM2H00_YPOS         0.00000             
 hallb_IPM2H00_XPOS         0.00000             
@@ -37,4 +37,5 @@ hallb_IPM2H00_XPOS         0.00000
 hallb_IPM2H00_CUR          0.00000             
 hallb_IPM2H02_YPOS         0.00000             
 hallb_IPM2H02_XPOS         0.00000             
+SVT_bias_voltage_top       0.0665940           
 

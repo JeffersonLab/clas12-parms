@@ -1,0 +1,3 @@
+include fadc250/adcecal2_tet20_mode3.cnf
+include fadc250/adcpcal2_tet6_mode3.cnf
+include fadc250/adcftof2_tet20_mode3.cnf

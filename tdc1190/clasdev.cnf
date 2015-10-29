@@ -7,11 +7,9 @@
 # ~~~~~~~
 # CRATE             rocbcal1   <- ROC/crate name, usually IP name
 #
-# TDC1190_ALLSLOTS             <- just keyword - all settings after this line will be implemented
-#                                                for all slots, till TDC1190_SLOTS will be met
 #
-# TDC1190_SLOTS     3  8  19   <- slot_numbers - in which next settings will be implemented
-#                                                till file ends or next TDC1190_SLOTS will be met
+# TDC1190_SLOT     3   <- slot_number - in which next settings will be implemented
+#                         till file ends or next TDC1190_SLOT will be met, can be 'all' for all slots
 #
 # TDC1190_BERR_FIFO  1   <- DMA Nwords method readout: 0 - use VME BUS error
 #                                                      1 - use event fifo
@@ -43,18 +41,16 @@
 
 TDC1190_CRATE all
 
-TDC1190_ALLSLOTS
+TDC1190_SLOT all
 
-#TDC1190_A24_A32    2
-#TDC1190_SNGL_BLT   3
-#TDC1190_SST_RATE   0
 
 TDC1190_BERR_FIFO  1
-
 TDC1190_BLT_EVENTS 1
 TDC1190_N_HITS     64
 TDC1190_ALMOSTFULL 16384
 TDC1190_OUT_PROG   2
+
+
 
 #TDC1190_W_WIDTH    400
 #TDC1190_W_OFFSET -1050

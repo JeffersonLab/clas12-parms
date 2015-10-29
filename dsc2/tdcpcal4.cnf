@@ -32,7 +32,7 @@ DSC2_CRATE     tdcpcal4
 
 DSC2_SLOT       all
 DSC2_WIDTH       20     40
-DSC2_THRESHOLD   5 5
+DSC2_THRESHOLD   3 3
 #
 ###DSC2_TRGDIGITAL 140      0
 #

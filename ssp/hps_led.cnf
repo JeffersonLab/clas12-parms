@@ -180,8 +180,8 @@ SSP_HPS_SET_IO_SRC    10    0   # HPS PAIRS 1   -> TI TS4
 # calibration triggers:
 SSP_HPS_SET_IO_SRC    11    24   # HPS LED       -> TI TS5
 #SSP_HPS_SET_IO_SRC    11    25   # HPS COSMIC    -> TI TS5
-SSP_HPS_SET_IO_SRC    12    18   # PULSER        -> TI TS6
-#SSP_HPS_SET_IO_SRC    12    0   # PULSER        -> TI TS6
+#SSP_HPS_SET_IO_SRC    12    18   # PULSER        -> TI TS6
+SSP_HPS_SET_IO_SRC    12    0   # PULSER        -> TI TS6
 
 
 # coinc time 10=40 ns

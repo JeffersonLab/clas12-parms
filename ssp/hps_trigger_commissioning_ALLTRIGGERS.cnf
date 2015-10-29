@@ -164,19 +164,19 @@ SSP_BERR  1
 SSP_W_WIDTH   100
 SSP_W_OFFSET  756
 
-SSP_HPS_PULSER 10000       # 1Hz pulser period
+SSP_HPS_PULSER 140       # 1Hz pulser period
 
 # enable ecal triggers:
-SSP_HPS_SET_IO_SRC    7     20   # HPS SINGLES 0 -> TI TS1
-SSP_HPS_SET_IO_SRC    8     21   # HPS SINGLES 1 -> TI TS2
-SSP_HPS_SET_IO_SRC    9     22   # HPS PAIRS 0   -> TI TS3
-SSP_HPS_SET_IO_SRC    10    23   # HPS PAIRS 1   -> TI TS4
+#SSP_HPS_SET_IO_SRC    7     20   # HPS SINGLES 0 -> TI TS1
+#SSP_HPS_SET_IO_SRC    8     21   # HPS SINGLES 1 -> TI TS2
+#SSP_HPS_SET_IO_SRC    9     22   # HPS PAIRS 0   -> TI TS3
+#SSP_HPS_SET_IO_SRC    10    23   # HPS PAIRS 1   -> TI TS4
 
 # disable ecal triggers:
-#SSP_HPS_SET_IO_SRC    7     0   # HPS SINGLES 0 -> TI TS1
-#SSP_HPS_SET_IO_SRC    8     0   # HPS SINGLES 1 -> TI TS2
-#SSP_HPS_SET_IO_SRC    9     0   # HPS PAIRS 0   -> TI TS3
-#SSP_HPS_SET_IO_SRC    10    0   # HPS PAIRS 1   -> TI TS4
+SSP_HPS_SET_IO_SRC    7     0   # HPS SINGLES 0 -> TI TS1
+SSP_HPS_SET_IO_SRC    8     0   # HPS SINGLES 1 -> TI TS2
+SSP_HPS_SET_IO_SRC    9     0   # HPS PAIRS 0   -> TI TS3
+SSP_HPS_SET_IO_SRC    10    0   # HPS PAIRS 1   -> TI TS4
 
 # enable calibration triggers:
 #SSP_HPS_SET_IO_SRC    11    24   # HPS LED       -> TI TS5
