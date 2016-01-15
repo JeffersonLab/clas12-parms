@@ -1,0 +1,579 @@
+
+
+# include fadc250/hps1.cnf-LED-MODE1
+
+#
+# hps1
+#
+# *     -     1 - Raw Window
+# *     -     2 - Pulse Raw Window
+# *     -     3 - Pulse Integral
+# *     -     4 - High-resolution time
+# *     -     7 - Mode 3 + Mode 4
+# *     -     8 - Mode 1 + Mode 4
+#
+FADC250_CRATE hps1
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+#FADC250_W_OFFSET  1200
+FADC250_W_WIDTH   400
+
+
+###FADC250_W_OFFSET  3300
+###FADC250_W_WIDTH   400
+
+# LED:
+#FADC250_W_OFFSET 3180
+# AFTER FRIMGAWQR CHANGES:
+FADC250_W_OFFSET 2940
+
+
+# COSMIC:
+#FADC250_W_OFFSET  3420
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       80
+FADC250_NPEAK     1
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_MODE      7
+#FADC250_NSB       16
+#FADC250_NSA       100
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#
+#FADC250_TET 20
+FADC250_TET 50
+#FADC250_TET 20
+
+#FADC250_SLOT     18
+#FADC250_ADC_MASK  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+# Set LED system trigger threshold
+FADC250_SLOT      20
+FADC250_CH_TET    15   500
+
+
+#
+#
+#FADC250_SLOT 3
+#FADC250_ALLCH_GAIN 0.114 0.126 0.119 0.112 0.121 0.094 0.101 0.118 0.107 0.117 0.202 0.181 0.219 0.213 0.192 0.183
+#FADC250_SLOT 4
+#FADC250_ALLCH_GAIN 0.201 0.179 0.211 0.198 0.128 0.116 0.128 0.123 0.136 0.133 0.115 0.130 0.134 0.150 0.178 0.190
+#FADC250_SLOT 5
+#FADC250_ALLCH_GAIN 0.198 0.176 0.176 0.198 0.168 0.184 0.180 0.199 0.115 0.124 0.117 0.124 0.122 0.129 0.109 0.122
+#FADC250_SLOT 6
+#FADC250_ALLCH_GAIN 0.120 0.107 0.192 0.213 0.200 0.186 0.192 0.188 0.214 1.852 0.274 0.221 0.123 0.104 0.122 0.121
+#FADC250_SLOT 7
+#FADC250_ALLCH_GAIN 0.123 0.135 0.109 0.116 0.119 0.122 0.202 0.188 0.173 0.140 0.191 0.178 0.191 0.178 0.179 0.201
+#FADC250_SLOT 8
+#FADC250_ALLCH_GAIN 0.182 0.189 0.175 0.188 0.185 0.186 0.180 0.192 0.186 0.182 0.181 0.194 0.207 0.189 0.182 0.195
+#FADC250_SLOT 9
+#FADC250_ALLCH_GAIN 0.203 0.190 0.194 0.175 0.172 0.197 0.184 0.183 0.184 0.177 0.196 0.182 0.179 0.188 0.193 0.206
+#FADC250_SLOT 14
+#FADC250_ALLCH_GAIN 0.189 0.193 0.197 0.219 0.169 0.207 0.196 0.170 0.171 0.194 0.185 0.188 0.186 0.189 0.173 0.192
+#FADC250_SLOT 15
+#FADC250_ALLCH_GAIN 0.177 0.194 0.190 0.190 0.203 0.191 0.187 0.187 0.195 0.204 0.165 0.170 0.204 1.727 0.184 0.184
+#FADC250_SLOT 16
+#FADC250_ALLCH_GAIN 0.177 0.173 0.030 0.188 0.207 0.169 0.170 0.174 0.187 0.199 0.182 0.200 0.170 0.193 0.188 0.175
+#FADC250_SLOT 17
+#FADC250_ALLCH_GAIN 0.196 0.186 0.191 0.171 0.190 0.203 0.187 0.207 0.193 0.187 0.207 0.166 0.181 0.189 0.204 0.186
+#FADC250_SLOT 18
+#FADC250_ALLCH_GAIN 0.166 0.204 0.168 0.183 0.205 0.192 0.179 0.171 0.172 0.178 0.185 0.181 0.180 0.191 0.194 0.184
+#FADC250_SLOT 19
+#FADC250_ALLCH_GAIN 0.171 0.171 0.175 0.193 0.182 0.186 0.175 0.188 0.182 0.225 0.188 0.188 0.188 0.207 0.176 0.168
+#FADC250_SLOT 20
+#FADC250_ALLCH_GAIN 0.174 0.179 0.155 0.173 0.168 0.175 0.189 0.184 0.168 0.194 0.199 0.194 0.175 0.227 0.227 0.227
+#
+
+
+FADC250_CRATE end
+
+# include fadc250/hps2.cnf-LED-MODE1
+
+#
+# hps2
+#
+# *     -     1 - Raw Window
+# *     -     2 - Pulse Raw Window
+# *     -     3 - Pulse Integral
+# *     -     4 - High-resolution time
+# *     -     7 - Mode 3 + Mode 4
+# *     -     8 - Mode 1 + Mode 4
+#
+FADC250_CRATE hps2
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+#FADC250_W_OFFSET  1200
+FADC250_W_WIDTH   400
+
+
+#FADC250_W_OFFSET  3300
+###FADC250_W_WIDTH   400
+
+# LED:
+#FADC250_W_OFFSET 3180
+# AFTER FRIMGAWQR CHANGES:
+FADC250_W_OFFSET 2940
+
+
+# COSMICS:
+#FADC250_W_OFFSET  3420
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       80
+FADC250_NPEAK     1
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_MODE      7
+#FADC250_NSB       16
+#FADC250_NSA       100
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#
+# in range (0-4095) inclusuve
+#FADC250_TET 20
+FADC250_TET 50
+#FADC250_TET 20
+
+# This was supposed to set high threshold on all channels,
+# then to be overwritten by pmt channels below in order to
+# decrease data size by factor of two by ignoring the bottom
+# ecal.  Result was instead zero triggers (except for 1Hz pulser).
+#FADC250_TET 3500
+
+# Set cosmic system trigger threshold
+# 12bit -> 1V: 40 = ~10mV threshold
+# relative to pedestal
+#FADC250_SLOT      20
+#FADC250_CH_TET    13   40
+#FADC250_CH_TET    14   40
+#FADC250_CH_TET    15   40
+
+
+#
+#FADC250_SLOT 3
+#FADC250_ALLCH_GAIN 0.186 0.179 0.178 0.194 0.156 0.175 0.181 0.163 0.189 0.183 0.196 0.169 0.176 0.178 0.200 0.188
+#FADC250_SLOT 4
+#FADC250_ALLCH_GAIN 0.189 0.182 0.200 0.194 0.130 0.142 0.121 0.118 0.116 0.134 0.134 0.146 0.119 0.142 0.197 0.168
+#FADC250_SLOT 5
+#FADC250_ALLCH_GAIN 0.183 0.185 0.174 0.187 0.173 0.170 0.180 0.189 0.124 0.135 0.116 0.130 0.120 0.130 0.125 0.119
+#FADC250_SLOT 6
+#FADC250_ALLCH_GAIN 0.112 0.103 0.181 0.170 0.173 0.193 0.193 0.214 0.180 0.193 0.188 0.169 0.140 0.123 0.126 0.110
+#FADC250_SLOT 7
+#FADC250_ALLCH_GAIN 0.118 0.132 0.138 0.104 0.122 0.115 0.216 0.196 0.189 0.211 0.197 0.192 0.204 0.186 0.191 0.208
+#FADC250_SLOT 8
+#FADC250_ALLCH_GAIN 0.117 0.115 0.217 0.112 0.122 0.151 0.114 0.126 0.126 0.140 0.205 0.176 0.187 0.181 0.181 0.186
+#FADC250_SLOT 9
+#FADC250_ALLCH_GAIN 0.178 0.184 0.170 0.196 0.149 0.108 0.134 0.142 0.129 0.141 0.121 0.116 0.125 0.131 0.163 0.192
+#FADC250_SLOT 14
+#FADC250_ALLCH_GAIN 0.194 0.176 0.187 0.184 0.178 0.189 0.176 0.202 0.190 0.194 0.142 0.191 0.160 0.188 0.197 0.204
+#FADC250_SLOT 15
+#FADC250_ALLCH_GAIN 0.196 0.180 0.185 0.180 0.204 0.170 0.165 0.198 0.172 0.197 0.182 0.175 0.197 0.178 0.184 0.182
+#FADC250_SLOT 16
+#FADC250_ALLCH_GAIN 0.194 0.199 0.170 0.194 0.191 0.171 0.170 0.199 0.196 0.197 0.198 0.195 0.209 0.191 0.193 0.181
+#FADC250_SLOT 17
+#FADC250_ALLCH_GAIN 0.177 0.168 0.166 0.186 0.173 0.173 0.201 0.173 0.185 0.184 0.186 0.180 0.201 0.178 0.172 0.171
+#FADC250_SLOT 18
+#FADC250_ALLCH_GAIN 0.191 0.186 0.185 0.190 0.181 0.189 0.201 0.162 0.189 0.198 0.199 0.194 0.186 0.173 0.211 0.211
+#FADC250_SLOT 19
+#FADC250_ALLCH_GAIN 0.189 0.214 0.181 0.182 0.200 0.186 0.195 0.194 0.209 0.168 0.186 0.175 0.174 0.185 0.191 0.163
+#FADC250_SLOT 20
+#FADC250_ALLCH_GAIN 0.200 0.171 0.197 0.174 0.174 0.187 0.181 0.187 0.195 0.190 0.182 0.188 0.197 0.227 0.227 0.227
+
+FADC250_CRATE end
+
+
+# include dsc2/hps11.cnf-HIGHTHRESH
+
+#
+# dsc2 config file for expid=clondev
+#
+# this file contains settings  for JLAB VME Discriminators DSC2
+#
+# CRATE      <tdcecal1>     <- crate name, usually IP name
+#
+# DSC2_SLOT  2   <- slot#
+#
+# DSC2_WIDTH  20  40   <- TDC width (ns), TRG width (ns)
+#
+# DSC2_TDCMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TDC enable mask
+#
+# DSC2_TRGMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TRG enable mask
+#
+# DSC2_TDCORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TDC OR mask
+#
+# DSC2_TRGORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TRG OR mask
+#
+# DSC2_THRESHOLD  20  50   <- board threshold: TDC threshold (mV), TRG threshold (mV)
+#
+# DSC2_CH_THRESHOLD    0  20   50   <- channel threshold: channel#, TDC threshold (mV), TRG threshold (mV)
+#
+#    following, if used, will supersede TRG width:
+#
+# DSC2_TRGDIGITAL   40  64    <- board digital TRG output: width (ns), delay (ns)
+#
+# DSC2_CH_TRGDIGITAL   0   40  64    <- channel digital TRG output: channel#, width (ns), delay (ns)
+#
+#
+DSC2_CRATE     hps11
+
+DSC2_SLOT       all
+
+# DSC2_SCALER_REFPRESCALE=1250 => 100kHz Reference clock
+DSC2_SCALER_REFPRESCALE 1250
+
+# ECAL, MINIMIZE THRESHOLD (0=27mV):
+DSC2_WIDTH       20  40
+DSC2_THRESHOLD   20  20
+#DSC2_TRGDIGITAL 140      0
+
+
+# RF SIGNAL, SLOT 20 CHANNELS 13/14:
+DSC2_SLOT 20
+DSC2_CH_THRESHOLD 13 400 500
+DSC2_CH_THRESHOLD 14 400 500
+
+
+# WHAT IS THIS (NOTHING IN SLOT2):
+DSC2_SLOT       2
+DSC2_CH_THRESHOLD    1  300   200
+
+#
+DSC2_CRATE     end
+
+# include dsc2/hps12.cnf-HIGHTHRESH
+
+#
+# dsc2 config file for expid=clondev
+#
+# this file contains settings  for JLAB VME Discriminators DSC2
+#
+# CRATE      <tdcecal1>     <- crate name, usually IP name
+#
+# DSC2_SLOT  2   <- slot#
+#
+# DSC2_WIDTH  20  40   <- TDC width (ns), TRG width (ns)
+#
+# DSC2_TDCMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TDC enable mask
+#
+# DSC2_TRGMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TRG enable mask
+#
+# DSC2_TDCORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TDC OR mask
+#
+# DSC2_TRGORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TRG OR mask
+#
+# DSC2_THRESHOLD  20  50   <- board threshold: TDC threshold (mV), TRG threshold (mV)
+#
+# DSC2_CH_THRESHOLD    0  20   50   <- channel threshold: channel#, TDC threshold (mV), TRG threshold (mV)
+#
+#    following, if used, will supersede TRG width:
+#
+# DSC2_TRGDIGITAL   40  64    <- board digital TRG output: width (ns), delay (ns)
+#
+# DSC2_CH_TRGDIGITAL   0   40  64    <- channel digital TRG output: channel#, width (ns), delay (ns)
+#
+#
+DSC2_CRATE     hps12
+
+DSC2_SLOT       all
+
+# DSC2_SCALER_REFPRESCALE=1250 => 100kHz Reference clock
+DSC2_SCALER_REFPRESCALE 1250
+
+# ECAL, MINIMIZE THERSHOLD (0=27mV):
+DSC2_WIDTH       20  40
+DSC2_THRESHOLD   20  20
+#DSC2_TRGDIGITAL 140      0
+
+# RF SIGNAL, SLOT 20 CHANNELS 13/14:
+DSC2_SLOT 20
+DSC2_CH_THRESHOLD 13 400 500
+DSC2_CH_THRESHOLD 14 400 500
+
+# WHAT IS THIS (NOTHING IN SLOT2)?
+DSC2_SLOT       2
+DSC2_CH_THRESHOLD    1  300   200
+
+
+
+DSC2_CRATE     end
+
+
+# include ti/hps11.cnf-NONBLOCKING
+
+#
+#TI_CRATE      <tdcecal1>     <- crate name, usually IP name
+#
+#TI_ADD_SLAVE 1                     # for every slave need to be added
+#
+#TI_FIBER_DELAY_OFFSET 0x80 0xcf    # fiber delay and offsets (in HEX)
+#
+#TI_BLOCK_LEVEL 1                   # the number of events in readout block
+#
+#TI_BUFFER_LEVEL 1                  # 0 - pipeline mode, 1 - ROC Lock mode, >=2 - buffered mode
+#
+#TI_INPUT_PRESCALE bit prescale     # bit: 0-5, prescale: 0-15, actual prescale value is 2^prescale
+#
+#TI_RANDOM_TRIGGER en prescale      # en: 0=disabled 1=enabled, prescale: 0-15, nominal rate = 500kHz/2^prescale
+
+TI_CRATE hps11
+
+#TI_ADD_SLAVE 1
+#TI_ADD_SLAVE 2
+#TI_ADD_SLAVE 3
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+TI_BUFFER_LEVEL 8
+TI_BLOCK_LEVEL  1
+
+TI_INPUT_PRESCALE 1  0
+TI_INPUT_PRESCALE 2  0
+TI_INPUT_PRESCALE 3  0
+TI_INPUT_PRESCALE 4  0
+TI_INPUT_PRESCALE 5  0
+TI_INPUT_PRESCALE 6  0
+
+#500kHz / 2^15 => ~15Hz random
+#TI_RANDOM_TRIGGER 1 15
+
+TI_CRATE end
+
+
+# include ssp/hps_led.cnf
+
+#
+# ssp config file
+#
+# this file contains settings for SSP
+#
+# format:
+# ~~~~~~~
+# CRATE             rocbcal1   <- ROC/crate name, usually IP name
+#
+# SSP_ALLSLOTS             <- just keyword - all settings after this line will be implemented
+#                                                for all slots, till SSP_SLOTS will be met
+#
+# SSP_SLOTS     3  8  19   <- slot_numbers - in which next settings will be implemented
+#                                                till file ends or next SSP_SLOTS will be met
+#
+# SSP_BERR  1   <- DMA Nwords method readout: 1 - enable VME BUS error
+#                                             0 - disable VME BUS error
+#
+# SSP_BLOCK_LEVEL 1      <- to set block level
+#
+# SSP_W_WIDTH    N
+#    N: 0 to 1023 - Trigger Window Width, in 4ns ticks
+#
+# SSP_W_OFFSET   N
+#    N: 0 to 1023 - Trigger Window Offset, in 4ns ticks
+#
+# SSP_HPS_LATENCY  LATENCY
+#    LATENCY: 0 to 511 - sets trigger latency (in 4ns ticks)
+#
+# SSP_HPS_SINGLES:
+# ----------------
+# SSP_HPS_SINGLES_EMIN  N  EMIN   EN
+#    N:    0 or 1 - selects the hps singles trigger bit
+#    EMIN: 0 to 8191MeV - cluster energies below this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_SINGLES_EMAX  N  EMAX   EN
+#    N:    0 or 1 - selects the hps singles trigger bit
+#    EMAX: 0 to 8191MeV - cluster energies above this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_SINGLES_NMIN  N  NMIN   EN
+#    N:    0 or 1 - selects the hps singles trigger bit
+#    NMIN: 0 to 9 - cluster with #hits below this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_COSMICS:
+# ----------------
+# SSP_HPS_COSMIC_TIMECOINCIDENCE  T
+#    T:    0 to 255 - sets cosmic hit coincidence time (in 4ns ticks)
+#
+# SSP_HPS_COSMIC_PATTERNCOINCIDENCE  pattern
+#    pattern  - 3:1 LUT definition for scintillator coincidence pattern that is accepted/rejected
+#                Scintillator channels are the last 3 channels (14-16) of FADC in slot 20
+#                pattern = 254 will trigger on any hit channels
+#                pattern = 128 will trigger when all 3 channels hit
+#                pattern = 136 will trigger when channels 14&15 are hit
+#                pattern = 232 will trigger when any 2 channels hit
+#
+# SSP_HPS_PAIRS:
+# ----------------
+# SSP_HPS_PAIRS_TIMECOINCIDENCE  N   T
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    T:    0 to 15 - sets cluster pair hit coincidence time (in +/-4ns ticks)
+#
+# SSP_HPS_PAIRS_EMIN  N   EMIN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    EMIN: 0 to 8191MeV - clusters energies below this threshold are cut
+#
+# SSP_HPS_PAIRS_EMAX  N   EMAX
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    EMAX: 0 to 8191MeV - clusters energies above this threshold are cut
+#
+# SSP_HPS_PAIRS_NMIN  N   NMIN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    NMIN: 0 to 9 - cluster with #hits below this threshold are cut
+#
+# SSP_HPS_PAIRS_SUMMAX  N   MAX   EN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    MAX:  0 to 8191MeV - cluster pairs energy sums above this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_PAIRS_DIFFMAX  N  MAX   EN 
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    MAX:  0 to 8191MeV - cluster pairs energy differences above this threshold are cut
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_PAIRS_COPLANARITY  N   ANGLE  EN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    ANGLE: 0 to 180 - cluster pair coplanarity with photon beam must be < +/-ANGLE (in degress)
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_PAIRS_ENERGYDIST  N   F  MIN  EN
+#    N:    0 or 1 - selects the hps pair trigger bit
+#    F:    0 to 8191 - conversion factor in MeV/mm to compensate cluster energy by radial distance from photon beam
+#    MIN:  0 to 8191 - minimum threshold in MeV to accept cluster pair.
+#          For each pair, the cluster with the smallest energy, Emin, is used in this cut.
+#          That cluster's minimum distance to photon beam is computed, R, and tested in the equation:
+#              MIN < Emin + F * R
+#          When the above is true the cluster pair passes this cut, otherwise it is cut.
+#    EN:   1 - enables, 0 - disables
+#
+# SSP_HPS_PULSER   F
+#    F:     Pulser frequency (0 to 125MHz)
+#
+# SSP_HPS_SET_IO_SRC   OUTPUT_PIN     SIGNAL_SEL
+#    OUTPUT_PIN selection:
+#       LVDSOUT0        0
+#       LVDSOUT1        1
+#       LVDSOUT2        2
+#       LVDSOUT3        3
+#       LVDSOUT4        4
+#       GPIO0           5
+#       GPIO1           6
+#       P2_LVDSOUT0     7
+#       P2_LVDSOUT1     8
+#       P2_LVDSOUT2     9
+#       P2_LVDSOUT3     10
+#       P2_LVDSOUT4     11
+#       P2_LVDSOUT5     12
+#       P2_LVDSOUT6     13
+#       P2_LVDSOUT7     14
+#       TRIG            15
+#       SYNC            16
+#
+#    SIGNAL_SEL selection:
+#       0          0
+#       1          1
+#       SYNC       2
+#       TRIG1      3
+#       TRIG2      4
+#       LVDSIN0    5
+#       LVDSIN1    6
+#       LVDSIN2    7
+#       LVDSIN3    8
+#       LVDSIN4    9
+#       P2LVDSIN0  10
+#       P2LVDSIN1  11
+#       P2LVDSIN2  12
+#       P2LVDSIN3  13
+#       P2LVDSIN4  14
+#       P2LVDSIN5  15
+#       P2LVDSIN6  16
+#       P2LVDSIN7  17
+#       PULSER     18
+#       BUSY       19
+#       TRIGGER0   20   (HPS SINGLES 0)
+#       TRIGGER1   21   (HPS SINGLES 1)
+#       TRIGGER2   22   (HPS PAIRS 0)
+#       TRIGGER3   23   (HPS PAIRS 1)
+#       TRIGGER4   24   (HPS LED)
+#       TRIGGER5   25   (HPS COSMIC)
+#       TRIGGER6   26
+#       TRIGGER7   27
+
+SSP_CRATE hps11
+
+SSP_ALLSLOTS
+
+SSP_BERR  1
+
+SSP_BLOCK_LEVEL 1
+
+SSP_W_WIDTH   100
+SSP_W_OFFSET  739
+
+SSP_HPS_PULSER 10000         # 1Hz pulser period
+
+#SSP_HPS_SET_IO_SRC    7     20   # HPS SINGLES 0 -> TI TS1
+#SSP_HPS_SET_IO_SRC    8     21   # HPS SINGLES 1 -> TI TS2
+#SSP_HPS_SET_IO_SRC    9     22   # HPS PAIRS 0   -> TI TS3
+#SSP_HPS_SET_IO_SRC    10    23   # HPS PAIRS 1   -> TI TS4
+
+# try to disable ecal triggers:
+SSP_HPS_SET_IO_SRC    7     0   # HPS SINGLES 0 -> TI TS1
+SSP_HPS_SET_IO_SRC    8     0   # HPS SINGLES 1 -> TI TS2
+SSP_HPS_SET_IO_SRC    9     0   # HPS PAIRS 0   -> TI TS3
+SSP_HPS_SET_IO_SRC    10    0   # HPS PAIRS 1   -> TI TS4
+
+# calibration triggers:
+SSP_HPS_SET_IO_SRC    11    24   # HPS LED       -> TI TS5
+#SSP_HPS_SET_IO_SRC    11    25   # HPS COSMIC    -> TI TS5
+#SSP_HPS_SET_IO_SRC    12    18   # PULSER        -> TI TS6
+SSP_HPS_SET_IO_SRC    12    0   # PULSER        -> TI TS6
+
+
+# coinc time 10=40 ns
+SSP_HPS_COSMIC_TIMECOINCIDENCE  10
+
+# cosmic: (B2 or B1) & B0 - two upper scintillators partially overlaped in coinc with bottom one
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE  168
+
+# cosmic: B2 or B1 or B0 - or of all scintillators
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE  254
+
+# cosmic: B0 - bottom scintillator only
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE  170
+
+# cosmic: B0 and B1
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE 136
+
+# led trigger
+#SSP_HPS_COSMIC_PATTERNCOINCIDENCE  254
+
+# cosmic B0 and B1 (136<<8) + led trigger (254<<0)
+SSP_HPS_COSMIC_PATTERNCOINCIDENCE   35070
+
+SSP_HPS_LATENCY 475
+
+
+
+SSP_CRATE end
+

@@ -1,0 +1,31 @@
+FADC250_CRATE adcpcal4
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+#FADC250_MODE      1
+#FADC250_NSB       3
+#FADC250_NSA       14
+#FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcpcal4_ped.cnf
+
+#pulse mode
+FADC250_MODE      7
+FADC250_NSB       12
+FADC250_NSA       156
+FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end

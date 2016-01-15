@@ -427,5 +427,9 @@ FADC250_CH_TET 12 1
 
 # SVT stuff
 include dpm/dpm-default.trg
+#include dpm/dpm-isha120-vfs0.trg
+#include dpm/dpm-isha240-vfs0.trg
+#include dpm/dpm-isha120-vfs100.trg
+#include dpm/dpm-isha70-vfs0.trg
 #include dpm/dpm-3sam-3rms.trg
 

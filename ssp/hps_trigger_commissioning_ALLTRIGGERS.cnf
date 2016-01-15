@@ -44,6 +44,20 @@
 #    NMIN: 0 to 9 - cluster with #hits below this threshold are cut
 #    EN:   1 - enables, 0 - disables
 #
+# SSP_HPS_SINGLES_PRESCALE N REGION XMIN XMAX PRESCALE
+#    N:        0 or 1 - selects the hps singles trigger bit
+#    REGION:   0 to 6 - selects which region index to define
+#    XMIN:    -31 to 31  - chooses the ECAL x coordinate to start region definition (inclusive)
+#    XMAX:    -31 to 31  - chooses the ECAL x coordinate to end region definition  (inclusive)
+#    PRESCALE: 0 to 65535 - set the prescale value for the region
+#
+#    Notes:
+#         1) To disable prescaling, set a region to cover the whole ECAL (i.e. xmin = -31, max = 31) and use PRESCALE = 0
+#         2) When using prescaling, define regions to be mutually exclusive to make the actual prescaling simple to understand
+#         3) The prescalers for all regions are OR'd together to form the actual singles trigger bit
+#         4) By default (if not defining anything) Region 0 is defined as the whole ECAL with prescaling disabled
+#            and Regions 1-6 are defined outside the ECAL range (i.e. disabled)
+#
 # SSP_HPS_COSMICS:
 # ----------------
 # SSP_HPS_COSMIC_TIMECOINCIDENCE  T

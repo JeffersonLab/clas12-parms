@@ -1,8 +1,8 @@
-Run at Mon Oct 12 13:50:01 EDT 2015
+Run at Thu Jan  7 15:11:44 EST 2016
 
 online, 35:  Online problem:  alarm_browser did not respond to status poll request
-online, 14:  alarm_handler responded to status poll request
-online, 6:  alarm_server responded to status poll request
-online, 4:  epics_monitor responded to status poll request
+online, 14:  Online problem:  alarm_handler did not respond to status poll request
+online, 6:  Online problem:  alarm_server did not respond to status poll request
+online, 4:  Online problem:  epics_monitor did not respond to status poll request
 online, 17:  Online problem:  ipcbank2et did not respond to status poll request
-online, 55:  clas_epics_server responded to status poll request
+online, 55:  Online problem:  clas_epics_server did not respond to status poll request

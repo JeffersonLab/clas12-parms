@@ -350,4 +350,17 @@
 		</description>
 	</dictEntry>
 
+	<dictEntry name="MVT composite data" tag="0xe11b" num="0" type="composite">
+		<description format="c,i,l,N(s,Ns)">
+			c	"slot number"
+			i	"trigger number"
+			l	"time stamp"
+			N	"number of channels fired"
+			s	"channel number"
+			N	"number of adc samples"
+			s	"adc value"
+		</description>
+	</dictEntry>
+
+
 </xmlDict>

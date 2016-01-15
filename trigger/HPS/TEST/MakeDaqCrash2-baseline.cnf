@@ -502,11 +502,15 @@ FADC250_CH_TET 12 1
 #
 
 # SVT stuff
+#include dpm/dpm-default.trg
+#include dpm/dpm-isha120-vfs0.trg
+#include dpm/dpm-isha240-vfs0.trg
+#include dpm/dpm-isha120-vfs100.trg
 
-# include dpm/dpm-default.trg
+# include dpm/dpm-isha70-vfs0.trg
 
 DPM_CRATE all
-DPM_CONFIG_FILE /usr/clas12/release/0.2/slac_svt/svtdaq/daq/config/rce_config.xml
+DPM_CONFIG_FILE /usr/clas12/release/0.3/slac_svt/svtdaq/daq/config/rce_config_isha70_vfs0.xml
 DPM_CRATE end
 #include dpm/dpm-3sam-3rms.trg
 

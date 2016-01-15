@@ -1,0 +1,236 @@
+#
+# main config file
+#
+
+# include ti/clasdev.cnf
+
+#
+#CRATE      <tdcecal1>     <- crate name, usually IP name
+#
+#TI_ADD_SLAVE 1                                 # for every slave need to be added
+#
+#TI_FIBER_DELAY_OFFSET 0x80 0xcf                # fiber delay and offsets
+#
+#TI_BLOCK_LEVEL 1                               # the number of events in readout block
+#
+#TI_BUFFER_LEVEL 1                              # 0 - pipeline mode, 1 - ROC Lock mode, >=2 - buffered mode
+#
+
+TI_CRATE all
+
+###TI_ADD_SLAVE 1
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+TI_BLOCK_LEVEL 1
+TI_BUFFER_LEVEL 1
+
+TI_INPUT_PRESCALE 1  0
+
+TI_CRATE end
+
+# include dsc2/clasdev.cnf
+
+#
+# dsc2 config file for expid=clondev
+#
+# this file contains settings  for JLAB VME Discriminators DSC2
+#
+# CRATE      <tdcecal1>     <- crate name, usually IP name
+#
+# DSC2_SLOT  2   <- slot#
+#
+# DSC2_WIDTH  20  40   <- TDC width (ns), TRG width (ns)
+#
+# DSC2_TDCMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TDC enable mask
+#
+# DSC2_TRGMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TRG enable mask
+#
+# DSC2_TDCORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TDC OR mask
+#
+# DSC2_TRGORMASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1     <- TRG OR mask
+#
+# DSC2_THRESHOLD  20  50   <- board threshold: TDC threshold (mV), TRG threshold (mV)
+#
+# DSC2_CH_THRESHOLD    0  20   50   <- channel threshold: channel#, TDC threshold (mV), TRG threshold (mV)
+#
+#    following, if used, will supersede TRG width:
+#
+# DSC2_TRGDIGITAL   40  64    <- board digital TRG output: width (ns), delay (ns)
+#
+# DSC2_CH_TRGDIGITAL   0   40  64    <- channel digital TRG output: channel#, width (ns), delay (ns)
+#
+#
+DSC2_CRATE     all
+
+DSC2_SLOT       all
+DSC2_WIDTH       20     40
+DSC2_THRESHOLD   10  10
+#DSC2_TRGDIGITAL 140      0
+#
+DSC2_CRATE     end
+
+# include fadc250/clasdev.cnf
+
+#
+# fadc250 config file - example
+#
+# this file contains settings for
+# fADC250 - JLAB VXS Flash ADC 12-bit 250 Msps 16 ch
+#
+# format:
+# ~~~~~~~
+# FADC250_CRATE     rocbcal1   <- ROC name, crate name, usually IP name
+# FADC250_ALLSLOTS             <- just keyword - all settings after this line will be implemented
+#                                                for all slots, till FADC250_SLOTS will be met
+# FADC250_SLOTS     3  8  15   <- slot_numbers - in which next settings will be implemented
+#                                                till file ends or next FADC250_SLOTS will be met
+#
+# FADC250_F_REV     0x02c1     <- firmware revision  (0x0 Bits:7-0)
+# FADC250_B_REV     0x0a03     <- board revision     (0x0 Bits:15-8)
+# FADC250_ID        0xfadc     <- board type         (0x0 Bits:31-16)
+#
+# FADC250_MODE      1   <- process mode: 1-4  (0x10C Bits:2-0)
+# FADC250_W_OFFSET  50  <- number of ns back from trigger point. (0x120)
+#                            (in Manual it is  PL=Trigger_Window(ns) * 250MHz)
+# FADC250_W_WIDTH   49  <- number of ns to include in trigger window. (0x11C)
+#                            (in M:  PTW=Trigger_Window(ns) * 250MHz, minimum is 6)
+# FADC250_NSB       3   <- number of ns before trigger point to include in data processing. (0x124)
+#                            This include the trigger Point. (minimum is 2 in all mode)
+# FADC250_NSA       6   <- number of ns after trigger point to include in data processing. (0x128)
+#                            Minimum is (6 in mode 2) and ( 3 in mode 0 and 1).
+#                            Number of sample report is 1 more for odd and 2 more for even NSA number.
+# FADC250_NPEAK     1   <- number of Pulses in Mode 2 and 3.  (0x10C Bits:6-5)
+#
+#                   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 - channels ##
+# FADC250_ADC_MASK  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- channel enable mask
+#
+# FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1   <- trigger enable mask 
+# 
+# FADC250_TET       110        <- board Trigger Energy Threshold (TET), same for all 16 channels
+# FADC250_CH_TET    0    110   <- channel# and TET_value for this channel
+# FADC250_ALLCH_TET 111  222  2  3  4  5  6  7  8  9  10  11  12  13  14  15   <- 16 TETs (0x12C - 0x148)
+#
+# FADC250_DAC       3300       <- board DAC, one and the same for all 16 channels
+# FADC250_CH_DAC    0    3300  <- channel# and DAC_value for this channel
+# FADC250_ALLCH_DAC 3300 3280 3310 3280 3310 3280 3310 3280 3300 3280 3300 3280 3310 3280 3310 3280 <- 16 DACs
+#
+# FADC250_PED       210        <- board Pedestals, same for all channels
+# FADC250_CH_PED    0    210   <- channel# and Pedestal_value for this channel
+# FADC250_ALLCH_PED 210  220  210  215  215  220  220  210  210  215  215  220  220  210  215  220  <- 16 PEDs
+#
+# FADC250_GAIN       210        <- board Gains, same for all channels
+# FADC250_CH_GAIN    0    210   <- channel# and Gain_value for this channel
+# FADC250_ALLCH_GAIN 210  220  210  215  215  220  220  210  210  215  215  220  220  210  215  220  <- 16 GAINs
+
+FADC250_CRATE all
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1200
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       24
+FADC250_NPEAK     1
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       20
+#FADC250_NSA       120
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_TET 400
+
+FADC250_CRATE end
+
+# include tdc1190/clasdev.cnf
+
+#
+# tdc1190 config file - example
+#
+# this file contains settings for tdc CAEN 1190
+#
+# format:
+# ~~~~~~~
+# CRATE             rocbcal1   <- ROC/crate name, usually IP name
+#
+# TDC1190_ALLSLOTS             <- just keyword - all settings after this line will be implemented
+#                                                for all slots, till TDC1190_SLOTS will be met
+#
+# TDC1190_SLOTS     3  8  19   <- slot_numbers - in which next settings will be implemented
+#                                                till file ends or next TDC1190_SLOTS will be met
+#
+# TDC1190_BERR_FIFO  1   <- DMA Nwords method readout: 0 - use VME BUS error
+#                                                      1 - use event fifo
+#
+# TDC1190_BLT_EVENTS 1      <- to set BLT Event Number Register
+# TDC1190_N_HITS     64     <- to set Max Number of Hits per Event (1,2,4,8,16,32,64,128)
+# TDC1190_ALMOSTFULL 16384  <- set number of words in output buffer
+#                              default is 64 words, max is 32735 words
+# TDC1190_OUT_PROG   2      <- set the function for the output on the control connector
+#                              0 : Data Ready
+#                              1 : Full
+#                              2 : Almost Full
+#                              3 : Error
+#
+# TDC1190_W_WIDTH    750 <- Trigger Window Width, in ns (from 25 to 51175)
+# TDC1190_W_OFFSET -1750 <- Trigger Window Offset, in ns (from -51175 to 1000)
+# TDC1190_W_EXTRA    25  <- Extra Search Margin (after window), in ns (from 0 to 1250)
+# TDC1190_W_REJECT   50  <- Reject Margin (before window), in ns (from 0 to 1250)
+#
+# TDC1190_EDGE       2   <- set Edge Detection: 1-trailing edge, 2-leading, 3-both
+#
+#
+#
+#                 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 - channels ##
+# TDC1190_MASK1   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.0-15
+# TDC1190_MASK2   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.16-31
+#....
+# TDC1190_MASK8   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.112-127
+
+TDC1190_CRATE all
+
+TDC1190_ALLSLOTS
+
+#TDC1190_A24_A32    2
+#TDC1190_SNGL_BLT   3
+#TDC1190_SST_RATE   0
+
+TDC1190_BERR_FIFO  1
+
+TDC1190_BLT_EVENTS 1
+TDC1190_N_HITS     64
+TDC1190_ALMOSTFULL 16384
+TDC1190_OUT_PROG   2
+
+#TDC1190_W_WIDTH    400
+#TDC1190_W_OFFSET -1050
+TDC1190_W_WIDTH   2550
+TDC1190_W_OFFSET -2550
+
+
+TDC1190_W_EXTRA    25
+TDC1190_W_REJECT   50
+
+TDC1190_EDGE       2
+
+#                 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 - channels ##
+TDC1190_MASK1     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK2     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK3     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK4     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK5     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK6     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK7     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK8     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+
+TDC1190_CRATE end
