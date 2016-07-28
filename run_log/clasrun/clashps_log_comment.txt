@@ -1,6 +1,5 @@
-Run Type: 
-Target: 
-Beam Current Request: 
-Operators:  expert: none, worker: none
-Comment: 
-Ignore this run: no
+"Run Type"  "Special run"
+"Target"  "2H02 Harp wire"
+"Beam Current Request"  "50"
+"Operators"  " expert: Rafayel Paremuzyan, worker: Marzio De Napoli"
+"Comment"  "Stright tracks"

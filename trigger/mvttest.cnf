@@ -43,8 +43,8 @@ MVT_CRATE mvt1
 # In the Clas12 mode clock, trigger and sync commands come from Trigger Supervisor
 MVT_Sys Name           Mvt
 MVT_Sys RunMode        Standalone
-MVT_Sys NbOfSmpPerEvt  16 
-MVT_Sys NbOfEvtPerBlk   1
+MVT_Sys NbOfSmpPerEvt   8
+MVT_Sys NbOfEvtPerBlk   20
 MVT_Sys ClkMode        Smp40_Rd40
 MVT_Sys SparseSmp       0
 
@@ -69,11 +69,15 @@ MVT_Bec 1 BaseAdr_A32m_Com 1 0x0B000000 0x12000000
 # BEU FRONT PANEL LINK NUMBER    
 #                 	   0  1  2  3    4  5  6  7    8   9 10  11
 #MVT_Bec 1 Beu x Feu   2  4  3  1    2  4  3  1    2  4  3  1    2 4 3 1    4  2 1  3   4 2 1 3   4 2 1 3    4 2 1 3  
-MVT_Bec  1 Beu 2 Feu  56 50 51  M    M  M  M  M   47 49 48  M    M M M M   24 36 M 37   M M M M   M M M M    M M M M    
-MVT_Bec  1 Beu 1 Feu   M 53 45 44    M  M  M  M   43 42 46  M    M M M M   55 52 M 54   M M M M   M M M M    M M M M 
+MVT_Bec  1 Beu 2 Feu  56 50 51  M    M  M  M  M   47 49 48  M    M M M M   24 36 M 37   M M M M   M M M M    M M M M     
+#MVT_Bec  1 Beu 2 Feu  56 50 51  M    M  M  M  M   47 M 48  M    M M M M   24 36 M 37   M M M M   M M M M    M M M M
+#MVT_Bec  1 Beu 2 Feu  M M M  M    M  M  M  M   M M M  M    M M M M   24 36 M 37   M M M M   M M M M    M M M M
+#MVT_Bec  1 Beu 1 Feu   M  M M M    M  M  M  M   M M M  M    M M M M   55 52 M 54   M M M M   M M M M    M M M M
+#MVT_Bec  1 Beu 1 Feu   M  M 45 44    M  M  M  M   43 42 46  M    M M M M   55 52 M 54   M M M M   M M M M    M M M M 
+MVT_Bec  1 Beu 1 Feu   M 53 45 44    M  M  M  M   43 42  46  M    M M M M   55 52 M 54   M M M M   M M M M    M M M M
 
-#MVT_Bec  1 Beu 2 Feu  M 50 M  M    M  M  M  M   M M M  M    M M M M   M M M M    M M M M   M M M M    M M M M
-#MVT_Bec  1 Beu 1 Feu  M M M  44    M  M  M  M   M M M  M    M M M M   M M M M    M M M M   M M M M    M M M M
+#MVT_Bec  1 Beu 2 Feu  56 50  M   M    M  M  M  M   M M M  M    M M M M   M M M M    M M M M   M M M M    M M M M
+#MVT_Bec  1 Beu 1 Feu  M  53  M  44    M  M  M  M   M M M  M    M M M M   M M M M    M M M M   M M M M    M M M M
 
 
 #######################################
@@ -86,9 +90,9 @@ MVT_Bec  1 Beu 1 Feu   M 53 45 44    M  M  M  M   43 42 46  M    M M M M   55 52
 MVT_Ti * TrgTimPar 7 7
 # Trigger source
 # HFBR1 (to be set in Clas12 run mode); Soft; FpInp1; FpInp2, IntCst, IntRnd (to be set in standalone run mode)
-MVT_Ti * TrgSrc FpInp1
-MVT_Ti * TrgRate 1
-MVT_Ti * TrgPrescale 0
+MVT_Ti * TrgSrc IntCst
+MVT_Ti * TrgRate 100
+MVT_Ti * TrgPrescale 9 
 # Trigger rules n Cnt Timebase
 # limit number of triggers to n in the  Cnt x Timebase interval
 # n - number of triggers from 1 to 4 (0 if no rules)
@@ -211,16 +215,77 @@ MVT_Feu * Main_Trig_LocThrot   1
 #--|DataRdy|FeuId|Rsvd|ZsChkSmp|DrOvh| ZS |ComModSub|PedSub|
 #--| 21-16 |15-8 |  7 |  6-4   |  3  |  2 |    1    |  0   |
 #######################################
-MVT_Feu * Feu_RunCtrl_Pd             0
-MVT_Feu * Feu_RunCtrl_CM             0
-MVT_Feu * Feu_RunCtrl_ZS             0
+MVT_Feu * Feu_RunCtrl_Pd             1
+MVT_Feu * Feu_RunCtrl_CM             1
+MVT_Feu * Feu_RunCtrl_ZS             1
 MVT_Feu * Feu_RunCtrl_DrOvr          0
 MVT_Feu * Feu_RunCtrl_RdDel          0
-MVT_Feu * Feu_RunCtrl_ZsChkSmp       1
+MVT_Feu * Feu_RunCtrl_ZsChkSmp       4
 MVT_Feu * Feu_RunCtrl_CmOffset     256
 # Associated parameters
 MVT_Feu * Feu_RunCtrl_PdFile         None
 MVT_Feu * Feu_RunCtrl_ZsFile         None
+
+# Crate 1
+MVT_Feu 50 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_01_ped.prg
+MVT_Feu 50 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_01_thr.prg
+
+MVT_Feu 51 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_02_ped.prg
+MVT_Feu 51 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_02_thr.prg
+
+MVT_Feu 56 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_03_ped.prg
+MVT_Feu 56 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_03_thr.prg
+
+# Crate 2
+MVT_Feu 49 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_04_ped.prg
+MVT_Feu 49 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_04_thr.prg
+
+MVT_Feu 48 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_05_ped.prg
+MVT_Feu 48 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_05_thr.prg
+
+MVT_Feu 47 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_06_ped.prg
+MVT_Feu 47 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_06_thr.prg
+
+# Crate 3
+MVT_Feu 24 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_07_ped.prg
+MVT_Feu 24 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_07_thr.prg
+
+MVT_Feu 37 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_08_ped.prg
+MVT_Feu 37 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_08_thr.prg
+
+MVT_Feu 36 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_09_ped.prg
+MVT_Feu 36 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_09_thr.prg
+
+# Crate 4
+MVT_Feu 53 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_10_ped.prg
+MVT_Feu 53 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_10_thr.prg
+
+MVT_Feu 45 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_11_ped.prg
+MVT_Feu 45 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_11_thr.prg
+
+MVT_Feu 44 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_12_ped.prg
+MVT_Feu 44 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_12_thr.prg
+
+# Crate 5
+MVT_Feu 42 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_13_ped.prg
+MVT_Feu 42 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_13_thr.prg
+
+MVT_Feu 46 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_14_ped.prg
+MVT_Feu 46 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_14_thr.prg
+
+MVT_Feu 43 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_15_ped.prg
+MVT_Feu 43 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_15_thr.prg
+
+# Crate 6
+MVT_Feu 55 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_16_ped.prg
+MVT_Feu 55 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_16_thr.prg
+
+MVT_Feu 54 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_17_ped.prg
+MVT_Feu 54 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_17_thr.prg
+
+MVT_Feu 52 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_18_ped.prg
+MVT_Feu 52 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_18_thr.prg
+
 
 #######################################
 #-- FEU PreScale Register
@@ -228,7 +293,7 @@ MVT_Feu * Feu_RunCtrl_ZsFile         None
 #--|    Delay     |Prescale|
 #--|   29 - 12    |  11-0  |
 # given in nanoseconds
-MVT_Feu * Feu_InterPacket_Delay 30000
+MVT_Feu * Feu_InterPacket_Delay 100
 
 #######################################
 #-- Communication registers
@@ -263,6 +328,6 @@ MVT_Feu * Dream *  8 0xFFFF 0xFFFF 0x0000 0x0000
 MVT_Feu * Dream *  9 0xFFFF 0xFFFF 0x0000 0x0000
 MVT_Feu * Dream * 10 0xFFFF 0xFFFF 0x0000 0x0000
 MVT_Feu * Dream * 11 0xFFFF 0xFFFF 0x0000 0x0000
-MVT_Feu * Dream * 12 0x0021 0x0000 0x0000 0x0000
+MVT_Feu * Dream * 12 0x00C8 0x0000 0x0000 0x0000
 
 MVT_CRATE end

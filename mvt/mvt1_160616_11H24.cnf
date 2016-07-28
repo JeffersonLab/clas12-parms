@@ -1,0 +1,842 @@
+MVT_CRATE mvt1
+############################
+# Global System parameters #
+############################
+Sys Name           Mvt
+Sys RunMode        Standalone
+Sys NbOfSmpPerEvt  48
+Sys NbOfEvtPerBlk  1
+Sys ClkMode        Smp40_Rd40
+Sys SparseSmp      0
+Sys BlockPrescale  1
+Sys BRepRawData    0
+################################
+# Backend crate configurations #
+################################
+Bec 1 CrateId 69
+Bec 1 Slot 12 Sd  69
+Bec 1 Slot 21 Ti  1 0x00a00000 0x08000000 Mblk Undefined
+Bec 1 Slot 16 Beu 1 0x00800000 0x09000000 Mblk Last     
+Bec 1 Slot 14 Beu 2 0x00700000 0x0a000000 Mblk First    
+Bec 1 BaseAdr_A32m_Com 1 0x0b000000 0x12000000
+# BE Crate 1 topology
+Bec 1 Beu 1 Feu  M 53 45 44  M  M  M  M 43 42 46  M  M  M  M  M 55 52  M 54  M  M  M  M  M  M  M  M  M  M  M  M
+Bec 1 Beu 2 Feu 56 50 51  M  M  M  M  M 47 49 48  M  M  M  M  M 24 36  M 37  M  M  M  M  M  M  M  M  M  M  M  M
+
+# Feu   1 <->   Inactive       Feu   2 <->   Inactive       Feu   3 <->   Inactive       Feu   4 <->   Inactive   
+# Feu   5 <->   Inactive       Feu   6 <->   Inactive       Feu   7 <->   Inactive       Feu   8 <->   Inactive   
+# Feu   9 <->   Inactive       Feu  10 <->   Inactive       Feu  11 <->   Inactive       Feu  12 <->   Inactive   
+# Feu  13 <->   Inactive       Feu  14 <->   Inactive       Feu  15 <->   Inactive       Feu  16 <->   Inactive   
+# Feu  17 <->   Inactive       Feu  18 <->   Inactive       Feu  19 <->   Inactive       Feu  20 <->   Inactive   
+# Feu  21 <->   Inactive       Feu  22 <->   Inactive       Feu  23 <->   Inactive       Feu  24 <->  Beu=2 Lnk=16
+# Feu  25 <->   Inactive       Feu  26 <->   Inactive       Feu  27 <->   Inactive       Feu  28 <->   Inactive   
+# Feu  29 <->   Inactive       Feu  30 <->   Inactive       Feu  31 <->   Inactive       Feu  32 <->   Inactive   
+# Feu  33 <->   Inactive       Feu  34 <->   Inactive       Feu  35 <->   Inactive       Feu  36 <->  Beu=2 Lnk=17
+# Feu  37 <->  Beu=2 Lnk=19    Feu  38 <->   Inactive       Feu  39 <->   Inactive       Feu  40 <->   Inactive   
+# Feu  41 <->   Inactive       Feu  42 <->  Beu=1 Lnk= 9    Feu  43 <->  Beu=1 Lnk= 8    Feu  44 <->  Beu=1 Lnk= 3
+# Feu  45 <->  Beu=1 Lnk= 2    Feu  46 <->  Beu=1 Lnk=10    Feu  47 <->  Beu=2 Lnk= 8    Feu  48 <->  Beu=2 Lnk=10
+# Feu  49 <->  Beu=2 Lnk= 9    Feu  50 <->  Beu=2 Lnk= 1    Feu  51 <->  Beu=2 Lnk= 2    Feu  52 <->  Beu=1 Lnk=17
+# Feu  53 <->  Beu=1 Lnk= 1    Feu  54 <->  Beu=1 Lnk=19    Feu  55 <->  Beu=1 Lnk=16    Feu  56 <->  Beu=2 Lnk= 0
+# Feu  57 <->   Inactive       Feu  58 <->   Inactive       Feu  59 <->   Inactive       Feu  60 <->   Inactive   
+# Feu  61 <->   Inactive       Feu  62 <->   Inactive       Feu  63 <->   Inactive       Feu  64 <->   Inactive   
+# Feu  65 <->   Inactive       Feu  66 <->   Inactive       Feu  67 <->   Inactive       Feu  68 <->   Inactive   
+# Feu  69 <->   Inactive       Feu  70 <->   Inactive       Feu  71 <->   Inactive       Feu  72 <->   Inactive   
+# Feu  73 <->   Inactive       Feu  74 <->   Inactive       Feu  75 <->   Inactive       Feu  76 <->   Inactive   
+# Feu  77 <->   Inactive       Feu  78 <->   Inactive       Feu  79 <->   Inactive       Feu  80 <->   Inactive   
+# Feu  81 <->   Inactive       Feu  82 <->   Inactive       Feu  83 <->   Inactive       Feu  84 <->   Inactive   
+# Feu  85 <->   Inactive       Feu  86 <->   Inactive       Feu  87 <->   Inactive       Feu  88 <->   Inactive   
+# Feu  89 <->   Inactive       Feu  90 <->   Inactive       Feu  91 <->   Inactive       Feu  92 <->   Inactive   
+# Feu  93 <->   Inactive       Feu  94 <->   Inactive       Feu  95 <->   Inactive       Feu  96 <->   Inactive   
+# Feu  97 <->   Inactive       Feu  98 <->   Inactive       Feu  99 <->   Inactive       Feu 100 <->   Inactive   
+# Feu 101 <->   Inactive       Feu 102 <->   Inactive       Feu 103 <->   Inactive       Feu 104 <->   Inactive   
+# Feu 105 <->   Inactive       Feu 106 <->   Inactive       Feu 107 <->   Inactive       Feu 108 <->   Inactive   
+# Feu 109 <->   Inactive       Feu 110 <->   Inactive       Feu 111 <->   Inactive       Feu 112 <->   Inactive   
+# Feu 113 <->   Inactive       Feu 114 <->   Inactive       Feu 115 <->   Inactive       Feu 116 <->   Inactive   
+# Feu 117 <->   Inactive       Feu 118 <->   Inactive       Feu 119 <->   Inactive       Feu 120 <->   Inactive   
+# Feu 121 <->   Inactive       Feu 122 <->   Inactive       Feu 123 <->   Inactive       Feu 124 <->   Inactive   
+# Feu 125 <->   Inactive       Feu 126 <->   Inactive       Feu 127 <->   Inactive       Feu 128 <->   Inactive   
+# Feu 129 <->   Inactive       Feu 130 <->   Inactive       Feu 131 <->   Inactive       Feu 132 <->   Inactive   
+# Feu 133 <->   Inactive       Feu 134 <->   Inactive       Feu 135 <->   Inactive       Feu 136 <->   Inactive   
+# Feu 137 <->   Inactive       Feu 138 <->   Inactive       Feu 139 <->   Inactive       Feu 140 <->   Inactive   
+# Feu 141 <->   Inactive       Feu 142 <->   Inactive       Feu 143 <->   Inactive       Feu 144 <->   Inactive   
+# Feu 145 <->   Inactive       Feu 146 <->   Inactive       Feu 147 <->   Inactive       Feu 148 <->   Inactive   
+# Feu 149 <->   Inactive       Feu 150 <->   Inactive       Feu 151 <->   Inactive       Feu 152 <->   Inactive   
+# Feu 153 <->   Inactive       Feu 154 <->   Inactive       Feu 155 <->   Inactive       Feu 156 <->   Inactive   
+# Feu 157 <->   Inactive       Feu 158 <->   Inactive       Feu 159 <->   Inactive       Feu 160 <->   Inactive   
+# Feu 161 <->   Inactive       Feu 162 <->   Inactive       Feu 163 <->   Inactive       Feu 164 <->   Inactive   
+# Feu 165 <->   Inactive       Feu 166 <->   Inactive       Feu 167 <->   Inactive       Feu 168 <->   Inactive   
+# Feu 169 <->   Inactive       Feu 170 <->   Inactive       Feu 171 <->   Inactive       Feu 172 <->   Inactive   
+# Feu 173 <->   Inactive       Feu 174 <->   Inactive       Feu 175 <->   Inactive       Feu 176 <->   Inactive   
+# Feu 177 <->   Inactive       Feu 178 <->   Inactive       Feu 179 <->   Inactive       Feu 180 <->   Inactive   
+# Feu 181 <->   Inactive       Feu 182 <->   Inactive       Feu 183 <->   Inactive       Feu 184 <->   Inactive   
+# Feu 185 <->   Inactive       Feu 186 <->   Inactive       Feu 187 <->   Inactive       Feu 188 <->   Inactive   
+# Feu 189 <->   Inactive       Feu 190 <->   Inactive       Feu 191 <->   Inactive       Feu 192 <->   Inactive   
+# Feu 193 <->   Inactive       Feu 194 <->   Inactive       Feu 195 <->   Inactive       Feu 196 <->   Inactive   
+# Feu 197 <->   Inactive       Feu 198 <->   Inactive       Feu 199 <->   Inactive       Feu 200 <->   Inactive   
+# Feu 201 <->   Inactive       Feu 202 <->   Inactive       Feu 203 <->   Inactive       Feu 204 <->   Inactive   
+# Feu 205 <->   Inactive       Feu 206 <->   Inactive       Feu 207 <->   Inactive       Feu 208 <->   Inactive   
+# Feu 209 <->   Inactive       Feu 210 <->   Inactive       Feu 211 <->   Inactive       Feu 212 <->   Inactive   
+# Feu 213 <->   Inactive       Feu 214 <->   Inactive       Feu 215 <->   Inactive       Feu 216 <->   Inactive   
+# Feu 217 <->   Inactive       Feu 218 <->   Inactive       Feu 219 <->   Inactive       Feu 220 <->   Inactive   
+# Feu 221 <->   Inactive       Feu 222 <->   Inactive       Feu 223 <->   Inactive       Feu 224 <->   Inactive   
+# Feu 225 <->   Inactive       Feu 226 <->   Inactive       Feu 227 <->   Inactive       Feu 228 <->   Inactive   
+# Feu 229 <->   Inactive       Feu 230 <->   Inactive       Feu 231 <->   Inactive       Feu 232 <->   Inactive   
+# Feu 233 <->   Inactive       Feu 234 <->   Inactive       Feu 235 <->   Inactive       Feu 236 <->   Inactive   
+# Feu 237 <->   Inactive       Feu 238 <->   Inactive       Feu 239 <->   Inactive       Feu 240 <->   Inactive   
+# Feu 241 <->   Inactive       Feu 242 <->   Inactive       Feu 243 <->   Inactive       Feu 244 <->   Inactive   
+# Feu 245 <->   Inactive       Feu 246 <->   Inactive       Feu 247 <->   Inactive       Feu 248 <->   Inactive   
+# Feu 249 <->   Inactive       Feu 250 <->   Inactive       Feu 251 <->   Inactive       Feu 252 <->   Inactive   
+# Feu 253 <->   Inactive       Feu 254 <->   Inactive       Feu 255 <->   Inactive      
+#####################
+# TI configurations #
+#####################
+# Ti * configuration
+# Ti * NbOfEvtPerBlk  0
+# Ti * ClkSrc         Undefined
+Ti * TrgSrc           FpInp1   
+Ti * SynSrc           Soft     
+Ti * BsySrc           SwB      
+Ti * TrgRate          100
+Ti * TrgPrescale      0
+Ti * TrgTimPar        7 7
+Ti * TrgRule 1        1 0 
+Ti * TrgRule 2        0 0 
+Ti * TrgRule 3        0 0 
+Ti * TrgRule 4        0 0 
+Ti * SynDel           0
+Ti * ExtEidTstp       1
+Ti * TrgInhThr        0
+# Ti 69 configuration
+# Ti 69 Slot 21 BaseAdr_A24_Reg=0x00a00000 BaseAdr_A32_Fifo=0x08000000
+# Ti 69 Slot 21 Mblk Min=0x0b000000 Max=0x12000000 Rank=Undefined
+# Ti 69 NbOfEvtPerBlk  1
+# Ti 69 ClkSrc         Internal 
+Ti 69 TrgSrc           FpInp1   
+Ti 69 SynSrc           Soft     
+Ti 69 BsySrc           SwB      
+Ti 69 TrgRate          100
+Ti 69 TrgPrescale      0
+Ti 69 TrgTimPar        7 7
+Ti 69 TrgRule 1        3 1 
+Ti 69 TrgRule 2        0 0 
+Ti 69 TrgRule 3        0 0 
+Ti 69 TrgRule 4        0 0 
+Ti 69 SynDel           0
+Ti 69 ExtEidTstp       1
+Ti 69 TrgInhThr        0
+
+#####################
+# SD configurations #
+#####################
+# Sd 69 Slot 12
+# Sd 69 ActiveSlotFlags 0x00014000
+
+###############################
+# Backend unit configurations #
+###############################
+# Beu * configuration
+# Beu * NbOfSmpPerEvt  0
+# Beu * NbOfEvtPerBlk  0
+# Beu * NearLoopEnb    0x00000000
+# Beu * RolEnb         0x00000000
+# Beu * FeuEmuMsk      0x00000000
+Beu * ClkSrc           Undefined     
+Beu * TrgSrc           Ti1      
+Beu * SynSrc           Ti       
+Beu * BsySrc           TrgFifo InMem 
+Beu * TrgFifo_Lwm      48
+Beu * TrgFifo_Hwm      54
+Beu * TrgFifo_FullThr  59
+Beu * TrgTstp_Offset   0
+Beu * InMemBusyThr     1000
+Beu * TimeOut          10000
+Beu * MaskToInput      0
+Beu * EmuDataSize      1
+Beu * TrigRate         153937
+# Beu 1 configuration
+# Beu 1 Slot 16 BaseAdr_A24_Reg=0x00800000 BaseAdr_A32_Fifo=0x09000000
+# Beu 1 Slot 16 Mblk Min=0x0b000000 Max=0x12000000 Rank=Last
+# Beu 1 NbOfSmpPerEvt  48
+# Beu 1 NbOfEvtPerBlk  1
+# Beu 1 NearLoopEnb    0x00000000
+# Beu 1 RolEnb         0x000b070e
+# Beu 1 FeuEmuMsk      0xffffffff
+Beu 1 ClkSrc           TiVxs         
+Beu 1 TrgSrc           Ti1      
+Beu 1 SynSrc           Ti       
+Beu 1 BsySrc           TrgFifo InMem 
+Beu 1 TrgFifo_Lwm      48
+Beu 1 TrgFifo_Hwm      54
+Beu 1 TrgFifo_FullThr  59
+Beu 1 TrgTstp_Offset   0
+Beu 1 InMemBusyThr     1000
+Beu 1 TimeOut          10000
+Beu 1 MaskToInput      0
+Beu 1 EmuDataSize      1
+Beu 1 TrigRate         153937
+# Beu 2 configuration
+# Beu 2 Slot 14 BaseAdr_A24_Reg=0x00700000 BaseAdr_A32_Fifo=0x0a000000
+# Beu 2 Slot 14 Mblk Min=0x0b000000 Max=0x12000000 Rank=First
+# Beu 2 NbOfSmpPerEvt  48
+# Beu 2 NbOfEvtPerBlk  1
+# Beu 2 NearLoopEnb    0x00000000
+# Beu 2 RolEnb         0x000b0707
+# Beu 2 FeuEmuMsk      0xffffffff
+Beu 2 ClkSrc           TiVxs         
+Beu 2 TrgSrc           Ti1      
+Beu 2 SynSrc           Ti       
+Beu 2 BsySrc           TrgFifo InMem 
+Beu 2 TrgFifo_Lwm      48
+Beu 2 TrgFifo_Hwm      54
+Beu 2 TrgFifo_FullThr  59
+Beu 2 TrgTstp_Offset   0
+Beu 2 InMemBusyThr     1000
+Beu 2 TimeOut          10000
+Beu 2 MaskToInput      0
+Beu 2 EmuDataSize      1
+Beu 2 TrigRate         153937
+################################
+# Frontend unit configurations #
+################################
+########################
+# Parameters for Feu=*
+########################
+# Main module configuration
+Feu * Main_Conf_ClkSel RecClk
+Feu * Main_Conf_SparseRd 0
+Feu * Main_Conf_DreamMask 0x00
+Feu * Main_Conf_Samples 48
+# Main module trigger configuration
+Feu * Main_Trig_TimeStamp 0
+Feu * Main_Trig_OvrWrnLwm 61
+Feu * Main_Trig_OvrWrnHwm 62
+Feu * Main_Trig_OvrThersh 63
+Feu * Main_Trig_LocThrot 1
+# FEU PowerUp Register
+Feu * Feu_Pwr_Dream 0xf
+Feu * Feu_Pwr_PrtFlt 0xffff
+# FEU Control parameters
+Feu * Feu_RunCtrl_Pd 1
+Feu * Feu_RunCtrl_CM 1
+Feu * Feu_RunCtrl_ZS 0
+Feu * Feu_RunCtrl_DrOvr 0
+Feu * Feu_RunCtrl_DrDblSmpClk 0
+Feu * Feu_RunCtrl_EvTstExt 0
+Feu * Feu_RunCtrl_RdDel 0
+Feu * Feu_RunCtrl_ZsChkSmp 4
+Feu * Feu_RunCtrl_CmOffset 256
+Feu * Feu_RunCtrl_AdcDatRdyDel 8
+Feu * Feu_RunCtrl_Id 0
+Feu * Feu_RunCtrl_PdFile None
+Feu * Feu_RunCtrl_ZsFile None
+# FEU Pulser parameters
+Feu * Feu_Pulser_Enable 0
+Feu * Feu_Pulser_DreamTst 0x 0
+Feu * Feu_Pulser_PulseWid 16
+# FEU Prescale parameters
+Feu * Feu_PreScale_EvtData    1
+Feu * Feu_InterPacket_Delay 50000
+# FEU Trigger Generator parameters
+Feu * Trig_Conf_Rate 0
+Feu * Trig_Conf_Src Tg_Src_Int
+Feu * Trig_Conf_TrigPipeLen 1
+Feu * Trig_Conf_TrigVetoLen 0
+Feu * Trig_Conf_File None
+# FEU Auxiliary Trigger Interface parameters
+Feu * TI_Ignore 1
+Feu * TI_DcBal_Enc 0
+Feu * TI_DcBal_Dec 0
+Feu * TI_Bert 0
+# FEU Self Trigger parameters
+Feu * SelfTrig_DreamMask 0xff
+Feu * SelfTrig_Mult 7
+Feu * SelfTrig_CmbHitPropFb 0
+Feu * SelfTrig_CmbHitPropOl 0
+Feu * SelfTrig_DrmHitWid 63
+Feu * SelfTrig_CmbHitWid 63
+Feu * SelfTrig_Veto 16777215
+Feu * SelfTrig_TrigTopo 0
+# Self Trigger topology parameters
+Feu * SelfTrig_Topology  0 0x00000000 0x00000000 0x00000000 0x00000000
+Feu * SelfTrig_Topology  4 0x00000000 0x00000000 0x00000000 0x00000000
+Feu * SelfTrig_Topology  8 0x00000000 0x00000000 0x00000000 0x00000000
+Feu * SelfTrig_Topology 12 0x00000000 0x00000000 0x00000000 0x00000000
+Feu * SelfTrig_Topology 16 0x00000000 0x00000000 0x00000000 0x00000000
+Feu * SelfTrig_Topology 20 0x00000000 0x00000000 0x00000000 0x00000000
+Feu * SelfTrig_Topology 24 0x00000000 0x00000000 0x00000000 0x00000000
+Feu * SelfTrig_Topology 28 0x00000000 0x00000000 0x00000000 0x00000000
+# FEU Communication parameters
+Feu * UdpChan_Enable 0
+Feu * UdpChan_MultiPackEnb 0
+Feu * UdpChan_MultiPackThr 0
+Feu * ComChan_Enable 1
+# Dream Clock Parameters
+Feu * DrmClk RdClk_Div 5.0
+Feu * DrmClk WrClk_Div 5.0
+Feu * DrmClk WrClk_Phase 2
+Feu * DrmClk AdcClk_Phase 5
+# Adc parameters
+Feu * Adc 0x16 0x03 1 
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+Feu * Dream *  1 0x001f 0xc023 0x0000 0x0000 
+Feu * Dream *  2 0x0000 0x0008 0x0000 0x0000 
+Feu * Dream *  3 0x0000 0x0000 0x0000 0x0000 
+Feu * Dream *  4 0x0000 0x0000 0x0000 0x0000 
+Feu * Dream *  6 0xaaaa 0xaaaa 0xaaaa 0xaaaa 
+Feu * Dream *  7 0xaaaa 0xaaaa 0xaaaa 0xaaaa 
+Feu * Dream *  8 0xffff 0xffff 0x0000 0x0000 
+Feu * Dream *  9 0xffff 0xffff 0x0000 0x0000 
+Feu * Dream * 10 0xffff 0xffff 0x0000 0x0000 
+Feu * Dream * 11 0xffff 0xffff 0x0000 0x0000 
+Feu * Dream * 12 0x002e 0x0000 0x0000 0x0000 
+########################
+# Parameters for Feu=24
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 24 Feu_RunCtrl_Id 24
+Feu 24 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_07_ped.prg
+Feu 24 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_07_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=36
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 36 Feu_RunCtrl_Id 36
+Feu 36 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_09_ped.prg
+Feu 36 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_09_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=37
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 37 Feu_RunCtrl_Id 37
+Feu 37 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_08_ped.prg
+Feu 37 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_08_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=42
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 42 Feu_RunCtrl_Id 42
+Feu 42 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_13_ped.prg
+Feu 42 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_13_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=43
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 43 Feu_RunCtrl_Id 43
+Feu 43 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_15_ped.prg
+Feu 43 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_15_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=44
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 44 Feu_RunCtrl_Id 44
+Feu 44 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_12_ped.prg
+Feu 44 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_12_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=45
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 45 Feu_RunCtrl_Id 45
+Feu 45 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_11_ped.prg
+Feu 45 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_11_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=46
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 46 Feu_RunCtrl_Id 46
+Feu 46 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_14_ped.prg
+Feu 46 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_14_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=47
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 47 Feu_RunCtrl_Id 47
+Feu 47 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_06_ped.prg
+Feu 47 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_06_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=48
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 48 Feu_RunCtrl_Id 48
+Feu 48 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_05_ped.prg
+Feu 48 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_05_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=49
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 49 Feu_RunCtrl_Id 49
+Feu 49 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_04_ped.prg
+Feu 49 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_04_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=50
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 50 Feu_RunCtrl_Id 50
+Feu 50 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_01_ped.prg
+Feu 50 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_01_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=51
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 51 Feu_RunCtrl_Id 51
+Feu 51 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_02_ped.prg
+Feu 51 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_02_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=52
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 52 Feu_RunCtrl_Id 52
+Feu 52 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_18_ped.prg
+Feu 52 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_18_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=53
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 53 Feu_RunCtrl_Id 53
+Feu 53 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_10_ped.prg
+Feu 53 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_10_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=54
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 54 Feu_RunCtrl_Id 54
+Feu 54 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_17_ped.prg
+Feu 54 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_17_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=55
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 55 Feu_RunCtrl_Id 55
+Feu 55 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_16_ped.prg
+Feu 55 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_16_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+########################
+# Parameters for Feu=56
+########################
+# Main module configuration
+# Main module trigger configuration
+# FEU PowerUp Register
+# FEU Control parameters
+Feu 56 Feu_RunCtrl_Id 56
+Feu 56 Feu_RunCtrl_PdFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_03_ped.prg
+Feu 56 Feu_RunCtrl_ZsFile /usr/clas12/release/0.3/parms/mvt/MvtPed_160113_18H05_000_03_thr.prg
+# FEU Pulser parameters
+# FEU Prescale parameters
+# FEU Trigger Generator parameters
+# FEU Auxiliary Trigger Interface parameters
+# FEU Self Trigger parameters
+# Self Trigger topology parameters
+# FEU Communication parameters
+# Dream Clock Parameters
+# Adc parameters
+# EeProm Values
+# Max16031 Values
+# Dream 0 parameters
+# Dream 1 parameters
+# Dream 2 parameters
+# Dream 3 parameters
+# Dream 4 parameters
+# Dream 5 parameters
+# Dream 6 parameters
+# Dream 7 parameters
+# Dream * parameters
+MVT_CRATE end

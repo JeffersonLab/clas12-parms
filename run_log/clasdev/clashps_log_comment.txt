@@ -1,0 +1,5 @@
+"Run Type"  "production"
+"Target"  "4um W"
+"Beam Current Request"  "200 nA"
+"Operators"  " expert: Daria Sokhan, worker: Latifa Elouadrhiri"
+"Comment"  ""

@@ -198,8 +198,8 @@ TI_CRATE end
 
 
 # ECAL PEDESTALS:
-include trigger/HPS/small/fadc250/peds/EcalPeds.trg
-include trigger/HPS/small/fadc250/peds/CalibPeds.trg
+#include trigger/HPS/small/fadc250/peds/EcalPeds.trg
+#include trigger/HPS/small/fadc250/peds/CalibPeds.trg
 
 
 ### FADC
@@ -427,10 +427,5 @@ FADC250_CH_TET 12 1
 
 # SVT stuff
 include dpm/dpm-default.trg
-#include dpm/dpm-isha120-vfs0.trg
-#include dpm/dpm-isha255-vfs0.trg
-#include dpm/dpm-isha240-vfs0.trg
-#include dpm/dpm-isha120-vfs100.trg
-#include dpm/dpm-isha70-vfs0.trg
-#include dpm/dpm-3sam-3rms.trg
+#include dpm/dpm-3sam-3rms-7532.trg
 

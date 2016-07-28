@@ -1,0 +1,10 @@
+#
+# DAQ config file
+#
+#  
+#
+
+#DAQ_CRATE prad14
+#DAQ_REPORT_RAW_DATA 1
+#DAQ_CRATE end
+

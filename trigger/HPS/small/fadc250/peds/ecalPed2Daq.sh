@@ -1,0 +1,1 @@
+/home/hpsrun/scripts/ecalPed2Daq.sh

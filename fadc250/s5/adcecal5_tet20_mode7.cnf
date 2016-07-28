@@ -16,7 +16,7 @@ FADC250_W_WIDTH   400
 
 #for FADC scalers
 FADC250_TET 20
-FADC250_CONF_FILE adcecal5_ped.cnf
+FADC250_CONF_FILE s5/adcecal5_ped.cnf
 
 #pulse mode
 FADC250_MODE      7

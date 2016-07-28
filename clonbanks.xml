@@ -363,4 +363,72 @@
 	</dictEntry>
 
 
+	<dictEntry name="DAQ performance timers" tag="0xe11e" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+	<dictEntry name="SRS Raw Data" tag="0xe11f" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+	<dictEntry name="FASTBUS Raw Data" tag="0xe120" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+	<dictEntry name="PGEM crate Raw Data" tag="0xe121" num="0" type="uint32">
+		<description>
+		</description>
+	</dictEntry>
+
+
+
+
+
+
+    <dictEntry name="EC strips" tag="0xd101" num="0" type="composite">
+        <description format="2c,2s">
+            c   "layer# (1-6)"
+            c   "strip# (1-36)"
+            s   "energy (MeV)"
+            s   "time (4 ns ticks)"
+        </description>
+    </dictEntry>
+
+    <dictEntry name="EC peaks" tag="0xd102" num="0" type="composite">
+        <description format="c,4s,2c">
+            c   "layer# (1-6)"
+            s   "energy (MeV)"
+            s   "time (4 ns ticks)"
+            s   "coord (strip# * 8, strip number from 1)"
+            s   "width (strip# * 8, strip number from 1)"
+            c   "first strip number (from 1)"
+            c   "the number of strips"
+        </description>
+    </dictEntry>
+
+    <dictEntry name="EC clusters" tag="0xd103" num="0" type="composite">
+        <description format="c,8s,6c">
+            c   "layer# (1-6)"
+            s   "energy (MeV)"
+            s   "time (4 ns ticks)"
+            s   "coordU (strip# * 8, strip number from 1)"
+            s   "coordV (strip# * 8, strip number from 1)"
+            s   "coordW (strip# * 8, strip number from 1)"
+            s   "widthU (strip# * 8, strip number from 1)"
+            s   "widthV (strip# * 8, strip number from 1)"
+            s   "widthW (strip# * 8, strip number from 1)"
+            c   "peak1U - U peak ID (from 1)
+            c   "peak1V - V peak ID (from 1)
+            c   "peak1W - W peak ID (from 1)
+            c   "peaknU - # of U peaks
+            c   "peaknV - # of V peaks
+            c   "peaknW - # of W peaks
+        </description>
+    </dictEntry>
+
+
+
 </xmlDict>
