@@ -1,9 +1,7 @@
 #
-# File generated automatically by DAQ running in RAW mode at Fri Jun  3 10:56:51 2016
+# File generated automatically by DAQ running in RAW mode at Tue Feb  7 22:28:43 2017
 #
 FADC250_CRATE adcftof1
-FADC250_SLOT 5
-FADC250_ALLCH_PED     0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000  170.452  182.137  196.991  181.171  175.241    0.000  174.228    0.000
-FADC250_SLOT 6
-FADC250_ALLCH_PED     0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000  238.397  262.653  219.494  245.283    0.000    0.000    0.000    0.000
+FADC250_SLOT 13
+FADC250_ALLCH_PED     0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000  169.994    0.000    0.000    0.000
 FADC250_CRATE end

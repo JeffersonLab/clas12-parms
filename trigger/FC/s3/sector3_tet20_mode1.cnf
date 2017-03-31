@@ -1,0 +1,116 @@
+
+# include fadc250/s3/adcecal3_tet20_mode1.cnf
+
+FADC250_CRATE adcecal3
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       36
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcecal3_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       36
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s3/adcpcal3_tet20_mode1.cnf
+
+FADC250_CRATE adcpcal3
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       156
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcpcal3_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       156
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s3/adcftof3_tet20_mode1.cnf
+
+FADC250_CRATE adcftof3
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       44
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcftof3_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       44
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include trigger/FC/s3/cosmic.trg
+
+#
+
+FADC250_CRATE all
+
+FADC250_SLOT all
+
+FADC250_W_OFFSET  7300
+
+FADC250_CRATE end
+
+

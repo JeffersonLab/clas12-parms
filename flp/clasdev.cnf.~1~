@@ -1,0 +1,19 @@
+#
+# FLP config file
+#
+# FLP_V1 voltage_channel0 voltage_channel1      # in volts
+# FLP_V2 voltage_channel0 voltage_channel1      # in volts
+# FLP_V3 voltage_channel0 voltage_channel1      # in volts
+# FLP_PERIOD voltage_channel0 voltage_channel1  # in ns (will be rounded to 20ns units)
+#
+
+FLP_CRATE tdcctof1
+
+FLP_SLOT all
+
+FLP_V1      3.7  3.7
+FLP_V2      3.7  3.7
+FLP_VLED    4.5  4.5
+FLP_PERIOD  125000 125000
+
+FLP_CRATE end

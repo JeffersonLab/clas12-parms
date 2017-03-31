@@ -1,0 +1,266 @@
+#########################
+# dafarm44 Crate (TS)
+#########################
+
+TS_CRATE dafarm44
+
+###TS_FIBER_DELAY_OFFSET 0x80 0xcf
+
+#TS_BLOCK_LEVEL 1
+#TS_BUFFER_LEVEL 1
+TS_BLOCK_LEVEL 10
+TS_BUFFER_LEVEL 8
+
+TS_HOLDOFF 1 30 1
+TS_HOLDOFF 2 30 1
+TS_HOLDOFF 3 30 1
+TS_HOLDOFF 4 30 1
+
+#TS_INPUT_PRESCALE 1 0
+#TS_INPUT_PRESCALE 2 0
+#TS_INPUT_PRESCALE 3 0
+#TS_INPUT_PRESCALE 4 0
+#TS_INPUT_PRESCALE 5 0
+#TS_INPUT_PRESCALE 6 0
+
+##TS_INPUT_MASK 0x3F000000
+TS_INPUT_MASK 0x3F000001
+
+# first arg: 0-disable, 1-enable; second arg: prescale (15-7Hz, 7-3.5kHz, 3-60kHz)
+TS_RANDOM_TRIGGER 0 3
+
+TS_CRATE end
+
+#########################
+# dafarm50 Crate (GT)
+#########################
+
+### TI
+TI_CRATE dafarm50
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+### VTP
+VTP_CRATE dafarm18
+
+VTP_FIRMWARE fe_vtp_hallb_v7_gt_test.bin
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   0  0  0  0
+
+# 6780 corresponds to 7900 FADC latency
+VTP_GT_LATENCY 6780
+
+VTP_GT_WIDTH   16
+
+# sector bits: trig number, ssp trig mask, ssp sector mask, multiplicity, coincidence (or opposite)
+VTP_GT_TRGBIT  0   1  1 1 1   # SECTOR 1: EC Inner Cluster
+VTP_GT_TRGBIT  1   4  1 1 1   # SECTOR 1: Inner sum+EC Outer sum)
+
+VTP_GT_TRGBIT  8   1  1 1 1   # SECTOR 1: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+VTP_GT_TRGBIT  9   1  2 1 1   # SECTOR 2: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+VTP_GT_TRGBIT  10  1  4 1 1   # SECTOR 3: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+VTP_GT_TRGBIT  11  1  8 1 1   # SECTOR 4: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+VTP_GT_TRGBIT  12  1 16 1 1   # SECTOR 5: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+VTP_GT_TRGBIT  13  1 32 1 1   # SECTOR 6: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+
+#VTP_GT_TRGBIT  8  8  1 1 1   # SECTOR 1: PC sum
+#VTP_GT_TRGBIT  9  8  2 1 1   # SECTOR 2: PC sum
+#VTP_GT_TRGBIT  10 8  4 1 1   # SECTOR 3: PC sum
+#VTP_GT_TRGBIT  11 8  8 1 1   # SECTOR 4: PC sum
+#VTP_GT_TRGBIT  12 8 16 1 1   # SECTOR 5: PC sum
+#VTP_GT_TRGBIT  13 8 32 1 1   # SECTOR 6: PC sum
+
+VTP_CRATE end
+
+
+
+
+### SSP
+SSP_CRATE dafarm50
+
+SSP_SLOT all
+
+SSP_W_OFFSET 7900
+SSP_W_WIDTH  400
+
+SSP_GT_LATENCY            4000
+SSP_GT_ECAL_ESUM_DELAY    0
+SSP_GT_ECAL_CLUSTER_DELAY 0
+SSP_GT_ECAL_ESUM_INTWIDTH 40
+SSP_GT_PCAL_ESUM_DELAY    0
+SSP_GT_PCAL_CLUSTER_DELAY 0
+SSP_GT_PCAL_ESUM_INTWIDTH 40
+
+# Sector Trigger bit 0 (EC inner cluster)
+SSP_GT_STRG_EN                        0  1
+
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      0  0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         0  0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        0  0
+
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN_EN   0  0
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN      0  0
+SSP_GT_STRG_ECALOUT_CLUSTER_WIDTH     0  0
+
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN_EN    0  1
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN       0  2000
+SSP_GT_STRG_ECALIN_CLUSTER_WIDTH      0  100
+
+SSP_GT_STRG_ECAL_ESUM_EN              0  0
+SSP_GT_STRG_ECAL_ESUM_MIN             0  0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           0  0
+
+SSP_GT_STRG_PCAL_ESUM_EN              0  0
+SSP_GT_STRG_PCAL_ESUM_MIN             0  10
+SSP_GT_STRG_PCAL_ESUM_WIDTH           0  100
+
+# Sector Trigger bit 1 (EC outer cluster)
+SSP_GT_STRG_EN                        1  0
+
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      1  0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         1  0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        1  0
+
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN_EN   1  1
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN      1  100
+SSP_GT_STRG_ECALOUT_CLUSTER_WIDTH     1  40
+
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN_EN    1  0
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN       1  0
+SSP_GT_STRG_ECALIN_CLUSTER_WIDTH      1  0
+
+SSP_GT_STRG_ECAL_ESUM_EN              1  0
+SSP_GT_STRG_ECAL_ESUM_MIN             1  0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           1  0
+
+SSP_GT_STRG_PCAL_ESUM_EN              1  0
+SSP_GT_STRG_PCAL_ESUM_MIN             1  0
+SSP_GT_STRG_PCAL_ESUM_WIDTH           1  0
+
+
+# Sector Trigger bit 2 (EC sum)
+SSP_GT_STRG_EN                        2  1
+
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      2  0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         2  0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        2  0
+
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN_EN   2  0
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN      2  0
+SSP_GT_STRG_ECALOUT_CLUSTER_WIDTH     2  0
+
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN_EN    2  0
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN       2  0
+SSP_GT_STRG_ECALIN_CLUSTER_WIDTH      2  0
+
+SSP_GT_STRG_ECAL_ESUM_EN              2  1
+SSP_GT_STRG_ECAL_ESUM_MIN             2  1000
+SSP_GT_STRG_ECAL_ESUM_WIDTH           2  40
+
+SSP_GT_STRG_PCAL_ESUM_EN              2  0
+SSP_GT_STRG_PCAL_ESUM_MIN             2  0
+SSP_GT_STRG_PCAL_ESUM_WIDTH           2  0
+
+
+# Sector Trigger bit 3 (PC sum)
+SSP_GT_STRG_EN                        3  0
+
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      3  0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         3  0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        3  0
+
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN_EN   3  0
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN      3  0
+SSP_GT_STRG_ECALOUT_CLUSTER_WIDTH     3  0
+
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN_EN    3  0
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN       3  0
+SSP_GT_STRG_ECALIN_CLUSTER_WIDTH      3  0
+
+SSP_GT_STRG_ECAL_ESUM_EN              3  0
+SSP_GT_STRG_ECAL_ESUM_MIN             3  0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           3  0
+
+SSP_GT_STRG_PCAL_ESUM_EN              3  1
+SSP_GT_STRG_PCAL_ESUM_MIN             3  100
+SSP_GT_STRG_PCAL_ESUM_WIDTH           3  40
+
+
+SSP_CRATE end
+
+
+
+#########################
+# dafarm13 Crate (FADC)
+#########################
+
+### TI
+TI_CRATE dafarm13
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+### VTP
+VTP_CRATE dafarm19
+
+VTP_FIRMWARE fe_vtp_hallb_v7_ec_test.bin
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  0  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFF0FFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x000000000
+
+VTP_ECINNER_HIT_EMIN     100
+VTP_ECINNER_HIT_DT       32
+VTP_ECINNER_HIT_DALITZ   0.0    127.0
+
+# dalitz have to be set around 72*8
+
+VTP_ECOUTER_HIT_EMIN     100
+VTP_ECOUTER_HIT_DT       32
+VTP_ECOUTER_HIT_DALITZ   0.0    127.0
+
+VTP_CRATE end
+
+
+
+FADC250_CRATE dafarm13
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       90
+FADC250_NPEAK     1
+
+FADC250_TET 100
+
+FADC250_W_OFFSET  7900
+FADC250_W_WIDTH   400
+
+include trigger/PEDS/dafarm13_ped.cnf
+
+FADC250_CRATE end

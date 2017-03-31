@@ -1,0 +1,84 @@
+#
+# 1 - cua device port number
+# 2 - location code
+# 3 - <device>
+# 4 - connection speed
+#
+0100   fcs100   <adcecal1>  115200
+0116   fcs116   <adcecal1vtp>  115200
+0117   fcs117   <adcpcal1vtp>  115200
+#
+0216   fcs216   <adcecal2vtp>  115200
+0217   fcs217   <adcpcal2vtp>  115200
+#
+0316   fcs316   <adcecal3vtp>  115200
+0317   fcs317   <adcpcal3vtp>  115200
+#
+0416   fcs416   <adcecal4vtp>  115200
+0417   fcs417   <adcpcal4vtp>  115200
+#
+0516   fcs516   <adcecal5vtp>  115200
+0517   fcs517   <adcpcal5vtp>  115200
+#
+0616   fcs616   <adcecal6vtp>  115200
+0617   fcs617   <adcpcal6vtp>  115200
+#
+0700   sbws00   <dc11>         115200
+0701   sbws01   <dc12>         115200
+0702   sbws02   <dc13>         115200
+0703   sbws03   <dc21>         115200
+0704   sbws04   <dc22>         115200
+0705   sbws05   <dc23>         115200
+0706   sbws06   <dc61>         115200
+0707   sbws07   <dc62>         115200
+0708   sbws08   <dc63>         115200
+0716   sbws16   <dc13vtp>      115200
+0717   sbws17   <dc23vtp>      115200
+0718   sbws18   <dc63vtp>      115200
+#
+0800   sbwn00   <dc31>         115200
+0801   sbwn01   <dc32>         115200
+0802   sbwn02   <dc33>         115200
+0803   sbwn03   <dc41>         115200
+0804   sbwn04   <dc42>         115200
+0805   sbwn05   <dc43>         115200
+0806   sbwn06   <dc51>         115200
+0807   sbwn07   <dc52>         115200
+0808   sbwn08   <dc53>         115200
+0816   sbwn16   <dc33vtp>      115200
+0817   sbwn17   <dc43vtp>      115200
+0818   sbwn18   <dc53vtp>      115200
+#
+0d00   pcl1   <trig2vtp>  115200
+0d01   pcl2   <vxstest0>      9600
+0d02   pcl3   <classc8>       9600
+0d03   pcl4   <classc4>       9600
+0d04   pcl5   <trig1>         9600
+0d05   pcl6   <trig1pmc1>    38400
+0d06   pcl7   <pi7>      9600
+0d07   pcl8   <pi8>      9600
+0d08   pcl9   <pi9>      9600
+0d09   pcl10   <pi10>     9600
+0d10   pcl11   <pi11>     9600
+0d11   pcl12   <pi12>     9600
+0d12   pcl13   <pi13>     9600
+0d13   pcl14   <pi14>     9600
+0d14   pcl15   <pi15>     9600
+0d15   pcl16   <pi16>     9600
+0d16   pcl17   <gluex_ts2>    9600
+0d17   pcl18   <gluex_vme1>   9600
+0d18   pcl19   <gluex_hv>     9600
+0d19   pcl20   <gluex_sc>     9600
+0d20   pcl21   <gluex_misc>   9600
+0d21   pcl22   <reset7>       2400
+0d22   pcl23
+0d23   pcl24
+0d24   pcl25
+0d25   pcl26
+0d26   pcl27
+0d27   pcl28
+0d28   pcl29
+0d29   pcl30
+0d30   pcl31
+0d31   pcl32
+#

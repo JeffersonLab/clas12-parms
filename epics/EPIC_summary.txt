@@ -1,5 +1,5 @@
 
-#  epics EPIC summary created by epics_monitor on Wed Jul 27 23:39:22 2016
+#  epics EPIC summary created by epics_monitor on Fri Feb 10 15:53:56 2017
 
 #     xxx, 17-Oct-07
 
@@ -8,23 +8,23 @@
 
 #Channel name              Channel value       Channel description
 #------------              -------------       -------------------
-SMRPOSB                    18.0000             B slit position
+SMRPOSB                    8.00000             B slit position
 scaler_cS3b                0.00000             scaler_cS3b
 scaler_cS4b                0.00000             scaler_cS4b
 scalerS8b                  0.00000             scalerS8b
 scalerS9b                  0.00000             scalerS9b
-scalerS10b                 0.00000             scalerS10b
-scalerS11b                 0.00000             scalerS11b
-scaler_cS5b                0.00000             scaler_cS5b
-scaler_cS6b                0.00000             scaler_cS6b
-scaler_cS7b                0.00000             scaler_cS7b
-collimator                 0.00000             collimator
-TGT:PRad:Mtr_X_Pos         104850.             TGT:PRad:Mtr_X_Pos
-TGT:PRad:Mtr_Y_Pos         51200.0             TGT:PRad:Mtr_Y_Pos
-TGT:PRad:Mtr_Z_Pos         0.00000             TGT:PRad:Mtr_Z_Pos
-TGT:PRad:Mtr_f_Pos         0.00000             TGT:PRad:Mtr_f_Pos
-TGT:PRad:Mtr_X_Enc         6557.00             TGT:PRad:Mtr_X_Enc
-TGT:PRad:Mtr_Y_Enc         3121.00             TGT:PRad:Mtr_Y_Enc
-TGT:PRad:Mtr_Z_Enc         0.00000             TGT:PRad:Mtr_Z_Enc
-TGT:PRad:Mtr_f_Enc         0.00000             TGT:PRad:Mtr_f_Enc
+scalerS10b                 2.00000             scalerS10b
+scalerS11b                 1.50000             scalerS11b
+scaler_cS5b                0.500000            scaler_cS5b
+scaler_cS6b                2.00000             scaler_cS6b
+scaler_cS7b                1.00000             scaler_cS7b
+collimator                 2.91490             collimator
+TGT:PRad:Mtr_X_Pos         -9999.00            TGT:PRad:Mtr_X_Pos
+TGT:PRad:Mtr_Y_Pos         -9999.00            TGT:PRad:Mtr_Y_Pos
+TGT:PRad:Mtr_Z_Pos         -9999.00            TGT:PRad:Mtr_Z_Pos
+TGT:PRad:Mtr_f_Pos         -9999.00            TGT:PRad:Mtr_f_Pos
+TGT:PRad:Mtr_X_Enc         -9999.00            TGT:PRad:Mtr_X_Enc
+TGT:PRad:Mtr_Y_Enc         -9999.00            TGT:PRad:Mtr_Y_Enc
+TGT:PRad:Mtr_Z_Enc         -9999.00            TGT:PRad:Mtr_Z_Enc
+TGT:PRad:Mtr_f_Enc         -9999.00            TGT:PRad:Mtr_f_Enc
 

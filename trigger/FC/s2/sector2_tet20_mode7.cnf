@@ -168,3 +168,15 @@ FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 
 FADC250_CRATE end
+
+# include trigger/FC/s2/cosmic.trg
+
+#
+
+FADC250_CRATE all
+
+FADC250_SLOT all
+
+FADC250_W_OFFSET  7300
+
+FADC250_CRATE end

@@ -38,5 +38,7 @@ DSC2_THRESHOLD   3 3
 #
 DSC2_SLOT  18
 DSC2_THRESHOLD   100  100
+DSC2_TDCORMASK 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#include dsc2/triggerbit.cnf
 
 DSC2_CRATE     end

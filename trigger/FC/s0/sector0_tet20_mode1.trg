@@ -1,0 +1,19 @@
+include fadc250/s1/adcecal1_tet20_mode1.cnf
+include fadc250/s1/adcpcal1_tet20_mode1.cnf
+include fadc250/s1/adcftof1_tet20_mode1.cnf
+include fadc250/s2/adcecal2_tet20_mode1.cnf
+include fadc250/s2/adcpcal2_tet20_mode1.cnf
+include fadc250/s2/adcftof2_tet20_mode1.cnf
+include fadc250/s3/adcecal3_tet20_mode1.cnf
+include fadc250/s3/adcpcal3_tet20_mode1.cnf
+include fadc250/s3/adcftof3_tet20_mode1.cnf
+include fadc250/s4/adcecal4_tet20_mode1.cnf
+include fadc250/s4/adcpcal4_tet20_mode1.cnf
+include fadc250/s4/adcftof4_tet20_mode1.cnf
+include fadc250/s5/adcecal5_tet20_mode1.cnf
+include fadc250/s5/adcpcal5_tet20_mode1.cnf
+include fadc250/s5/adcftof5_tet20_mode1.cnf
+include fadc250/s6/adcecal6_tet20_mode1.cnf
+include fadc250/s6 adcpcal6_tet20_mode1.cnf
+include fadc250/s6/adcftof6_tet20_mode1.cnf
+include trigger/FC/s0/cosmic.trg

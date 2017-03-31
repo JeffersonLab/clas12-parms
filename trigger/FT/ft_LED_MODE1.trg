@@ -49,15 +49,16 @@ FADC250_NSA       400
 FADC250_NPEAK     1
 
 #pulse mode
-##FADC250_MODE      3
-##FADC250_NSB       20
-##FADC250_NSA       120
-##FADC250_NPEAK     3
+#FADC250_MODE      7
+#FADC250_NSB       20
+#FADC250_NSA       180
+#FADC250_NPEAK     1
 
 #       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
 FADC250_ADC_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 FADC250_TRG_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
-FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+#FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 FADC250_TRG_WIDTH       100
 FADC250_TRG_MINTOT      5
 FADC250_TRG_MINMULT     1
@@ -153,15 +154,16 @@ FADC250_NSA       400
 FADC250_NPEAK     1
 
 #pulse mode
-##FADC250_MODE      3
-##FADC250_NSB       20
-##FADC250_NSA       120
-##FADC250_NPEAK     3
+#FADC250_MODE      7
+#FADC250_NSB       20
+#FADC250_NSA       180
+#FADC250_NPEAK     1
 
 #       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
 FADC250_ADC_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 FADC250_TRG_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
-FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+#FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 FADC250_TRG_WIDTH       100
 FADC250_TRG_MINTOT      5
 FADC250_TRG_MINMULT     1
@@ -270,15 +272,16 @@ FADC250_NSA       400
 FADC250_NPEAK     1
 
 #pulse mode
-##FADC250_MODE      3
-##FADC250_NSB       20
-##FADC250_NSA       120
-##FADC250_NPEAK     3
+#FADC250_MODE      7
+#FADC250_NSB       20
+#FADC250_NSA       180
+#FADC250_NPEAK     1
 
 #       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
 FADC250_ADC_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 FADC250_TRG_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
-FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+#FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 FADC250_TRG_WIDTH       100
 FADC250_TRG_MINTOT      4
 FADC250_TRG_MINMULT     4

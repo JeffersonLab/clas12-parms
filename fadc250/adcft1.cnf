@@ -8,7 +8,7 @@ FADC250_DAC  3300
 #when decreased, ADC pulse moves left
 # setting for LED flasher: OFFSET=940, WIDTH=400
 # setting for cosmics: OFFSET=1150, WIDTH=400
-FADC250_W_OFFSET  940
+FADC250_W_OFFSET  1140
 FADC250_W_WIDTH   400
 
 #raw mode

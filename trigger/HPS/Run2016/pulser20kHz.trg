@@ -56,7 +56,8 @@ TI_CRATE end
 ### SSP
 SSP_CRATE hps11
 
-SSP_ALLSLOTS
+SSP_SLOTS all
+
 SSP_W_WIDTH   100
 SSP_W_OFFSET  753
 
@@ -269,7 +270,7 @@ include trigger/HPS/small/fadc250/peds/EcalPeds_0nA.trg
 include trigger/HPS/small/fadc250/gains/EcalGains.trg
 
 # SVT stuff
-include dpm/dpm-default.trg
-include dpm/dpm-3sam-3rms.trg
+###include dpm/dpm-default.trg
+###include dpm/dpm-3sam-3rms.trg
 
 

@@ -1,0 +1,37 @@
+#
+# VTP config file
+#
+
+VTP_CRATE all
+
+VTP_W_WIDTH 800
+VTP_W_OFFSET 7300
+
+# enable payloads
+VTP_PAYLOAD_EN           1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+# vtp fibers
+VTP_FIBER_EN             1 0 0 0
+
+# energy sum
+VTP_EC_FADCSUM_CH        0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF
+
+# EC inner
+VTP_ECINNER_HIT_EMIN     100
+VTP_ECINNER_HIT_DT       8
+VTP_ECINNER_HIT_DALITZ   0 1023
+
+# EC outer
+VTP_ECOUTER_HIT_EMIN     100
+VTP_ECOUTER_HIT_DT       8
+VTP_ECOUTER_HIT_DALITZ   0 1023
+
+# trig2vtp latency
+VTP_GT_LATENCY           6000
+VTP_GT_WIDTH             100
+
+# trig bits (0-15)
+VTP_GT_TRGBIT            0  0 0 0 0
+VTP_GT_TRGBIT            1  0 0 0 0
+VTP_GT_TRGBIT            2  0 0 0 0
+VTP_GT_TRGBIT            3  0 0 0 0

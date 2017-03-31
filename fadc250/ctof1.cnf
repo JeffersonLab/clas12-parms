@@ -8,10 +8,10 @@ FADC250_DAC  3300
 #when decreased, ADC pulse moves left
 
 # cosmic trigger
-#FADC250_W_OFFSET  1250
+FADC250_W_OFFSET  1250
 
 # LED trigger
-FADC250_W_OFFSET  850
+#FADC250_W_OFFSET  850
 
 FADC250_W_WIDTH   400
 
