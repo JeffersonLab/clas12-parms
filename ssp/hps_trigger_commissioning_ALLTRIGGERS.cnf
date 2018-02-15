@@ -7,7 +7,7 @@
 # ~~~~~~~
 # SSP_CRATE             rocbcal1   <- ROC/crate name, usually IP name
 #
-# SSP_ALLSLOTS             <- just keyword - all settings after this line will be implemented
+# SSP_SLOTS all             <- just keyword - all settings after this line will be implemented
 #                                                for all slots, till SSP_SLOTS will be met
 #
 # SSP_SLOTS     3  8  19   <- slot_numbers - in which next settings will be implemented
@@ -169,7 +169,7 @@
 
 SSP_CRATE hps11
 
-SSP_ALLSLOTS
+SSP_SLOTS all
 
 SSP_BERR  1
 

@@ -79,8 +79,23 @@ VSCM_BCO_FREQ        16
 # YG trig latency study, peak shifted left, window size the same
 #VSCM_TRIG_WINDOW     256       224        16
 
+
+
+####################################
 # YG trig latency study
+
+# cosmic trigger from SVT1's SD
 VSCM_TRIG_WINDOW     96       224        16 
+
+# trying to coincide with CLAS trigger (added 6600ns)
+#VSCM_TRIG_WINDOW     256      1064        16 
+####################################
+
+
+
+
+
+
 #
 # # trigger processing latency=512 - do not have hits
 #VSCM_TRIG_WINDOW     256       768        16
@@ -188,5 +203,17 @@ FSSR_ADDR_REG_DCR                4        0x17
 FSSR_ADDR_REG_DCR                5        0x17
 FSSR_ADDR_REG_DCR                6        0x17
 FSSR_ADDR_REG_DCR                7        0x17
+
+VSCM_SLOT all
+VCSM_FSSR_GOTHIT_CFG 0xFF 64
+
+VSCM_SLOT 5
+VCSM_FSSR_GOTHIT_CFG 0x0F 64
+
+VSCM_SLOT 10 
+VCSM_FSSR_GOTHIT_CFG 0x0F 64
+
+VSCM_SLOT 17
+VCSM_FSSR_GOTHIT_CFG 0x0F 64
 
 VSCM_CRATE end

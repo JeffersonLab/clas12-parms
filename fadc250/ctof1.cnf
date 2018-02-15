@@ -1,12 +1,17 @@
-FADC250_CRATE all
-
+FADC250_CRATE ctof1
 
 FADC250_SLOT all
 
 FADC250_DAC  3300
 
 #when decreased, ADC pulse moves left
+
+# cosmic trigger
 FADC250_W_OFFSET  1250
+
+# LED trigger
+#FADC250_W_OFFSET  850
+
 FADC250_W_WIDTH   400
 
 #raw mode
@@ -26,7 +31,7 @@ FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 
 #zero threshold, pedestal file will be created
-##FADC250_TET 0
+#FADC250_TET 0
 
 #non-zero threshold, pedestal file will be used
 FADC250_TET 10
