@@ -1,0 +1,261 @@
+# Pedestal memory initialization file
+#   Produced:                    17:46:21 Nov 18 2017
+#   From:                        mmtb_000133.evio_JTB_07_ped.prg
+#   Min pedestal of masked channels: 256
+#   Max pedestal of masked channels: 4000
+0x002b3ffa --    0 B0 E0 S0 C 0 D 0-0x3ffa 4090 D 1-0x002b   43    
+0x00273fce --    1 B0 E0 S0 C 1 D 0-0x3fce 4046 D 1-0x0027   39    
+0x0038000c --    2 B0 E0 S0 C 2 D 0-0x000c   12 D 1-0x0038   56    
+0x00143ff2 --    3 B0 E0 S0 C 3 D 0-0x3ff2 4082 D 1-0x0014   20    
+0x00143ffd --    4 B0 E0 S0 C 4 D 0-0x3ffd 4093 D 1-0x0014   20    
+0x00183ff5 --    5 B0 E0 S0 C 5 D 0-0x3ff5 4085 D 1-0x0018   24    
+0x00200016 --    6 B0 E0 S0 C 6 D 0-0x0016   22 D 1-0x0020   32    
+0x00213ff9 --    7 B0 E0 S0 C 7 D 0-0x3ff9 4089 D 1-0x0021   33    
+0x001d0012 --    8 B0 E0 S0 C 8 D 0-0x0012   18 D 1-0x001d   29    
+0x001c3ffa --    9 B0 E0 S0 C 9 D 0-0x3ffa 4090 D 1-0x001c   28    
+0x00313ff8 --   10 B0 E0 S0 C10 D 0-0x3ff8 4088 D 1-0x0031   49    
+0x0018000e --   11 B0 E0 S0 C11 D 0-0x000e   14 D 1-0x0018   24    
+0x002b3ff8 --   12 B0 E0 S0 C12 D 0-0x3ff8 4088 D 1-0x002b   43    
+0x000f000e --   13 B0 E0 S0 C13 D 0-0x000e   14 D 1-0x000f   15    
+0x00230014 --   14 B0 E0 S0 C14 D 0-0x0014   20 D 1-0x0023   35    
+0x002a3ff5 --   15 B0 E0 S0 C15 D 0-0x3ff5 4085 D 1-0x002a   42    
+0x00240004 --   16 B0 E0 S0 C16 D 0-0x0004    4 D 1-0x0024   36    
+0x00143ffe --   17 B0 E0 S0 C17 D 0-0x3ffe 4094 D 1-0x0014   20    
+0x00280000 --   18 B0 E0 S0 C18 D 0-0x0000    0 D 1-0x0028   40    
+0x0021000e --   19 B0 E0 S0 C19 D 0-0x000e   14 D 1-0x0021   33    
+0x00433ffd --   20 B0 E0 S0 C20 D 0-0x3ffd 4093 D 1-0x0043   67    
+0x000e000f --   21 B0 E0 S0 C21 D 0-0x000f   15 D 1-0x000e   14    
+0x002e3ff8 --   22 B0 E0 S0 C22 D 0-0x3ff8 4088 D 1-0x002e   46    
+0x001f0001 --   23 B0 E0 S0 C23 D 0-0x0001    1 D 1-0x001f   31    
+0x0013001c --   24 B0 E0 S0 C24 D 0-0x001c   28 D 1-0x0013   19    
+0x00090005 --   25 B0 E0 S0 C25 D 0-0x0005    5 D 1-0x0009    9    
+0x00153fe2 --   26 B0 E0 S0 C26 D 0-0x3fe2 4066 D 1-0x0015   21    
+0x000f3feb --   27 B0 E0 S0 C27 D 0-0x3feb 4075 D 1-0x000f   15    
+0x00063ff1 --   28 B0 E0 S0 C28 D 0-0x3ff1 4081 D 1-0x0006    6    
+0x3ffa3ff7 --   29 B0 E0 S0 C29 D 0-0x3ff7 4087 D 1-0x3ffa 4090    
+0x00280017 --   30 B0 E0 S0 C30 D 0-0x0017   23 D 1-0x0028   40    
+0x3ff63fe9 --   31 B0 E0 S0 C31 D 0-0x3fe9 4073 D 1-0x3ff6 4086    
+0x3ff33fff --   32 B0 E0 S0 C32 D 0-0x3fff 4095 D 1-0x3ff3 4083    
+0x3ffe3ff4 --   33 B0 E0 S0 C33 D 0-0x3ff4 4084 D 1-0x3ffe 4094    
+0x00053fed --   34 B0 E0 S0 C34 D 0-0x3fed 4077 D 1-0x0005    5    
+0x00003ffa --   35 B0 E0 S0 C35 D 0-0x3ffa 4090 D 1-0x0000    0    
+0x000e000c --   36 B0 E0 S0 C36 D 0-0x000c   12 D 1-0x000e   14    
+0x3ffe0005 --   37 B0 E0 S0 C37 D 0-0x0005    5 D 1-0x3ffe 4094    
+0x3ff53ffd --   38 B0 E0 S0 C38 D 0-0x3ffd 4093 D 1-0x3ff5 4085    
+0x00073fe9 --   39 B0 E0 S0 C39 D 0-0x3fe9 4073 D 1-0x0007    7    
+0x0008000f --   40 B0 E0 S0 C40 D 0-0x000f   15 D 1-0x0008    8    
+0x00053fee --   41 B0 E0 S0 C41 D 0-0x3fee 4078 D 1-0x0005    5    
+0x00253ff5 --   42 B0 E0 S0 C42 D 0-0x3ff5 4085 D 1-0x0025   37    
+0x00033ff1 --   43 B0 E0 S0 C43 D 0-0x3ff1 4081 D 1-0x0003    3    
+0x00080010 --   44 B0 E0 S0 C44 D 0-0x0010   16 D 1-0x0008    8    
+0x000a0002 --   45 B0 E0 S0 C45 D 0-0x0002    2 D 1-0x000a   10    
+0x0023000f --   46 B0 E0 S0 C46 D 0-0x000f   15 D 1-0x0023   35    
+0x00063ff8 --   47 B0 E0 S0 C47 D 0-0x3ff8 4088 D 1-0x0006    6    
+0x00260006 --   48 B0 E0 S0 C48 D 0-0x0006    6 D 1-0x0026   38    
+0x00123ff6 --   49 B0 E0 S0 C49 D 0-0x3ff6 4086 D 1-0x0012   18    
+0x0024000c --   50 B0 E0 S0 C50 D 0-0x000c   12 D 1-0x0024   36    
+0x00270005 --   51 B0 E0 S0 C51 D 0-0x0005    5 D 1-0x0027   39    
+0x00313ffa --   52 B0 E0 S0 C52 D 0-0x3ffa 4090 D 1-0x0031   49    
+0x00243ffa --   53 B0 E0 S0 C53 D 0-0x3ffa 4090 D 1-0x0024   36    
+0x001b0018 --   54 B0 E0 S0 C54 D 0-0x0018   24 D 1-0x001b   27    
+0x002f000d --   55 B0 E0 S0 C55 D 0-0x000d   13 D 1-0x002f   47    
+0x003b000e --   56 B0 E0 S0 C56 D 0-0x000e   14 D 1-0x003b   59    
+0x002d0000 --   57 B0 E0 S0 C57 D 0-0x0000    0 D 1-0x002d   45    
+0x002c3ffb --   58 B0 E0 S0 C58 D 0-0x3ffb 4091 D 1-0x002c   44    
+0x00170005 --   59 B0 E0 S0 C59 D 0-0x0005    5 D 1-0x0017   23    
+0x001f000e --   60 B0 E0 S0 C60 D 0-0x000e   14 D 1-0x001f   31    
+0x00143ff5 --   61 B0 E0 S0 C61 D 0-0x3ff5 4085 D 1-0x0014   20    
+0x002c3ff9 --   62 B0 E0 S0 C62 D 0-0x3ff9 4089 D 1-0x002c   44    
+0x002f3ff9 --   63 B0 E0 S0 C63 D 0-0x3ff9 4089 D 1-0x002f   47    
+0x3fe60028 --   64 B1 E0 S0 C 0 D 2-0x0028   40 D 3-0x3fe6 4070    
+0x000a000b --   65 B1 E0 S0 C 1 D 2-0x000b   11 D 3-0x000a   10    
+0x0005002c --   66 B1 E0 S0 C 2 D 2-0x002c   44 D 3-0x0005    5    
+0x000c001f --   67 B1 E0 S0 C 3 D 2-0x001f   31 D 3-0x000c   12    
+0x0015002d --   68 B1 E0 S0 C 4 D 2-0x002d   45 D 3-0x0015   21    
+0x00020010 --   69 B1 E0 S0 C 5 D 2-0x0010   16 D 3-0x0002    2    
+0x00080028 --   70 B1 E0 S0 C 6 D 2-0x0028   40 D 3-0x0008    8    
+0x3fff001e --   71 B1 E0 S0 C 7 D 2-0x001e   30 D 3-0x3fff 4095    
+0x0017001f --   72 B1 E0 S0 C 8 D 2-0x001f   31 D 3-0x0017   23    
+0x00050032 --   73 B1 E0 S0 C 9 D 2-0x0032   50 D 3-0x0005    5    
+0x00080026 --   74 B1 E0 S0 C10 D 2-0x0026   38 D 3-0x0008    8    
+0x3ff3002d --   75 B1 E0 S0 C11 D 2-0x002d   45 D 3-0x3ff3 4083    
+0x3fea0030 --   76 B1 E0 S0 C12 D 2-0x0030   48 D 3-0x3fea 4074    
+0x3fe70007 --   77 B1 E0 S0 C13 D 2-0x0007    7 D 3-0x3fe7 4071    
+0x3ffb0041 --   78 B1 E0 S0 C14 D 2-0x0041   65 D 3-0x3ffb 4091    
+0x3fd1002d --   79 B1 E0 S0 C15 D 2-0x002d   45 D 3-0x3fd1 4049    
+0x3fff000f --   80 B1 E0 S0 C16 D 2-0x000f   15 D 3-0x3fff 4095    
+0x3fed0032 --   81 B1 E0 S0 C17 D 2-0x0032   50 D 3-0x3fed 4077    
+0x3ff7001f --   82 B1 E0 S0 C18 D 2-0x001f   31 D 3-0x3ff7 4087    
+0x3ff10013 --   83 B1 E0 S0 C19 D 2-0x0013   19 D 3-0x3ff1 4081    
+0x3fda002c --   84 B1 E0 S0 C20 D 2-0x002c   44 D 3-0x3fda 4058    
+0x3ff3002a --   85 B1 E0 S0 C21 D 2-0x002a   42 D 3-0x3ff3 4083    
+0x3ff30008 --   86 B1 E0 S0 C22 D 2-0x0008    8 D 3-0x3ff3 4083    
+0x3feb0030 --   87 B1 E0 S0 C23 D 2-0x0030   48 D 3-0x3feb 4075    
+0x00000038 --   88 B1 E0 S0 C24 D 2-0x0038   56 D 3-0x0000    0    
+0x3fd60009 --   89 B1 E0 S0 C25 D 2-0x0009    9 D 3-0x3fd6 4054    
+0x3fd9002d --   90 B1 E0 S0 C26 D 2-0x002d   45 D 3-0x3fd9 4057    
+0x3ff20028 --   91 B1 E0 S0 C27 D 2-0x0028   40 D 3-0x3ff2 4082    
+0x3ff00030 --   92 B1 E0 S0 C28 D 2-0x0030   48 D 3-0x3ff0 4080    
+0x3fd40012 --   93 B1 E0 S0 C29 D 2-0x0012   18 D 3-0x3fd4 4052    
+0x3fdc0014 --   94 B1 E0 S0 C30 D 2-0x0014   20 D 3-0x3fdc 4060    
+0x3fee000a --   95 B1 E0 S0 C31 D 2-0x000a   10 D 3-0x3fee 4078    
+0x3fde002d --   96 B1 E0 S0 C32 D 2-0x002d   45 D 3-0x3fde 4062    
+0x3fd7000a --   97 B1 E0 S0 C33 D 2-0x000a   10 D 3-0x3fd7 4055    
+0x3ff70016 --   98 B1 E0 S0 C34 D 2-0x0016   22 D 3-0x3ff7 4087    
+0x3fda000b --   99 B1 E0 S0 C35 D 2-0x000b   11 D 3-0x3fda 4058    
+0x3fe80037 --  100 B1 E0 S0 C36 D 2-0x0037   55 D 3-0x3fe8 4072    
+0x001b000d --  101 B1 E0 S0 C37 D 2-0x000d   13 D 3-0x001b   27    
+0x0001001d --  102 B1 E0 S0 C38 D 2-0x001d   29 D 3-0x0001    1    
+0x3ff50027 --  103 B1 E0 S0 C39 D 2-0x0027   39 D 3-0x3ff5 4085    
+0x00090013 --  104 B1 E0 S0 C40 D 2-0x0013   19 D 3-0x0009    9    
+0x3ffc0024 --  105 B1 E0 S0 C41 D 2-0x0024   36 D 3-0x3ffc 4092    
+0x3ff40027 --  106 B1 E0 S0 C42 D 2-0x0027   39 D 3-0x3ff4 4084    
+0x3fe30040 --  107 B1 E0 S0 C43 D 2-0x0040   64 D 3-0x3fe3 4067    
+0x3fe5001d --  108 B1 E0 S0 C44 D 2-0x001d   29 D 3-0x3fe5 4069    
+0x00110022 --  109 B1 E0 S0 C45 D 2-0x0022   34 D 3-0x0011   17    
+0x0000002c --  110 B1 E0 S0 C46 D 2-0x002c   44 D 3-0x0000    0    
+0x3ffd0031 --  111 B1 E0 S0 C47 D 2-0x0031   49 D 3-0x3ffd 4093    
+0x0009002f --  112 B1 E0 S0 C48 D 2-0x002f   47 D 3-0x0009    9    
+0x3ff7001f --  113 B1 E0 S0 C49 D 2-0x001f   31 D 3-0x3ff7 4087    
+0x000f003a --  114 B1 E0 S0 C50 D 2-0x003a   58 D 3-0x000f   15    
+0x3ff50033 --  115 B1 E0 S0 C51 D 2-0x0033   51 D 3-0x3ff5 4085    
+0x0012004b --  116 B1 E0 S0 C52 D 2-0x004b   75 D 3-0x0012   18    
+0x3ff50037 --  117 B1 E0 S0 C53 D 2-0x0037   55 D 3-0x3ff5 4085    
+0x0006004c --  118 B1 E0 S0 C54 D 2-0x004c   76 D 3-0x0006    6    
+0x00030011 --  119 B1 E0 S0 C55 D 2-0x0011   17 D 3-0x0003    3    
+0x0003001e --  120 B1 E0 S0 C56 D 2-0x001e   30 D 3-0x0003    3    
+0x3ffd001e --  121 B1 E0 S0 C57 D 2-0x001e   30 D 3-0x3ffd 4093    
+0x0013001b --  122 B1 E0 S0 C58 D 2-0x001b   27 D 3-0x0013   19    
+0x00150025 --  123 B1 E0 S0 C59 D 2-0x0025   37 D 3-0x0015   21    
+0x3fe10033 --  124 B1 E0 S0 C60 D 2-0x0033   51 D 3-0x3fe1 4065    
+0x3ff8001c --  125 B1 E0 S0 C61 D 2-0x001c   28 D 3-0x3ff8 4088    
+0x3ff8001a --  126 B1 E0 S0 C62 D 2-0x001a   26 D 3-0x3ff8 4088    
+0x00080016 --  127 B1 E0 S0 C63 D 2-0x0016   22 D 3-0x0008    8    
+0x002e3fdb --  128 B2 E0 S0 C 0 D 4-0x3fdb 4059 D 5-0x002e   46    
+0x00113fd2 --  129 B2 E0 S0 C 1 D 4-0x3fd2 4050 D 5-0x0011   17    
+0x00433fdc --  130 B2 E0 S0 C 2 D 4-0x3fdc 4060 D 5-0x0043   67    
+0x00323fd9 --  131 B2 E0 S0 C 3 D 4-0x3fd9 4057 D 5-0x0032   50    
+0x003b3fe5 --  132 B2 E0 S0 C 4 D 4-0x3fe5 4069 D 5-0x003b   59    
+0x00233fee --  133 B2 E0 S0 C 5 D 4-0x3fee 4078 D 5-0x0023   35    
+0x001b3fd8 --  134 B2 E0 S0 C 6 D 4-0x3fd8 4056 D 5-0x001b   27    
+0x001c3fe7 --  135 B2 E0 S0 C 7 D 4-0x3fe7 4071 D 5-0x001c   28    
+0x00333fed --  136 B2 E0 S0 C 8 D 4-0x3fed 4077 D 5-0x0033   51    
+0x001e3fee --  137 B2 E0 S0 C 9 D 4-0x3fee 4078 D 5-0x001e   30    
+0x000d3feb --  138 B2 E0 S0 C10 D 4-0x3feb 4075 D 5-0x000d   13    
+0x00073fbd --  139 B2 E0 S0 C11 D 4-0x3fbd 4029 D 5-0x0007    7    
+0x00183fcd --  140 B2 E0 S0 C12 D 4-0x3fcd 4045 D 5-0x0018   24    
+0x00093fdc --  141 B2 E0 S0 C13 D 4-0x3fdc 4060 D 5-0x0009    9    
+0x00313fd8 --  142 B2 E0 S0 C14 D 4-0x3fd8 4056 D 5-0x0031   49    
+0x00173fcf --  143 B2 E0 S0 C15 D 4-0x3fcf 4047 D 5-0x0017   23    
+0x00033feb --  144 B2 E0 S0 C16 D 4-0x3feb 4075 D 5-0x0003    3    
+0x00123fce --  145 B2 E0 S0 C17 D 4-0x3fce 4046 D 5-0x0012   18    
+0x00293fe4 --  146 B2 E0 S0 C18 D 4-0x3fe4 4068 D 5-0x0029   41    
+0x00093fdd --  147 B2 E0 S0 C19 D 4-0x3fdd 4061 D 5-0x0009    9    
+0x002d3fd5 --  148 B2 E0 S0 C20 D 4-0x3fd5 4053 D 5-0x002d   45    
+0x00213fc3 --  149 B2 E0 S0 C21 D 4-0x3fc3 4035 D 5-0x0021   33    
+0x00123fe4 --  150 B2 E0 S0 C22 D 4-0x3fe4 4068 D 5-0x0012   18    
+0x00133fd2 --  151 B2 E0 S0 C23 D 4-0x3fd2 4050 D 5-0x0013   19    
+0x001e3fcc --  152 B2 E0 S0 C24 D 4-0x3fcc 4044 D 5-0x001e   30    
+0x00233fcf --  153 B2 E0 S0 C25 D 4-0x3fcf 4047 D 5-0x0023   35    
+0x001b3fc9 --  154 B2 E0 S0 C26 D 4-0x3fc9 4041 D 5-0x001b   27    
+0x00023fc3 --  155 B2 E0 S0 C27 D 4-0x3fc3 4035 D 5-0x0002    2    
+0x00333fcc --  156 B2 E0 S0 C28 D 4-0x3fcc 4044 D 5-0x0033   51    
+0x002b3fdc --  157 B2 E0 S0 C29 D 4-0x3fdc 4060 D 5-0x002b   43    
+0x00353fc9 --  158 B2 E0 S0 C30 D 4-0x3fc9 4041 D 5-0x0035   53    
+0x001a3fb7 --  159 B2 E0 S0 C31 D 4-0x3fb7 4023 D 5-0x001a   26    
+0x00243fe3 --  160 B2 E0 S0 C32 D 4-0x3fe3 4067 D 5-0x0024   36    
+0x00183fd3 --  161 B2 E0 S0 C33 D 4-0x3fd3 4051 D 5-0x0018   24    
+0x00243fb9 --  162 B2 E0 S0 C34 D 4-0x3fb9 4025 D 5-0x0024   36    
+0x001b3fc5 --  163 B2 E0 S0 C35 D 4-0x3fc5 4037 D 5-0x001b   27    
+0x00103fdb --  164 B2 E0 S0 C36 D 4-0x3fdb 4059 D 5-0x0010   16    
+0x00313fd2 --  165 B2 E0 S0 C37 D 4-0x3fd2 4050 D 5-0x0031   49    
+0x00473fb5 --  166 B2 E0 S0 C38 D 4-0x3fb5 4021 D 5-0x0047   71    
+0x00303fda --  167 B2 E0 S0 C39 D 4-0x3fda 4058 D 5-0x0030   48    
+0x002e3fd3 --  168 B2 E0 S0 C40 D 4-0x3fd3 4051 D 5-0x002e   46    
+0x003f3fbb --  169 B2 E0 S0 C41 D 4-0x3fbb 4027 D 5-0x003f   63    
+0x00343fd0 --  170 B2 E0 S0 C42 D 4-0x3fd0 4048 D 5-0x0034   52    
+0x00093fd3 --  171 B2 E0 S0 C43 D 4-0x3fd3 4051 D 5-0x0009    9    
+0x00183fda --  172 B2 E0 S0 C44 D 4-0x3fda 4058 D 5-0x0018   24    
+0x00183fd0 --  173 B2 E0 S0 C45 D 4-0x3fd0 4048 D 5-0x0018   24    
+0x00473fd7 --  174 B2 E0 S0 C46 D 4-0x3fd7 4055 D 5-0x0047   71    
+0x00303fda --  175 B2 E0 S0 C47 D 4-0x3fda 4058 D 5-0x0030   48    
+0x00223ff5 --  176 B2 E0 S0 C48 D 4-0x3ff5 4085 D 5-0x0022   34    
+0x00243fd4 --  177 B2 E0 S0 C49 D 4-0x3fd4 4052 D 5-0x0024   36    
+0x003e3fd3 --  178 B2 E0 S0 C50 D 4-0x3fd3 4051 D 5-0x003e   62    
+0x001a3fe5 --  179 B2 E0 S0 C51 D 4-0x3fe5 4069 D 5-0x001a   26    
+0x00363fe9 --  180 B2 E0 S0 C52 D 4-0x3fe9 4073 D 5-0x0036   54    
+0x00143fed --  181 B2 E0 S0 C53 D 4-0x3fed 4077 D 5-0x0014   20    
+0x004a3fff --  182 B2 E0 S0 C54 D 4-0x3fff 4095 D 5-0x004a   74    
+0x00363fd1 --  183 B2 E0 S0 C55 D 4-0x3fd1 4049 D 5-0x0036   54    
+0x00333fd9 --  184 B2 E0 S0 C56 D 4-0x3fd9 4057 D 5-0x0033   51    
+0x001b3fef --  185 B2 E0 S0 C57 D 4-0x3fef 4079 D 5-0x001b   27    
+0x00173ff3 --  186 B2 E0 S0 C58 D 4-0x3ff3 4083 D 5-0x0017   23    
+0x00463fcf --  187 B2 E0 S0 C59 D 4-0x3fcf 4047 D 5-0x0046   70    
+0x00303fe1 --  188 B2 E0 S0 C60 D 4-0x3fe1 4065 D 5-0x0030   48    
+0x00003fd1 --  189 B2 E0 S0 C61 D 4-0x3fd1 4049 D 5-0x0000    0    
+0x00373fe8 --  190 B2 E0 S0 C62 D 4-0x3fe8 4072 D 5-0x0037   55    
+0x002c3fd8 --  191 B2 E0 S0 C63 D 4-0x3fd8 4056 D 5-0x002c   44    
+0x00043fb3 --  192 B3 E0 S0 C 0 D 6-0x3fb3 4019 D 7-0x0004    4    
+0x00003fd9 --  193 B3 E0 S0 C 1 D 6-0x3fd9 4057 D 7-0x0000    0    
+0x3fec3fc3 --  194 B3 E0 S0 C 2 D 6-0x3fc3 4035 D 7-0x3fec 4076    
+0x3fe93fe3 --  195 B3 E0 S0 C 3 D 6-0x3fe3 4067 D 7-0x3fe9 4073    
+0x00013fc3 --  196 B3 E0 S0 C 4 D 6-0x3fc3 4035 D 7-0x0001    1    
+0x00133fb1 --  197 B3 E0 S0 C 5 D 6-0x3fb1 4017 D 7-0x0013   19    
+0x3fe93fdd --  198 B3 E0 S0 C 6 D 6-0x3fdd 4061 D 7-0x3fe9 4073    
+0x3ff53fe3 --  199 B3 E0 S0 C 7 D 6-0x3fe3 4067 D 7-0x3ff5 4085    
+0x3fec3fcc --  200 B3 E0 S0 C 8 D 6-0x3fcc 4044 D 7-0x3fec 4076    
+0x3ffc3fc6 --  201 B3 E0 S0 C 9 D 6-0x3fc6 4038 D 7-0x3ffc 4092    
+0x3ffd3fbb --  202 B3 E0 S0 C10 D 6-0x3fbb 4027 D 7-0x3ffd 4093    
+0x3ffe3fd6 --  203 B3 E0 S0 C11 D 6-0x3fd6 4054 D 7-0x3ffe 4094    
+0x3fea3fd7 --  204 B3 E0 S0 C12 D 6-0x3fd7 4055 D 7-0x3fea 4074    
+0x3ffb3fe9 --  205 B3 E0 S0 C13 D 6-0x3fe9 4073 D 7-0x3ffb 4091    
+0x3ff13fbf --  206 B3 E0 S0 C14 D 6-0x3fbf 4031 D 7-0x3ff1 4081    
+0x00053fd5 --  207 B3 E0 S0 C15 D 6-0x3fd5 4053 D 7-0x0005    5    
+0x3fe03fd1 --  208 B3 E0 S0 C16 D 6-0x3fd1 4049 D 7-0x3fe0 4064    
+0x3ffe3fcf --  209 B3 E0 S0 C17 D 6-0x3fcf 4047 D 7-0x3ffe 4094    
+0x3fed3fd3 --  210 B3 E0 S0 C18 D 6-0x3fd3 4051 D 7-0x3fed 4077    
+0x3ff33fdf --  211 B3 E0 S0 C19 D 6-0x3fdf 4063 D 7-0x3ff3 4083    
+0x3fe73fc1 --  212 B3 E0 S0 C20 D 6-0x3fc1 4033 D 7-0x3fe7 4071    
+0x3ffa3fd7 --  213 B3 E0 S0 C21 D 6-0x3fd7 4055 D 7-0x3ffa 4090    
+0x3ff83fc5 --  214 B3 E0 S0 C22 D 6-0x3fc5 4037 D 7-0x3ff8 4088    
+0x3ff43fc6 --  215 B3 E0 S0 C23 D 6-0x3fc6 4038 D 7-0x3ff4 4084    
+0x3fe93fdd --  216 B3 E0 S0 C24 D 6-0x3fdd 4061 D 7-0x3fe9 4073    
+0x3ffb3fc0 --  217 B3 E0 S0 C25 D 6-0x3fc0 4032 D 7-0x3ffb 4091    
+0x3fe73fab --  218 B3 E0 S0 C26 D 6-0x3fab 4011 D 7-0x3fe7 4071    
+0x3feb3fce --  219 B3 E0 S0 C27 D 6-0x3fce 4046 D 7-0x3feb 4075    
+0x3fd13fc3 --  220 B3 E0 S0 C28 D 6-0x3fc3 4035 D 7-0x3fd1 4049    
+0x3fd63fb2 --  221 B3 E0 S0 C29 D 6-0x3fb2 4018 D 7-0x3fd6 4054    
+0x3fea3fbd --  222 B3 E0 S0 C30 D 6-0x3fbd 4029 D 7-0x3fea 4074    
+0x3fdf3fc4 --  223 B3 E0 S0 C31 D 6-0x3fc4 4036 D 7-0x3fdf 4063    
+0x3fe43fd5 --  224 B3 E0 S0 C32 D 6-0x3fd5 4053 D 7-0x3fe4 4068    
+0x3fe13fbe --  225 B3 E0 S0 C33 D 6-0x3fbe 4030 D 7-0x3fe1 4065    
+0x3fdb3fbc --  226 B3 E0 S0 C34 D 6-0x3fbc 4028 D 7-0x3fdb 4059    
+0x3fe53fbf --  227 B3 E0 S0 C35 D 6-0x3fbf 4031 D 7-0x3fe5 4069    
+0x3ff13fc1 --  228 B3 E0 S0 C36 D 6-0x3fc1 4033 D 7-0x3ff1 4081    
+0x3feb3fcd --  229 B3 E0 S0 C37 D 6-0x3fcd 4045 D 7-0x3feb 4075    
+0x3feb3fd2 --  230 B3 E0 S0 C38 D 6-0x3fd2 4050 D 7-0x3feb 4075    
+0x3ff03fc0 --  231 B3 E0 S0 C39 D 6-0x3fc0 4032 D 7-0x3ff0 4080    
+0x3fdf3fc5 --  232 B3 E0 S0 C40 D 6-0x3fc5 4037 D 7-0x3fdf 4063    
+0x00083fea --  233 B3 E0 S0 C41 D 6-0x3fea 4074 D 7-0x0008    8    
+0x3fce3fb3 --  234 B3 E0 S0 C42 D 6-0x3fb3 4019 D 7-0x3fce 4046    
+0x3ffd3fcc --  235 B3 E0 S0 C43 D 6-0x3fcc 4044 D 7-0x3ffd 4093    
+0x00003fc9 --  236 B3 E0 S0 C44 D 6-0x3fc9 4041 D 7-0x0000    0    
+0x3ffc3fca --  237 B3 E0 S0 C45 D 6-0x3fca 4042 D 7-0x3ffc 4092    
+0x3fe83fce --  238 B3 E0 S0 C46 D 6-0x3fce 4046 D 7-0x3fe8 4072    
+0x3ff03fd4 --  239 B3 E0 S0 C47 D 6-0x3fd4 4052 D 7-0x3ff0 4080    
+0x3ffe3fcd --  240 B3 E0 S0 C48 D 6-0x3fcd 4045 D 7-0x3ffe 4094    
+0x00043fe1 --  241 B3 E0 S0 C49 D 6-0x3fe1 4065 D 7-0x0004    4    
+0x3ff23fce --  242 B3 E0 S0 C50 D 6-0x3fce 4046 D 7-0x3ff2 4082    
+0x3ffd3fea --  243 B3 E0 S0 C51 D 6-0x3fea 4074 D 7-0x3ffd 4093    
+0x00003fc2 --  244 B3 E0 S0 C52 D 6-0x3fc2 4034 D 7-0x0000    0    
+0x3fff3fbf --  245 B3 E0 S0 C53 D 6-0x3fbf 4031 D 7-0x3fff 4095    
+0x3ff43faf --  246 B3 E0 S0 C54 D 6-0x3faf 4015 D 7-0x3ff4 4084    
+0x00113fe2 --  247 B3 E0 S0 C55 D 6-0x3fe2 4066 D 7-0x0011   17    
+0x000b3feb --  248 B3 E0 S0 C56 D 6-0x3feb 4075 D 7-0x000b   11    
+0x00123fd4 --  249 B3 E0 S0 C57 D 6-0x3fd4 4052 D 7-0x0012   18    
+0x3fec3fc3 --  250 B3 E0 S0 C58 D 6-0x3fc3 4035 D 7-0x3fec 4076    
+0x00163fc0 --  251 B3 E0 S0 C59 D 6-0x3fc0 4032 D 7-0x0016   22    
+0x000a3fcb --  252 B3 E0 S0 C60 D 6-0x3fcb 4043 D 7-0x000a   10    
+0x00023ff1 --  253 B3 E0 S0 C61 D 6-0x3ff1 4081 D 7-0x0002    2    
+0x00023fc4 --  254 B3 E0 S0 C62 D 6-0x3fc4 4036 D 7-0x0002    2    
+0x00393fc6 --  255 B3 E0 S0 C63 D 6-0x3fc6 4038 D 7-0x0039   57    

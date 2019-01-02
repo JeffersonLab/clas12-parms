@@ -1,0 +1,119 @@
+#
+# dcrb config file - example
+#
+# this file contains settings for DCRB boards
+#
+# format:
+# ~~~~~~~
+# DCRB_CRATE   rocname   <- ROC/crate name, usually IP name
+#
+#
+# DCRB_SLOT        3   <- slot_number - in which next settings will be implemented
+#                         till file ends or next DCRB_SLOT will be met, can be 'all' for all slots
+#
+# DCRB_W_OFFSET  2000  <- Trigger Window Offset, in ns (from -51175 to 1000)
+# DCRB_W_WIDTH   2000  <- Trigger Window Width, in ns (from 25 to 51175)
+# DCRB_DEADTIME  1000  <- Extra Search Margin (after window), in ns (from 0 to 1250)
+#
+# DCRB_THRESHOLD  -30  <- discriminator threshold in mV (from XXX to YYY)
+#
+
+DCRB_CRATE all
+
+DCRB_SLOT all
+
+DCRB_W_OFFSET  7900
+DCRB_W_WIDTH   2000
+DCRB_DEADTIME  1000
+
+#-12 - 130MB/sec form 14 crates, -10 - 200MB/sec
+#
+# thresholds: -30, -45, -60, -75
+#
+DCRB_THRESHOLD -45
+
+DCRB_CRATE end
+
+#
+#reg1 30
+#
+DCRB_CRATE dc11
+DCRB_SLOT all
+DCRB_THRESHOLD -30
+DCRB_CRATE end
+DCRB_CRATE dc21
+DCRB_SLOT all
+DCRB_THRESHOLD -30
+DCRB_CRATE end
+DCRB_CRATE dc31
+DCRB_SLOT all
+DCRB_THRESHOLD -30
+DCRB_CRATE end
+DCRB_CRATE dc41
+DCRB_SLOT all
+DCRB_THRESHOLD -30
+DCRB_CRATE end
+DCRB_CRATE dc51
+DCRB_SLOT all
+DCRB_THRESHOLD -30
+DCRB_CRATE end
+DCRB_CRATE dc61
+DCRB_SLOT all
+DCRB_THRESHOLD -30
+DCRB_CRATE end
+
+#
+#reg2 45
+#
+DCRB_CRATE dc12
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc22
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc32
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc42
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc52
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc62
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+
+#
+#reg3 45
+#
+DCRB_CRATE dc13
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc23
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc33
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc43
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc53
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end
+DCRB_CRATE dc63
+DCRB_SLOT all
+DCRB_THRESHOLD -45
+DCRB_CRATE end

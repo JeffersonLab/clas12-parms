@@ -1,0 +1,43 @@
+#
+#TI_CRATE      <tdcecal1>     <- crate name, usually IP name
+#
+#TI_ADD_SLAVE 1                     # for every slave need to be added
+#
+#TI_FIBER_DELAY_OFFSET 0x80 0xcf    # fiber delay and offsets (in HEX)
+#
+#TI_BLOCK_LEVEL 1                   # the number of events in readout block
+#
+#TI_BUFFER_LEVEL 1                  # 0 - pipeline mode, 1 - ROC Lock mode, >=2 - buffered mode
+#
+#TI_INPUT_PRESCALE bit prescale     # bit: 0-5, prescale: 0-15, actual prescale value is 2^prescale
+#
+#TI_RANDOM_TRIGGER en prescale      # en: 0=disabled 1=enabled, prescale: 0-15, nominal rate = 500kHz/2^prescale
+
+TI_CRATE mmft1
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+TI_BUFFER_LEVEL 5
+TI_BLOCK_LEVEL  1
+
+TI_INPUT_PRESCALE 1  0
+TI_INPUT_PRESCALE 2  0
+TI_INPUT_PRESCALE 3  0
+TI_INPUT_PRESCALE 4  0
+TI_INPUT_PRESCALE 5  0
+TI_INPUT_PRESCALE 6  0
+
+
+
+# trigger rules
+# 1 trigger in Nx0.48us
+TI_HOLDOFF 1 50 0
+
+
+# 4 triggers in Nx3.84us
+#TI_HOLDOFF 4 10 1
+
+
+#500kHz / 2^15 => ~15Hz random
+TI_RANDOM_TRIGGER 1 15
+
+TI_CRATE end

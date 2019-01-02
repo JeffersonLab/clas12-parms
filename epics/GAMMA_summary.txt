@@ -1,5 +1,5 @@
 
-#  epics GAMMA summary created by epics_monitor on Wed Jan  2 11:03:11 2019
+#  epics GAMMA summary created by epics_monitor on Wed Jan  2 11:11:10 2019
 
 #     xxx, 17-Oct-07
 
@@ -9,12 +9,12 @@
 #Channel name              Channel value       
 #------------              -------------       
 Hall B energy              6535.36             
-Faraday cup                0.000772456         
-Faraday cup unblocked      0.0131106           
-Faraday offset             479.800             
+Faraday cup                -0.000882807        
+Faraday cup unblocked      -0.0149835          
+Faraday offset             483.800             
 Faraday slope              906.200             
-SLM                        1.94118e-05         
-SLM offset                 251.000             
+SLM                        -0.000194118        
+SLM offset                 251.400             
 SLM slope                  5151.50             
 B slit position            8.00000             
 hallb_IPM2C21A_XPOS        0.00000             
@@ -56,7 +56,7 @@ Phi_FG                     0.744226
 HELDELAYd                  6.00000             
 H+_rate                    0.00000             
 Sync_rate                  0.00000             
-Q_asym                     -0.567788           
+Q_asym                     0.319061            
 1/2_wave_plate_1           0.00000             
 1/2_wave_plate_1_setpoint  1.00000             
 1/2_wave_plate_2           750.001             
