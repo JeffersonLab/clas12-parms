@@ -1,0 +1,17 @@
+0  S1
+1  S2
+2  S3
+3  S4
+4  S5
+5  S6
+6  LTCC
+7  FC
+8  SVT
+9  CTOF
+10 CND
+11 MVT
+12 HELICITY STROB
+13 
+14 
+15 
+

@@ -1,0 +1,39 @@
+#
+# cnd production
+#
+#lcs changed FADC250_W_WIDTH from 400 to 256 10.9.2018
+#
+# FADCs
+#
+FADC250_CRATE adccnd1
+FADC250_SLOT all
+############
+# FADC250_TET setting up to run 5130 included - Oct. 13, 2018
+# and after 5140 included up to run #5163 included
+FADC250_TET 60
+
+#sergey: set GAIN 19-nov-2018
+FADC250_GAIN 0.04
+
+#
+# New setting for test
+#Run #5164 & #5165, 10/13/18
+#FADC250_TET 40
+# Run #5138 & #5139, 10/14/18
+#FADC250_TET 20
+#
+FADC250_NSB 12
+FADC250_NSA 60
+FADC250_W_OFFSET  7730
+FADC250_W_WIDTH   256
+
+include trigger/PEDS/hv_off/adccnd1_ped.cnf
+
+FADC250_CRATE end
+
+
+#
+# TDCs
+#
+
+include trigger/CND/adccnd1.cnf

@@ -1,0 +1,18 @@
+#
+# include it with following:
+#   include trigger/CTOF_HTCC/tdcctof1.cnf
+#
+
+TDC1190_CRATE tdcctof1
+
+TDC1190_SLOT all
+
+#before Oct 10, 2018
+#TDC1190_W_WIDTH   500 
+#TDC1190_W_OFFSET -8250
+
+#Oct 10, 2018
+TDC1190_W_WIDTH   250
+TDC1190_W_OFFSET -8100
+
+TDC1190_CRATE end

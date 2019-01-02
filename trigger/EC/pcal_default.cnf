@@ -1,0 +1,45 @@
+#
+# PCAL pedestals
+#
+
+FADC250_CRATE adcpcal1
+FADC250_NSB 12
+FADC250_NSA 156
+FADC250_TET 20
+include trigger/PEDS/hv_on/adcpcal1_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcpcal2
+FADC250_NSB 12
+FADC250_NSA 156
+FADC250_TET 20
+include trigger/PEDS/hv_on/adcpcal2_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcpcal3
+FADC250_NSB 12
+FADC250_NSA 156
+FADC250_TET 20
+include trigger/PEDS/hv_on/adcpcal3_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcpcal4
+FADC250_NSB 12
+FADC250_NSA 156
+FADC250_TET 20
+include trigger/PEDS/hv_on/adcpcal4_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcpcal5
+FADC250_NSB 12
+FADC250_NSA 156
+FADC250_TET 20
+include trigger/PEDS/hv_on/adcpcal5_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcpcal6
+FADC250_NSB 12
+FADC250_NSA 156
+FADC250_TET 20
+include trigger/PEDS/hv_on/adcpcal6_ped.cnf
+FADC250_CRATE end

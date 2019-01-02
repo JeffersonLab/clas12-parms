@@ -1,0 +1,5 @@
+# CND cluster trigger logic
+
+SSP_GT_STRG_CND_EN      1
+SSP_GT_STRG_CND_WIDTH   64
+SSP_GT_STRG_CND_MASK    0xFF

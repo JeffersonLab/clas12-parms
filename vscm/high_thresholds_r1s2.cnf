@@ -1,0 +1,42 @@
+
+# Set discriminator 0 on U3,U4 FSSR2 chips to 20
+FSSR_ADDR_REG_DISC_THR        4        0        60 
+FSSR_ADDR_REG_DISC_THR        5        0        60
+FSSR_ADDR_REG_DISC_THR        6        0        60
+FSSR_ADDR_REG_DISC_THR        7        0        60
+
+FSSR_ADDR_REG_DISC_THR        4        1        75
+FSSR_ADDR_REG_DISC_THR        5        1        75
+FSSR_ADDR_REG_DISC_THR        6        1        75
+FSSR_ADDR_REG_DISC_THR        7        1        75
+
+FSSR_ADDR_REG_DISC_THR        4        2        90
+FSSR_ADDR_REG_DISC_THR        5        2        90
+FSSR_ADDR_REG_DISC_THR        6        2        90
+FSSR_ADDR_REG_DISC_THR        7        2        90
+
+FSSR_ADDR_REG_DISC_THR        4        3        105
+FSSR_ADDR_REG_DISC_THR        5        3        105
+FSSR_ADDR_REG_DISC_THR        6        3        105
+FSSR_ADDR_REG_DISC_THR        7        3        105
+
+FSSR_ADDR_REG_DISC_THR        4        4        120
+FSSR_ADDR_REG_DISC_THR        5        4        120
+FSSR_ADDR_REG_DISC_THR        6        4        120
+FSSR_ADDR_REG_DISC_THR        7        4        120
+
+FSSR_ADDR_REG_DISC_THR        4        5        135
+FSSR_ADDR_REG_DISC_THR        5        5        135
+FSSR_ADDR_REG_DISC_THR        6        5        135
+FSSR_ADDR_REG_DISC_THR        7        5        135
+
+FSSR_ADDR_REG_DISC_THR        4        6        150
+FSSR_ADDR_REG_DISC_THR        5        6        150
+FSSR_ADDR_REG_DISC_THR        6        6        150
+FSSR_ADDR_REG_DISC_THR        7        6        150
+
+FSSR_ADDR_REG_DISC_THR        4        7        165
+FSSR_ADDR_REG_DISC_THR        5        7        165
+FSSR_ADDR_REG_DISC_THR        6        7        165
+FSSR_ADDR_REG_DISC_THR        7        7        165
+

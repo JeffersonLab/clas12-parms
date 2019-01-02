@@ -1,0 +1,49 @@
+#
+# ecal pedestals
+#
+
+FADC250_CRATE adcecal1
+FADC250_NSB 12
+FADC250_NSA 60
+FADC250_TET 60
+include trigger/PEDS/hv_on/adcecal1_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcecal2
+FADC250_NSB 12
+FADC250_NSA 60
+FADC250_TET 60
+include trigger/PEDS/hv_on/adcecal2_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcecal3
+FADC250_NSB 12
+FADC250_NSA 60
+FADC250_TET 60
+include trigger/PEDS/hv_on/adcecal3_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcecal4
+FADC250_NSB 12
+FADC250_NSA 60
+FADC250_TET 60
+include trigger/PEDS/hv_on/adcecal4_ped.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcecal5
+FADC250_NSB 12
+FADC250_NSA 60
+FADC250_TET 30
+include trigger/PEDS/hv_on/adcecal5_ped.cnf
+FADC250_SLOT 3
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  0
+FADC250_CRATE end
+
+FADC250_CRATE adcecal6
+FADC250_NSB 12
+FADC250_NSA 60
+FADC250_TET 60
+include trigger/PEDS/hv_on/adcecal6_ped.cnf
+FADC250_CRATE end
+
+#include trigger/EC/ecal_ltcc_tet.cnf

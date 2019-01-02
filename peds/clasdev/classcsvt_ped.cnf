@@ -1,0 +1,7 @@
+#
+# File generated automatically by DAQ running in RAW mode at Thu Jun 29 09:18:09 2017
+#
+FADC250_CRATE classcsvt
+FADC250_SLOT 4
+FADC250_ALLCH_PED   110.930  120.755   65.068   92.830   86.088   97.487   85.197   83.979  108.975  102.798  103.500  228.115    0.000   77.472   80.602   85.407
+FADC250_CRATE end

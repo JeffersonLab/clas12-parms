@@ -1,0 +1,4 @@
+#A.C. 1/9/2018
+
+ft_default.cnf: the file included in clas production trigger files
+STAND_ALONE:    trg files to be used in stand-alone runs from clonpcft1

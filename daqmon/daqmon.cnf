@@ -1,0 +1,23 @@
+#
+# config file for CMViewer class
+#
+#    format:
+#
+# HIST <histogram #> <horizontal pad #> <vertical pad #> <prompt(1=yes/0=no)>
+#
+# TMLN <histogram #> <horizontal pad #> <vertical pad #> <time interval (sec)>
+# GRAF <histogram #> <bin# (from 1) to plot> <min> <max> <alarm> <norm. bin#>
+#
+##########################
+# first set of histograms
+##########################
+CMON_TAB Tab1 1 1
+CMON_PAD clonpc0:test1 1 2 1 1
+#CMON_PAD clonpc0:test3 2 2 1 1
+#
+CMON_TAB Tab2 2 3
+CMON_PAD clonpc0:test2 1 2 1 1
+CMON_PAD clonpc0:test4 2 2 1 1
+#
+# end
+#

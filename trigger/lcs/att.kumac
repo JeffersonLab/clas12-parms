@@ -1,0 +1,15 @@
+vec/cre att(8,540) r ; vec/read att attlen
+vec/cre p1a(4,23)  r ; vec/read p1a p1a
+vec/cre p1b(4,62)  r ; vec/read p1b p1b
+vec/cop att(4,1:23)  ap1a
+vec/cop att(4,24:85) ap1b
+vec/cop p1a(2,:) l1a
+vec/cop p1b(2,:) l1b
+sigma af1a = 800*exp(-l1a/ap1a)
+sigma af1b = 2000*exp(-l1b/ap1b)
+zone 1 2
+set vsiz 0.25
+vec/draw af1a 100
+line 0. 100 24 100 ; atitle '1A PADDLE' '800*ATT'
+vec/draw af1b 100
+line 0. 200 63 200 ; atitle '1B PADDLE' '2000*ATT'

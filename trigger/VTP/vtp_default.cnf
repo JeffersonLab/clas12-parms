@@ -1,0 +1,51 @@
+VTP_CRATE adcecal1vtp
+  include trigger/VTP/ecalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcecal2vtp
+  include trigger/VTP/ecalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcecal3vtp
+  include trigger/VTP/ecalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcecal4vtp
+  include trigger/VTP/ecalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcecal5vtp
+  include trigger/VTP/ecalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcecal6vtp
+  include trigger/VTP/ecalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcpcal1vtp
+  include trigger/VTP/pcalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcpcal2vtp
+  include trigger/VTP/pcalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcpcal3vtp
+  include trigger/VTP/pcalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcpcal4vtp
+  include trigger/VTP/pcalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcpcal5vtp
+  include trigger/VTP/pcalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcpcal6vtp
+  include trigger/VTP/pcalvtp_default.cnf
+VTP_CRATE end
+
+VTP_CRATE adcctof1vtp
+  include trigger/VTP/htccvtp_default.cnf
+VTP_CRATE end

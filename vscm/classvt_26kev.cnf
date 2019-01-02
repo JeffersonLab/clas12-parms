@@ -1,0 +1,244 @@
+#######################################
+# Format: <Address> <Param 0> ... <Param N-1>
+#
+# Valid options:
+#
+#    FSSR_ADDR_REG_DISC_THR                <Param 0> <Param 1> <Param 2>
+#                               Usage:
+#                               FSSR_SetThreshold(int id, unsigned int idx, unsigned char thr);
+#                               FSSR_SetThreshold(<Param 0>, <Param 1>, <Param 2>)
+#
+#    FSSR_ADDR_REG_KILL                        <Param 0> <Param 1> <Param 2> <Param 3> <Param 4>
+#                               Usage:
+#                               FSSR_KillSelect(int id, unsigned int *mask)
+#                               mask[0] = <Param 1>
+#                               mask[1] = <Param 2>
+#                               mask[2] = <Param 3>
+#                               mask[3] = <Param 4>
+#                               FSSR_KillSelect(<Param 0>,mask)
+#
+#    FSSR_ADDR_REG_INJECT                <Param 0> <Param 1> <Param 2> <Param 3> <Param 4>
+#                               Usage:
+#                               FSSR_InjectSelect(int id, unsigned int *mask)
+#                               mask[0] = <Param 1>
+#                               mask[1] = <Param 2>
+#                               mask[2] = <Param 3>
+#                               mask[3] = <Param 4>
+#                               FSSR_InjectSelect(<Param 0>,mask)
+#
+#    FSSR_ADDR_REG_DCR                        <Param 0> <Param 1>
+#                               Usage:
+#                               FSSR_SetControl(int id, unsigned int mask)
+#                               FSSR_SetControl(<Param 0>, <Param 1>)
+#
+#    VSCM_BCO_FREQ                                <Param 0>
+#                               Usage:
+#                               VSCMSetBCOClockFreq(unsigned int freq)
+#                               VSCMSetBCOClockFreq(<Param 0>)
+#
+#    VSCM_TRIG_WINDOW                        <Param 0> <Param 1> <Param 2>
+#                               Usage:
+#                               VSCM_SetupTriggerWindow(unsigned int windowSize,unsigned int windowLookback, unsigned int bcoFreq)
+#                               VSCM_SetupTriggerWindow(<Param 0>, <Param 1>, <Param2>)
+#
+# Parameters can be decimal(no prefix) or hexidecimal("0x" prefix)
+
+
+VSCM_CRATE all
+
+VSCM_SLOT all
+
+# set clock source - must be first statement in config file !!! default is internal
+#VSCM_CLOCK_INTERNAL
+VSCM_CLOCK_EXTERNAL
+
+
+# VSCM_MAX_TRIGGER_NUM: 0               - enabled forever
+#                       1 to 4294967295 - trigger before trigger is disabled
+###VSCM_MAX_TRIGGER_NUM	2000
+
+# Set BCO frequency to 4MHz
+###VSCM_BCO_FREQ        32
+VSCM_BCO_FREQ        16
+
+# Set Lookback parameters to 256=2us window, 512=4us lookback, 4MHz BCO
+###VSCM_TRIG_WINDOW        256        512        32
+#VSCM_TRIG_WINDOW        256        512        26
+#VSCM_TRIG_WINDOW        512        1024        26
+#VSCM_TRIG_WINDOW        384        384        16
+
+# trigger processing latency=0 - have hits YG offset 1-16
+# #VSCM_TRIG_WINDOW     256       256        16
+
+# 6/12/15 - Yuri/Ben cosmic window self trigger ideal window(?) YG no hits offset 1-15
+#VSCM_TRIG_WINDOW     224       96        16
+
+# YG trig latency study, no tracks 
+#VSCM_TRIG_WINDOW     256       128        16
+
+# YG trig latency study, peak shifted left, window size the same
+#VSCM_TRIG_WINDOW     256       224        16
+
+
+
+####################################
+# YG trig latency study
+
+# cosmic trigger from SVT1's SD
+VSCM_TRIG_WINDOW     96       224        16 
+
+# trying to coincide with CLAS trigger (added 6600ns)
+#VSCM_TRIG_WINDOW     256      1064        16 
+####################################
+
+
+
+
+
+
+#
+# # trigger processing latency=512 - do not have hits
+#VSCM_TRIG_WINDOW     256       768        16
+
+
+# Set discriminator 0 on all FSSR2 chips to 20
+FSSR_ADDR_REG_DISC_THR        0        0        30
+FSSR_ADDR_REG_DISC_THR        1        0        30
+FSSR_ADDR_REG_DISC_THR        2        0        30
+FSSR_ADDR_REG_DISC_THR        3        0        30
+FSSR_ADDR_REG_DISC_THR        4        0        30
+FSSR_ADDR_REG_DISC_THR        5        0        30
+FSSR_ADDR_REG_DISC_THR        6        0        30
+FSSR_ADDR_REG_DISC_THR        7        0        30
+
+FSSR_ADDR_REG_DISC_THR        0        1        45
+FSSR_ADDR_REG_DISC_THR        1        1        45
+FSSR_ADDR_REG_DISC_THR        2        1        45
+FSSR_ADDR_REG_DISC_THR        3        1        45
+FSSR_ADDR_REG_DISC_THR        4        1        45
+FSSR_ADDR_REG_DISC_THR        5        1        45
+FSSR_ADDR_REG_DISC_THR        6        1        45
+FSSR_ADDR_REG_DISC_THR        7        1        45
+
+FSSR_ADDR_REG_DISC_THR        0        2        60
+FSSR_ADDR_REG_DISC_THR        1        2        60
+FSSR_ADDR_REG_DISC_THR        2        2        60
+FSSR_ADDR_REG_DISC_THR        3        2        60
+FSSR_ADDR_REG_DISC_THR        4        2        60
+FSSR_ADDR_REG_DISC_THR        5        2        60
+FSSR_ADDR_REG_DISC_THR        6        2        60
+FSSR_ADDR_REG_DISC_THR        7        2        60
+
+FSSR_ADDR_REG_DISC_THR        0        3        75
+FSSR_ADDR_REG_DISC_THR        1        3        75
+FSSR_ADDR_REG_DISC_THR        2        3        75
+FSSR_ADDR_REG_DISC_THR        3        3        75
+FSSR_ADDR_REG_DISC_THR        4        3        75
+FSSR_ADDR_REG_DISC_THR        5        3        75
+FSSR_ADDR_REG_DISC_THR        6        3        75
+FSSR_ADDR_REG_DISC_THR        7        3        75
+
+FSSR_ADDR_REG_DISC_THR        0        4        90
+FSSR_ADDR_REG_DISC_THR        1        4        90
+FSSR_ADDR_REG_DISC_THR        2        4        90
+FSSR_ADDR_REG_DISC_THR        3        4        90
+FSSR_ADDR_REG_DISC_THR        4        4        90
+FSSR_ADDR_REG_DISC_THR        5        4        90
+FSSR_ADDR_REG_DISC_THR        6        4        90
+FSSR_ADDR_REG_DISC_THR        7        4        90
+
+FSSR_ADDR_REG_DISC_THR        0        5        105
+FSSR_ADDR_REG_DISC_THR        1        5        105
+FSSR_ADDR_REG_DISC_THR        2        5        105
+FSSR_ADDR_REG_DISC_THR        3        5        105
+FSSR_ADDR_REG_DISC_THR        4        5        105
+FSSR_ADDR_REG_DISC_THR        5        5        105
+FSSR_ADDR_REG_DISC_THR        6        5        105
+FSSR_ADDR_REG_DISC_THR        7        5        105
+
+FSSR_ADDR_REG_DISC_THR        0        6        120
+FSSR_ADDR_REG_DISC_THR        1        6        120
+FSSR_ADDR_REG_DISC_THR        2        6        120
+FSSR_ADDR_REG_DISC_THR        3        6        120
+FSSR_ADDR_REG_DISC_THR        4        6        120
+FSSR_ADDR_REG_DISC_THR        5        6        120
+FSSR_ADDR_REG_DISC_THR        6        6        120
+FSSR_ADDR_REG_DISC_THR        7        6        120
+
+FSSR_ADDR_REG_DISC_THR        0        7        135
+FSSR_ADDR_REG_DISC_THR        1        7        135
+FSSR_ADDR_REG_DISC_THR        2        7        135
+FSSR_ADDR_REG_DISC_THR        3        7        135
+FSSR_ADDR_REG_DISC_THR        4        7        135
+FSSR_ADDR_REG_DISC_THR        5        7        135
+FSSR_ADDR_REG_DISC_THR        6        7        135
+FSSR_ADDR_REG_DISC_THR        7        7        135
+
+# Enable all channels on all FSSR2 chips
+FSSR_ADDR_REG_KILL        0        0x00000000        0x00000000        0x00000000        0x00000000
+FSSR_ADDR_REG_KILL        1        0x00000000        0x00000000        0x00000000        0x00000000
+FSSR_ADDR_REG_KILL        2        0x00000000        0x00000000        0x00000000        0x00000000
+FSSR_ADDR_REG_KILL        3        0x00000000        0x00000000        0x00000000        0x00000000
+FSSR_ADDR_REG_KILL        4        0x00000000        0x00000000        0x00000000        0x00000000
+FSSR_ADDR_REG_KILL        5        0x00000000        0x00000000        0x00000000        0x00000000
+FSSR_ADDR_REG_KILL        6        0x00000000        0x00000000        0x00000000        0x00000000
+FSSR_ADDR_REG_KILL        7        0x00000000        0x00000000        0x00000000        0x00000000
+
+# Disable pusler injections on all channels on all FSSR2 chips
+FSSR_ADDR_REG_INJECT        0        0x00000000        0x00000000        0x00000000        0x00000000        
+FSSR_ADDR_REG_INJECT        1        0x00000000        0x00000000        0x00000000        0x00000000        
+FSSR_ADDR_REG_INJECT        2        0x00000000        0x00000000        0x00000000        0x00000000        
+FSSR_ADDR_REG_INJECT        3        0x00000000        0x00000000        0x00000000        0x00000000        
+FSSR_ADDR_REG_INJECT        4        0x00000000        0x00000000        0x00000000        0x00000000        
+FSSR_ADDR_REG_INJECT        5        0x00000000        0x00000000        0x00000000        0x00000000        
+FSSR_ADDR_REG_INJECT        6        0x00000000        0x00000000        0x00000000        0x00000000        
+FSSR_ADDR_REG_INJECT        7        0x00000000        0x00000000        0x00000000        0x00000000        
+
+# Setup FSSR2 amplifier
+FSSR_ADDR_REG_DCR                0        0x17
+FSSR_ADDR_REG_DCR                1        0x17
+FSSR_ADDR_REG_DCR                2        0x17
+FSSR_ADDR_REG_DCR                3        0x17
+FSSR_ADDR_REG_DCR                4        0x17
+FSSR_ADDR_REG_DCR                5        0x17
+FSSR_ADDR_REG_DCR                6        0x17
+FSSR_ADDR_REG_DCR                7        0x17
+
+VSCM_SLOT all
+VCSM_FSSR_GOTHIT_CFG 0xFF 64
+
+VSCM_SLOT 5
+VCSM_FSSR_GOTHIT_CFG 0x0F 64
+
+VSCM_SLOT 10 
+VCSM_FSSR_GOTHIT_CFG 0x0F 64
+
+VSCM_SLOT 17
+VCSM_FSSR_GOTHIT_CFG 0x0F 64
+
+VSCM_CRATE end
+
+# Set higher discriminator thresholds on U3,U4 FSSR2 chips, R1, inner layer
+#VSCM_CRATE svt1
+#
+#VSCM_SLOT 3
+#include high_thresholds.cnf
+#include high_thresholds_r1s2.cnf
+#VSCM_SLOT 4
+#include high_thresholds.cnf
+#VSCM_SLOT 5 
+#include high_thresholds.cnf
+#
+#VSCM_CRATE end
+#
+#VSCM_CRATE svt2
+#
+#VSCM_SLOT 3
+#include high_thresholds.cnf
+#VSCM_SLOT 4
+#include high_thresholds.cnf
+#VSCM_SLOT 5
+#include high_thresholds.cnf
+#
+#VSCM_CRATE end
+

@@ -1,0 +1,14 @@
+VSCM_CRATE svt2
+VSCM_SLOT 9
+
+# FSSR_ADDR_REG_KILL - strip vectors are bit reversed, avoid using this
+# FSSR_ADDR_REG_KILL  <chip 0-7>    <strip 96...127>  <strip 64...95>   <strip32..63>     <strip 0..31>
+#FSSR_ADDR_REG_KILL        4        0x00000000        0x00000000        0x1C000000        0x00000000
+
+
+# FSSR_ADDR_REG_KILL_STRIP <chip 0-7> <strip 0-127>
+FSSR_ADDR_REG_KILL_STRIP 4  35
+FSSR_ADDR_REG_KILL_STRIP 4  36
+FSSR_ADDR_REG_KILL_STRIP 4  37
+
+VSCM_CRATE end

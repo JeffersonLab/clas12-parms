@@ -1,0 +1,122 @@
+SSP_CRATE trig2
+
+SSP_SLOT all
+
+SSP_W_OFFSET 7900
+SSP_W_WIDTH  400
+
+#####################
+# possible prefixes:
+#  SSP_GT_
+#  SSP_GT_STRG_
+#  SSP_GTC_
+#  SSP_GTC_CTRG_
+#  SSP_RICH_
+#  SSP_HPS_
+#####################
+
+
+
+####################################
+# 'SSP_GT_' - sectors trigger logic
+####################################
+
+SSP_GT_LATENCY            5000
+SSP_GT_ECAL_ESUM_DELAY    0
+SSP_GT_ECAL_CLUSTER_DELAY 0
+SSP_GT_ECAL_ESUM_INTWIDTH 40 # integration window for total sums from ECAL_IN+ECAL_OUT
+
+SSP_GT_ECAL_COSMIC_DELAY  0
+
+SSP_GT_PCAL_ESUM_DELAY    0
+SSP_GT_PCAL_CLUSTER_DELAY 0
+SSP_GT_PCAL_ESUM_INTWIDTH 40 # integration window for total sums from PCAL
+
+SSP_GT_HTCC_DELAY         0
+SSP_GT_FTOF_DELAY         0
+
+# for DC test
+#SSP_GT_PCAL_COSMIC_DELAY  1500
+
+SSP_GT_DC_SEG_DELAY       0  0
+SSP_GT_DC_SEG_DELAY       1  0
+SSP_GT_DC_SEG_DELAY       2  0
+
+####################################################################
+# 'SSP_GT_STRG_' - sector trigger bits - logic inside single sector
+####################################################################
+
+# Disable all triggers
+include trigger/SSP/ssp_disable_all_triggers.cnf
+
+# Sector Trigger bit 0
+SSP_GT_STRG                           0
+SSP_GT_STRG_EN                        1
+include trigger/SSP/ssp_HTCC.cnf
+
+# Sector Trigger bit 1 
+SSP_GT_STRG                           1
+SSP_GT_STRG_EN                        1
+include trigger/SSP/ssp_PCAL.cnf
+
+# Sector Trigger bit 2 
+SSP_GT_STRG                           2
+SSP_GT_STRG_EN                        1
+include trigger/SSP/ssp_ECAL.cnf
+
+# Sector Trigger bit 3 
+SSP_GT_STRG                           3
+SSP_GT_STRG_EN                        1
+include trigger/SSP/ssp_PCAL.cnf
+include trigger/SSP/ssp_ECAL.cnf
+
+# Sector Trigger bit 4 
+#SSP_GT_STRG                           4
+#SSP_GT_STRG_EN                        1
+#include trigger/SSP/ssp_HTCC.cnf
+#include trigger/SSP/ssp_PCAL.cnf
+#include trigger/SSP/ssp_ECAL.cnf
+
+# Sector Trigger bit 5 
+#SSP_GT_STRG                           5
+#SSP_GT_STRG_EN                        1
+#include trigger/SSP/ssp_FTOF.cnf
+
+# Sector Trigger bit 6 
+#SSP_GT_STRG                           6
+#SSP_GT_STRG_EN                        1
+#include trigger/SSP/ssp_HTCC.cnf
+#include trigger/SSP/ssp_FTOF.cnf
+
+SSP_CRATE end
+
+
+#######################################
+# 'SSP_GTC_' - central detectors logic
+#######################################
+
+SSP_GTC_LATENCY           5000
+
+SSP_GTC_FT_ESUM_DELAY     0
+SSP_GTC_FT_CLUSTER_DELAY  0
+SSP_GTC_FT_ESUM_INTWIDTH  0
+#SSP_GTC_HTCC_DELAY       0
+
+
+###################################################
+# 'SSP_GTC_CTRG_' - central detectors trigger bits
+###################################################
+
+SSP_GTC_CTRG 0
+
+SSP_GTC_CTRG_EN 1
+SSP_GTC_CTRG_FT_CLUSTER_EN         0
+SSP_GTC_CTRG_FT_CLUSTER_EMIN       0
+SSP_GTC_CTRG_FT_CLUSTER_EMAX       0
+SSP_GTC_CTRG_FT_CLUSTER_HODO_NMIN  0
+SSP_GTC_CTRG_FT_CLUSTER_NMIN       0
+SSP_GTC_CTRG_FT_CLUSTER_WIDTH      0
+SSP_GTC_CTRG_FT_ESUM_EN            0
+SSP_GTC_CTRG_FT_ESUM_EMIN          0
+SSP_GTC_CTRG_FT_ESUM_WIDTH         0
+

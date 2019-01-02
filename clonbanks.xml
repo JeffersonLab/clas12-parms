@@ -77,6 +77,9 @@
                0(18:12)        "CH"
                0(11:04)        "BCO"
                0(02:00)        "ADC"
+            0(31:27)=0x10+0x09 "TDCEVT"
+               0(18:16)        "FSSRNUM"
+               0(15:00)        "TDC"
             0(31:27)=0x10+0x0E "DNV"
             0(31:27)=0x10+0x0F "FILLER"
 		</description>
@@ -90,6 +93,9 @@
                0(18:12)        "CH"
                0(11:04)        "LATENCY"
                0(02:00)        "ADC"
+            0(31:27)=0x10+0x09 "TDCEVT"
+               0(18:16)        "FSSRNUM"
+               0(15:00)        "TDC"
 		</description>
 	</dictEntry>
 
@@ -313,6 +319,85 @@
 
 
 	<dictEntry name="DSC2 Scalers raw format" tag="0xe115" num="0" type="uint32">
+            0(31:27)=0x10+0x00 "BLKHDR"
+
+            0(31:27)=0x10+0x01 "BLKTLR"
+
+            0(31:27)=0x10+0x02 "EVTHDR"
+
+            0(31:27)=0x10+0x04 "SCALERHDR"
+               0(31:0)  "TRG gated ch0"
+               1(31:0)  "TRG gated ch1"
+               2(31:0)  "TRG gated ch2"
+               3(31:0)  "TRG gated ch3"
+               4(31:0)  "TRG gated ch4"
+               5(31:0)  "TRG gated ch5"
+               6(31:0)  "TRG gated ch6"
+               7(31:0)  "TRG gated ch7"
+               8(31:0)  "TRG gated ch8"
+               9(31:0)  "TRG gated ch9"
+              10(31:0)  "TRG gated ch10"
+              11(31:0)  "TRG gated ch11"
+              12(31:0)  "TRG gated ch12"
+              13(31:0)  "TRG gated ch13"
+              14(31:0)  "TRG gated ch14"
+              15(31:0)  "TRG gated ch15"
+              16(31:0)  "TDC gated ch0"
+              17(31:0)  "TDC gated ch1"
+              18(31:0)  "TDC gated ch2"
+              19(31:0)  "TDC gated ch3"
+              20(31:0)  "TDC gated ch4"
+              21(31:0)  "TDC gated ch5"
+              22(31:0)  "TDC gated ch6"
+              23(31:0)  "TDC gated ch7"
+              24(31:0)  "TDC gated ch8"
+              25(31:0)  "TDC gated ch9"
+              26(31:0)  "TDC gated ch10"
+              27(31:0)  "TDC gated ch11"
+              28(31:0)  "TDC gated ch12"
+              29(31:0)  "TDC gated ch13"
+              30(31:0)  "TDC gated ch14"
+              31(31:0)  "TDC gated ch15"
+              32(31:0)  "TRG ungated ch0"
+              33(31:0)  "TRG ungated ch1"
+              34(31:0)  "TRG ungated ch2"
+              35(31:0)  "TRG ungated ch3"
+              36(31:0)  "TRG ungated ch4"
+              37(31:0)  "TRG ungated ch5"
+              33(31:0)  "TRG ungated ch6"
+              39(31:0)  "TRG ungated ch7"
+              40(31:0)  "TRG ungated ch8"
+              41(31:0)  "TRG ungated ch9"
+              42(31:0)  "TRG ungated ch10"
+              43(31:0)  "TRG ungated ch11"
+              44(31:0)  "TRG ungated ch12"
+              45(31:0)  "TRG ungated ch13"
+              46(31:0)  "TRG ungated ch14"
+              47(31:0)  "TRG ungated ch15"
+              48(31:0)  "TDC ungated ch0"
+              49(31:0)  "TDC ungated ch1"
+              50(31:0)  "TDC ungated ch2"
+              51(31:0)  "TDC ungated ch3"
+              52(31:0)  "TDC ungated ch4"
+              53(31:0)  "TDC ungated ch5"
+              54(31:0)  "TDC ungated ch6"
+              55(31:0)  "TDC ungated ch7"
+              56(31:0)  "TDC ungated ch8"
+              57(31:0)  "TDC ungated ch9"
+              58(31:0)  "TDC ungated ch10"
+              59(31:0)  "TDC ungated ch11"
+              60(31:0)  "TDC ungated ch12"
+              61(31:0)  "TDC ungated ch13"
+              62(31:0)  "TDC ungated ch14"
+              63(31:0)  "TDC ungated ch15"
+              64(31:0)  "REFERENCE gated"
+              65(31:0)  "REFERENCE ungated"
+              66(31:0)  "DSC2 FILLER"
+
+            0(31:27)=0x10+0x0E "DNV"
+
+            0(31:27)=0x10+0x0F "FILLER"
+
 		<description>
 
 		</description>
@@ -396,13 +481,11 @@
                0(21:0)         "NWORDS"
 
             0(31:27)=0x10+0x02 "EVTHDR"
-		       0(26:0)         "EVENTNUM"
+               0(26:0)         "EVENTNUM"
 
             0(31:27)=0x10+0x03 "TRGTIME"
-		       0(23:0)         "TIMEL"
-		       1(23:0)         "TIMEH"
-
-
+               0(23:0)         "TIMEL"
+               1(23:0)         "TIMEH"
 
             0(31:27)=0x10+0x04 "EC_PEAK"
                0(26:26)        "PEAK_INST"
@@ -464,11 +547,22 @@
                1(30:00)        "CLUSTER_MASK_MIDDLE"
                2(30:00)        "CLUSTER_MASK_LOW"
 
-            0(31:27)=0x10+0x0C "FT_HODO"
-               0(21:21)        "HODO_LAYER"
-               0(20:10)        "HODO_TIME"
-               0(09:05)        "CAL_Y"
-               0(04:00)        "CAL_X"
+            0(31:23)=0x10+0x0C0 "DC_ROAD"
+               0(22:17)        "SEG_SL"
+               0(11:11)        "ROAD_INBEND"
+               0(10:10)        "ROAD_OUTBEND"
+               0(09:09)        "ROAD_VALID"
+               0(08:00)        "TIME"
+               1(30:0)         "ROAD_FTOF(61:31)"
+               2(30:0)         "ROAD_FTOF(30:0)"
+
+            0(31:23)=0x10+0x0C1 "DC_SEGMENT"
+               0(11:09)        "SUPERLAYER_NUMBER"
+               0(08:00)        "TIME"
+               1(18:0)         "SEGMENT_WIRE(111:93)"
+               2(30:0)         "SEGMENT_WIRE(92:62)"
+               3(30:0)         "SEGMENT_WIRE(61:31)"
+               4(30:0)         "SEGMENT_WIRE(30:0)"
 
             0(31:27)=0x10+0x0D "TRIGGER"
                0(26:16)        "TRIG_TIME"
@@ -540,6 +634,46 @@
 
 
 
+	<dictEntry name="FADC250 Window Raw Data (mode 1 packed)" tag="0xe126" num="0" type="composite">
+		<description format="c,m(c,ms)">
+			c	"slot number"
+			m	"number of channels fired"
+			c	"channel number"
+			m	"number of shorts in packed array"
+			s	"packed fadc bytes"
+		</description>
+	</dictEntry>
+
+
+
+	<dictEntry name="SVT Composite Data with tag 9 (TDCEVT))" tag="0xe127" num="0" type="composite">
+		<description format="c,i,l,N(c,c,c,c),N(c,s)">
+			c	"slot number"
+			i	"trigger number"
+			l	"time stamp"
+			N	"number of channels fired"
+			c	"half/chip number"
+			c	"channel number"
+			c	"tdc value"
+			c	"adc value"
+			N	"number of ASICs fired"
+			c	"ASIC number"
+			s	"tdc value"
+		</description>
+	</dictEntry>
+
+
+	<dictEntry name="MVT composite data packed" tag="0xe128" num="0" type="composite">
+		<description format="c,i,l,n(s,mc)">
+			c	"slot number"
+			i	"trigger number"
+			l	"time stamp"
+            n   "number of channels"
+            s   "channel number"
+			m	"number of samples per channel, will be used to unpack data"
+            c   "byte array - packed data"
+		</description>
+	</dictEntry>
 
 
 

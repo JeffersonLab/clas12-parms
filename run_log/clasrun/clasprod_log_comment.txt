@@ -1,0 +1,6 @@
+"Run Number"  "5996"
+"Run Type"  "PROD66_NOFT_NORICH"
+"Target"  "LH2"
+"Beam Current Request"  "35"
+"Operators"  " expert: Rafayel Paremuzyan, worker: Yulia Furletova"
+"Comment"  ""

@@ -1,0 +1,39 @@
+#########################
+# rich4 Crate
+########################
+
+TI_CRATE rich4
+
+TI_BLOCK_LEVEL 8
+TI_BUFFER_LEVEL 8
+#TI_BLOCK_LEVEL 1
+#TI_BUFFER_LEVEL 1
+
+TI_HOLDOFF 1 4 1
+TI_HOLDOFF 2 4 1
+TI_HOLDOFF 3 3 1
+TI_HOLDOFF 4 2 1
+#TI_HOLDOFF 1 30 1
+#TI_HOLDOFF 2 30 1
+#TI_HOLDOFF 3 30 1
+#TI_HOLDOFF 4 30 1
+
+#TI_INPUT_PRESCALE 1 0
+#TI_INPUT_PRESCALE 2 0
+#TI_INPUT_PRESCALE 3 0
+#TI_INPUT_PRESCALE 4 0
+#TI_INPUT_PRESCALE 5 0
+#TI_INPUT_PRESCALE 6 0
+
+#TI_INPUT_MASK 0x0000003F
+TI_INPUT_MASK 1 1 1 1 1 1
+
+# first arg: 0-disable, 1-enable; second arg: prescale (15-7Hz, 7-3.5kHz, 3-60kHz)
+
+#Disable random trigger and use front-panel inputs
+#TI_RANDOM_TRIGGER 0 3
+
+#Enable random trigger (this disables front-panel input triggers)
+TI_RANDOM_TRIGGER 1 3
+
+TI_CRATE end

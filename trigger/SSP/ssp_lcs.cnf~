@@ -1,0 +1,218 @@
+SSP_CRATE trig2
+
+SSP_SLOT all
+
+SSP_W_OFFSET 7900
+SSP_W_WIDTH  400
+
+#####################
+# possible prefixes:
+#  SSP_GT_
+#  SSP_GT_STRG_
+#  SSP_GTC_
+#  SSP_GTC_CTRG_
+#  SSP_RICH_
+#  SSP_HPS_
+#####################
+
+
+
+####################################
+# 'SSP_GT_' - sectors trigger logic
+####################################
+
+SSP_GT_LATENCY            5000
+SSP_GT_ECAL_ESUM_DELAY    0
+SSP_GT_ECAL_CLUSTER_DELAY 0
+SSP_GT_ECAL_ESUM_INTWIDTH 40 # integration window for total sums from ECAL_IN+ECAL_OUT
+
+SSP_GT_ECAL_COSMIC_DELAY  0
+
+SSP_GT_PCAL_ESUM_DELAY    0
+SSP_GT_PCAL_CLUSTER_DELAY 0
+SSP_GT_PCAL_ESUM_INTWIDTH 40 # integration window for total sums from PCAL
+
+# for DC test
+#SSP_GT_PCAL_COSMIC_DELAY  1500
+
+SSP_GT_DC_SEG_DELAY       0  0
+SSP_GT_DC_SEG_DELAY       1  0
+SSP_GT_DC_SEG_DELAY       2  0
+
+####################################################################
+# 'SSP_GT_STRG_' - sector trigger bits - logic inside single sector
+####################################################################
+
+# Sector Trigger bit 0 
+SSP_GT_STRG                           0
+
+SSP_GT_STRG_EN                        1
+
+# ecal/pcal cluster trigger logic
+SSP_GT_STRG_ECAL_CLUSTER_EMIN_EN      0
+SSP_GT_STRG_ECAL_CLUSTER_EMIN         100
+SSP_GT_STRG_ECAL_CLUSTER_WIDTH        64
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         100
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        64
+
+# ecal/pcal total sum trigger logic
+SSP_GT_STRG_ECAL_ESUM_EN              0
+SSP_GT_STRG_ECAL_ESUM_MIN             0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           0
+SSP_GT_STRG_PCAL_ESUM_EN              0
+SSP_GT_STRG_PCAL_ESUM_MIN             0
+SSP_GT_STRG_PCAL_ESUM_WIDTH           0
+
+# ecal/pcal pixel trigger logic
+SSP_GT_STRG_ECALIN_COSMIC_EN          0
+SSP_GT_STRG_ECALOUT_COSMIC_EN         1
+SSP_GT_STRG_PCAL_COSMIC_EN            0
+SSP_GT_STRG_COSMIC_WIDTH              64
+
+# drift chamber superlay multiplicity
+SSP_GT_STRG_DC_MULT_EN                0
+SSP_GT_STRG_DC_MULT_MIN               0
+SSP_GT_STRG_DC_MULT_WIDTH             0
+
+
+
+
+# Sector Trigger bit 1 
+SSP_GT_STRG                           1
+
+SSP_GT_STRG_EN                        0
+
+# ecal/pcal cluster trigger logic
+SSP_GT_STRG_ECAL_CLUSTER_EMIN_EN      0
+SSP_GT_STRG_ECAL_CLUSTER_EMIN         0
+SSP_GT_STRG_ECAL_CLUSTER_WIDTH        0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        0
+
+# ecal/pcal total sum trigger logic
+SSP_GT_STRG_ECAL_ESUM_EN              0
+SSP_GT_STRG_ECAL_ESUM_MIN             0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           0
+SSP_GT_STRG_PCAL_ESUM_EN              0
+SSP_GT_STRG_PCAL_ESUM_MIN             0
+SSP_GT_STRG_PCAL_ESUM_WIDTH           0
+
+# ecal/pcal pixel trigger logic
+SSP_GT_STRG_ECALIN_COSMIC_EN          0
+SSP_GT_STRG_ECALOUT_COSMIC_EN         0
+SSP_GT_STRG_PCAL_COSMIC_EN            1
+SSP_GT_STRG_COSMIC_WIDTH              0
+
+# drift chamber superlay multiplicity
+SSP_GT_STRG_DC_MULT_EN                0
+SSP_GT_STRG_DC_MULT_MIN               0
+SSP_GT_STRG_DC_MULT_WIDTH             0
+
+
+
+
+# Sector Trigger bit 2 
+SSP_GT_STRG                           2
+
+SSP_GT_STRG_EN                        0
+
+# ecal/pcal cluster trigger logic
+SSP_GT_STRG_ECAL_CLUSTER_EMIN_EN      0
+SSP_GT_STRG_ECAL_CLUSTER_EMIN         0
+SSP_GT_STRG_ECAL_CLUSTER_WIDTH        0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        0
+
+# ecal/pcal total sum trigger logic
+SSP_GT_STRG_ECAL_ESUM_EN              0
+SSP_GT_STRG_ECAL_ESUM_MIN             0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           0
+SSP_GT_STRG_PCAL_ESUM_EN              0
+SSP_GT_STRG_PCAL_ESUM_MIN             0
+SSP_GT_STRG_PCAL_ESUM_WIDTH           0
+
+# ecal/pcal pixel trigger logic
+SSP_GT_STRG_ECALIN_COSMIC_EN          0
+SSP_GT_STRG_ECALOUT_COSMIC_EN         0
+SSP_GT_STRG_PCAL_COSMIC_EN            0
+SSP_GT_STRG_COSMIC_WIDTH              0
+
+# htcc
+SSP_GT_STRG_HTCC_EN                   1
+SSP_GT_STRG_HTCC_MASK                 0xFFFFFFFFFFFF
+SSP_GT_STRG_HTCC_WIDTH                0
+
+# drift chamber superlay multiplicity
+SSP_GT_STRG_DC_MULT_EN                0
+SSP_GT_STRG_DC_MULT_MIN               0
+SSP_GT_STRG_DC_MULT_WIDTH             0
+
+
+
+# Sector Trigger bit 3 
+SSP_GT_STRG                           3
+
+SSP_GT_STRG_EN                        0
+
+# ecal/pcal cluster trigger logic
+SSP_GT_STRG_ECAL_CLUSTER_EMIN_EN      0
+SSP_GT_STRG_ECAL_CLUSTER_EMIN         0
+SSP_GT_STRG_ECAL_CLUSTER_WIDTH        0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        0
+
+# ecal/pcal total sum trigger logic
+SSP_GT_STRG_ECAL_ESUM_EN              0
+SSP_GT_STRG_ECAL_ESUM_MIN             0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           0
+SSP_GT_STRG_PCAL_ESUM_EN              0
+SSP_GT_STRG_PCAL_ESUM_MIN             0
+SSP_GT_STRG_PCAL_ESUM_WIDTH           0
+
+# ecal/pcal pixel trigger logic
+SSP_GT_STRG_ECALIN_COSMIC_EN          0
+SSP_GT_STRG_ECALOUT_COSMIC_EN         1
+SSP_GT_STRG_PCAL_COSMIC_EN            0
+SSP_GT_STRG_COSMIC_WIDTH              0
+
+# drift chamber superlay multiplicity
+SSP_GT_STRG_DC_MULT_EN                0
+SSP_GT_STRG_DC_MULT_MIN               0
+SSP_GT_STRG_DC_MULT_WIDTH             0
+
+
+
+SSP_CRATE end
+
+
+#######################################
+# 'SSP_GTC_' - central detectors logic
+#######################################
+
+SSP_GTC_LATENCY           5000
+
+SSP_GTC_FT_ESUM_DELAY     0
+SSP_GTC_FT_CLUSTER_DELAY  0
+SSP_GTC_FT_ESUM_INTWIDTH  0
+
+
+###################################################
+# 'SSP_GTC_CTRG_' - central detectors trigger bits
+###################################################
+
+SSP_GTC_CTRG 0
+
+SSP_GTC_CTRG_EN                    0
+SSP_GTC_CTRG_FT_CLUSTER_EN         1
+SSP_GTC_CTRG_FT_CLUSTER_EMIN       100
+SSP_GTC_CTRG_FT_CLUSTER_EMAX       163830
+SSP_GTC_CTRG_FT_CLUSTER_HODO_NMIN  0
+SSP_GTC_CTRG_FT_CLUSTER_NMIN       2
+SSP_GTC_CTRG_FT_CLUSTER_WIDTH      100
+SSP_GTC_CTRG_FT_ESUM_EN            0
+SSP_GTC_CTRG_FT_ESUM_EMIN          0
+

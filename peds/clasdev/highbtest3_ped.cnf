@@ -1,7 +1,7 @@
 #
-# File generated automatically by DAQ running in RAW mode at Wed Jul 26 16:37:50 2017
+# File generated automatically by DAQ running in RAW mode at Fri Jul 27 16:25:54 2018
 #
 FADC250_CRATE highbtest3
 FADC250_SLOT 4
-FADC250_ALLCH_PED   110.252  119.835   64.401   92.976   86.077   97.630   85.035   83.763  216.877  210.272  211.485  228.863    0.000    0.000    0.000    0.000
+FADC250_ALLCH_PED   111.684  119.269   65.431   94.550  192.145  202.348  192.700  188.920  218.480  210.172  210.407  228.033    0.000    0.000    0.000    0.000
 FADC250_CRATE end

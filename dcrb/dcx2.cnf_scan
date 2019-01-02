@@ -1,0 +1,70 @@
+
+#
+# dcrb config file - example
+#
+# this file contains settings for DCRB boards
+#
+# format:
+# ~~~~~~~
+# DCRB_CRATE   rocname   <- ROC/crate name, usually IP name
+#
+#
+# DCRB_SLOT        3   <- slot_number - in which next settings will be implemented
+#                         till file ends or next DCRB_SLOT will be met, can be 'all' for all slots
+#
+# DCRB_W_OFFSET  2000  <- Trigger Window Offset, in ns (from -51175 to 1000)
+# DCRB_W_WIDTH   2000  <- Trigger Window Width, in ns (from 25 to 51175)
+# DCRB_DEADTIME  1000  <- Extra Search Margin (after window), in ns (from 0 to 1250)
+#
+# DCRB_THRESHOLD  -30  <- discriminator threshold in mV (from XXX to YYY)
+#
+
+DCRB_CRATE all
+
+DCRB_SLOT all
+
+#DCRB_W_OFFSET       7650
+#DCRB_W_WIDTH        1400
+DCRB_W_OFFSET       7550
+DCRB_W_WIDTH        800
+
+DCRB_HIT_TRIG_WIDTH 1500
+DCRB_THRESHOLD      -65
+DCRB_DEADTIME       1000
+
+DCRB_SLOT 3
+DCRB_DEADTIME       1100
+DCRB_SLOT 14
+DCRB_DEADTIME       1100
+
+DCRB_SLOT 4
+DCRB_DEADTIME       1000
+DCRB_SLOT 15
+DCRB_DEADTIME       1000
+
+DCRB_SLOT 5
+DCRB_DEADTIME       900
+DCRB_SLOT 16
+DCRB_DEADTIME       900
+
+DCRB_SLOT 6
+DCRB_DEADTIME       800
+DCRB_SLOT 17
+DCRB_DEADTIME       800
+
+DCRB_SLOT 7
+DCRB_DEADTIME       700
+DCRB_SLOT 18
+DCRB_DEADTIME       700
+
+DCRB_SLOT 8
+DCRB_DEADTIME       600
+DCRB_SLOT 19
+DCRB_DEADTIME       600
+
+DCRB_SLOT 9
+DCRB_DEADTIME       500
+DCRB_SLOT 20
+DCRB_DEADTIME       500
+
+DCRB_CRATE end

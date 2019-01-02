@@ -1,0 +1,13 @@
+#!/bin/tcsh
+
+# DET = cnd,ctof
+# PED = on,off
+
+set DET = $1
+set PED = $CLON_PARMS/trigger/PEDS/hv_$2
+set NAM = adc$DET
+
+ssh ${NAM}1 fadc250peds $PED/${NAM}1_ped.cnf > $PED/${NAM}1_ped.log &
+
+#cd $PED
+#sed -i '/FADC250_CRATE/d' *.cnf

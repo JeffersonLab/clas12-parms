@@ -1,0 +1,50 @@
+# epics_gamma_monitor.cfg
+
+*CHANNELS* - List of epics channels
+
+#  N.B.  MAX_EPICS is 250
+
+# Display name				     epics channel name
+# ------------				     ------------------
+
+"Hall B energy"                     "MBSY2C_energy"                  "get"
+
+"Moeller vacuum (V)"                "VCG2C21"                        "get"
+"VCG2C21A"                          "VCG2C21A"                       "get"
+"VCG2C24A"                          "VCG2C24A"                       "get"
+"VCG2H00A"                          "VCG2H00A"                       "get"
+"VCG2H01A"                          "VCG2H01A"                       "get"
+"VCG2H02A"                          "VCG2H02A"                       "get"
+
+"Faraday cup"                       "scaler_calc1"                   "get"
+
+# BPMs
+
+"hallb_IPM2C21A_XPOS"               "hallb_IPM2C21A_XPOS"            "get"
+"hallb_IPM2C21A_YPOS"               "hallb_IPM2C21A_YPOS"            "get"
+"hallb_IPM2C21A_CUR"                "hallb_IPM2C21A_CUR"             "get"
+"hallb_IPM2C24A_XPOS"               "hallb_IPM2C24A_XPOS"            "get"
+"hallb_IPM2C24A_YPOS"               "hallb_IPM2C24A_YPOS"            "get"
+"hallb_IPM2C24A_CUR"                "hallb_IPM2C24A_CUR"             "get"
+"hallb_IPM2H01_XPOS"                "hallb_IPM2H01_XPOS"             "get"
+"hallb_IPM2H01_YPOS"                "hallb_IPM2H01_YPOS"             "get"
+"hallb_IPM2H01_CUR"                 "hallb_IPM2H01_CUR"              "get"
+
+# HyCal transporter
+
+"ptrans_x"                          "ptrans_x"                       "get"
+"ptrans_y"                          "ptrans_y"                       "get"
+"hallb_ptrans_x_encoder"            "hallb_ptrans_x_encoder"         "get"
+"hallb_ptrans_y1_encoder"           "hallb_ptrans_y1_encoder"        "get"
+"hallb_ptrans_y2_encoder"           "hallb_ptrans_y2_encoder"        "get"
+
+# PRad target
+
+"TGT:PRad:Cell_P"                   "TGT:PRad:Cell_P"                "get"
+"TGT:PRad:Chamber_P"                "TGT:PRad:Chamber_P"             "get"
+"TGT:PRad:Tank_P_P"                 "TGT:PRad:Tank_P_P"              "get"
+"TGT:PRad:Cell_Gas_T"               "TGT:PRad:Cell_Gas_T"            "get"
+"TGT:PRad:Cell_Body_T"              "TGT:PRad:Cell_Body_T"           "get"
+"TGT:PRad:MFC_Flow"                 "TGT:PRad:MFC_Flow"              "get"
+
+

@@ -1,0 +1,1 @@
+/usr/clas12/release/1.3.2/epics/bin/epicsSetTriggers.sh

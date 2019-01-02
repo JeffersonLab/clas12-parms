@@ -1,0 +1,21 @@
+************************** trigger_v20_0.trg ******************
+This is supposed to be the same trigger as trigger_v12_3.trg (Latest production trigger in May 2018),
+Only differences are following
+- New DC logic syntax is used
+- A new line is added that tellse which FTOF matching table to use
+    ====== SSP_GT_FTOFPCU_MATCH_TABLE    0         # 0 is the old map, 1 is the new map Andrea provided after the last run
+**************************** END OF trigger_v20_0.trg ******************
+
+
+
+************************** trigger_v20_1.trg ******************
+The is the same as the trigger_v20_0.trg, the only difference is 
+dc hit multiplicity increased from 3 to 5, 
+
+All line "SSP_GT_STRG_DC_MULT_MIN               3" have changed to "SSP_GT_STRG_DC_MULT_MIN               5"
+**************************** END OF trigger_v20_1.trg ******************
+
+
+************************** trigger_v20_Validation.trg *****************
+This file is intended to take Random run with 15 KHz Trigger rate.
+The purpose is to validate electron trigger.

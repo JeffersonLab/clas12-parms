@@ -1,0 +1,243 @@
+
+JLAB fadc pedestal measurement on host adcpcal2
+----------------------------
+Opening CRCSR Window (opened at [0xb6fda000,0xb7fda000])
+Opening A32 Window (opened at [0xb6fca000,0xb6fda000])
+Opening A32Blt Window (opened at [0xacfca000,0xb6fca000])
+Opening A24 Window (opened at [0xabfca000,0xacfca000])
+Opening A16 Window (opened at [0xabfba000,0xabfca000])
+jlabgefMapTsi: Tempe Chip Userspace map successful
+VME Bus Error IRQ Disabled
+vmeBusCreateLockShm: vmeBus shared memory mutex initialized
+Initialized FADC  0  Slot #  3 at address 0xac14a000 (0x00180000) 
+Initialized FADC  1  Slot #  4 at address 0xac1ca000 (0x00200000) 
+Initialized FADC  2  Slot #  5 at address 0xac24a000 (0x00280000) 
+Initialized FADC  3  Slot #  6 at address 0xac2ca000 (0x00300000) 
+Initialized FADC  4  Slot #  7 at address 0xac34a000 (0x00380000) 
+Initialized FADC  5  Slot #  8 at address 0xac3ca000 (0x00400000) 
+Initialized FADC  6  Slot #  9 at address 0xac44a000 (0x00480000) 
+Initialized FADC  7  Slot # 10 at address 0xac4ca000 (0x00500000) 
+jlabgefMemProbe: Clearing VME BERR/2eST (0x800cf900) at VME address 0x580000
+jlabgefMemProbe: Clearing VME BERR/2eST (0x800cf900) at VME address 0x600000
+Initialized FADC  8  Slot # 13 at address 0xac64a000 (0x00680000) 
+Initialized FADC  9  Slot # 14 at address 0xac6ca000 (0x00700000) 
+Initialized FADC 10  Slot # 15 at address 0xac74a000 (0x00780000) 
+Initialized FADC 11  Slot # 16 at address 0xac7ca000 (0x00800000) 
+jlabgefMemProbe: Clearing VME BERR/2eST (0x800cf900) at VME address 0x880000
+jlabgefMemProbe: Clearing VME BERR/2eST (0x800cf900) at VME address 0x900000
+jlabgefMemProbe: Clearing VME BERR/2eST (0x800cf900) at VME address 0x980000
+jlabgefMemProbe: Clearing VME BERR/2eST (0x800cf900) at VME address 0xa00000
+faInit: Enabling FADC Internal Clock, and VXS Triggers (VXS Sync Reset)
+faInit: 12 FADC(s) successfully initialized
+fadc250Config: nfadc=12
+fadc250InitGlobals reached
+
+NOTE: use EXPID=>clasdev< from environment
+
+ReadConfigFile: Using configuration file >/usr/clas12/release/1.3.2/parms/fadc250/adcpcal2.cnf<
+
+ReadConfigFile: crate = all  host = adcpcal2 - activated
+
+ReadConfigFile: crate = end  host = adcpcal2 - disactivated
+
+
+fadc250DownloadAll reached, nfadc=12
+faMeasureChannelPedestal: slot 3, chan 0 => avg 56.904, rms  1.182, min 53, max 61
+faMeasureChannelPedestal: slot 3, chan 1 => avg 61.773, rms  1.265, min 57, max 67
+faMeasureChannelPedestal: slot 3, chan 2 => avg 73.008, rms  1.191, min 69, max 77
+faMeasureChannelPedestal: slot 3, chan 3 => avg 96.197, rms  1.210, min 92, max 101
+faMeasureChannelPedestal: slot 3, chan 4 => avg 75.568, rms  1.435, min 70, max 81
+faMeasureChannelPedestal: slot 3, chan 5 => avg 89.220, rms  1.237, min 85, max 93
+faMeasureChannelPedestal: slot 3, chan 6 => avg 84.835, rms  1.362, min 80, max 90
+faMeasureChannelPedestal: slot 3, chan 7 => avg 88.566, rms  1.538, min 83, max 94
+faMeasureChannelPedestal: slot 3, chan 8 => avg 102.948, rms  1.307, min 99, max 108
+faMeasureChannelPedestal: slot 3, chan 9 => avg 84.401, rms  1.321, min 80, max 90
+faMeasureChannelPedestal: slot 3, chan 10 => avg 124.044, rms  1.231, min 120, max 128
+faMeasureChannelPedestal: slot 3, chan 11 => avg 75.526, rms  1.218, min 72, max 80
+faMeasureChannelPedestal: slot 3, chan 12 => avg 123.041, rms  1.212, min 119, max 128
+faMeasureChannelPedestal: slot 3, chan 13 => avg 75.662, rms  1.140, min 72, max 80
+faMeasureChannelPedestal: slot 3, chan 14 => avg 104.470, rms  1.095, min 100, max 108
+faMeasureChannelPedestal: slot 3, chan 15 => avg 140.939, rms  1.251, min 137, max 145
+faMeasureChannelPedestal: slot 4, chan 0 => avg 117.729, rms  1.300, min 113, max 122
+faMeasureChannelPedestal: slot 4, chan 1 => avg 102.583, rms  1.347, min 98, max 107
+faMeasureChannelPedestal: slot 4, chan 2 => avg 130.780, rms  1.346, min 126, max 135
+faMeasureChannelPedestal: slot 4, chan 3 => avg 92.350, rms  1.230, min 88, max 97
+faMeasureChannelPedestal: slot 4, chan 4 => avg 107.256, rms  1.311, min 103, max 112
+faMeasureChannelPedestal: slot 4, chan 5 => avg 104.439, rms  1.309, min 100, max 109
+faMeasureChannelPedestal: slot 4, chan 6 => avg 130.889, rms  1.306, min 126, max 135
+faMeasureChannelPedestal: slot 4, chan 7 => avg 83.602, rms  1.589, min 78, max 89
+faMeasureChannelPedestal: slot 4, chan 8 => avg 115.152, rms  1.246, min 111, max 119
+faMeasureChannelPedestal: slot 4, chan 9 => avg 136.931, rms  1.386, min 132, max 141
+faMeasureChannelPedestal: slot 4, chan 10 => avg 120.406, rms  1.262, min 116, max 125
+faMeasureChannelPedestal: slot 4, chan 11 => avg 125.637, rms  1.297, min 121, max 131
+faMeasureChannelPedestal: slot 4, chan 12 => avg 121.048, rms  1.304, min 116, max 125
+faMeasureChannelPedestal: slot 4, chan 13 => avg 124.488, rms  1.265, min 120, max 129
+faMeasureChannelPedestal: slot 4, chan 14 => avg 135.874, rms  1.278, min 131, max 140
+faMeasureChannelPedestal: slot 4, chan 15 => avg 102.930, rms  1.187, min 99, max 108
+faMeasureChannelPedestal: slot 5, chan 0 => avg 86.554, rms  1.183, min 82, max 91
+faMeasureChannelPedestal: slot 5, chan 1 => avg 94.710, rms  1.152, min 90, max 98
+faMeasureChannelPedestal: slot 5, chan 2 => avg 105.930, rms  1.227, min 102, max 110
+faMeasureChannelPedestal: slot 5, chan 3 => avg 65.987, rms  1.178, min 61, max 70
+faMeasureChannelPedestal: slot 5, chan 4 => avg 114.749, rms  1.341, min 110, max 119
+faMeasureChannelPedestal: slot 5, chan 5 => avg 91.281, rms  1.243, min 87, max 95
+faMeasureChannelPedestal: slot 5, chan 6 => avg 125.543, rms  1.306, min 121, max 131
+faMeasureChannelPedestal: slot 5, chan 7 => avg 112.724, rms  1.319, min 108, max 117
+faMeasureChannelPedestal: slot 5, chan 8 => avg 80.959, rms  1.304, min 76, max 86
+faMeasureChannelPedestal: slot 5, chan 9 => avg 80.788, rms  1.250, min 77, max 86
+faMeasureChannelPedestal: slot 5, chan 10 => avg 114.599, rms  1.353, min 110, max 120
+faMeasureChannelPedestal: slot 5, chan 11 => avg 81.973, rms  1.223, min 77, max 85
+faMeasureChannelPedestal: slot 5, chan 12 => avg 91.139, rms  1.180, min 87, max 95
+faMeasureChannelPedestal: slot 5, chan 13 => avg 84.121, rms  1.186, min 80, max 88
+faMeasureChannelPedestal: slot 5, chan 14 => avg 71.888, rms  1.133, min 68, max 76
+faMeasureChannelPedestal: slot 5, chan 15 => avg 122.812, rms  1.233, min 119, max 127
+faMeasureChannelPedestal: slot 6, chan 0 => avg 116.398, rms  1.319, min 111, max 121
+faMeasureChannelPedestal: slot 6, chan 1 => avg 89.448, rms  1.266, min 85, max 94
+faMeasureChannelPedestal: slot 6, chan 2 => avg 91.004, rms  1.168, min 86, max 96
+faMeasureChannelPedestal: slot 6, chan 3 => avg 90.796, rms  1.196, min 87, max 95
+faMeasureChannelPedestal: slot 6, chan 4 => avg 89.417, rms  1.363, min 84, max 94
+faMeasureChannelPedestal: slot 6, chan 5 => avg 127.629, rms  1.327, min 123, max 132
+faMeasureChannelPedestal: slot 6, chan 6 => avg 78.503, rms  1.297, min 74, max 83
+faMeasureChannelPedestal: slot 6, chan 7 => avg 144.490, rms  1.373, min 139, max 149
+faMeasureChannelPedestal: slot 6, chan 8 => avg 102.976, rms  1.300, min 98, max 107
+faMeasureChannelPedestal: slot 6, chan 9 => avg 124.104, rms  1.264, min 119, max 129
+faMeasureChannelPedestal: slot 6, chan 10 => avg 127.125, rms  1.402, min 122, max 132
+faMeasureChannelPedestal: slot 6, chan 11 => avg 93.951, rms  1.076, min 90, max 98
+faMeasureChannelPedestal: slot 6, chan 12 => avg 88.536, rms  1.201, min 85, max 93
+faMeasureChannelPedestal: slot 6, chan 13 => avg 69.962, rms  1.147, min 66, max 74
+faMeasureChannelPedestal: slot 6, chan 14 => avg 96.709, rms  1.146, min 93, max 101
+faMeasureChannelPedestal: slot 6, chan 15 => avg 92.508, rms  1.151, min 88, max 96
+faMeasureChannelPedestal: slot 7, chan 0 => avg 120.773, rms  1.245, min 116, max 125
+faMeasureChannelPedestal: slot 7, chan 1 => avg 87.263, rms  1.330, min 82, max 92
+faMeasureChannelPedestal: slot 7, chan 2 => avg 85.817, rms  1.232, min 82, max 90
+faMeasureChannelPedestal: slot 7, chan 3 => avg 108.550, rms  1.197, min 104, max 114
+faMeasureChannelPedestal: slot 7, chan 4 => avg 62.811, rms  1.484, min 58, max 68
+faMeasureChannelPedestal: slot 7, chan 5 => avg 80.359, rms  1.260, min 75, max 84
+faMeasureChannelPedestal: slot 7, chan 6 => avg 81.440, rms  1.326, min 77, max 86
+faMeasureChannelPedestal: slot 7, chan 7 => avg 124.134, rms  1.329, min 119, max 129
+faMeasureChannelPedestal: slot 7, chan 8 => avg 67.215, rms  1.163, min 63, max 71
+faMeasureChannelPedestal: slot 7, chan 9 => avg 70.034, rms  1.398, min 63, max 78
+faMeasureChannelPedestal: slot 7, chan 10 => avg 92.695, rms  1.335, min 88, max 97
+faMeasureChannelPedestal: slot 7, chan 11 => avg 73.929, rms  1.259, min 67, max 79
+faMeasureChannelPedestal: slot 7, chan 12 => avg 92.716, rms  1.208, min 89, max 97
+faMeasureChannelPedestal: slot 7, chan 13 => avg 74.109, rms  1.427, min 65, max 82
+faMeasureChannelPedestal: slot 7, chan 14 => avg 86.872, rms  1.223, min 81, max 93
+faMeasureChannelPedestal: slot 7, chan 15 => avg 104.651, rms  1.235, min 99, max 109
+faMeasureChannelPedestal: slot 8, chan 0 => avg 112.688, rms  1.255, min 106, max 118
+faMeasureChannelPedestal: slot 8, chan 1 => avg 139.591, rms  1.385, min 132, max 146
+faMeasureChannelPedestal: slot 8, chan 2 => avg 94.346, rms  1.234, min 90, max 101
+faMeasureChannelPedestal: slot 8, chan 3 => avg 115.507, rms  1.139, min 112, max 120
+faMeasureChannelPedestal: slot 8, chan 4 => avg 105.872, rms  1.301, min 101, max 110
+faMeasureChannelPedestal: slot 8, chan 5 => avg 137.080, rms  1.364, min 132, max 142
+faMeasureChannelPedestal: slot 8, chan 6 => avg 120.147, rms  1.288, min 115, max 125
+faMeasureChannelPedestal: slot 8, chan 7 => avg 132.756, rms  1.357, min 126, max 138
+faMeasureChannelPedestal: slot 8, chan 8 => avg 116.887, rms  1.338, min 111, max 122
+faMeasureChannelPedestal: slot 8, chan 9 => avg 97.170, rms  1.368, min 92, max 103
+faMeasureChannelPedestal: slot 8, chan 10 => avg 118.824, rms  1.247, min 114, max 123
+faMeasureChannelPedestal: slot 8, chan 11 => avg 142.166, rms  1.296, min 136, max 148
+faMeasureChannelPedestal: slot 8, chan 12 => avg 109.266, rms  1.285, min 105, max 114
+faMeasureChannelPedestal: slot 8, chan 13 => avg 118.331, rms  1.224, min 112, max 123
+faMeasureChannelPedestal: slot 8, chan 14 => avg 128.681, rms  1.271, min 123, max 133
+faMeasureChannelPedestal: slot 8, chan 15 => avg 160.391, rms  1.263, min 156, max 165
+faMeasureChannelPedestal: slot 9, chan 0 => avg 132.822, rms  1.530, min 127, max 138
+faMeasureChannelPedestal: slot 9, chan 1 => avg 70.088, rms  1.356, min 65, max 75
+faMeasureChannelPedestal: slot 9, chan 2 => avg 101.943, rms  1.321, min 98, max 107
+faMeasureChannelPedestal: slot 9, chan 3 => avg 124.298, rms  1.668, min 118, max 132
+faMeasureChannelPedestal: slot 9, chan 4 => avg 106.229, rms  1.392, min 101, max 112
+faMeasureChannelPedestal: slot 9, chan 5 => avg 125.002, rms  1.328, min 121, max 130
+faMeasureChannelPedestal: slot 9, chan 6 => avg 150.020, rms  1.390, min 146, max 155
+faMeasureChannelPedestal: slot 9, chan 7 => avg 91.904, rms  1.370, min 87, max 96
+faMeasureChannelPedestal: slot 9, chan 8 => avg 102.998, rms  1.407, min 98, max 108
+faMeasureChannelPedestal: slot 9, chan 9 => avg 103.597, rms  1.334, min 99, max 109
+faMeasureChannelPedestal: slot 9, chan 10 => avg 79.942, rms  1.282, min 75, max 84
+faMeasureChannelPedestal: slot 9, chan 11 => avg 119.340, rms  1.301, min 115, max 124
+faMeasureChannelPedestal: slot 9, chan 12 => avg 111.545, rms  1.388, min 106, max 116
+faMeasureChannelPedestal: slot 9, chan 13 => avg 127.345, rms  1.247, min 123, max 132
+faMeasureChannelPedestal: slot 9, chan 14 => avg 156.154, rms  1.326, min 151, max 161
+faMeasureChannelPedestal: slot 9, chan 15 => avg 110.198, rms  1.240, min 106, max 116
+faMeasureChannelPedestal: slot 10, chan 0 => avg 138.758, rms  1.335, min 134, max 143
+faMeasureChannelPedestal: slot 10, chan 1 => avg 126.438, rms  1.276, min 121, max 131
+faMeasureChannelPedestal: slot 10, chan 2 => avg 115.479, rms  1.213, min 111, max 120
+faMeasureChannelPedestal: slot 10, chan 3 => avg 115.449, rms  1.207, min 111, max 120
+faMeasureChannelPedestal: slot 10, chan 4 => avg 137.446, rms  1.287, min 133, max 142
+faMeasureChannelPedestal: slot 10, chan 5 => avg 162.453, rms  1.386, min 157, max 167
+faMeasureChannelPedestal: slot 10, chan 6 => avg 122.070, rms  1.207, min 118, max 126
+faMeasureChannelPedestal: slot 10, chan 7 => avg 65.110, rms  1.384, min 60, max 71
+faMeasureChannelPedestal: slot 10, chan 8 => avg 110.729, rms  1.375, min 106, max 116
+faMeasureChannelPedestal: slot 10, chan 9 => avg 106.399, rms  1.403, min 102, max 111
+faMeasureChannelPedestal: slot 10, chan 10 => avg 133.835, rms  1.366, min 129, max 139
+faMeasureChannelPedestal: slot 10, chan 11 => avg 108.347, rms  1.276, min 104, max 113
+faMeasureChannelPedestal: slot 10, chan 12 => avg 152.749, rms  1.394, min 148, max 157
+faMeasureChannelPedestal: slot 10, chan 13 => avg 113.775, rms  1.294, min 109, max 119
+faMeasureChannelPedestal: slot 10, chan 14 => avg 97.469, rms  1.267, min 93, max 102
+faMeasureChannelPedestal: slot 10, chan 15 => avg 119.883, rms  1.249, min 116, max 124
+faMeasureChannelPedestal: slot 13, chan 0 => avg 122.137, rms  1.189, min 118, max 127
+faMeasureChannelPedestal: slot 13, chan 1 => avg 113.893, rms  1.173, min 110, max 118
+faMeasureChannelPedestal: slot 13, chan 2 => avg 118.785, rms  1.174, min 113, max 123
+faMeasureChannelPedestal: slot 13, chan 3 => avg 135.628, rms  1.202, min 131, max 140
+faMeasureChannelPedestal: slot 13, chan 4 => avg 121.332, rms  1.360, min 115, max 126
+faMeasureChannelPedestal: slot 13, chan 5 => avg 129.458, rms  1.322, min 125, max 135
+faMeasureChannelPedestal: slot 13, chan 6 => avg 98.593, rms  1.229, min 94, max 102
+faMeasureChannelPedestal: slot 13, chan 7 => avg 97.138, rms  1.236, min 93, max 102
+faMeasureChannelPedestal: slot 13, chan 8 => avg 123.724, rms  1.284, min 119, max 128
+faMeasureChannelPedestal: slot 13, chan 9 => avg 104.802, rms  1.238, min 101, max 109
+faMeasureChannelPedestal: slot 13, chan 10 => avg 135.588, rms  1.368, min 131, max 140
+faMeasureChannelPedestal: slot 13, chan 11 => avg 104.498, rms  1.189, min 101, max 109
+faMeasureChannelPedestal: slot 13, chan 12 => avg 110.464, rms  1.163, min 106, max 114
+faMeasureChannelPedestal: slot 13, chan 13 => avg 124.686, rms  1.216, min 121, max 129
+faMeasureChannelPedestal: slot 13, chan 14 => avg 123.065, rms  1.354, min 118, max 128
+faMeasureChannelPedestal: slot 13, chan 15 => avg 122.797, rms  1.241, min 118, max 127
+faMeasureChannelPedestal: slot 14, chan 0 => avg 125.408, rms  1.641, min 120, max 131
+faMeasureChannelPedestal: slot 14, chan 1 => avg 113.116, rms  1.638, min 107, max 119
+faMeasureChannelPedestal: slot 14, chan 2 => avg 84.018, rms  1.214, min 79, max 88
+faMeasureChannelPedestal: slot 14, chan 3 => avg 87.128, rms  1.228, min 83, max 92
+faMeasureChannelPedestal: slot 14, chan 4 => avg 105.076, rms  1.390, min 99, max 110
+faMeasureChannelPedestal: slot 14, chan 5 => avg 109.461, rms  1.294, min 105, max 114
+faMeasureChannelPedestal: slot 14, chan 6 => avg 74.589, rms  1.322, min 70, max 79
+faMeasureChannelPedestal: slot 14, chan 7 => avg 122.804, rms  1.340, min 118, max 128
+faMeasureChannelPedestal: slot 14, chan 8 => avg 82.646, rms  1.258, min 78, max 88
+faMeasureChannelPedestal: slot 14, chan 9 => avg 137.936, rms  1.507, min 133, max 143
+faMeasureChannelPedestal: slot 14, chan 10 => avg 59.759, rms  1.305, min 55, max 64
+faMeasureChannelPedestal: slot 14, chan 11 => avg 93.068, rms  1.178, min 87, max 97
+faMeasureChannelPedestal: slot 14, chan 12 => avg 118.856, rms  1.238, min 114, max 123
+faMeasureChannelPedestal: slot 14, chan 13 => avg 90.994, rms  1.151, min 87, max 95
+faMeasureChannelPedestal: slot 14, chan 14 => avg 134.519, rms  1.265, min 130, max 139
+faMeasureChannelPedestal: slot 14, chan 15 => avg 132.060, rms  1.220, min 128, max 136
+faMeasureChannelPedestal: slot 15, chan 0 => avg 92.617, rms  1.149, min 88, max 97
+faMeasureChannelPedestal: slot 15, chan 1 => avg 89.912, rms  1.079, min 86, max 94
+faMeasureChannelPedestal: slot 15, chan 2 => avg 92.573, rms  1.224, min 88, max 97
+faMeasureChannelPedestal: slot 15, chan 3 => avg 45.823, rms  1.166, min 42, max 51
+faMeasureChannelPedestal: slot 15, chan 4 => avg 87.066, rms  1.317, min 83, max 92
+faMeasureChannelPedestal: slot 15, chan 5 => avg 98.240, rms  1.228, min 93, max 102
+faMeasureChannelPedestal: slot 15, chan 6 => avg 92.755, rms  1.368, min 88, max 98
+faMeasureChannelPedestal: slot 15, chan 7 => avg 87.705, rms  1.526, min 83, max 93
+faMeasureChannelPedestal: slot 15, chan 8 => avg 84.512, rms  1.342, min 80, max 89
+faMeasureChannelPedestal: slot 15, chan 9 => avg 123.670, rms  1.365, min 118, max 129
+faMeasureChannelPedestal: slot 15, chan 10 => avg 88.415, rms  1.313, min 84, max 93
+faMeasureChannelPedestal: slot 15, chan 11 => avg 121.882, rms  1.228, min 118, max 127
+faMeasureChannelPedestal: slot 15, chan 12 => avg 103.377, rms  1.267, min 99, max 108
+faMeasureChannelPedestal: slot 15, chan 13 => avg 106.188, rms  1.192, min 103, max 111
+faMeasureChannelPedestal: slot 15, chan 14 => avg 99.172, rms  1.079, min 95, max 103
+faMeasureChannelPedestal: slot 15, chan 15 => avg 72.913, rms  1.163, min 67, max 77
+faMeasureChannelPedestal: slot 16, chan 0 => avg 124.485, rms  1.243, min 119, max 129
+faMeasureChannelPedestal: slot 16, chan 1 => avg 97.428, rms  1.309, min 93, max 103
+faMeasureChannelPedestal: slot 16, chan 2 => avg 103.444, rms  1.235, min 99, max 107
+faMeasureChannelPedestal: slot 16, chan 3 => avg 87.706, rms  1.282, min 83, max 93
+faMeasureChannelPedestal: slot 16, chan 4 => avg 123.526, rms  1.349, min 119, max 128
+faMeasureChannelPedestal: slot 16, chan 5 => avg 98.774, rms  1.314, min 94, max 103
+faMeasureChannelPedestal: slot 16, chan 6 => avg 72.047, rms  1.301, min 68, max 77
+faMeasureChannelPedestal: slot 16, chan 7 => avg 109.729, rms  1.411, min 105, max 115
+faMeasureChannelPedestal: slot 16, chan 8 => avg 126.044, rms  1.403, min 120, max 131
+faMeasureChannelPedestal: slot 16, chan 9 => avg 64.877, rms  1.296, min 60, max 69
+faMeasureChannelPedestal: slot 16, chan 10 => avg 125.050, rms  1.374, min 120, max 130
+faMeasureChannelPedestal: slot 16, chan 11 => avg 95.074, rms  1.277, min 91, max 100
+faMeasureChannelPedestal: slot 16, chan 12 => avg 68.305, rms  1.224, min 64, max 73
+faMeasureChannelPedestal: slot 16, chan 13 => avg 83.333, rms  1.234, min 79, max 88
+faMeasureChannelPedestal: slot 16, chan 14 => avg 60.232, rms  1.161, min 56, max 64
+faMeasureChannelPedestal: slot 16, chan 15 => avg 96.558, rms  1.234, min 92, max 102
+jlabgefCloseDefaultWindows reached
+Closing A16 Window
+Closing A24 Window
+Closing A32Blt Window
+Closing A32 Window
+Closing CRCSR Window
+Calling gefVmeClose

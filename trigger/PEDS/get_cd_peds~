@@ -1,0 +1,18 @@
+#!/bin/tcsh
+
+# DET = ecal,pcal,ftof
+# PED = on,off
+
+set DET = $1
+set PED = $CLON_PARMS/trigger/PEDS/hv_$2
+set NAM = adc$DET
+
+ssh ${NAM}1 fadc250peds $PED/${NAM}1_ped.cnf > $PED/${NAM}1_ped.log &
+ssh ${NAM}2 fadc250peds $PED/${NAM}2_ped.cnf > $PED/${NAM}2_ped.log &
+ssh ${NAM}3 fadc250peds $PED/${NAM}3_ped.cnf > $PED/${NAM}3_ped.log &
+ssh ${NAM}4 fadc250peds $PED/${NAM}4_ped.cnf > $PED/${NAM}4_ped.log &
+ssh ${NAM}5 fadc250peds $PED/${NAM}5_ped.cnf > $PED/${NAM}5_ped.log &
+ssh ${NAM}6 fadc250peds $PED/${NAM}6_ped.cnf > $PED/${NAM}6_ped.log &
+
+#cd $PED
+#sed -i '/FADC250_CRATE/d' *.cnf

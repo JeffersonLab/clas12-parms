@@ -1,0 +1,14 @@
+#
+# ssp config file
+#
+SSP_CRATE trig2 # stage 2
+
+SSP_SLOT all
+
+SSP_W_OFFSET 7900
+SSP_W_WIDTH  400
+
+SSP_GT_LATENCY            4000
+
+
+SSP_CRATE end

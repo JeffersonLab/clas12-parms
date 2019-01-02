@@ -1,0 +1,5 @@
+#!/bin/tcsh
+
+dimanv tdcecal$1 set tdcecal$1_sl18_ch0_ch11_off.cnf
+dimanv tdcpcal$1 set s2_ltcc.cnf
+

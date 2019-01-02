@@ -84,8 +84,12 @@ VSCM_BCO_FREQ        16
 ####################################
 # YG trig latency study
 
+# cosmic trigger from SVT1's SD (with VSCM internal delay to match CLAS12 latency)
+# 08/2018 cosmic runs
+VSCM_TRIG_WINDOW     96       979        16
+
 # cosmic trigger from SVT1's SD
-VSCM_TRIG_WINDOW     96       224        16 
+#VSCM_TRIG_WINDOW     96       224        16 
 
 # trying to coincide with CLAS trigger (added 6600ns)
 #VSCM_TRIG_WINDOW     256      1064        16 
@@ -102,77 +106,77 @@ VSCM_TRIG_WINDOW     96       224        16
 
 
 # Set discriminator 0 on all FSSR2 chips to 20
-FSSR_ADDR_REG_DISC_THR        0        0        30
-FSSR_ADDR_REG_DISC_THR        1        0        30
-FSSR_ADDR_REG_DISC_THR        2        0        30
-FSSR_ADDR_REG_DISC_THR        3        0        30
-FSSR_ADDR_REG_DISC_THR        4        0        30
-FSSR_ADDR_REG_DISC_THR        5        0        30
-FSSR_ADDR_REG_DISC_THR        6        0        30
-FSSR_ADDR_REG_DISC_THR        7        0        30
+FSSR_ADDR_REG_DISC_THR        0        0        35
+FSSR_ADDR_REG_DISC_THR        1        0        35
+FSSR_ADDR_REG_DISC_THR        2        0        35
+FSSR_ADDR_REG_DISC_THR        3        0        35
+FSSR_ADDR_REG_DISC_THR        4        0        35
+FSSR_ADDR_REG_DISC_THR        5        0        35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
 
-FSSR_ADDR_REG_DISC_THR        0        1        45
-FSSR_ADDR_REG_DISC_THR        1        1        45
-FSSR_ADDR_REG_DISC_THR        2        1        45
-FSSR_ADDR_REG_DISC_THR        3        1        45
-FSSR_ADDR_REG_DISC_THR        4        1        45
-FSSR_ADDR_REG_DISC_THR        5        1        45
-FSSR_ADDR_REG_DISC_THR        6        1        45
-FSSR_ADDR_REG_DISC_THR        7        1        45
+FSSR_ADDR_REG_DISC_THR        0        1        50
+FSSR_ADDR_REG_DISC_THR        1        1        50
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+FSSR_ADDR_REG_DISC_THR        4        1        50
+FSSR_ADDR_REG_DISC_THR        5        1        50
+FSSR_ADDR_REG_DISC_THR        6        1        50
+FSSR_ADDR_REG_DISC_THR        7        1        50
 
-FSSR_ADDR_REG_DISC_THR        0        2        60
-FSSR_ADDR_REG_DISC_THR        1        2        60
-FSSR_ADDR_REG_DISC_THR        2        2        60
-FSSR_ADDR_REG_DISC_THR        3        2        60
-FSSR_ADDR_REG_DISC_THR        4        2        60
-FSSR_ADDR_REG_DISC_THR        5        2        60
-FSSR_ADDR_REG_DISC_THR        6        2        60
-FSSR_ADDR_REG_DISC_THR        7        2        60
+FSSR_ADDR_REG_DISC_THR        0        2        65
+FSSR_ADDR_REG_DISC_THR        1        2        65
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+FSSR_ADDR_REG_DISC_THR        4        2        65
+FSSR_ADDR_REG_DISC_THR        5        2        65
+FSSR_ADDR_REG_DISC_THR        6        2        65
+FSSR_ADDR_REG_DISC_THR        7        2        65
 
-FSSR_ADDR_REG_DISC_THR        0        3        75
-FSSR_ADDR_REG_DISC_THR        1        3        75
-FSSR_ADDR_REG_DISC_THR        2        3        75
-FSSR_ADDR_REG_DISC_THR        3        3        75
-FSSR_ADDR_REG_DISC_THR        4        3        75
-FSSR_ADDR_REG_DISC_THR        5        3        75
-FSSR_ADDR_REG_DISC_THR        6        3        75
-FSSR_ADDR_REG_DISC_THR        7        3        75
+FSSR_ADDR_REG_DISC_THR        0        3        80
+FSSR_ADDR_REG_DISC_THR        1        3        80
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+FSSR_ADDR_REG_DISC_THR        4        3        80
+FSSR_ADDR_REG_DISC_THR        5        3        80
+FSSR_ADDR_REG_DISC_THR        6        3        80
+FSSR_ADDR_REG_DISC_THR        7        3        80
 
-FSSR_ADDR_REG_DISC_THR        0        4        90
-FSSR_ADDR_REG_DISC_THR        1        4        90
-FSSR_ADDR_REG_DISC_THR        2        4        90
-FSSR_ADDR_REG_DISC_THR        3        4        90
-FSSR_ADDR_REG_DISC_THR        4        4        90
-FSSR_ADDR_REG_DISC_THR        5        4        90
-FSSR_ADDR_REG_DISC_THR        6        4        90
-FSSR_ADDR_REG_DISC_THR        7        4        90
+FSSR_ADDR_REG_DISC_THR        0        4        95
+FSSR_ADDR_REG_DISC_THR        1        4        95
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+FSSR_ADDR_REG_DISC_THR        4        4        95
+FSSR_ADDR_REG_DISC_THR        5        4        95
+FSSR_ADDR_REG_DISC_THR        6        4        95
+FSSR_ADDR_REG_DISC_THR        7        4        95
 
-FSSR_ADDR_REG_DISC_THR        0        5        105
-FSSR_ADDR_REG_DISC_THR        1        5        105
-FSSR_ADDR_REG_DISC_THR        2        5        105
-FSSR_ADDR_REG_DISC_THR        3        5        105
-FSSR_ADDR_REG_DISC_THR        4        5        105
-FSSR_ADDR_REG_DISC_THR        5        5        105
-FSSR_ADDR_REG_DISC_THR        6        5        105
-FSSR_ADDR_REG_DISC_THR        7        5        105
+FSSR_ADDR_REG_DISC_THR        0        5        110
+FSSR_ADDR_REG_DISC_THR        1        5        110
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+FSSR_ADDR_REG_DISC_THR        4        5        110
+FSSR_ADDR_REG_DISC_THR        5        5        110
+FSSR_ADDR_REG_DISC_THR        6        5        110
+FSSR_ADDR_REG_DISC_THR        7        5        110
 
-FSSR_ADDR_REG_DISC_THR        0        6        120
-FSSR_ADDR_REG_DISC_THR        1        6        120
-FSSR_ADDR_REG_DISC_THR        2        6        120
-FSSR_ADDR_REG_DISC_THR        3        6        120
-FSSR_ADDR_REG_DISC_THR        4        6        120
-FSSR_ADDR_REG_DISC_THR        5        6        120
-FSSR_ADDR_REG_DISC_THR        6        6        120
-FSSR_ADDR_REG_DISC_THR        7        6        120
+FSSR_ADDR_REG_DISC_THR        0        6        125
+FSSR_ADDR_REG_DISC_THR        1        6        125
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+FSSR_ADDR_REG_DISC_THR        4        6        125
+FSSR_ADDR_REG_DISC_THR        5        6        125
+FSSR_ADDR_REG_DISC_THR        6        6        125
+FSSR_ADDR_REG_DISC_THR        7        6        125
 
-FSSR_ADDR_REG_DISC_THR        0        7        135
-FSSR_ADDR_REG_DISC_THR        1        7        135
-FSSR_ADDR_REG_DISC_THR        2        7        135
-FSSR_ADDR_REG_DISC_THR        3        7        135
-FSSR_ADDR_REG_DISC_THR        4        7        135
-FSSR_ADDR_REG_DISC_THR        5        7        135
-FSSR_ADDR_REG_DISC_THR        6        7        135
-FSSR_ADDR_REG_DISC_THR        7        7        135
+FSSR_ADDR_REG_DISC_THR        0        7        140
+FSSR_ADDR_REG_DISC_THR        1        7        140
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+FSSR_ADDR_REG_DISC_THR        4        7        140
+FSSR_ADDR_REG_DISC_THR        5        7        140
+FSSR_ADDR_REG_DISC_THR        6        7        140
+FSSR_ADDR_REG_DISC_THR        7        7        140
 
 # Enable all channels on all FSSR2 chips
 FSSR_ADDR_REG_KILL        0        0x00000000        0x00000000        0x00000000        0x00000000
@@ -217,3 +221,35 @@ VSCM_SLOT 17
 VCSM_FSSR_GOTHIT_CFG 0x0F 64
 
 VSCM_CRATE end
+
+#VSCM_CRATE svt2
+#VSCM_SLOT 7
+
+#FSSR_ADDR_REG_DISC_THR        2        0        5
+#FSSR_ADDR_REG_DISC_THR        3        0        5
+#VSCM_CRATE end
+
+# Set higher discriminator thresholds on U3,U4 FSSR2 chips, R1, inner layer
+#VSCM_CRATE svt1
+#
+#VSCM_SLOT 3
+#include high_thresholds.cnf
+#include high_thresholds_r1s2.cnf
+#VSCM_SLOT 4
+#include high_thresholds.cnf
+#VSCM_SLOT 5 
+#include high_thresholds.cnf
+#
+#VSCM_CRATE end
+#
+#VSCM_CRATE svt2
+#
+#VSCM_SLOT 3
+#include high_thresholds.cnf
+#VSCM_SLOT 4
+#include high_thresholds.cnf
+#VSCM_SLOT 5
+#include high_thresholds.cnf
+#
+#VSCM_CRATE end
+

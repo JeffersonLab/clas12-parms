@@ -1,0 +1,25 @@
+VTP_CRATE all
+
+VTP_FIRMWARE fe_vtp_hallb_v7_dc.bin
+
+#Before Oct 11
+#VTP_W_OFFSET 7650
+#VTP_W_WIDTH 1450
+
+VTP_W_OFFSET 6150
+VTP_W_WIDTH 32
+
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  0  0  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   0  1  0  0
+
+# DC Segment finder threshold <superlayer = 0,1> <min=0-6>
+VTP_DC_SEGTHR  0   4
+VTP_DC_SEGTHR  1   4
+
+VTP_CRATE end
+

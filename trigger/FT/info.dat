@@ -1,0 +1,13 @@
+Following two files:
+trigger_v20_1_FTValidation.trg
+trigger_v20_1_FTOnly.trg
+
+are the same:
+trigger_v20_FTValidation.trg
+trigger_v20_FTOnly.trg
+
+files, only DC hit multiplicity requirement was changed from 3 to 5
+The following expressions
+"SSP_GT_STRG_DC_MULT_MIN               3" 
+have changed to
+"SSP_GT_STRG_DC_MULT_MIN               5"

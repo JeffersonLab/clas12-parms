@@ -1,0 +1,33 @@
+*** Begin of history file: Fri Feb 16 19:47:52 2018
+./att.kumac
+./att.kumac
+ve/pr af1a
+ve/pr af1b
+./att.kumac
+./att.kumac
+help vec/draw
+./att.kumac
+./att.kumac
+help vec/plot
+./att.kumac
+./att.kumac
+./att.kumac
+./att.kumac
+./att.kumac
+./att.kumac
+set asiz 0.3
+./att.kumac
+set vsiz 0.3
+./att.kumac
+set csiz 0.3
+./att.kumac
+ve/pr l1a
+ve/pr ap1a
+./att.kumac
+set ndvx 20
+./att.kumac
+set ndvy 10
+./att.kumac
+./att.kumac
+exit
+*** End   of history file: Fri Feb 16 20:20:41 2018

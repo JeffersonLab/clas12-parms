@@ -1,0 +1,26 @@
+#
+#   HTCC trigger mask, stage 1:
+#   S1      S2      S3      S4      S5      S6
+#  0  1    2  3    4  5    6  7    8  9   10 11
+# 12 13   14 15   16 17   18 19   20 21   22 23
+# 24 25   26 27   28 29   30 31   32 33   34 35
+# 36 37   38 39   40 41   42 43   44 45   46 47
+#
+
+SSP_GT_STRG_HTCC_EN                   1
+
+SSP_SLOT 3      # sector 1 SSP
+SSP_GT_STRG_HTCC_MASK                 0x0000000000FF
+SSP_SLOT 4      # sector 2 SSP
+SSP_GT_STRG_HTCC_MASK                 0x00000000FF00
+SSP_SLOT 5      # sector 3 SSP
+SSP_GT_STRG_HTCC_MASK                 0x000000FF0000
+SSP_SLOT 6      # sector 4 SSP
+SSP_GT_STRG_HTCC_MASK                 0x0000FF000000
+SSP_SLOT 7      # sector 5 SSP
+SSP_GT_STRG_HTCC_MASK                 0x00FF00000000
+SSP_SLOT 8      # sector 6 SSP
+SSP_GT_STRG_HTCC_MASK                 0xFF0000000000
+SSP_SLOT all
+
+SSP_GT_STRG_HTCC_WIDTH                0

@@ -1,0 +1,80 @@
+#A.C. on 12 dec 2017: created followign file taking what was in ft_selftrigger_VTP.trg
+
+VTP_CRATE adcft1vtp
+
+VTP_FIRMWARE fe_vtp_hallb_v7_ftcal1.bin
+
+#VTP_W_OFFSET 1400
+##VTP_W_OFFSET 7900
+#VTP_W_OFFSET 7650
+VTP_W_OFFSET 7730
+VTP_W_WIDTH  400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  0  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  1  1  1
+
+# Cluster seed hit minimum energy to form cluster. Units MeV
+#VTP_FTCAL_SEED_EMIN   100
+VTP_FTCAL_SEED_EMIN 50
+# Cluster hit timing coicidence (with respect to seed). Units: +/-Xns
+VTP_FTCAL_SEED_DT     16
+# Hodo coincidence dt (with respect to seed). Units: +/-Xns
+VTP_FTCAL_HODO_DT     16
+
+VTP_CRATE end
+
+
+
+
+VTP_CRATE adcft2vtp
+
+VTP_FIRMWARE fe_vtp_hallb_v7_ftcal2.bin
+
+#VTP_W_OFFSET 1400
+##VTP_W_OFFSET 7900
+VTP_W_OFFSET 7650
+VTP_W_WIDTH  400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  0  1  0  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  1  1  1
+
+# Cluster seed hit minimum energy to form cluster. Units MeV
+#VTP_FTCAL_SEED_EMIN   100
+VTP_FTCAL_SEED_EMIN   50 
+# Cluster hit timing coicidence (with respect to seed). Units: +/-Xns
+VTP_FTCAL_SEED_DT     16
+# Hodo coincidence dt (with respect to seed). Units: +/-Xns
+VTP_FTCAL_HODO_DT     16
+VTP_CRATE end
+
+
+VTP_CRATE adcft3vtp
+
+VTP_FIRMWARE fe_vtp_hallb_v7_fthodo.bin
+
+#VTP_W_OFFSET 1400
+##VTP_W_OFFSET 7900
+VTP_W_OFFSET 7650
+VTP_W_WIDTH  400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  1  1  1
+
+# Hodoscope minimum hodoscope hit energy
+#A.C. 19/2/2018: this is in % with respect to MIP charge. For example, 20 means 20 % of the MIP charge 
+
+VTP_FTHODO_EMIN    25
+
+VTP_CRATE end

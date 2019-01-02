@@ -1,0 +1,5 @@
+Yura,
+svt1 and svt2 were complaining about missing slots during readout,
+I took them out of daq to finish trigger delay scans, can you check
+in meanwhile if everything is Ok there ?
+Sergey

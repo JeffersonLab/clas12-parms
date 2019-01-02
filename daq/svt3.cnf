@@ -1,0 +1,6 @@
+#
+# DAQ config file for svt3 crate
+#
+DAQ_CRATE svt3
+DAQ_EXTERNAL_VME_READOUT_INTERVAL 1
+DAQ_CRATE end

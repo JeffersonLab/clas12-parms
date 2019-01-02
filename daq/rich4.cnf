@@ -1,0 +1,6 @@
+#
+# DAQ config file for rich4 crate
+#
+DAQ_CRATE rich4
+DAQ_EXTERNAL_VME_READOUT_INTERVAL 5
+DAQ_CRATE end

@@ -1,0 +1,13 @@
+#
+# include it with following:
+#   include trigger/CND/adccnd1.cnf
+#
+
+TDC1190_CRATE adccnd1
+
+TDC1190_SLOT all
+
+TDC1190_W_WIDTH   500
+TDC1190_W_OFFSET -8200
+
+TDC1190_CRATE end

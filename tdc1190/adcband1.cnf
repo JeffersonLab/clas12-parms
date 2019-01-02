@@ -1,0 +1,76 @@
+#
+# tdc1190 config file - example
+#
+# this file contains settings for tdc CAEN 1190
+#
+# format:
+# ~~~~~~~
+# CRATE             rocbcal1   <- ROC/crate name, usually IP name
+#
+#
+# TDC1190_SLOT     3   <- slot_number - in which next settings will be implemented
+#                         till file ends or next TDC1190_SLOT will be met, can be 'all' for all slots
+#
+# TDC1190_BERR_FIFO  1   <- DMA Nwords method readout: 0 - use VME BUS error
+#                                                      1 - use event fifo
+#
+# TDC1190_BLT_EVENTS 1      <- to set BLT Event Number Register
+# TDC1190_N_HITS     64     <- to set Max Number of Hits per Event (1,2,4,8,16,32,64,128)
+# TDC1190_ALMOSTFULL 16384  <- set number of words in output buffer
+#                              default is 64 words, max is 32735 words
+# TDC1190_OUT_PROG   2      <- set the function for the output on the control connector
+#                              0 : Data Ready
+#                              1 : Full
+#                              2 : Almost Full
+#                              3 : Error
+#
+# TDC1190_W_WIDTH    750 <- Trigger Window Width, in ns (from 25 to 51175)
+# TDC1190_W_OFFSET -1750 <- Trigger Window Offset, in ns (from -51175 to 1000)
+# TDC1190_W_EXTRA    25  <- Extra Search Margin (after window), in ns (from 0 to 1250)
+# TDC1190_W_REJECT   50  <- Reject Margin (before window), in ns (from 0 to 1250)
+#
+# TDC1190_EDGE       2   <- set Edge Detection: 1-trailing edge, 2-leading, 3-both
+#
+#
+#
+#                 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 - channels ##
+# TDC1190_MASK1   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.0-15
+# TDC1190_MASK2   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.16-31
+#....
+# TDC1190_MASK8   1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0   <- enable mask for ch.112-127
+
+TDC1190_CRATE adcband1
+
+TDC1190_SLOT all
+
+
+TDC1190_BERR_FIFO  1
+TDC1190_BLT_EVENTS 1
+TDC1190_N_HITS     64
+TDC1190_ALMOSTFULL 16384
+TDC1190_OUT_PROG   2
+
+#TDC1190_W_WIDTH    400
+#TDC1190_W_OFFSET -1050
+TDC1190_W_WIDTH   2550
+#TDC1190_W_OFFSET -2550
+TDC1190_W_OFFSET -7950
+
+
+TDC1190_W_EXTRA    25
+TDC1190_W_REJECT   50
+
+TDC1190_EDGE       2
+
+#                 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 - channels ##
+TDC1190_MASK1     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK2     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK3     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK4     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK5     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK6     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK7     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+TDC1190_MASK8     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+
+TDC1190_CRATE end

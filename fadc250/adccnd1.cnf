@@ -1,0 +1,50 @@
+FADC250_CRATE all
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+#when decreased, ADC pulse moves left
+
+# cosmic trigger
+#FADC250_W_OFFSET  1250
+
+# LED trigger
+FADC250_W_OFFSET  800
+
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       24
+FADC250_NPEAK     1
+
+#pulse mode
+#cosmic
+#FADC250_MODE      3
+#FADC250_NSB       20
+#FADC250_NSA       120
+#FADC250_NPEAK     3
+
+#LED
+#FADC250_MODE      7
+#FADC250_NSB       12
+#FADC250_NSA       48
+#FADC250_NPEAK     1
+
+
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#zero threshold, pedestal file will be created
+#FADC250_TET 0
+
+#non-zero threshold, pedestal file will be used
+FADC250_TET 20
+FADC250_CONF_FILE adccnd1_ped.cnf
+
+FADC250_CRATE end

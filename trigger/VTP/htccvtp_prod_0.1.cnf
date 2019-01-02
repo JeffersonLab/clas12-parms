@@ -1,0 +1,10 @@
+
+# Unit: 1/10 Phe     1 = 0.1phe
+#
+#                       strip  mult cluster 
+#                         |     |     |
+###VTP_HTCC_THRESHOLDS       1     0    30
+VTP_HTCC_THRESHOLDS       1     0    1
+
+# VTP_HTCC_NFRAMES 0=4ns, 1=8ns, 2=12ns, 3=16ns coincidence
+VTP_HTCC_NFRAMES       3

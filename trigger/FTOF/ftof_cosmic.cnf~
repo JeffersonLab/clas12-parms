@@ -1,0 +1,47 @@
+#
+# ftof pedestals
+#
+
+FADC250_CRATE adcftof1
+FADC250_W_OFFSET  7900
+#FADC250_W_WIDTH 296
+include trigger/FTOF/adcftof1_ped.cnf
+include trigger/FTOF/adcftof_fadc_cosmic.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcftof2
+FADC250_W_OFFSET  7900
+#FADC250_W_WIDTH 296
+include trigger/FTOF/adcftof2_ped.cnf
+include trigger/FTOF/adcftof_fadc_cosmic.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcftof3
+FADC250_W_OFFSET  7900
+#FADC250_W_WIDTH 296
+include trigger/FTOF/adcftof3_ped.cnf
+include trigger/FTOF/adcftof_fadc_cosmic.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcftof4
+FADC250_W_OFFSET  7900
+#FADC250_W_WIDTH 296
+include trigger/FTOF/adcftof4_ped.cnf
+include trigger/FTOF/adcftof_fadc_cosmic.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcftof5
+FADC250_W_OFFSET  7900
+#FADC250_W_WIDTH 296
+include trigger/FTOF/adcftof5_ped.cnf
+include trigger/FTOF/adcftof_fadc_cosmic.cnf
+FADC250_CRATE end
+
+FADC250_CRATE adcftof6
+FADC250_W_OFFSET  7900
+#FADC250_W_WIDTH 296
+include trigger/FTOF/adcftof6_ped.cnf
+include trigger/FTOF/adcftof_fadc_cosmic.cnf
+FADC250_CRATE end
+
+#include trigger/FTOF/tdcftof_cosmic.cnf

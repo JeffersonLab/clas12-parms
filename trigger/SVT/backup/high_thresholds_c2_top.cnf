@@ -1,0 +1,26 @@
+
+# Set discriminators on FSSR2 chips
+FSSR_ADDR_REG_DISC_THR        4        0        35
+FSSR_ADDR_REG_DISC_THR        5        0        35
+
+FSSR_ADDR_REG_DISC_THR        4        1        50
+FSSR_ADDR_REG_DISC_THR        5        1        50
+
+FSSR_ADDR_REG_DISC_THR        4        2        65
+FSSR_ADDR_REG_DISC_THR        5        2        65
+
+FSSR_ADDR_REG_DISC_THR        4        3        80
+FSSR_ADDR_REG_DISC_THR        5        3        80
+
+FSSR_ADDR_REG_DISC_THR        4        4        95
+FSSR_ADDR_REG_DISC_THR        5        4        95
+
+FSSR_ADDR_REG_DISC_THR        4        5        110
+FSSR_ADDR_REG_DISC_THR        5        5        110
+
+FSSR_ADDR_REG_DISC_THR        4        6        125
+FSSR_ADDR_REG_DISC_THR        5        6        125
+
+FSSR_ADDR_REG_DISC_THR        4        7        140
+FSSR_ADDR_REG_DISC_THR        5        7        140
+
