@@ -25,8 +25,16 @@ DSC2_THRESHOLD   400  400
 DSC2_ENABLE_DAQ_READOUT 8
 ##DSC2_ENABLE_DAQ_READOUT 9
 
+# Slot 8 is fcup/slm, which we want for beam charge,
+# so integrate over entire run and not zero on readout.
+
+# this (presumably) sets it to not zero on readout:
 DSC2_SLOT 8
 DSC2_SCALER_FLAGS 1
+
+# 100 kHz, for a ~12-hour maximum (32-bits, unsigned):
+DSC2_SLOT 8
+DSC2_SCALER_REFPRESCALE 1250
 
 # Prescale reference to make 100kHz it reference
 DSC2_SLOT 11
