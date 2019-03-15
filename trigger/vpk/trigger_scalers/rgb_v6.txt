@@ -1,0 +1,32 @@
+ 0 1 00 Electron - OR of 1-6
+ 1 0 00 Sector 1
+ 2 0 00 Sector 2
+ 3 0 00 Sector 3
+ 4 0 00 Sector 4
+ 5 0 00 Sector 5
+ 6 0 00 Sector 6
+ 7 1 00 Muons(no EMAX) 1-4
+ 8 1 00 Muons(no EMAX) 2-5
+ 9 1 00 Muons(no EMAX) 3-6
+10 1 07 Electron OR no DC
+11 0 15 Electron OR DCROAD
+12 0 15 S1 Muon+
+13 0 15 S2 Muon+
+14 0 15 S3 Muon+
+15 0 15 S4 Muon+
+16 0 15 S5 Muon+
+17 0 15 S6 Muon+
+18 0 15 S1 Muon-, S4 DCSEG
+19 0 15 S2 Muon-, S5 DCSEG
+20 0 15 S3 Muon-, S6 DCSEG
+21 0 15 S4 Muon-, S1 DCSEG
+22 0 15 S5 Muon-, S2 DCSEG
+23 0 15 S6 Muon-, S3 DCSEG
+24 0 15 S1 Muon-, S4 Muon+
+25 0 15 S2 Muon-, S5 Muon+
+26 0 15 S3 Muon-, S6 Muon+
+27 0 15 S4 Muon-, S1 Muon+
+28 0 15 S5 Muon-, S2 Muon+
+29 0 15 S6 Muon-, S3 Muon+
+30 0 15 DCROAD+ DCROAD-
+31 1  0 Pulser

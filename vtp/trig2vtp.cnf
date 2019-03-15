@@ -1,0 +1,6 @@
+VTP_CRATE trig2vtp
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_CRATE end

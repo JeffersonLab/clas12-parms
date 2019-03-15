@@ -1,0 +1,772 @@
+
+
+# include trigger/CTOF_HTCC/ctof_cosmic.trg
+
+#
+# tdc calibration trigger file: take data with internal pulser and low discr thresholds
+#  (ssh clasrun@clonsl2, type 'fcmon', pick sector, detector and dsc2)
+#
+
+#
+# TI settings
+#
+TI_CRATE adcctof1
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+TI_BLOCK_LEVEL 1
+TI_BUFFER_LEVEL 1
+
+## ts1, ts2, ts3, ts4, ts5, ts6
+TI_INPUT_MASK 1 0 0 0 0 0
+
+## trigger rules
+## 1 trigger in Nx0.48us
+##TI_HOLDOFF 1 50 0
+## 4 triggers in Nx3.84us
+##TI_HOLDOFF 4 10 1
+##500kHz / 2^15 => ~15Hz random
+##TI_RANDOM_TRIGGER 1 3
+
+TI_CRATE end
+
+
+#
+# FADCs
+#
+FADC250_CRATE adcctof1
+FADC250_SLOT all
+
+FADC250_W_OFFSET  1400
+FADC250_W_WIDTH   400
+
+FADC250_SLOT 13
+FADC250_ADC_MASK  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+FADC250_TRG_MASK  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+FADC250_SLOT 14
+FADC250_ADC_MASK  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+FADC250_TRG_MASK  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+FADC250_SLOT 15
+FADC250_ADC_MASK  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+FADC250_TRG_MASK  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+FADC250_CRATE end
+
+
+# include trigger/CTOF_HTCC/adcctof1_ped_cosmic.cnf
+
+FADC250_CRATE adcctof1
+FADC250_SLOT 3
+FADC250_TET 20
+FADC250_ALLCH_PED  116.229  102.218  102.902  101.321   99.051   80.344  146.162   98.027  125.499  102.141  108.177   91.796  117.292  106.230  107.963  123.709
+FADC250_SLOT 4
+FADC250_TET 20
+FADC250_ALLCH_PED  136.355  141.667  113.728   77.648  101.296  112.943  111.768  132.398  154.590  168.694  116.738  108.247  140.550  107.384  113.653  109.115
+FADC250_SLOT 5
+FADC250_TET 20
+FADC250_ALLCH_PED  110.627  109.331  143.230  146.247  149.951  152.592  147.523  155.607  112.774  155.627  159.957  160.644  133.387  130.698  150.350  158.610
+FADC250_SLOT 6
+FADC250_TET 20
+FADC250_ALLCH_PED  128.549  115.673  109.843  135.776   75.796  117.560  131.153  103.679  126.728  128.067  100.951  125.254   94.152  142.218  124.120  106.835
+FADC250_SLOT 7
+FADC250_TET 20
+FADC250_ALLCH_PED   90.327  121.980   93.660   94.262   89.269  125.218  131.499  117.481  114.895  108.816  100.932   97.378  119.365   99.494  114.061   74.710
+FADC250_SLOT 8
+FADC250_TET 20
+FADC250_ALLCH_PED  125.246  111.659  133.249  133.330  157.840  133.120  108.566   84.769  139.837  121.479  118.901  151.707  145.721  130.169  139.345  103.383
+FADC250_SLOT 13
+FADC250_TET 15
+FADC250_ALLCH_PED   92.229  112.749  129.384   67.532   89.436  119.716   99.237   88.144   70.141  139.769  114.187   90.328   90.281  104.123   72.257  124.552
+FADC250_SLOT 14
+FADC250_TET 15
+FADC250_ALLCH_PED   98.001   82.872   90.940   81.580   88.140   91.201   92.438   94.413   43.912   71.718  114.192   94.507   93.631   83.634   72.446  103.157
+FADC250_SLOT 15
+FADC250_TET 15
+FADC250_ALLCH_PED   47.838   94.644  106.132   93.174  101.346   81.368  104.452   81.963  109.441   90.711   98.563   81.947   78.236  121.632   75.974   94.384
+FADC250_CRATE end
+
+# include trigger/CND/cnd_ctof_cosmic.cnf
+
+#
+# cnd cosmic
+#
+# FADCs
+#
+FADC250_CRATE adccnd1
+FADC250_SLOT all
+
+##FADC250_COMPRESSION  2
+
+FADC250_W_OFFSET  1860
+#FADC250_W_WIDTH   400
+FADC250_W_WIDTH   384
+
+FADC250_TET 60
+
+# include trigger/PEDS/hv_on/adccnd1_ped.cnf
+
+FADC250_CRATE adccnd1
+FADC250_SLOT 3
+FADC250_ALLCH_PED  165.277  155.408  170.824  164.705  168.755  164.548  170.305  227.684  182.980  266.762  186.159  137.949  200.839  167.825  191.845  179.181
+FADC250_SLOT 4
+FADC250_ALLCH_PED  175.223  168.510  159.061  170.031  206.074  181.297  185.206  195.558  185.099  186.284  178.966  220.356  188.627  174.497  197.526  164.039
+FADC250_SLOT 5
+FADC250_ALLCH_PED  142.761  138.289  172.278  151.401  151.120  173.139  167.761  177.294  194.280  164.603  213.089  159.642  133.780  196.457  143.850  201.909
+FADC250_SLOT 6
+FADC250_ALLCH_PED  164.110  190.937  174.768  127.754  115.755  208.914  173.159  159.246  193.177  206.683  178.103  162.401  218.783  191.939  172.076  181.582
+FADC250_SLOT 7
+FADC250_ALLCH_PED  201.848  192.689  223.551  201.431  218.829  228.888  227.722  212.599  222.019  188.276  213.954  221.555  205.425  177.735  211.631  184.351
+FADC250_SLOT 8
+FADC250_ALLCH_PED  198.491  176.871  168.327  120.915  214.431  201.857  192.766  203.677  192.703  209.439  213.794  195.139  186.819  219.464  190.274  212.688
+FADC250_SLOT 9
+FADC250_ALLCH_PED  158.760  172.948  160.744  130.897  149.664  155.895  175.605  193.125  160.498  173.830  183.098  165.285  169.791  180.485  170.730  163.640
+FADC250_SLOT 10
+FADC250_ALLCH_PED  180.016  194.037  209.310  180.230  246.791  197.467  208.120  187.508  158.225  161.237  172.428  143.274  162.269  137.109  156.660  170.145
+FADC250_SLOT 13
+FADC250_ALLCH_PED  212.885  191.993  197.047  191.115  185.291  185.237  142.866  243.692  183.501  142.796  160.395  157.212  182.029  168.706  158.491  148.441
+FADC250_CRATE end
+FADC250_CRATE end
+
+
+#
+# TDCs
+#
+
+TDC1190_CRATE adccnd1
+TDC1190_SLOT all
+
+TDC1190_W_OFFSET -2000
+TDC1190_W_WIDTH   2000
+
+TDC1190_CRATE end
+
+#
+# TDCs
+#
+
+TDC1190_CRATE tdcctof1
+TDC1190_SLOT all
+
+TDC1190_W_OFFSET -1500
+TDC1190_W_WIDTH    400
+
+TDC1190_CRATE end
+
+
+# include trigger/SVT/svt_prod.trg
+
+
+# SVT thresholds
+
+VSCM_CRATE svt1
+
+VSCM_SLOT 3
+
+# include trigger/SVT/high_thresholds.cnf
+
+# Set discriminators on U3,U4 FSSR2 chips
+# 01/28/2019 changed hit thresholds from 30 to 35 (R1Bottom)
+FSSR_ADDR_REG_DISC_THR        2        0        35 
+FSSR_ADDR_REG_DISC_THR        3        0        35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+FSSR_ADDR_REG_DISC_THR        6        1        50
+FSSR_ADDR_REG_DISC_THR        7        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+FSSR_ADDR_REG_DISC_THR        6        2        65
+FSSR_ADDR_REG_DISC_THR        7        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+FSSR_ADDR_REG_DISC_THR        6        3        80
+FSSR_ADDR_REG_DISC_THR        7        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+FSSR_ADDR_REG_DISC_THR        6        4        95
+FSSR_ADDR_REG_DISC_THR        7        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+FSSR_ADDR_REG_DISC_THR        6        5        110
+FSSR_ADDR_REG_DISC_THR        7        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+FSSR_ADDR_REG_DISC_THR        6        6        125
+FSSR_ADDR_REG_DISC_THR        7        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+FSSR_ADDR_REG_DISC_THR        6        7        140
+FSSR_ADDR_REG_DISC_THR        7        7        140
+
+VSCM_SLOT 3
+
+# include trigger/SVT/high_thresholds_r1s2b.cnf
+
+# Set discriminators on FSSR2 chips
+# 01/28/2019 changed hit threshold from 33 to 35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
+
+FSSR_ADDR_REG_DISC_THR        6        1        50
+FSSR_ADDR_REG_DISC_THR        7        1        50
+
+FSSR_ADDR_REG_DISC_THR        6        2        65
+FSSR_ADDR_REG_DISC_THR        7        2        65
+
+FSSR_ADDR_REG_DISC_THR        6        3        80
+FSSR_ADDR_REG_DISC_THR        7        3        80
+
+FSSR_ADDR_REG_DISC_THR        6        4        95
+FSSR_ADDR_REG_DISC_THR        7        4        95
+
+FSSR_ADDR_REG_DISC_THR        6        5        110
+FSSR_ADDR_REG_DISC_THR        7        5        110
+
+FSSR_ADDR_REG_DISC_THR        6        6        125
+FSSR_ADDR_REG_DISC_THR        7        6        125
+
+FSSR_ADDR_REG_DISC_THR        6        7        140
+FSSR_ADDR_REG_DISC_THR        7        7        140
+
+VSCM_SLOT 4
+
+# include trigger/SVT/high_thresholds.cnf
+
+# Set discriminators on U3,U4 FSSR2 chips
+# 01/28/2019 changed hit thresholds from 30 to 35 (R1Bottom)
+FSSR_ADDR_REG_DISC_THR        2        0        35 
+FSSR_ADDR_REG_DISC_THR        3        0        35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+FSSR_ADDR_REG_DISC_THR        6        1        50
+FSSR_ADDR_REG_DISC_THR        7        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+FSSR_ADDR_REG_DISC_THR        6        2        65
+FSSR_ADDR_REG_DISC_THR        7        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+FSSR_ADDR_REG_DISC_THR        6        3        80
+FSSR_ADDR_REG_DISC_THR        7        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+FSSR_ADDR_REG_DISC_THR        6        4        95
+FSSR_ADDR_REG_DISC_THR        7        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+FSSR_ADDR_REG_DISC_THR        6        5        110
+FSSR_ADDR_REG_DISC_THR        7        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+FSSR_ADDR_REG_DISC_THR        6        6        125
+FSSR_ADDR_REG_DISC_THR        7        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+FSSR_ADDR_REG_DISC_THR        6        7        140
+FSSR_ADDR_REG_DISC_THR        7        7        140
+
+VSCM_SLOT 5
+
+# include trigger/SVT/high_thresholds.cnf
+
+# Set discriminators on U3,U4 FSSR2 chips
+# 01/28/2019 changed hit thresholds from 30 to 35 (R1Bottom)
+FSSR_ADDR_REG_DISC_THR        2        0        35 
+FSSR_ADDR_REG_DISC_THR        3        0        35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+FSSR_ADDR_REG_DISC_THR        6        1        50
+FSSR_ADDR_REG_DISC_THR        7        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+FSSR_ADDR_REG_DISC_THR        6        2        65
+FSSR_ADDR_REG_DISC_THR        7        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+FSSR_ADDR_REG_DISC_THR        6        3        80
+FSSR_ADDR_REG_DISC_THR        7        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+FSSR_ADDR_REG_DISC_THR        6        4        95
+FSSR_ADDR_REG_DISC_THR        7        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+FSSR_ADDR_REG_DISC_THR        6        5        110
+FSSR_ADDR_REG_DISC_THR        7        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+FSSR_ADDR_REG_DISC_THR        6        6        125
+FSSR_ADDR_REG_DISC_THR        7        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+FSSR_ADDR_REG_DISC_THR        6        7        140
+FSSR_ADDR_REG_DISC_THR        7        7        140
+
+VSCM_SLOT 7
+
+# include trigger/SVT/high_thresholds_c1_bottom_r2s1b.cnf
+
+# Set discriminators on FSSR2 chips
+# 01/28 changed hit threshold from 31 to 40
+FSSR_ADDR_REG_DISC_THR        2        0        40
+FSSR_ADDR_REG_DISC_THR        3        0        40
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+
+VSCM_SLOT 8
+
+# include trigger/SVT/high_thresholds_c1_bottom_r2s3b.cnf
+
+# Set discriminators on FSSR2 chips
+# 01/28/2019 changed hit threshold from 34 to 35
+FSSR_ADDR_REG_DISC_THR        2        0        35
+FSSR_ADDR_REG_DISC_THR        3        0        35
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+
+
+# include trigger/SVT/killmask_svt1.cnf
+
+# FSSR_ADDR_REG_KILL_STRIP <chip 0-7> <strip 0-127>
+VSCM_CRATE svt1
+VSCM_SLOT 3
+#R1S1B strips 172 173 10/08/2018 YG added 43(171) on 10/16/2018
+FSSR_ADDR_REG_KILL_STRIP 3  43
+FSSR_ADDR_REG_KILL_STRIP 3  44
+FSSR_ADDR_REG_KILL_STRIP 3  45
+
+VSCM_SLOT 7
+#R2S1B
+FSSR_ADDR_REG_KILL_STRIP 2  68
+FSSR_ADDR_REG_KILL_STRIP 2  69
+FSSR_ADDR_REG_KILL_STRIP 2  70
+FSSR_ADDR_REG_KILL_STRIP 2  71
+
+VSCM_SLOT 8
+#R2S3B 02/03/2019 added strip 12
+FSSR_ADDR_REG_KILL_STRIP 3  8
+FSSR_ADDR_REG_KILL_STRIP 3  9
+FSSR_ADDR_REG_KILL_STRIP 3  10
+FSSR_ADDR_REG_KILL_STRIP 3  11
+FSSR_ADDR_REG_KILL_STRIP 3  12
+
+VSCM_SLOT 17
+#R3S18B 10/19/2018 YG added strips 1 and 3 10/20/2018 YG added strips 0 and 4
+FSSR_ADDR_REG_KILL_STRIP 3  0
+FSSR_ADDR_REG_KILL_STRIP 3  1
+FSSR_ADDR_REG_KILL_STRIP 3  2
+FSSR_ADDR_REG_KILL_STRIP 3  3
+FSSR_ADDR_REG_KILL_STRIP 3  4
+
+VSCM_CRATE end
+VSCM_CRATE end
+
+VSCM_CRATE svt2
+
+VSCM_SLOT 3
+
+# include trigger/SVT/high_thresholds.cnf
+
+# Set discriminators on U3,U4 FSSR2 chips
+# 01/28/2019 changed hit thresholds from 30 to 35 (R1Bottom)
+FSSR_ADDR_REG_DISC_THR        2        0        35 
+FSSR_ADDR_REG_DISC_THR        3        0        35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+FSSR_ADDR_REG_DISC_THR        6        1        50
+FSSR_ADDR_REG_DISC_THR        7        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+FSSR_ADDR_REG_DISC_THR        6        2        65
+FSSR_ADDR_REG_DISC_THR        7        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+FSSR_ADDR_REG_DISC_THR        6        3        80
+FSSR_ADDR_REG_DISC_THR        7        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+FSSR_ADDR_REG_DISC_THR        6        4        95
+FSSR_ADDR_REG_DISC_THR        7        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+FSSR_ADDR_REG_DISC_THR        6        5        110
+FSSR_ADDR_REG_DISC_THR        7        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+FSSR_ADDR_REG_DISC_THR        6        6        125
+FSSR_ADDR_REG_DISC_THR        7        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+FSSR_ADDR_REG_DISC_THR        6        7        140
+FSSR_ADDR_REG_DISC_THR        7        7        140
+
+
+# include trigger/SVT/high_thresholds_r1s5t.cnf
+
+# Set discriminators on FSSR2 chips
+# 01/28/2019 changed hit threshold from 34 to 35
+FSSR_ADDR_REG_DISC_THR        4        0        35
+FSSR_ADDR_REG_DISC_THR        5        0        35
+
+FSSR_ADDR_REG_DISC_THR        4        1        50
+FSSR_ADDR_REG_DISC_THR        5        1        50
+
+FSSR_ADDR_REG_DISC_THR        4        2        65
+FSSR_ADDR_REG_DISC_THR        5        2        65
+
+FSSR_ADDR_REG_DISC_THR        4        3        80
+FSSR_ADDR_REG_DISC_THR        5        3        80
+
+FSSR_ADDR_REG_DISC_THR        4        4        95
+FSSR_ADDR_REG_DISC_THR        5        4        95
+
+FSSR_ADDR_REG_DISC_THR        4        5        110
+FSSR_ADDR_REG_DISC_THR        5        5        110
+
+FSSR_ADDR_REG_DISC_THR        4        6        125
+FSSR_ADDR_REG_DISC_THR        5        6        125
+
+FSSR_ADDR_REG_DISC_THR        4        7        140
+FSSR_ADDR_REG_DISC_THR        5        7        140
+
+VSCM_SLOT 4
+
+# include trigger/SVT/high_thresholds.cnf
+
+# Set discriminators on U3,U4 FSSR2 chips
+# 01/28/2019 changed hit thresholds from 30 to 35 (R1Bottom)
+FSSR_ADDR_REG_DISC_THR        2        0        35 
+FSSR_ADDR_REG_DISC_THR        3        0        35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+FSSR_ADDR_REG_DISC_THR        6        1        50
+FSSR_ADDR_REG_DISC_THR        7        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+FSSR_ADDR_REG_DISC_THR        6        2        65
+FSSR_ADDR_REG_DISC_THR        7        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+FSSR_ADDR_REG_DISC_THR        6        3        80
+FSSR_ADDR_REG_DISC_THR        7        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+FSSR_ADDR_REG_DISC_THR        6        4        95
+FSSR_ADDR_REG_DISC_THR        7        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+FSSR_ADDR_REG_DISC_THR        6        5        110
+FSSR_ADDR_REG_DISC_THR        7        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+FSSR_ADDR_REG_DISC_THR        6        6        125
+FSSR_ADDR_REG_DISC_THR        7        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+FSSR_ADDR_REG_DISC_THR        6        7        140
+FSSR_ADDR_REG_DISC_THR        7        7        140
+
+VSCM_SLOT 5
+
+# include trigger/SVT/high_thresholds.cnf
+
+# Set discriminators on U3,U4 FSSR2 chips
+# 01/28/2019 changed hit thresholds from 30 to 35 (R1Bottom)
+FSSR_ADDR_REG_DISC_THR        2        0        35 
+FSSR_ADDR_REG_DISC_THR        3        0        35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+FSSR_ADDR_REG_DISC_THR        6        1        50
+FSSR_ADDR_REG_DISC_THR        7        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+FSSR_ADDR_REG_DISC_THR        6        2        65
+FSSR_ADDR_REG_DISC_THR        7        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+FSSR_ADDR_REG_DISC_THR        6        3        80
+FSSR_ADDR_REG_DISC_THR        7        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+FSSR_ADDR_REG_DISC_THR        6        4        95
+FSSR_ADDR_REG_DISC_THR        7        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+FSSR_ADDR_REG_DISC_THR        6        5        110
+FSSR_ADDR_REG_DISC_THR        7        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+FSSR_ADDR_REG_DISC_THR        6        6        125
+FSSR_ADDR_REG_DISC_THR        7        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+FSSR_ADDR_REG_DISC_THR        6        7        140
+FSSR_ADDR_REG_DISC_THR        7        7        140
+
+VSCM_SLOT 7
+
+# include trigger/SVT/high_thresholds_c1_bottom_r2s5b.cnf
+
+# Set discriminators on FSSR2 chips
+# 01/28/2019 changed hit threshold from 33 to 40
+FSSR_ADDR_REG_DISC_THR        2        0        40
+FSSR_ADDR_REG_DISC_THR        3        0        40
+
+FSSR_ADDR_REG_DISC_THR        2        1        50
+FSSR_ADDR_REG_DISC_THR        3        1        50
+
+FSSR_ADDR_REG_DISC_THR        2        2        65
+FSSR_ADDR_REG_DISC_THR        3        2        65
+
+FSSR_ADDR_REG_DISC_THR        2        3        80
+FSSR_ADDR_REG_DISC_THR        3        3        80
+
+FSSR_ADDR_REG_DISC_THR        2        4        95
+FSSR_ADDR_REG_DISC_THR        3        4        95
+
+FSSR_ADDR_REG_DISC_THR        2        5        110
+FSSR_ADDR_REG_DISC_THR        3        5        110
+
+FSSR_ADDR_REG_DISC_THR        2        6        125
+FSSR_ADDR_REG_DISC_THR        3        6        125
+
+FSSR_ADDR_REG_DISC_THR        2        7        140
+FSSR_ADDR_REG_DISC_THR        3        7        140
+
+VSCM_SLOT 9
+
+# include trigger/SVT/high_thresholds_c2_top_r2s10t.cnf
+
+# Set discriminators on FSSR2 chips
+# 01/28/2019 changed hit threshold from 32 to 35
+FSSR_ADDR_REG_DISC_THR        4        0        35
+FSSR_ADDR_REG_DISC_THR        5        0        35
+
+FSSR_ADDR_REG_DISC_THR        4        1        50
+FSSR_ADDR_REG_DISC_THR        5        1        50
+
+FSSR_ADDR_REG_DISC_THR        4        2        65
+FSSR_ADDR_REG_DISC_THR        5        2        65
+
+FSSR_ADDR_REG_DISC_THR        4        3        80
+FSSR_ADDR_REG_DISC_THR        5        3        80
+
+FSSR_ADDR_REG_DISC_THR        4        4        95
+FSSR_ADDR_REG_DISC_THR        5        4        95
+
+FSSR_ADDR_REG_DISC_THR        4        5        110
+FSSR_ADDR_REG_DISC_THR        5        5        110
+
+FSSR_ADDR_REG_DISC_THR        4        6        125
+FSSR_ADDR_REG_DISC_THR        5        6        125
+
+FSSR_ADDR_REG_DISC_THR        4        7        140
+FSSR_ADDR_REG_DISC_THR        5        7        140
+
+#include trigger/SVT/killmask_r2s10t.cnf
+
+# include trigger/SVT/killmask_svt2.cnf
+
+VSCM_CRATE svt2
+
+VSCM_SLOT 4
+#R1S6T strip 145 01/25/2019 YG
+FSSR_ADDR_REG_KILL_STRIP 1  16
+
+VSCM_SLOT 9
+# FSSR_ADDR_REG_KILL_STRIP <chip 0-7> <strip 0-127>
+#R2S10T
+FSSR_ADDR_REG_KILL_STRIP 4  36
+FSSR_ADDR_REG_KILL_STRIP 4  37
+FSSR_ADDR_REG_KILL_STRIP 4  38
+FSSR_ADDR_REG_KILL_STRIP 4  39
+
+VSCM_SLOT 7
+#R2S5B
+FSSR_ADDR_REG_KILL_STRIP 2  109
+FSSR_ADDR_REG_KILL_STRIP 2  110
+FSSR_ADDR_REG_KILL_STRIP 2  111
+FSSR_ADDR_REG_KILL_STRIP 2  112
+
+VSCM_SLOT 16
+#R3S12U4 strip 176 08/11/2018 YG, 175, 177 01/25/2019
+FSSR_ADDR_REG_KILL_STRIP 3  46
+FSSR_ADDR_REG_KILL_STRIP 3  47
+FSSR_ADDR_REG_KILL_STRIP 3  48
+
+VSCM_CRATE end
+VSCM_CRATE end
+#include trigger/SVT/killmask.cnf
+
+
+TS_CRATE trig1
+
+###TS_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TS_BLOCK_LEVEL 1
+TS_BUFFER_LEVEL 1
+#TS_BLOCK_LEVEL 1
+#TS_BUFFER_LEVEL 8
+
+#TS_HOLDOFF 1 60 1
+#TS_HOLDOFF 2 60 1
+#TS_HOLDOFF 3 60 1
+#TS_HOLDOFF 4 60 1
+TS_HOLDOFF 1 30 1
+TS_HOLDOFF 2 30 1
+TS_HOLDOFF 3 30 1
+TS_HOLDOFF 4 30 1
+
+#TS_INPUT_PRESCALE 1 0
+#TS_INPUT_PRESCALE 2 0
+#TS_INPUT_PRESCALE 3 0
+#TS_INPUT_PRESCALE 4 0
+#TS_INPUT_PRESCALE 5 0
+#TS_INPUT_PRESCALE 6 0
+
+#SD trigger
+TS_GTP_INPUT_MASK 0x00000000
+TS_FP_INPUT_MASK 0x00000200
+
+TS_RANDOM_TRIGGER 0 3
+TS_CRATE end
+
+
+#
+# FADCs
+#
+FADC250_CRATE adcctof1
+FADC250_SLOT all
+FADC250_COMPRESSION  2
+FADC250_W_OFFSET  1860
+FADC250_W_WIDTH   192
+FADC250_CRATE end
+
+# include trigger/CTOF_HTCC/adcctof1_ped_cosmic.cnf
+
+FADC250_CRATE adcctof1
+FADC250_SLOT 3
+FADC250_TET 20
+FADC250_ALLCH_PED  116.229  102.218  102.902  101.321   99.051   80.344  146.162   98.027  125.499  102.141  108.177   91.796  117.292  106.230  107.963  123.709
+FADC250_SLOT 4
+FADC250_TET 20
+FADC250_ALLCH_PED  136.355  141.667  113.728   77.648  101.296  112.943  111.768  132.398  154.590  168.694  116.738  108.247  140.550  107.384  113.653  109.115
+FADC250_SLOT 5
+FADC250_TET 20
+FADC250_ALLCH_PED  110.627  109.331  143.230  146.247  149.951  152.592  147.523  155.607  112.774  155.627  159.957  160.644  133.387  130.698  150.350  158.610
+FADC250_SLOT 6
+FADC250_TET 20
+FADC250_ALLCH_PED  128.549  115.673  109.843  135.776   75.796  117.560  131.153  103.679  126.728  128.067  100.951  125.254   94.152  142.218  124.120  106.835
+FADC250_SLOT 7
+FADC250_TET 20
+FADC250_ALLCH_PED   90.327  121.980   93.660   94.262   89.269  125.218  131.499  117.481  114.895  108.816  100.932   97.378  119.365   99.494  114.061   74.710
+FADC250_SLOT 8
+FADC250_TET 20
+FADC250_ALLCH_PED  125.246  111.659  133.249  133.330  157.840  133.120  108.566   84.769  139.837  121.479  118.901  151.707  145.721  130.169  139.345  103.383
+FADC250_SLOT 13
+FADC250_TET 15
+FADC250_ALLCH_PED   92.229  112.749  129.384   67.532   89.436  119.716   99.237   88.144   70.141  139.769  114.187   90.328   90.281  104.123   72.257  124.552
+FADC250_SLOT 14
+FADC250_TET 15
+FADC250_ALLCH_PED   98.001   82.872   90.940   81.580   88.140   91.201   92.438   94.413   43.912   71.718  114.192   94.507   93.631   83.634   72.446  103.157
+FADC250_SLOT 15
+FADC250_TET 15
+FADC250_ALLCH_PED   47.838   94.644  106.132   93.174  101.346   81.368  104.452   81.963  109.441   90.711   98.563   81.947   78.236  121.632   75.974   94.384
+FADC250_CRATE end
+#
+# TDCs
+#
+TDC1190_CRATE tdcctof1
+TDC1190_SLOT all
+TDC1190_W_OFFSET -2060
+TDC1190_W_WIDTH    400
+TDC1190_CRATE end
