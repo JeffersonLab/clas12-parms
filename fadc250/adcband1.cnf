@@ -2,15 +2,15 @@
 # FADC
 #
 
-FADC250_CRATE all
+FADC250_CRATE adcband1
 FADC250_SLOT all
 
 FADC250_DAC  3300
 
 #when decreased, ADC pulse moves left
-#FADC250_W_OFFSET  1250
+FADC250_W_OFFSET  1250
 FADC250_W_WIDTH   400
-FADC250_W_OFFSET  7590
+#FADC250_W_OFFSET  7590
 
 
 #raw mode
@@ -18,8 +18,8 @@ FADC250_MODE      1
 #FADC250_NSB       12
 #FADC250_NSA       24
 FADC250_NSB	  4	
-FADC250_NSA       12
-FADC250_NPEAK     1
+FADC250_NSA       11
+FADC250_NPEAK     24
 
 
 
@@ -34,8 +34,7 @@ FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 #FADC250_TET 0
 
 #non-zero threshold, pedestal file will be used
-#FADC250_TET 10
-FADC250_TET 40
+FADC250_TET 82
 FADC250_CONF_FILE adcband1_ped.cnf
 
 FADC250_CRATE end

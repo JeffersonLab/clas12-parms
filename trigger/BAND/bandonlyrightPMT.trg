@@ -59,8 +59,6 @@ FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 #FADC250_TET 0
 
 #non-zero threshold, pedestal file will be used
-FADC250_TET 10
+FADC250_TET 41
 FADC250_CONF_FILE adcband1_ped.cnf
-FADC250_SLOT 3
-FADC250_CH_TET 9 380
 FADC250_CRATE end

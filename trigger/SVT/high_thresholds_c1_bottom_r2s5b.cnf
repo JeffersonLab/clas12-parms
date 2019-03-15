@@ -1,7 +1,7 @@
-
 # Set discriminators on FSSR2 chips
-FSSR_ADDR_REG_DISC_THR        2        0        33
-FSSR_ADDR_REG_DISC_THR        3        0        33
+# 01/28/2019 changed hit threshold from 33 to 40
+FSSR_ADDR_REG_DISC_THR        2        0        40
+FSSR_ADDR_REG_DISC_THR        3        0        40
 
 FSSR_ADDR_REG_DISC_THR        2        1        50
 FSSR_ADDR_REG_DISC_THR        3        1        50

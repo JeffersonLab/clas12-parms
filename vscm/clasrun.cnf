@@ -95,7 +95,9 @@ VSCM_BCO_FREQ        16
 #VSCM_TRIG_WINDOW     96      1064        16
 
 # Yuri latency for cosmic trigger from CTOF
-#VSCM_TRIG_WINDOW     96      224        16 
+# 01/28/2019 reduced window from 6 to 4 BCO (96->64)
+# 01/29/2019 reduced to 3 BCO
+#VSCM_TRIG_WINDOW     48      224        16 
 #
 ##sergey on Yuri request Jan 17 2018 19:05 
 #VSCM_TRIG_WINDOW     96      1000        16 
@@ -113,6 +115,7 @@ VSCM_BCO_FREQ        16
 #VSCM_TRIG_WINDOW     80      979        16
 # Yuri 01/20/2018 8:13 shrink the window by 128 ns, now it is 4 BCO Run group A setting 
 # 08/2018 same setting for RGA, continue
+# same settings for RGB
 VSCM_TRIG_WINDOW     64      979        16
 ####################################
 

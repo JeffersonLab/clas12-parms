@@ -1,9 +1,9 @@
-
 # Set discriminators on U3,U4 FSSR2 chips
-FSSR_ADDR_REG_DISC_THR        2        0        30 
-FSSR_ADDR_REG_DISC_THR        3        0        30
-FSSR_ADDR_REG_DISC_THR        6        0        30
-FSSR_ADDR_REG_DISC_THR        7        0        30
+# 01/28/2019 changed hit thresholds from 30 to 35 (R1Bottom)
+FSSR_ADDR_REG_DISC_THR        2        0        35 
+FSSR_ADDR_REG_DISC_THR        3        0        35
+FSSR_ADDR_REG_DISC_THR        6        0        35
+FSSR_ADDR_REG_DISC_THR        7        0        35
 
 FSSR_ADDR_REG_DISC_THR        2        1        50
 FSSR_ADDR_REG_DISC_THR        3        1        50

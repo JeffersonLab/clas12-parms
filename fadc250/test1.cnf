@@ -35,7 +35,7 @@ FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 #FADC250_PED 0
 
 #non-zero threshold, pedestal file will be used
-FADC250_TET 150
+#FADC250_TET 220
 
 FADC250_CONF_FILE test1_ped.cnf
 

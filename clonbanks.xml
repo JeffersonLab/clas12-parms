@@ -676,6 +676,27 @@
 	</dictEntry>
 
 
+	<dictEntry name="TPC composite data packed" tag="0xe129" num="0" type="composite">
+		<description format="c,i,l,n(s,m(c,mc))">
+			c	"slot number"
+			i	"trigger number"
+			l	"time stamp"
+            n   "number of channels"
+            s   "channel number"
+			m	"number of pulses"
+			c	"first sample"
+
+			m	"number of samples per channel, will be used to unpack data"
+            c   "byte array - packed data"
+IF NOT COMPRESSED, CAN BE FOLLOWING:
+			m	"number of adc samples"
+			s	"adc value"
+
+		</description>
+	</dictEntry>
+
+
+
 
 
     <dictEntry name="EC strips" tag="0xd101" num="0" type="composite">

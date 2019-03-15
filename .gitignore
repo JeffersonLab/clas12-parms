@@ -3,3 +3,8 @@ PRLIB/
 TRLIB/
 tt/
 epics/GAMMA_summary.txt
+*.prg
+*~
+*bak
+*old
+*#

@@ -38,7 +38,7 @@ MVT_Sys ClkMode        Smp40_Rd40
 MVT_Sys SparseSmp       0
 
 # Set to 1000000 for prescale data only; must be > 0
-MVT_Sys BlockPrescale   100
+MVT_Sys BlockPrescale   1
 
 # Report Raw Data : valid only in Standalone mode
 MVT_Sys RepRawData      0
@@ -340,21 +340,21 @@ MVT_CRATE  mmft1
 #
 # Complement of MVT configuration file with FEU pedestals and thresholds
 # To be included in the main configuration file
-# Generated from FTT_roc_75_cmp_000088.evio on Fri Oct 26 08:19:50 EDT 2018
+# Generated from FTT_roc_75_cmp_000062.evio on Fri Feb 8 06:44:09 EST 2019
 #
 MVT_Feu * Feu_RunCtrl_PdFile None
-MVT_Feu 01 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_msk_01_ped.prg
-MVT_Feu 04 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_msk_04_ped.prg
-MVT_Feu 05 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_msk_05_ped.prg
-MVT_Feu 08 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_msk_08_ped.prg
-MVT_Feu 10 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_msk_10_ped.prg
-MVT_Feu 12 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_msk_12_ped.prg
+MVT_Feu 01 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_msk_01_ped.prg
+MVT_Feu 04 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_msk_04_ped.prg
+MVT_Feu 05 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_msk_05_ped.prg
+MVT_Feu 08 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_msk_08_ped.prg
+MVT_Feu 10 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_msk_10_ped.prg
+MVT_Feu 12 Feu_RunCtrl_PdFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_msk_12_ped.prg
 #
 MVT_Feu * Feu_RunCtrl_ZsFile None
-MVT_Feu 01 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_mod_01_thr.prg
-MVT_Feu 04 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_mod_04_thr.prg
-MVT_Feu 05 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_mod_05_thr.prg
-MVT_Feu 08 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_mod_08_thr.prg
-MVT_Feu 10 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_mod_10_thr.prg
-MVT_Feu 12 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000088_FTT_mod_12_thr.prg
+MVT_Feu 01 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_mod_01_thr.prg
+MVT_Feu 04 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_mod_04_thr.prg
+MVT_Feu 05 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_mod_05_thr.prg
+MVT_Feu 08 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_mod_08_thr.prg
+MVT_Feu 10 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_mod_10_thr.prg
+MVT_Feu 12 Feu_RunCtrl_ZsFile /usr/clas12/release/1.3.2/parms/mvt/FTT_roc_75_cmp_000062_FTT_mod_12_thr.prg
 MVT_CRATE end

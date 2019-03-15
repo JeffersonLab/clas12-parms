@@ -1,1 +1,54 @@
-vtp_firmware_ptor_nsol.txt
+# VTPHOST         Z7FPGA_FIRMWARE        V7FPGA_FIRMWARE
+
+trig2vtp          fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_gt.bin
+
+adcecal1vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ecs.bin
+adcecal2vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ecs.bin
+adcecal3vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ecs.bin
+adcecal4vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ecs.bin
+adcecal5vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ecs.bin
+adcecal6vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ecs.bin
+
+adcpcal1vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_pcs.bin
+adcpcal2vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_pcs.bin
+adcpcal3vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_pcs.bin
+adcpcal4vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_pcs.bin
+adcpcal5vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_pcs.bin
+adcpcal6vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_pcs.bin
+
+adcft1vtp         fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftcal1.bin
+adcft2vtp         fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftcal2.bin
+adcft3vtp         fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_fthodo.bin
+
+adcctof1vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_htccs.bin
+adccnd1vtp        fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_cnd.bin
+
+adcftof1vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+adcftof2vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+adcftof3vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+adcftof4vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+adcftof5vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+adcftof6vtp       fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+
+dc11vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc12vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc13vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc21vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc22vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc23vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc31vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc32vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc33vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc41vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc42vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc43vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc51vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc52vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc53vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc61vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc62vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+dc63vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
+
+hps1vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+hps2vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+

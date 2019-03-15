@@ -1,5 +1,6 @@
 
 include trigger/CTOF_HTCC/ctof_cosmic.trg
+include trigger/SVT/svt_prod.trg
 
 TS_CRATE trig1
 
