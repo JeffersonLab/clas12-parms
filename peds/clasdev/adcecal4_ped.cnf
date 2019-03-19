@@ -1,7 +1,7 @@
 #
-# File generated automatically by DAQ running in RAW mode at Fri Mar 15 08:40:48 2019
+# File generated automatically by DAQ running in RAW mode at Tue Mar 19 08:56:42 2019
 #
 FADC250_CRATE adcecal4
 FADC250_SLOT 19
-FADC250_ALLCH_PED  1836.417    0.000 1691.130    0.000 2586.267    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000
+FADC250_ALLCH_PED  1743.505    0.000 1786.661    0.000 2590.293    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000
 FADC250_CRATE end
