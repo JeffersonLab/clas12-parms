@@ -337,11 +337,11 @@ SSP_GT_STRG_DC_WIDTH                 32
 #################
 #                
 #
-# Sector Trigger bit 2 FTOFxPCU & PCAL>10 MeV & DCsecgments(5outof6)&DC-roads
+# Sector Trigger bit 3 FTOFxPCU & PCAL>10 MeV & DCsecgments(5outof6)&DC-roads
 #
 # 
 #################
-SSP_GT_STRG                           2
+SSP_GT_STRG                           3
 SSP_GT_STRG_EN                        1
 
 # PCU trigger logic
@@ -649,59 +649,59 @@ VTP_GT_WIDTH   16
 # Physics Triggers
 ################################
 # Electron, All Sectors with DCROADxPCALU
-VTP_GT_TRGBIT   0   8  63  1                1  0  0    1  # SSP STRG3, SECTOR 1-6
+VTP_GT_TRGBIT   0   8  63  1                1  0  0    0  # SSP STRG3, SECTOR 1-6
 
 # FTOFxPCU
-VTP_GT_TRGBIT   1   1   1  1                1  0  0    1  #  STRG0, SECTOR 1
-VTP_GT_TRGBIT   2   1   2  1                1  0  0    1  #  STRG0, SECTOR 2
-VTP_GT_TRGBIT   3   1   4  1                1  0  0    1  #  STRG0, SECTOR 3
-VTP_GT_TRGBIT   4   1   8  1                1  0  0    1  #  STRG0, SECTOR 4
-VTP_GT_TRGBIT   5   1  16  1                1  0  0    1  #  STRG0, SECTOR 5
-VTP_GT_TRGBIT   6   1  32  1                1  0  0    1  #  STRG0, SECTOR 6
+VTP_GT_TRGBIT   1   1   1  1                1  0  0    0  #  STRG0, SECTOR 1
+VTP_GT_TRGBIT   2   1   2  1                1  0  0    0  #  STRG0, SECTOR 2
+VTP_GT_TRGBIT   3   1   4  1                1  0  0    0  #  STRG0, SECTOR 3
+VTP_GT_TRGBIT   4   1   8  1                1  0  0    0  #  STRG0, SECTOR 4
+VTP_GT_TRGBIT   5   1  16  1                1  0  0    0  #  STRG0, SECTOR 5
+VTP_GT_TRGBIT   6   1  32  1                1  0  0    0  #  STRG0, SECTOR 6
 
 # FTOFxPCU & PCAL>10 MeV
-VTP_GT_TRGBIT   7   2   1  1		    1  0  0    1  #  STRG1 SECTOR 1 
-VTP_GT_TRGBIT   8   2   2  1      	    1  0  0    1  #  STRG1 SECTOR 2 
-VTP_GT_TRGBIT   9   2   4  1       	    1  0  0    1  #  STRG1 SECTOR 3 
-VTP_GT_TRGBIT  10   2   8  1       	    1  0  0    1  #  STRG1 SECTOR 4 
-VTP_GT_TRGBIT  11   2  16  1        	    1  0  0    1  #  STRG1 SECTOR 5 
-VTP_GT_TRGBIT  12   2  32  1       	    1  0  0    1  #  STRG1 SECTOR 6
+VTP_GT_TRGBIT   7   2   1  1		    1  0  0    0  #  STRG1 SECTOR 1 
+VTP_GT_TRGBIT   8   2   2  1      	    1  0  0    0  #  STRG1 SECTOR 2 
+VTP_GT_TRGBIT   9   2   4  1       	    1  0  0    0  #  STRG1 SECTOR 3 
+VTP_GT_TRGBIT  10   2   8  1       	    1  0  0    0  #  STRG1 SECTOR 4 
+VTP_GT_TRGBIT  11   2  16  1        	    1  0  0    0  #  STRG1 SECTOR 5 
+VTP_GT_TRGBIT  12   2  32  1       	    1  0  0    0  #  STRG1 SECTOR 6
 
 # FTOFxPCU & PCAL>10 MeV & DC-segments (5 out of 6)
-VTP_GT_TRGBIT  13   4   1  1		    1  0  0    1  #  STRG2 SECTOR 1 
-VTP_GT_TRGBIT  14   4   2  1      	    1  0  0    1  #  STRG2 SECTOR 2 
-VTP_GT_TRGBIT  15   4   4  1       	    1  0  0    1  #  STRG2 SECTOR 3 
-VTP_GT_TRGBIT  16   4   8  1       	    1  0  0    1  #  STRG2 SECTOR 4 
-VTP_GT_TRGBIT  17   4  16  1        	    1  0  0    1  #  STRG2 SECTOR 5 
-VTP_GT_TRGBIT  18   4  32  1       	    1  0  0    1  #  STRG2 SECTOR 6
+VTP_GT_TRGBIT  13   4   1  1		    1  0  0    0  #  STRG2 SECTOR 1 
+VTP_GT_TRGBIT  14   4   2  1      	    1  0  0    0  #  STRG2 SECTOR 2 
+VTP_GT_TRGBIT  15   4   4  1       	    1  0  0    0  #  STRG2 SECTOR 3 
+VTP_GT_TRGBIT  16   4   8  1       	    1  0  0    0  #  STRG2 SECTOR 4 
+VTP_GT_TRGBIT  17   4  16  1        	    1  0  0    0  #  STRG2 SECTOR 5 
+VTP_GT_TRGBIT  18   4  32  1       	    1  0  0    0  #  STRG2 SECTOR 6
 
 # FTOFxPCU & PCAL>10 MeV & DC-roads  
-VTP_GT_TRGBIT  19   8   1  1		    1  0  0    1  #  STRG3 SECTOR 1 
-VTP_GT_TRGBIT  20   8   2  1      	    1  0  0    1  #  STRG3 SECTOR 2 
-VTP_GT_TRGBIT  21   8   4  1       	    1  0  0    1  #  STRG3 SECTOR 3 
-VTP_GT_TRGBIT  22   8   8  1       	    1  0  0    1  #  STRG3 SECTOR 4 
-VTP_GT_TRGBIT  23   8  16  1        	    1  0  0    1  #  STRG3 SECTOR 5 
-VTP_GT_TRGBIT  24   8  32  1       	    1  0  0    1  #  STRG3 SECTOR 6
+VTP_GT_TRGBIT  19   8   1  1		    1  0  0    0  #  STRG3 SECTOR 1 
+VTP_GT_TRGBIT  20   8   2  1      	    1  0  0    0  #  STRG3 SECTOR 2 
+VTP_GT_TRGBIT  21   8   4  1       	    1  0  0    0  #  STRG3 SECTOR 3 
+VTP_GT_TRGBIT  22   8   8  1       	    1  0  0    0  #  STRG3 SECTOR 4 
+VTP_GT_TRGBIT  23   8  16  1        	    1  0  0    0  #  STRG3 SECTOR 5 
+VTP_GT_TRGBIT  24   8  32  1       	    1  0  0    0  #  STRG3 SECTOR 6
 
 
 
 # FT(200-4000)MeV x DC x FTOFPCU x PCAL>10MeV (2 Sectors)
-VTP_GT_TRGBIT  25  16  63  2               1  1  0     1  # SSP STRG4, SECTOR 1-6, CTRG0
+VTP_GT_TRGBIT  25   4  63  2               1  1  0     0  # STRG2, MULT.2 and CTRG0
 
 # FT(300 - 8500) MeV x DC x FTOFPCU x PCAL>10MeV x CTOF
-VTP_GT_TRGBIT  26  16  63  1               1  1  0     2  # SSP STRG4, SECTOR 1-6, CTRG1
+VTP_GT_TRGBIT  26   4  63  1               1  2  0     0  # STRG2, MULT.1 and CTRG1
 
 #CENTRAL CTOF
-VTP_GT_TRGBIT  27  0  63  1               1  1  0     4  # SSP STRG4, SECTOR 1-6, CTRG2
+VTP_GT_TRGBIT  27   0  63  1                1  4  0    0  # CTRG2
 
 #CENTRAL CND*CTOF
-VTP_GT_TRGBIT  28  0  63  1               1  1  0     8  # SSP STRG4, SECTOR 1-6, CTRG3
+VTP_GT_TRGBIT  28   0  63  1                1  8  0    0  # CTRG3
 
 
 
 
 # FT(200 - 4000) w hodoscope               --> THIS IS THE ONLY TRG SOURCE
-VTP_GT_TRGBIT  31  0  63  1               1  1  6     1  #  CTRG0
+VTP_GT_TRGBIT  31   0  63  1                1  1  0     1  #  CTRG0
 
 
 

@@ -71,7 +71,7 @@ SSP_HPS_SET_IO_SRC                    17  18
 SSP_RICH_TDC_ENABLE                   0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF
 
 # TDC Readout Window
-SSP_RICH_W_WIDTH                      400
+SSP_RICH_W_WIDTH                      250
 SSP_RICH_W_OFFSET                     7980
 
 #

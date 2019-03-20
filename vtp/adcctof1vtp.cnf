@@ -8,7 +8,7 @@ VTP_W_WIDTH   400
 VTP_PAYLOAD_EN  0  1  0  1  1  1  1  0  1  0  1  0  1  0  1  0
 
 #      fiber:  1  2  3  4
-VTP_FIBER_EN   1  0  0  0
+VTP_FIBER_EN   1  1  0  0
 
 # Unit: 1/10 Phe     1 = 0.1phe
 #
