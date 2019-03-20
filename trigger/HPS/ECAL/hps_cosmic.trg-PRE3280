@@ -1,0 +1,226 @@
+##########################
+# GTP
+##########################
+GTP_CRATE all
+
+GTP_CLUSTER_PULSE_COIN      3    3
+
+# SEED thrershold in MeV (0-8191)
+GTP_CLUSTER_PULSE_THRESHOLD 35
+
+GTP_CRATE end
+
+##########################
+# HPS 11 Crate
+##########################
+
+### TI
+TI_CRATE hps11
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+TI_BUFFER_LEVEL 8
+TI_BLOCK_LEVEL  1
+
+TI_INPUT_PRESCALE 1  0
+TI_INPUT_PRESCALE 2  0
+TI_INPUT_PRESCALE 3  0
+TI_INPUT_PRESCALE 4  0
+TI_INPUT_PRESCALE 5  0
+TI_INPUT_PRESCALE 6  0
+
+TI_CRATE end
+
+
+### SSP
+SSP_CRATE hps11
+
+SSP_ALLSLOTS
+SSP_W_WIDTH   100
+SSP_W_OFFSET  799
+
+SSP_HPS_PULSER 1       # 1Hz pulser period
+
+# ecal triggers:
+# HPS SINGLES 0  -> TI TS1
+#SSP_HPS_SET_IO_SRC		7	20	#ENABLED
+SSP_HPS_SET_IO_SRC		7	0	#DISABLED
+
+#HPS SINGLES 1   -> TI TS2
+#SSP_HPS_SET_IO_SRC		8	21	#ENABLED
+SSP_HPS_SET_IO_SRC		8	0	#DISABLED
+
+#HPS PAIRS 0     -> TI TS3
+#SSP_HPS_SET_IO_SRC		9	22	#ENABLED
+SSP_HPS_SET_IO_SRC		9	0	#DISABLED
+
+#HPS PAIRS 1     -> TI TS4
+#SSP_HPS_SET_IO_SRC		10	23	#ENABLED
+SSP_HPS_SET_IO_SRC		10	0	#DISABLED
+
+# HPS COSMIC/LED -> TI TS5
+#SSP_HPS_SET_IO_SRC		11	24	#ENABLED-LED
+SSP_HPS_SET_IO_SRC		11	25	#ENABLED-COSMIC
+#SSP_HPS_SET_IO_SRC		11	0	#DISABLED
+
+# PULSER         -> TI TS6
+#SSP_HPS_SET_IO_SRC		12	18	#ENABLED
+SSP_HPS_SET_IO_SRC		12	0	#DISABLED
+
+
+# coinc time 10=40 ns
+SSP_HPS_COSMIC_TIMECOINCIDENCE  10
+
+# cosmic B0 and B1 (136<<8) + led trigger (254<<0)
+SSP_HPS_COSMIC_PATTERNCOINCIDENCE   35070
+
+SSP_HPS_LATENCY 475
+
+# Singles 0 trigger
+SSP_HPS_SINGLES_EMIN  0  1400 0
+SSP_HPS_SINGLES_EMAX  0  4444 0
+SSP_HPS_SINGLES_NMIN  0  1    0
+
+# Singles 1 trigger
+SSP_HPS_SINGLES_EMIN  1  1500 0
+SSP_HPS_SINGLES_EMAX  1  3333 0
+SSP_HPS_SINGLES_NMIN  1  2    0
+
+# Pairs 0 trigger
+SSP_HPS_PAIRS_TIMECOINCIDENCE  0  5
+SSP_HPS_PAIRS_EMIN             0  100
+SSP_HPS_PAIRS_EMAX             0  4444
+SSP_HPS_PAIRS_NMIN             0  1
+SSP_HPS_PAIRS_SUMMAX_MIN       0  3333 888  1
+SSP_HPS_PAIRS_DIFFMAX          0  666       1
+SSP_HPS_PAIRS_COPLANARITY      0  70        1
+SSP_HPS_PAIRS_ENERGYDIST       0  5.5  100  1
+
+# Pairs 1 trigger
+SSP_HPS_PAIRS_TIMECOINCIDENCE  1  4
+SSP_HPS_PAIRS_EMIN             1  200
+SSP_HPS_PAIRS_EMAX             1  3333
+SSP_HPS_PAIRS_NMIN             1  2
+SSP_HPS_PAIRS_SUMMAX_MIN       1  2222 1000 1
+SSP_HPS_PAIRS_DIFFMAX          1  444       1
+SSP_HPS_PAIRS_COPLANARITY      1  40        1
+SSP_HPS_PAIRS_ENERGYDIST       1  4.5  200  1
+
+SSP_CRATE end
+
+# ECAL GAINS AND PEDESTALS:
+include trigger/HPS/small/fadc250/peds/EcalPeds.trg
+include trigger/HPS/small/fadc250/gains/EcalGainsBig.trg
+
+### FADC: RF SIGNALS, HPS11, SLOT 13, CHANNELS 0/1
+FADC250_CRATE hps11
+
+FADC250_SLOT all
+FADC250_DAC  3300
+FADC250_W_OFFSET 3010
+FADC250_W_WIDTH 400
+
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       240
+FADC250_NPEAK     1
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#Set RF clock threshold
+FADC250_TET 800
+
+FADC250_SLOT 13
+FADC250_ALLCH_PED 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+FADC250_CRATE end
+
+
+##########################
+# HPS 12 Crate
+##########################
+
+### TI
+TI_CRATE hps12
+TI_FIBER_DELAY_OFFSET 0x80 0xc9
+TI_CRATE end
+
+
+##########################
+# HPS 1 Crate
+##########################
+
+### TI
+TI_CRATE hps1
+TI_FIBER_DELAY_OFFSET 0x80 0xc9
+TI_CRATE end
+
+### FADC
+FADC250_CRATE hps1
+
+FADC250_SLOT all
+FADC250_DAC  3300
+FADC250_W_OFFSET 3180
+FADC250_W_WIDTH   400
+
+FADC250_MODE      1
+FADC250_NSB       20
+FADC250_NSA       100
+FADC250_NPEAK     1
+
+#       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_TET 12
+
+# Set LED system trigger threshold
+FADC250_SLOT      20
+FADC250_CH_TET    15   500
+
+#       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0
+
+FADC250_CRATE end
+
+##########################
+# HPS 2 Crate
+##########################
+
+### TI
+TI_CRATE hps2
+TI_FIBER_DELAY_OFFSET 0x80 0xc9
+TI_CRATE end
+
+### FADC
+FADC250_CRATE hps2
+
+FADC250_SLOT all
+FADC250_DAC  3300
+FADC250_W_OFFSET 3180
+FADC250_W_WIDTH   400
+
+FADC250_MODE      1
+FADC250_NSB       20
+FADC250_NSA       100
+FADC250_NPEAK     1
+
+#       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_TET 12
+
+# Set cosmic system trigger threshold
+# 12bit -> 1V: 40 = ~10mV threshold
+# relative to pedestal
+FADC250_SLOT      20
+FADC250_CH_TET    13   60
+FADC250_CH_TET    14   60
+#       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0
+
+FADC250_CRATE end

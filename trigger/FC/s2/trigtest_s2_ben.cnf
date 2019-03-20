@@ -1,0 +1,878 @@
+#
+# FADCs for forward carriage
+#
+#
+# Cole's stuff
+#
+#include fadc250/s1/adcecal1_tet20_mode1.cnf
+#include fadc250/s1/adcpcal1_tet20_mode1.cnf
+#include fadc250/s1/adcftof1_tet20_mode1.cnf
+#include fadc250/s2/adcecal2_tet20_mode1.cnf
+#include fadc250/s2/adcpcal2_tet20_mode1.cnf
+#include fadc250/s2/adcftof2_tet20_mode1.cnf
+#include fadc250/s3/adcecal3_tet20_mode1.cnf
+#include fadc250/s3/adcpcal3_tet20_mode1.cnf
+#include fadc250/s3/adcftof3_tet20_mode1.cnf
+#include fadc250/s4/adcecal4_tet20_mode1.cnf
+#include fadc250/s4/adcpcal4_tet20_mode1.cnf
+#include fadc250/s4/adcftof4_tet20_mode1.cnf
+#include fadc250/s5/adcecal5_tet20_mode1.cnf
+#include fadc250/s5/adcpcal5_tet20_mode1.cnf
+#include fadc250/s5/adcftof5_tet20_mode1.cnf
+#include fadc250/s6/adcecal6_tet20_mode1.cnf
+#include fadc250/s6/adcpcal6_tet20_mode1.cnf
+#include fadc250/s6/adcftof6_tet20_mode1.cnf
+
+
+#
+# our pedestals
+#
+FADC250_CRATE adcecal2
+FADC250_MODE     1
+FADC250_NSB      12
+FADC250_NSA      36
+FADC250_NPEAK    1
+
+# include trigger/PEDS/ben/adcecal2_ped.cnf
+
+FADC250_SLOT 3
+FADC250_ALLCH_PED  115.396  108.124   95.025  121.327   83.396  142.641  160.466  102.138  130.038  121.765  148.853  154.261  139.298  117.934  150.962  109.236
+FADC250_SLOT 4
+FADC250_ALLCH_PED   74.303   80.216   80.119   76.370  138.515   85.665  131.323   81.555   82.108  117.917   96.255   65.648   71.204   89.457  108.589   97.809
+FADC250_SLOT 5
+FADC250_ALLCH_PED   69.295   77.968  119.773   59.486   69.419   95.526   93.184   89.415  128.582   76.797  110.378  112.349   92.728   76.295   96.994  121.651
+FADC250_SLOT 6
+FADC250_ALLCH_PED  104.182   82.335   98.101   41.667   82.034  118.949  105.564  114.812  115.424  131.051  101.566   92.064   95.748  135.979  144.811   80.687
+FADC250_SLOT 7
+FADC250_ALLCH_PED  133.891  144.300  119.834   71.757  111.472  105.501  134.423  129.049  131.166  136.015  151.370  113.582  154.717  120.066  101.789  138.859
+FADC250_SLOT 8
+FADC250_ALLCH_PED  146.941  116.174  114.815  117.964  147.078  186.739  138.527  112.030  110.723  112.464  122.544  150.408  118.922  137.321  137.057   84.915
+FADC250_SLOT 9
+FADC250_ALLCH_PED   95.123   94.287  110.642   85.302   87.224   96.110  113.412  111.721   96.464  107.773  101.194   72.824   92.776   82.167  136.038  121.506
+FADC250_SLOT 10
+FADC250_ALLCH_PED   61.388   76.367  108.479   99.836   90.104  100.519   78.554   88.458   92.034   99.374   99.143   93.518   98.262  105.944   92.723   72.306
+FADC250_SLOT 13
+FADC250_ALLCH_PED  106.412  107.189  131.131   60.212   98.137   95.319  113.798  104.012   63.671  113.961  142.246  113.772   72.591  140.761   62.051   51.986
+FADC250_SLOT 14
+FADC250_ALLCH_PED   86.659  101.921   92.321  100.941   61.087  100.406   87.744   77.890   97.784   90.363  107.625   80.154   72.091   84.537   63.833   59.600
+FADC250_SLOT 15
+FADC250_ALLCH_PED  139.903  124.988   98.645   75.928  113.007  130.159  123.837  134.041  130.577  124.338  149.594   95.363  118.394  119.405  124.412  101.234
+FADC250_SLOT 16
+FADC250_ALLCH_PED   72.242  123.292  124.273  110.831   95.657  112.645   86.288   66.385  111.652  107.156  121.598   73.492   86.413   67.836   52.384  114.088
+FADC250_SLOT 17
+FADC250_ALLCH_PED  110.635   63.041  107.915   96.413   82.661  137.863  148.578  127.105  115.075   98.713  120.965  135.945  103.214   83.264  116.519   89.734
+FADC250_SLOT 18
+FADC250_ALLCH_PED  128.567   69.232   97.888   80.906  135.331  114.738  111.279  103.063  106.253  130.016   76.668   82.530  227.772  173.956  180.375  160.205
+FADC250_SLOT 19
+FADC250_ALLCH_PED  223.915  192.195  214.433  221.657  181.646  216.503  205.305  198.551  208.827  198.029  198.459  179.434  240.696  205.614  195.593  186.738
+FADC250_SLOT 20
+FADC250_ALLCH_PED  158.400  133.512  181.803  176.402  197.014  185.499  207.660  188.427  178.731  210.197  174.046  173.486  176.905  173.556  200.923  178.480
+FADC250_CRATE end
+
+FADC250_CRATE adcpcal2
+FADC250_MODE     1
+FADC250_NSB      12
+FADC250_NSA      156
+FADC250_NPEAK    1
+
+# include trigger/PEDS/ben/adcpcal2_ped.cnf
+
+FADC250_SLOT 3
+FADC250_ALLCH_PED   56.379   61.347   73.247   96.089   75.598   89.365   84.658   88.867  103.093   83.994  124.199   75.905  122.631   75.363  104.162  139.998
+FADC250_SLOT 4
+FADC250_ALLCH_PED  117.667  102.851  129.896   92.913  106.837  105.168  131.512   83.406  116.726  137.334  120.696  125.805  121.298  124.501  136.452  103.240
+FADC250_SLOT 5
+FADC250_ALLCH_PED   87.005   94.086  105.676   66.245  114.732   90.966  126.344  113.169   80.328   81.631  113.252   81.929   90.934   84.304   71.982  121.839
+FADC250_SLOT 6
+FADC250_ALLCH_PED  116.210   89.084   90.859   91.008   88.604  127.483   77.165  144.116  102.644  123.882  125.974   93.209   88.196   69.540   95.525   90.762
+FADC250_SLOT 7
+FADC250_ALLCH_PED  120.754   87.084   86.286  108.335   62.849   80.246   82.086  123.820   67.218   69.893   92.917   73.856   92.866   73.975   86.459  104.907
+FADC250_SLOT 8
+FADC250_ALLCH_PED  112.994  140.264   94.971  116.171  107.115  137.031  120.157  134.112  116.833   97.839  119.359  142.226  109.555  118.624  129.559  161.341
+FADC250_SLOT 9
+FADC250_ALLCH_PED  133.234   69.813  101.755  125.544  106.446  124.974  149.941   91.751  103.529  103.670   80.213  119.533  111.936  127.632  154.864  109.914
+FADC250_SLOT 10
+FADC250_ALLCH_PED  138.083  126.599  115.274  114.100  136.837  161.087  121.050   64.659  109.115  105.609  130.557  105.627  151.949  112.974   96.591  118.887
+FADC250_SLOT 13
+FADC250_ALLCH_PED  121.474  112.936  118.749  135.768  120.625  129.798   98.945   97.216  123.867  105.695  134.899  104.970  110.506  124.999  122.654  122.881
+FADC250_SLOT 14
+FADC250_ALLCH_PED  125.498  113.638   83.095   87.100  104.998  109.496   74.330  122.362   83.114  138.393   60.027   93.152  119.079   92.171  134.387  132.556
+FADC250_SLOT 15
+FADC250_ALLCH_PED   92.654   90.712   93.033   42.859   86.997   99.016   93.222   87.788   85.212  123.968   89.037  122.345  104.123  107.191  100.348   73.316
+FADC250_SLOT 16
+FADC250_ALLCH_PED  124.241   96.671  102.602   87.573  123.316   97.619   70.923  109.140  125.503   64.042  124.964   94.504   67.924   83.518   60.452   96.630
+FADC250_CRATE end
+
+#########################
+# trig1 Crate
+#########################
+
+TS_CRATE trig1
+
+###TS_FIBER_DELAY_OFFSET 0x80 0xcf
+
+#TS_BLOCK_LEVEL 1
+#TS_BUFFER_LEVEL 1
+
+TS_BLOCK_LEVEL  1
+TS_BUFFER_LEVEL 1
+
+
+
+#TS_HOLDOFF 1 60 1
+#TS_HOLDOFF 2 60 1
+#TS_HOLDOFF 3 60 1
+#TS_HOLDOFF 4 60 1
+
+TS_HOLDOFF 1 30 1
+TS_HOLDOFF 2 30 1
+TS_HOLDOFF 3 30 1
+TS_HOLDOFF 4 30 1
+
+
+
+
+
+
+#TS_INPUT_PRESCALE 1 0
+#TS_INPUT_PRESCALE 2 0
+#TS_INPUT_PRESCALE 3 0
+#TS_INPUT_PRESCALE 4 0
+#TS_INPUT_PRESCALE 5 0
+#TS_INPUT_PRESCALE 6 0
+
+##TS_INPUT_MASK 0x3F000000
+TS_INPUT_MASK 0x3F000000
+
+# first arg: 0-disable, 1-enable; second arg: prescale (15-7Hz, 7-3.5kHz, 3-60kHz)
+TS_RANDOM_TRIGGER 0 3
+
+TS_CRATE end
+
+#########################
+# trig2 Crate
+#########################
+
+### TI
+TI_CRATE trig2
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE trig2vtp # stage 3
+
+VTP_FIRMWARE fe_vtp_hallb_v7_gt_test.bin
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   0  0  0  0
+
+# 6780 corresponds to 7900 FADC latency
+VTP_GT_LATENCY 6780
+
+VTP_GT_WIDTH   16
+
+# sector bits: trig number, ssp trig mask, ssp sector mask,        multiplicity, coincidence=#extended_clock_cycles   (or opposite)
+#VTP_GT_TRGBIT  8   3  1 1 1   # SECTOR 1: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+#VTP_GT_TRGBIT  9   3  2 1 1   # SECTOR 2: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+#VTP_GT_TRGBIT  10  3  4 1 1   # SECTOR 3: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+#VTP_GT_TRGBIT  11  3  8 1 1   # SECTOR 4: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+#VTP_GT_TRGBIT  12  3 16 1 1   # SECTOR 5: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+#VTP_GT_TRGBIT  13  3 32 1 1   # SECTOR 6: EC Inner Cluster | EC Outer Cluster | (EC Inner sum+EC Outer sum)
+
+VTP_GT_TRGBIT  8  8  1 1 1   # SECTOR 1: PC sum
+VTP_GT_TRGBIT  9  8  2 1 1   # SECTOR 2: PC sum
+VTP_GT_TRGBIT  10 8  4 1 1   # SECTOR 3: PC sum
+VTP_GT_TRGBIT  11 8  8 1 1   # SECTOR 4: PC sum
+VTP_GT_TRGBIT  12 8 16 1 1   # SECTOR 5: PC sum
+VTP_GT_TRGBIT  13 8 32 1 1   # SECTOR 6: PC sum
+
+VTP_CRATE end
+
+
+
+
+### SSP
+SSP_CRATE trig2 # stage 2
+
+SSP_SLOT all
+
+SSP_W_OFFSET 7900
+SSP_W_WIDTH  400
+
+SSP_GT_LATENCY            4000
+SSP_GT_ECAL_ESUM_DELAY    0
+SSP_GT_ECAL_CLUSTER_DELAY 0
+SSP_GT_ECAL_ESUM_INTWIDTH 40 # integration window for total sums from ECAL_IN+ECAL_OUT
+SSP_GT_PCAL_ESUM_DELAY    0
+SSP_GT_PCAL_CLUSTER_DELAY 0
+SSP_GT_PCAL_ESUM_INTWIDTH 40 # integration window for total sums from PCAL
+
+
+# Sector Trigger bit 0 (EC inner cluster)
+SSP_GT_STRG_EN                        0  0
+
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      0  0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         0  0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        0  0
+
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN_EN   0  0
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN      0  0
+SSP_GT_STRG_ECALOUT_CLUSTER_WIDTH     0  0
+
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN_EN    0  1
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN       0  100 # threshold
+SSP_GT_STRG_ECALIN_CLUSTER_WIDTH      0  40 # coincidence window (to coincide with other components (PCAL, OUTER etc)
+
+SSP_GT_STRG_ECAL_ESUM_EN              0  0
+SSP_GT_STRG_ECAL_ESUM_MIN             0  0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           0  0
+
+SSP_GT_STRG_PCAL_ESUM_EN              0  0
+SSP_GT_STRG_PCAL_ESUM_MIN             0  10
+SSP_GT_STRG_PCAL_ESUM_WIDTH           0  100
+
+# Sector Trigger bit 1 (EC outer cluster)
+SSP_GT_STRG_EN                        1  0
+
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      1  0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         1  0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        1  0
+
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN_EN   1  1
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN      1  100
+SSP_GT_STRG_ECALOUT_CLUSTER_WIDTH     1  40
+
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN_EN    1  0
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN       1  0
+SSP_GT_STRG_ECALIN_CLUSTER_WIDTH      1  0
+
+SSP_GT_STRG_ECAL_ESUM_EN              1  0
+SSP_GT_STRG_ECAL_ESUM_MIN             1  0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           1  0
+
+SSP_GT_STRG_PCAL_ESUM_EN              1  0
+SSP_GT_STRG_PCAL_ESUM_MIN             1  0
+SSP_GT_STRG_PCAL_ESUM_WIDTH           1  0
+
+
+# Sector Trigger bit 2 (EC sum)
+SSP_GT_STRG_EN                        2  0
+
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      2  0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         2  0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        2  0
+
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN_EN   2  0
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN      2  0
+SSP_GT_STRG_ECALOUT_CLUSTER_WIDTH     2  0
+
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN_EN    2  0
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN       2  0
+SSP_GT_STRG_ECALIN_CLUSTER_WIDTH      2  0
+
+SSP_GT_STRG_ECAL_ESUM_EN              2  1
+SSP_GT_STRG_ECAL_ESUM_MIN             2  100
+SSP_GT_STRG_ECAL_ESUM_WIDTH           2  40
+
+SSP_GT_STRG_PCAL_ESUM_EN              2  0
+SSP_GT_STRG_PCAL_ESUM_MIN             2  0
+SSP_GT_STRG_PCAL_ESUM_WIDTH           2  0
+
+
+# Sector Trigger bit 3 (PC sum+EC inner cluster+EC outer cluster)
+SSP_GT_STRG_EN                        3  1
+
+SSP_GT_STRG_PCAL_CLUSTER_EMIN_EN      3  0
+SSP_GT_STRG_PCAL_CLUSTER_EMIN         3  0
+SSP_GT_STRG_PCAL_CLUSTER_WIDTH        3  0
+
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN_EN   3  0
+SSP_GT_STRG_ECALOUT_CLUSTER_EMIN      3  0
+SSP_GT_STRG_ECALOUT_CLUSTER_WIDTH     3  0
+
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN_EN    3  0
+SSP_GT_STRG_ECALIN_CLUSTER_EMIN       3  0
+SSP_GT_STRG_ECALIN_CLUSTER_WIDTH      3  0
+
+SSP_GT_STRG_ECAL_ESUM_EN              3  0
+SSP_GT_STRG_ECAL_ESUM_MIN             3  0
+SSP_GT_STRG_ECAL_ESUM_WIDTH           3  0
+
+SSP_GT_STRG_PCAL_ESUM_EN              3  1
+SSP_GT_STRG_PCAL_ESUM_MIN             3  500
+SSP_GT_STRG_PCAL_ESUM_WIDTH           3  40
+
+
+SSP_CRATE end
+
+
+
+# stage 1
+
+#########################
+# adcecal1 Crate
+#########################
+
+### TI
+TI_CRATE adcecal1
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+### VTP
+VTP_CRATE adcecal1vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFF0FFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x000000000
+
+VTP_ECINNER_HIT_EMIN     100 # strip energy threshold to 1dim peak search
+VTP_ECINNER_HIT_DT       8   # +-8clk = +-32ns strip coincidence window to form 1dim peak, and to form 2dim from 1dim
+##VTP_ECINNER_HIT_DALITZ   512    672
+VTP_ECINNER_HIT_DALITZ   568    584 # dalitz rule
+
+# dalitz have to be set around 72*8
+
+VTP_ECOUTER_HIT_EMIN     100
+VTP_ECOUTER_HIT_DT       8
+VTP_ECOUTER_HIT_DALITZ   512    672
+
+VTP_CRATE end
+
+
+
+
+#########################
+# adcecal2 Crate
+#########################
+
+### TI
+TI_CRATE adcecal2
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcecal2vtp
+
+VTP_FIRMWARE fe_vtp_hallb_v7_ec_test.bin
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFF0FFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x000000000
+
+VTP_ECINNER_HIT_EMIN     100
+VTP_ECINNER_HIT_DT       8
+##VTP_ECINNER_HIT_DALITZ   512    672
+VTP_ECINNER_HIT_DALITZ   568    584
+
+VTP_ECOUTER_HIT_EMIN     100
+VTP_ECOUTER_HIT_DT       8
+VTP_ECOUTER_HIT_DALITZ   512    672
+
+VTP_CRATE end
+
+
+
+#########################
+# adcecal3 Crate
+#########################
+
+### TI
+TI_CRATE adcecal3
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcecal3vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFF0FFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x000000000
+
+VTP_ECINNER_HIT_EMIN     100
+VTP_ECINNER_HIT_DT       8
+##VTP_ECINNER_HIT_DALITZ   512    672
+VTP_ECINNER_HIT_DALITZ   568    584
+
+VTP_ECOUTER_HIT_EMIN     100
+VTP_ECOUTER_HIT_DT       8
+VTP_ECOUTER_HIT_DALITZ   512    672
+
+VTP_CRATE end
+
+
+
+
+
+
+
+#########################
+# adcecal4 Crate
+#########################
+
+### TI
+TI_CRATE adcecal4
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcecal4vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFF0FFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x000000000
+
+VTP_ECINNER_HIT_EMIN     100
+VTP_ECINNER_HIT_DT       8
+##VTP_ECINNER_HIT_DALITZ   512    672
+VTP_ECINNER_HIT_DALITZ   568    584
+
+VTP_ECOUTER_HIT_EMIN     100
+VTP_ECOUTER_HIT_DT       8
+VTP_ECOUTER_HIT_DALITZ   512    672
+
+VTP_CRATE end
+
+
+
+
+
+
+#########################
+# adcecal5 Crate
+#########################
+
+### TI
+TI_CRATE adcecal5
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcecal5vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFF0FFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x000000000
+
+VTP_ECINNER_HIT_EMIN     100
+VTP_ECINNER_HIT_DT       8
+##VTP_ECINNER_HIT_DALITZ   512    672
+VTP_ECINNER_HIT_DALITZ   568    584
+
+VTP_ECOUTER_HIT_EMIN     100
+VTP_ECOUTER_HIT_DT       8
+VTP_ECOUTER_HIT_DALITZ   512    672
+
+VTP_CRATE end
+
+
+
+
+
+
+#########################
+# adcecal6 Crate
+#########################
+
+### TI
+TI_CRATE adcecal6
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcecal6vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFF0FFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x000000000
+
+VTP_ECINNER_HIT_EMIN     100
+VTP_ECINNER_HIT_DT       8
+##VTP_ECINNER_HIT_DALITZ   512    672
+VTP_ECINNER_HIT_DALITZ   568    584
+
+VTP_ECOUTER_HIT_EMIN     100
+VTP_ECOUTER_HIT_DT       8
+VTP_ECOUTER_HIT_DALITZ   512    672
+
+VTP_CRATE end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#########################
+# adcpcal1 Crate
+#########################
+
+### TI
+TI_CRATE adcpcal1
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcpcal1vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x00000000 0x000000000
+
+VTP_CRATE end
+
+
+
+
+
+
+#########################
+# adcpcal2 Crate
+#########################
+
+### TI
+TI_CRATE adcpcal2
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcpcal2vtp
+
+VTP_FIRMWARE fe_vtp_hallb_v7_ec_test.bin
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x00000000 0x000000000
+
+VTP_CRATE end
+
+
+
+
+
+
+
+
+
+
+
+
+
+#########################
+# adcpcal3 Crate
+#########################
+
+### TI
+TI_CRATE adcpcal3
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcpcal3vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x00000000 0x000000000
+
+VTP_CRATE end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#########################
+# adcpcal4 Crate
+#########################
+
+### TI
+TI_CRATE adcpcal4
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcpcal4vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x00000000 0x000000000
+
+VTP_CRATE end
+
+
+
+
+
+
+
+
+
+
+#########################
+# adcpcal5 Crate
+#########################
+
+### TI
+TI_CRATE adcpcal5
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcpcal5vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x00000000 0x000000000
+
+VTP_CRATE end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#########################
+# adcpcal6 Crate
+#########################
+
+### TI
+TI_CRATE adcpcal6
+
+TI_FIBER_DELAY_OFFSET 0x80 0xcf
+
+TI_CRATE end
+
+
+
+
+### VTP
+VTP_CRATE adcpcal6vtp
+
+VTP_W_OFFSET 7900
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  1  1  1  1  1  1  1  1  0  1  0  1  0  1  0
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+VTP_EC_FADCSUM_CH 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0x00000000 0x000000000
+
+VTP_CRATE end
+
+
+FADC250_CRATE all
+
+FADC250_SLOT all
+FADC250_DAC   3300
+FADC250_TET   20
+FADC250_W_OFFSET  7900
+FADC250_W_WIDTH   400
+
+FADC250_CRATE end

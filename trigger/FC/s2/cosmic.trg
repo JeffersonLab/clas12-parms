@@ -1,0 +1,13 @@
+#
+
+FADC250_CRATE all
+
+FADC250_SLOT all
+
+#local TI
+FADC250_W_OFFSET  7300
+
+#TS: 7900 (start at 40; 7800 start at 20)
+#FADC250_W_OFFSET  7900
+
+FADC250_CRATE end

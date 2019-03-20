@@ -1,3 +1,6 @@
+#
+# File generated automatically by DAQ running in RAW mode at Thu Apr  9 13:19:08 2015
+#
 FADC250_CRATE adcpcal4
 FADC250_SLOT 3
 FADC250_ALLCH_PED   94.322   99.114  117.783  117.127   95.172  105.962  123.527  124.497  146.802   95.359  128.906   83.873   88.284  107.501  105.126   80.375

@@ -1,0 +1,685 @@
+
+# include fadc250/s1/adcecal1_tet20_mode1.cnf
+
+FADC250_CRATE adcecal1
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       36
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+
+#for LTCC 
+FADC250_SLOT 18
+FADC250_CH_TET 12 30
+FADC250_CH_TET 13 30
+FADC250_CH_TET 14 30
+FADC250_CH_TET 15 30
+FADC250_SLOT 19
+FADC250_CH_TET 0 30
+FADC250_CH_TET 1 30
+FADC250_CH_TET 2 35
+FADC250_CH_TET 3 35
+FADC250_CH_TET 4 30
+FADC250_CH_TET 5 30
+FADC250_CH_TET 6 50
+FADC250_CH_TET 7 30
+FADC250_CH_TET 8 30
+FADC250_CH_TET 9 30
+FADC250_CH_TET 10 30
+FADC250_CH_TET 11 30
+FADC250_CH_TET 12 30
+FADC250_CH_TET 13 30
+FADC250_CH_TET 14 50
+FADC250_CH_TET 15 30
+FADC250_SLOT 20
+FADC250_TET 30
+
+FADC250_CONF_FILE adcecal1_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       36
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s1/adcpcal1_tet20_mode1.cnf
+
+FADC250_CRATE adcpcal1
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       156
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcpcal1_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       156
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s1/adcftof1_tet20_mode1.cnf
+
+FADC250_CRATE adcftof1
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       44
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcftof1_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       44
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s2/adcecal2_tet20_mode1.cnf
+
+FADC250_CRATE adcecal2
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       36
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+
+#for LTCC 
+FADC250_SLOT 18
+FADC250_CH_TET 12 30
+FADC250_CH_TET 13 30
+FADC250_CH_TET 14 30
+FADC250_CH_TET 15 30
+FADC250_SLOT 19
+FADC250_CH_TET 0 30
+FADC250_CH_TET 1 30
+FADC250_CH_TET 2 30
+FADC250_CH_TET 3 30
+FADC250_CH_TET 4 30
+FADC250_CH_TET 5 30
+FADC250_CH_TET 6 30
+FADC250_CH_TET 7 30
+FADC250_CH_TET 8 30
+FADC250_CH_TET 9 30
+FADC250_CH_TET 10 30
+FADC250_CH_TET 11 30
+FADC250_CH_TET 12 30
+FADC250_CH_TET 13 30
+FADC250_CH_TET 14 30
+FADC250_CH_TET 15 30
+FADC250_SLOT 20
+FADC250_TET 30
+
+
+FADC250_CONF_FILE adcecal2_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       36
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s2/adcpcal2_tet20_mode1.cnf
+
+FADC250_CRATE adcpcal2
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       156
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcpcal2_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       156
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s2/adcftof2_tet20_mode1.cnf
+
+FADC250_CRATE adcftof2
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       44
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcftof2_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       44
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s3/adcecal3_tet20_mode1.cnf
+
+FADC250_CRATE adcecal3
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       36
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcecal3_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       36
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s3/adcpcal3_tet20_mode1.cnf
+
+FADC250_CRATE adcpcal3
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       156
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcpcal3_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       156
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s3/adcftof3_tet20_mode1.cnf
+
+FADC250_CRATE adcftof3
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       44
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcftof3_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       44
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s4/adcecal4_tet20_mode1.cnf
+
+FADC250_CRATE adcecal4
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       36
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcecal4_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       36
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s4/adcpcal4_tet20_mode1.cnf
+
+FADC250_CRATE adcpcal4
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       156
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcpcal4_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       156
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s4/adcftof4_tet20_mode1.cnf
+
+FADC250_CRATE adcftof4
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       44
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcftof4_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       44
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s5/adcecal5_tet20_mode1.cnf
+
+FADC250_CRATE adcecal5
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       36
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcecal5_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       36
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s5/adcpcal5_tet20_mode1.cnf
+
+FADC250_CRATE adcpcal5
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       156
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcpcal5_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       156
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s5/adcftof5_tet20_mode1.cnf
+
+FADC250_CRATE adcftof5
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       44
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcftof5_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       44
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s6/adcecal6_tet20_mode1.cnf
+
+FADC250_CRATE adcecal6
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       36
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcecal6_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       36
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include fadc250/s6
+
+
+# include fadc250/s6/adcftof6_tet20_mode1.cnf
+
+FADC250_CRATE adcftof6
+
+
+FADC250_SLOT all
+
+FADC250_DAC  3300
+
+FADC250_W_OFFSET  1280
+FADC250_W_WIDTH   400
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       12
+FADC250_NSA       44
+FADC250_NPEAK     1
+
+#for FADC scalers
+FADC250_TET 20
+FADC250_CONF_FILE adcftof6_ped.cnf
+
+#pulse mode
+#FADC250_MODE      3
+#FADC250_NSB       12
+#FADC250_NSA       44
+#FADC250_NPEAK     3
+
+#       channel:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+FADC250_CRATE end
+
+# include trigger/FC/s0/cosmic.trg
+
+#
+# FADC's
+#
+
+FADC250_CRATE all
+
+FADC250_SLOT all
+
+# old v1495 (without extra delay)
+#FADC250_W_OFFSET  1880
+
+# v1495 trigger connected to local TI
+#FADC250_W_OFFSET  7300
+
+#TS: 7900 (start at 40; 7800 start at 20)
+FADC250_W_OFFSET  7900
+
+FADC250_CRATE end
+
+
+
+
+#
+# trigger supervisor
+#
+
+TS_CRATE trig1
+
+#TS_BLOCK_LEVEL 40
+#TS_BUFFER_LEVEL 8
+
+TS_BLOCK_LEVEL 1
+TS_BUFFER_LEVEL 1
+
+
+TS_HOLDOFF 1 60 1
+TS_HOLDOFF 2 60 1
+TS_HOLDOFF 3 60 1
+TS_HOLDOFF 4 60 1
+
+TS_INPUT_MASK 0x00000001
+
+# first arg: 0-disable, 1-enable; second arg: prescale (7-3.5kHz, 3-60kHz)
+TS_RANDOM_TRIGGER 0 9
+
+TS_CRATE end
