@@ -46,12 +46,18 @@ FADC250_SLOT all
 FADC250_DAC  3300
 
 #when decreased, ADC pulse moves left
+#Settings with Photodiode plugged
+#FADC250_W_OFFSET  1320
+#FADC250_W_WIDTH   400
+#older cosmics setting without Photo diode used
 FADC250_W_OFFSET  1200
 FADC250_W_WIDTH   280
 
 #raw mode
 FADC250_MODE      1
-FADC250_NSB       12
+#FADC250_W_OFFSET  1200
+#FADC250_W_WIDTH   280
+
 FADC250_NSA       24
 FADC250_NPEAK     1
 

@@ -12,18 +12,17 @@
 
 # Common settings
 
+FADC250_CRATE all
+FADC250_SLOT	   all
+
 # compression: 0-no compression, 1-compression, 2-both (verify mode)
 FADC250_COMPRESSION  1
 
-FADC250_CRATE all
-FADC250_SLOT	   all
 FADC250_MODE         1
 ##FADC250_W_OFFSET  7900
 FADC250_W_OFFSET  7650
 FADC250_W_WIDTH	   400
 FADC250_CRATE end
-
-
 
 TDC1190_CRATE all
 TDC1190_SLOT all
@@ -223,20 +222,9 @@ SSP_W_WIDTH  400
 SSP_GT_LATENCY            5000
 
 
-#SSP_GT_HTCC_DELAY         140
-#SSP_GT_FTOF_DELAY          80
-#SSP_GT_ECAL_CLUSTER_DELAY   0
-#SSP_GT_PCAL_CLUSTER_DELAY   0
-#SSP_GT_CTOF_DELAY          212
-#SSP_GT_CND_DELAY           220
-#SSP_GT_PCAL_PCU_DELAY      76
-
-#SSP_GT_HTCC_DELAY           1164
 SSP_GT_HTCC_DELAY           1132
 SSP_GT_ECAL_CLUSTER_DELAY   1024
 SSP_GT_PCAL_CLUSTER_DELAY   1024
-SSP_GT_CTOF_DELAY           1236
-SSP_GT_CND_DELAY            1244
 SSP_GT_FTOF_DELAY           1104
 SSP_GT_PCAL_PCU_DELAY       1068
 
@@ -434,6 +422,87 @@ SSP_GT_STRG_FTOFPCU_MATCH_MASK        8
 #   32 = +/-5 FTOF strip tolerance
 
 
+#######################################
+#
+# 'SSP_GTC_' - central detectors logic
+#
+#######################################
+
+SSP_GTC_LATENCY           5000
+
+SSP_GTC_FT_ESUM_DELAY     0
+SSP_GTC_FT_CLUSTER_DELAY  1180
+SSP_GTC_FT_ESUM_INTWIDTH  0
+SSP_GTC_CTOF_DELAY        1236
+SSP_GTC_CND_DELAY         1244
+
+###################################################
+# 'SSP_GTC_CTRG_' - central detectors trigger bits
+###################################################
+
+########################
+# Central Trigger bit 0    CTRG0:  FT(200-4000)xHD(2)
+########################
+SSP_GTC_CTRG                       0
+
+SSP_GTC_CTRG_EN                    1
+SSP_GTC_CTRG_FT_CLUSTER_EN         1
+SSP_GTC_CTRG_FT_CLUSTER_EMIN       200
+SSP_GTC_CTRG_FT_CLUSTER_EMAX       4000
+SSP_GTC_CTRG_FT_CLUSTER_HODO_NMIN  2
+SSP_GTC_CTRG_FT_CLUSTER_NMIN       1
+SSP_GTC_CTRG_FT_CLUSTER_WIDTH      0
+SSP_GTC_CTRG_FT_ESUM_EN            0
+SSP_GTC_CTRG_FT_ESUM_EMIN          0
+SSP_GTC_CTRG_FT_ESUM_WIDTH         0
+
+
+########################
+# Central Trigger bit 1    CTRG1:  FT(200-4000)xHD(2) x CTOF 
+########################
+SSP_GTC_CTRG                       1
+SSP_GTC_CTRG_EN                    1
+
+SSP_GTC_CTRG_EN                    1
+SSP_GTC_CTRG_FT_CLUSTER_EN         1
+SSP_GTC_CTRG_FT_CLUSTER_EMIN       200
+SSP_GTC_CTRG_FT_CLUSTER_EMAX       4000
+SSP_GTC_CTRG_FT_CLUSTER_HODO_NMIN  2
+SSP_GTC_CTRG_FT_CLUSTER_NMIN       1
+SSP_GTC_CTRG_FT_CLUSTER_WIDTH      0
+SSP_GTC_CTRG_FT_ESUM_EN            0
+SSP_GTC_CTRG_FT_ESUM_EMIN          0
+SSP_GTC_CTRG_FT_ESUM_WIDTH         0
+
+SSP_GTC_CTRG_CTOF_EN               1
+SSP_GTC_CTRG_CTOF_WIDTH            64
+
+########################
+# Central Trigger bit 2    CTRG2:  CTOF 
+########################
+SSP_GTC_CTRG                       2
+SSP_GTC_CTRG_EN                    1
+
+SSP_GTC_CTRG_CTOF_EN               1
+SSP_GTC_CTRG_CTOF_WIDTH            64
+
+########################
+# Central Trigger bit 3    CTRG3:  CTOF x CND
+########################
+SSP_GTC_CTRG                       3
+SSP_GTC_CTRG_EN                    1
+
+SSP_GTC_CTRG_CTOF_EN               1
+SSP_GTC_CTRG_CTOF_WIDTH            64
+
+SSP_GTC_CTRG_CND_EN		   1
+SSP_GTC_CTRG_CND_WIDTH		   64
+
+#CNDxCTOF
+SSP_GTC_CTRG_CNDCTOF_EN		   1
+SSP_GTC_CTRG_CNDCTOF_WIDTH	   64
+SSP_GTC_CTRG_CNDCTOF_MATCH_MASK	   2
+
 
 SSP_CRATE end
 
@@ -533,7 +602,7 @@ VTP_GT_TRGBIT  30 32  32  1  		   1  0  0  0  # SSP STRG5, SECTOR 6
 
 # PULSER
 VTP_GT_TRG             31
-VTP_GT_TRG_PULSER_FREQ 20000.0
+VTP_GT_TRG_PULSER_FREQ 30000.0
 
 VTP_CRATE end
 
@@ -599,6 +668,6 @@ TS_FP_PRESCALE  8 5
 #                 1-enable; 
 #                 |   Prescale (15-7Hz, 7-3.5kHz, 5-15kHz, 4-30kHz, 3-60kHz)
 #                 |   |
-TS_RANDOM_TRIGGER 0   3
+TS_RANDOM_TRIGGER 0   2
 
 TS_CRATE end

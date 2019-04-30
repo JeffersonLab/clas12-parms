@@ -70,6 +70,11 @@ FADC250_NSA 60
 FADC250_TET 60
 FADC250_GAIN 0.1
 include trigger/PEDS/hv_on/adcecal6_ped.cnf
+
+# NOTE: April 12, 2019, 14:07: mask off channels for adcecal6 slot 18 set to 0 to prevent broken FADC data going to trigger & readout
+#FADC250_CRATE adcecal6
+#FADC250_SLOT 18
+#FADC250_ADC_MASK  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 FADC250_CRATE end
 
 include trigger/EC/ecal_ltcc_tet.cnf

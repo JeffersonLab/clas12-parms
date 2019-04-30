@@ -281,7 +281,7 @@ SSP_GT_STRG_EN                        1
 
 # PCU trigger logic
 SSP_GT_STRG_FTOFPCU_EN                1
-SSP_GT_STRG_FTOFPCU_WIDTH             0
+SSP_GT_STRG_FTOFPCU_WIDTH             64
 SSP_GT_STRG_FTOFPCU_MATCH_MASK        8
 
 # SSP_GT_STRG_FTOFPCU_MATCH_MASK   N
@@ -309,7 +309,7 @@ SSP_GT_STRG_EN                        1
 
 # PCU trigger logic
 SSP_GT_STRG_FTOFPCU_EN                1
-SSP_GT_STRG_FTOFPCU_WIDTH             0
+SSP_GT_STRG_FTOFPCU_WIDTH             64
 SSP_GT_STRG_FTOFPCU_MATCH_MASK        8
 
 # SSP_GT_STRG_FTOFPCU_MATCH_MASK   N
@@ -346,7 +346,7 @@ SSP_GT_STRG_EN                        1
 
 # PCU trigger logic
 SSP_GT_STRG_FTOFPCU_EN                1
-SSP_GT_STRG_FTOFPCU_WIDTH             0
+SSP_GT_STRG_FTOFPCU_WIDTH             64
 SSP_GT_STRG_FTOFPCU_MATCH_MASK        8
 
 # SSP_GT_STRG_FTOFPCU_MATCH_MASK   N
@@ -686,7 +686,7 @@ VTP_GT_TRGBIT  24   8  32  1       	    1  0  0    0  #  STRG3 SECTOR 6
 
 
 # FT(200-4000)MeV x DC x FTOFPCU x PCAL>10MeV (2 Sectors)
-VTP_GT_TRGBIT  25   4  63  2               1  1  0     0  # STRG2, MULT.2 and CTRG0
+VTP_GT_TRGBIT  25   4  63  2                1  1  0     0  # STRG2, MULT.2 and CTRG0
 
 # FT(300 - 8500) MeV x DC x FTOFPCU x PCAL>10MeV x CTOF
 VTP_GT_TRGBIT  26   4  63  1               1  2  0     0  # STRG2, MULT.1 and CTRG1
@@ -701,10 +701,10 @@ VTP_GT_TRGBIT  28   0  63  1                1  8  0    0  # CTRG3
 
 
 # FT(200 - 4000) w hodoscope               --> THIS IS THE ONLY TRG SOURCE
-VTP_GT_TRGBIT  31   0  63  1                1  1  0     1  #  CTRG0
+VTP_GT_TRGBIT  31   0  63  1                1  1  0     9  #  CTRG0
 
 
-
+ 
 VTP_CRATE end
 
 ############################

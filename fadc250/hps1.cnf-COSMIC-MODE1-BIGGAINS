@@ -44,7 +44,8 @@ FADC250_TRG_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 
 #
-FADC250_TET 12
+FADC250_TET 18
+#FADC250_TET 50
 
 
 # BIG GAINS TO EMULATE BEAM DATA WITH COSMICS:
@@ -59,6 +60,10 @@ FADC250_SLOT      20
 FADC250_CH_TET    15   500
 #       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
 FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0
+
+# Set Hodoscope threshold
+FADC250_SLOT 10
+FADC250_ALLCH_TET   250     220     220     240    250     255     260     240     240     255     265     195     215     195     195     190
 
 FADC250_CONF_FILE hps1_ped.cnf
 

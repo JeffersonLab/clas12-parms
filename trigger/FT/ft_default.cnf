@@ -137,7 +137,7 @@ FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 #    the threshold value for readout and only use it for triggering
 # 3) this threshold is relative to the fadc pedestal/offsets used
 
-FADC250_TET 50
+FADC250_TET 75
 #FADC250_TET 0
 
 include trigger/PEDS/hv_on/adcft3_ped.cnf

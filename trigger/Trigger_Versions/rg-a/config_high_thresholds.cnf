@@ -1,0 +1,46 @@
+VSCM_CRATE svt1
+
+VSCM_SLOT 3
+# Set discriminators on U3,U4 FSSR2 chips 
+FSSR_ADDR_REG_DISC_THR        2        0        250 
+FSSR_ADDR_REG_DISC_THR        3        0        250
+FSSR_ADDR_REG_DISC_THR        6        0        250
+FSSR_ADDR_REG_DISC_THR        7        0        250
+
+FSSR_ADDR_REG_DISC_THR        2        1        60
+FSSR_ADDR_REG_DISC_THR        3        1        60
+FSSR_ADDR_REG_DISC_THR        6        1        60
+FSSR_ADDR_REG_DISC_THR        7        1        60
+
+FSSR_ADDR_REG_DISC_THR        2        2        75
+FSSR_ADDR_REG_DISC_THR        3        2        75
+FSSR_ADDR_REG_DISC_THR        6        2        75
+FSSR_ADDR_REG_DISC_THR        7        2        75
+
+FSSR_ADDR_REG_DISC_THR        2        3        90
+FSSR_ADDR_REG_DISC_THR        3        3        90
+FSSR_ADDR_REG_DISC_THR        6        3        90
+FSSR_ADDR_REG_DISC_THR        7        3        90
+
+FSSR_ADDR_REG_DISC_THR        2        4        105
+FSSR_ADDR_REG_DISC_THR        3        4        105
+FSSR_ADDR_REG_DISC_THR        6        4        105
+FSSR_ADDR_REG_DISC_THR        7        4        105
+
+FSSR_ADDR_REG_DISC_THR        2        5        120
+FSSR_ADDR_REG_DISC_THR        3        5        120
+FSSR_ADDR_REG_DISC_THR        6        5        120
+FSSR_ADDR_REG_DISC_THR        7        5        120
+
+FSSR_ADDR_REG_DISC_THR        2        6        135
+FSSR_ADDR_REG_DISC_THR        3        6        135
+FSSR_ADDR_REG_DISC_THR        6        6        135
+FSSR_ADDR_REG_DISC_THR        7        6        135
+
+FSSR_ADDR_REG_DISC_THR        2        7        150
+FSSR_ADDR_REG_DISC_THR        3        7        150
+FSSR_ADDR_REG_DISC_THR        6        7        150
+FSSR_ADDR_REG_DISC_THR        7        7        150
+
+VSCM_CRATE_END
+
