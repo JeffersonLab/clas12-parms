@@ -1,5 +1,0 @@
-include trigger/HPS/small/fadc250/peds/EcalPeds.trg
-include trigger/HPS/small/fadc250/peds/CalibPeds.trg
-include trigger/HPS/small/fadc250/gains/EcalGains.trg
-
-
