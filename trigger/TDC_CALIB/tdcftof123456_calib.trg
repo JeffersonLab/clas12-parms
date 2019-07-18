@@ -48,7 +48,7 @@ TDC1190_W_REJECT   50
 TDC1190_EDGE       2
 
 #set to 0 to turn compensation off, set to 1 to turn it on
-TDC1190_COMPENSATION 0
+TDC1190_COMPENSATION 1
 
 #                 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 - channels ##
 TDC1190_MASK1     1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1

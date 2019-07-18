@@ -16,14 +16,16 @@ TI_BUFFER_LEVEL 1
 
 TI_INPUT_MASK 1 1 1 1 1 1
 
-## trigger rules
-## 1 trigger in Nx0.48us
-##TI_HOLDOFF 1 50 0
-## 4 triggers in Nx3.84us
-##TI_HOLDOFF 4 10 1
-##500kHz / 2^15 => ~15Hz random
 
-TI_RANDOM_TRIGGER 1 15
+## 1 trigger in Nx0.48us
+#TI_HOLDOFF 1 4 1
+#TI_HOLDOFF 2 4 1
+#TI_HOLDOFF 3 3 1
+## 4 triggers in Nx3.84us
+#TI_HOLDOFF 4 2 1
+
+
+TI_RANDOM_TRIGGER 1 4
 
 TI_CRATE end
 

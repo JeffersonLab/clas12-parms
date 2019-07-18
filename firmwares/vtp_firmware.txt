@@ -49,6 +49,6 @@ dc61vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
 dc62vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
 dc63vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_dc_data.bin
 
-hps1vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
-hps2vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_ftof.bin
+hps1vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_hps.bin
+hps2vtp           fe_vtp_hallb_z7.bin    fe_vtp_hallb_v7_hps.bin
 

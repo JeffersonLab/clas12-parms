@@ -51,5 +51,12 @@ DSC2_CH_THRESHOLD 14 400 500
 DSC2_SLOT       2
 DSC2_CH_THRESHOLD    1  300   200
 
+# dsc2 in slot 6 is used as discriminator:
+# (10 mV corresponds to about what we used in FADCs)
+DSC2_SLOT       6
+DSC2_WIDTH       40  40
+DSC2_CH_THRESHOLD    0  10   100
+DSC2_CH_THRESHOLD    1  10   100
+
 #
 DSC2_CRATE     end

@@ -19,10 +19,14 @@ TS_CRATE all
 #TS_BUFFER_LEVEL  1
 TS_BLOCK_LEVEL   40
 TS_BUFFER_LEVEL   8
-TS_HOLDOFF   1  5 1
-TS_HOLDOFF   2  5 1
-TS_HOLDOFF   3 15 1
-TS_HOLDOFF   4 10 1
+#TS_HOLDOFF   1  5 1
+#TS_HOLDOFF   2  5 1
+#TS_HOLDOFF   3 15 1
+#TS_HOLDOFF   4 10 1
+TS_HOLDOFF   1  4 1
+TS_HOLDOFF   2  4 1
+TS_HOLDOFF   3  3 1
+TS_HOLDOFF   4  2 1
 
 #
 # TS FP trigger mask
@@ -42,7 +46,7 @@ TS_HOLDOFF   4 10 1
 #                 1-enable; 
 #                 |   Prescale (15-7Hz, 7-3.5kHz, 5-15kHz, 4-30kHz, 3-60kHz)
 #                 |   |
-TS_RANDOM_TRIGGER 1   15
+TS_RANDOM_TRIGGER 1   3
 
 TS_CRATE end
 

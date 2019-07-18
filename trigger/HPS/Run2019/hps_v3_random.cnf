@@ -1,0 +1,888 @@
+
+# include trigger/HPS/Run2019/trigger/hps_trigger_v3.cnf
+
+###########################################################
+# HPS Trigger 
+#############################################################
+
+# Setup VTP firmware to use right calorimeter half
+VTP_CRATE hps1vtp
+VTP_HPS_ECAL_TOP
+VTP_CRATE end
+
+VTP_CRATE hps2vtp
+VTP_HPS_ECAL_BOT
+VTP_CRATE end
+
+
+VTP_CRATE all
+
+# Note: For VTP trigger objects to match timestamps of FADC: VTP_W_OFFSET=FADC_W_OFFSET-16
+VTP_W_OFFSET 2572
+VTP_W_WIDTH 400
+
+#        slot: 10 13  9 14  8 15  7 16  6 17  5 18  4 19  3 20
+#     payload:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+VTP_PAYLOAD_EN  1  0  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+#      fiber:  1  2  3  4
+VTP_FIBER_EN   1  0  0  0
+
+# Cluster hit timing coincidence: 0 to 16, units: +/-ns
+VTP_HPS_ECAL_CLUSTER_HIT_DT  16
+
+# Cluster seed threshold in: 1 to 8191, units MeV
+VTP_HPS_ECAL_CLUSTER_SEED_THR   100
+
+# Hodoscope fadc hit cut: minimum acceptable FADC hit integral: 1 to 8191, units TBD
+VTP_HPS_HODOSCOPE_FADCHIT_THR   1
+
+# Hodoscope trigger hit cut: minimum acceptable integral (clustered or single tile): 1 to 8191, units TBD
+VTP_HPS_HODOSCOPE_HODO_THR      200
+
+# Hodoscope hit coincidence between L1,L2, and also ECAL clusters (real with is specified value +4ns): 0 to 28, units: ns
+VTP_HPS_HODOSCOPE_HODO_DT       28
+
+###################################
+# Calibration Trigger Setup
+###################################
+
+# Hodoscope trigger: require hits on top, bottom, or both
+VTP_HPS_CALIB_HODOSCOPE_TOP_EN  1
+VTP_HPS_CALIB_HODOSCOPE_BOT_EN  1
+
+# Cosmic trigger: time coincidence: 0 to 1024, units: ns
+VTP_HPS_CALIB_COSMIC_DT         40
+# Require hits on top, bottom, or both
+VTP_HPS_CALIB_COSMIC_TOP_EN     1
+VTP_HPS_CALIB_COSMIC_BOT_EN     1
+
+# Pulser trigger: frequency: 0 to 125MHz, units: Hz
+VTP_HPS_CALIB_PULSER_EN         1
+VTP_HPS_CALIB_PULSER_FREQ       100.0
+
+
+###################################
+# Singles Trigger 0 Setup            Low energy cluster  (150) MeV  (-31,+31)
+###################################
+
+#                    singles trigger bit number
+#                    |       settings
+#                    |       |                       enable cut
+#                    |       |                       |
+#                    |       |                       |
+
+# Enable trigger
+VTP_HPS_SINGLE_EN    0                             1
+
+# Minimum cluster energy: 1 to 8191, units MeV
+VTP_HPS_SINGLE_EMIN  0     150                     1
+VTP_HPS_SINGLE_EMAX  0    8191                     0
+VTP_HPS_SINGLE_NMIN  0       1                     1
+
+# Minimum cluster x coordinate: -31 to 31
+VTP_HPS_SINGLE_XMIN  0     -31                     0
+
+# Cluster position dependent energy threshold coefficients
+# Cluster Energy >=     C0  + C1*X + C2*X*X+C3*X*X*X
+
+VTP_HPS_SINGLE_PDE   0   2945.5   -263.6     10.63     -0.1617  0
+
+# Hodoscope trigger
+#                       require hit on l1
+#                       |     require hit on l2
+#                       |     |      require hit on l1 and l2 with geometry matching
+#                       |     |      |      require hit on l1 and l2 with cluster X geometry matching
+#                       |     |      |      |
+#                       |     |      |      |
+VTP_HPS_SINGLE_HODO  0  0     0      0      0
+
+
+
+###################################
+# Singles Trigger 1 Setup            Positron: (200-3000) MeV  (5,+31)
+###################################
+
+#                    singles trigger bit number
+#                    |       settings
+#                    |       |                       enable cut
+#                    |       |                       |
+#                    |       |                       |
+
+# Enable trigger
+VTP_HPS_SINGLE_EN    1                             1
+
+# Minimum cluster energy: 1 to 8191, units MeV
+VTP_HPS_SINGLE_EMIN  1     200                     1
+VTP_HPS_SINGLE_EMAX  1    3000                     1
+VTP_HPS_SINGLE_NMIN  1       2                     1
+
+# Minimum cluster x coordinate: -31 to 31
+VTP_HPS_SINGLE_XMIN  1       4                     1
+
+# Cluster position dependent energy threshold coefficients
+# Cluster Energy >=     C0  + C1*X + C2*X*X+C3*X*X*X
+#VTP_HPS_SINGLE_PDE   1   2945.5   -263.6     10.63     -0.1617  0
+#VTP_HPS_SINGLE_PDE   1   2186.8   -183.9     6.550     -0.0800  0
+#VTP_HPS_SINGLE_PDE   1   1900.0   -171.6     5.83     -0.0536  0
+VTP_HPS_SINGLE_PDE   1   1241.3   -154.2     7.43     -0.1177  0
+
+
+# Hodoscope trigger
+#                       require hit on l1
+#                       |     require hit on l2
+#                       |     |      require hit on l1 and l2 with geometry matching
+#                       |     |      |      require hit on l1 and l2 with cluster X geometry matching
+#                       |     |      |      |
+#                       |     |      |      |
+VTP_HPS_SINGLE_HODO  1  0     0      0      0
+
+
+###################################
+# Singles Trigger 2 Setup            Positron: Position dependent cut (200-3000) MeV  (5,+31) L1*L2
+###################################
+
+#                    singles trigger bit number
+#                    |       settings
+#                    |       |                       enable cut
+#                    |       |                       |
+#                    |       |                       |
+
+# Enable trigger
+VTP_HPS_SINGLE_EN    2                             1
+
+# Minimum cluster energy: 1 to 8191, units MeV
+VTP_HPS_SINGLE_EMIN  2     200                     1
+VTP_HPS_SINGLE_EMAX  2    3000                     1
+VTP_HPS_SINGLE_NMIN  2       2                     1
+
+# Minimum cluster x coordinate: -31 to 31
+VTP_HPS_SINGLE_XMIN  2        4                    1
+
+# Cluster position dependent energy threshold coefficients
+# Cluster Energy >=     C0  + C1*X + C2*X*X+C3*X*X*X
+#VTP_HPS_SINGLE_PDE   2   2945.5   -263.6     10.63     -0.1617  1
+#VTP_HPS_SINGLE_PDE   2   2186.8   -183.9     6.550     -0.0800  1
+#VTP_HPS_SINGLE_PDE   2   1900.0   -171.6     5.83     -0.0536  1
+VTP_HPS_SINGLE_PDE   2   1241.3   -154.2     7.43     -0.1177  1
+# Hodoscope trigger
+#                       require hit on l1
+#                       |     require hit on l2
+#                       |     |      require hit on l1 and l2 with geometry matching
+#                       |     |      |      require hit on l1 and l2 with cluster X geometry matching
+#                       |     |      |      |
+#                       |     |      |      |
+VTP_HPS_SINGLE_HODO  2  0     0      0      0
+
+
+###################################
+# Singles Trigger 3 Setup     Positron: with Hodo (200-3000) MeV (5,+31) L1*L2 Match with cluster
+###################################
+
+#                    singles trigger bit number
+#                    |       settings
+#                    |       |--------------|      enable cut
+#                    |       |              |      |
+#                    |       |              |      |
+
+# Enable trigger
+VTP_HPS_SINGLE_EN    3                             1
+
+# Minimum cluster energy: 1 to 8191, units MeV
+VTP_HPS_SINGLE_EMIN  3     200                     1
+VTP_HPS_SINGLE_EMAX  3    3000                     1
+VTP_HPS_SINGLE_NMIN  3       2                     1
+
+# Minimum cluster x coordinate: -31 to 31
+VTP_HPS_SINGLE_XMIN  3       4                     1
+
+# Cluster position dependent energy threshold coefficients
+# Cluster Energy >=     C0  + C1*X + C2*X*X+C3*X*X*X
+#VTP_HPS_SINGLE_PDE   3   2945.5   -263.6     10.63     -0.1617  1
+#VTP_HPS_SINGLE_PDE   3   2186.8   -183.9     6.550     -0.0800  1
+#VTP_HPS_SINGLE_PDE   3   1900.0   -171.6     5.83     -0.0536  1
+VTP_HPS_SINGLE_PDE   3   1241.3   -154.2     7.43     -0.1177  1
+
+
+# Hodoscope trigger
+#                       require hit on l1
+#                       |     require hit on l2
+#                       |     |      require hit on l1 and l2 with geometry matching
+#                       |     |      |      require hit on l1 and l2 with cluster X geometry matching
+#                       |     |      |      |
+#                       |     |      |      |
+VTP_HPS_SINGLE_HODO  3  1     1      1      1
+
+
+
+###################################
+# Pair Trigger 0 Setup                 A' Trigger
+###################################
+
+#                              pair trigger bit number
+#                              |     settings
+#                              |     |-------|     enable cut
+#                              |     |       |     |
+#                              |     |       |     |
+
+# Enable Trigger
+VTP_HPS_PAIR_EN                0     1
+
+# Minimum cluster energy
+VTP_HPS_PAIR_EMIN              0     300
+
+# Maximum Cluster energy
+VTP_HPS_PAIR_EMAX              0     3000
+
+# Minimum Hit in Cluster
+VTP_HPS_PAIR_NMIN              0     2
+
+# Pair time coincidence: 0 to 16, units +/-ns
+VTP_HPS_PAIR_TIMECOINCIDENCE   0     12
+
+# Pair Cluster Sum Max,Min: 0 to 8191, units MeV
+VTP_HPS_PAIR_SUMMAX_MIN        0   4000  1200      1
+
+# Pair Cluster Difference Maximum
+VTP_HPS_PAIR_DIFFMAX           0     2200          1
+
+# Pair Energy,Distance:         dist*F  >= THR, units: F: MeV/mm, THR: MeV
+VTP_HPS_PAIR_ENERGYDIST        0     5.5  700     1
+
+# Pair Coplanarity Tolerance: 0 to 180, units: +/-degrees
+VTP_HPS_PAIR_COPLANARITY       0     40           1
+
+
+###################################
+# Pair Trigger 1 Setup               Moller
+###################################
+
+#                              pair trigger bit number
+#                              |     settings
+#                              |     |-------|     enable cut
+#                              |     |       |     |
+#                              |     |       |     |
+
+# Enable Trigger
+VTP_HPS_PAIR_EN                1     1
+
+# Minimum cluster energy
+VTP_HPS_PAIR_EMIN              1     300
+
+# Maximum Cluster energy
+VTP_HPS_PAIR_EMAX              1     3000
+
+# Minimum Hit in Cluster
+VTP_HPS_PAIR_NMIN              1     2
+
+# Pair time coincidence: 0 to 16, units +/-ns
+VTP_HPS_PAIR_TIMECOINCIDENCE   1      16
+
+# Pair Cluster Sum Max,Min: 0 to 8191, units MeV
+VTP_HPS_PAIR_SUMMAX_MIN        1     3800 1000     1
+
+# Pair Cluster Difference Maximum
+VTP_HPS_PAIR_DIFFMAX           1     2200          1
+
+# Pair Energy,Distance:         dist*F  >= THR, units: F: MeV/mm, THR: MeV
+VTP_HPS_PAIR_ENERGYDIST        1     5.5   400     0
+
+# Pair Coplanarity Tolerance: 0 to 180, units: +/-degrees
+VTP_HPS_PAIR_COPLANARITY       1    180            0
+
+
+###################################
+# Pair Trigger 2 Setup               pi0
+###################################
+
+#                              pair trigger bit number
+#                              |     settings
+#                              |     |-------|     enable cut
+#                              |     |       |     |
+#                              |     |       |     |
+
+# Enable Trigger
+VTP_HPS_PAIR_EN                2     1
+
+# Minimum cluster energy
+VTP_HPS_PAIR_EMIN              2     300
+
+# Maximum Cluster energy
+VTP_HPS_PAIR_EMAX              2     3500
+
+# Minimum Hit in Cluster
+VTP_HPS_PAIR_NMIN              2     3
+
+# Pair time coincidence: 0 to 16, units +/-ns
+VTP_HPS_PAIR_TIMECOINCIDENCE   2     12
+
+# Pair Cluster Sum Max,Min: 0 to 8191, units MeV
+VTP_HPS_PAIR_SUMMAX_MIN        2     3800  800     1
+
+# Pair Cluster Difference Maximum
+VTP_HPS_PAIR_DIFFMAX           2     4500          0
+
+# Pair Energy,Distance:         dist*F  >= THR, units: F: MeV/mm, THR: MeV
+VTP_HPS_PAIR_ENERGYDIST        2     5.5   400     0
+
+# Pair Coplanarity Tolerance: 0 to 180, units: +/-degrees
+VTP_HPS_PAIR_COPLANARITY       2     35            0
+
+
+###################################
+# Pair Trigger 3 Setup
+###################################
+
+#                              pair trigger bit number
+#                              |     settings
+#                              |     |-------|     enable cut
+#                              |     |       |     |
+#                              |     |       |     |
+
+# Enable Trigger
+VTP_HPS_PAIR_EN                3     0
+
+# Minimum cluster energy
+VTP_HPS_PAIR_EMIN              3     100
+
+# Maximum Cluster energy
+VTP_HPS_PAIR_EMAX              3     8191
+
+# Minimum Hit in Cluster
+VTP_HPS_PAIR_NMIN              3     1
+
+# Pair time coincidence: 0 to 16, units +/-ns
+VTP_HPS_PAIR_TIMECOINCIDENCE   3     12
+
+# Pair Cluster Sum Max,Min: 0 to 8191, units MeV
+VTP_HPS_PAIR_SUMMAX_MIN        3     8191    1     1
+
+# Pair Cluster Difference Maximum
+VTP_HPS_PAIR_DIFFMAX           3     8191          1
+
+# Pair Energy,Distance:         dist*F  >= THR, units: F: MeV/mm, THR: MeV
+VTP_HPS_PAIR_ENERGYDIST        3     5.5   400     1
+
+# Pair Coplanarity Tolerance: 0 to 180, units: +/-degrees
+VTP_HPS_PAIR_COPLANARITY       3     35            1
+
+###################################
+# Cluster Multiplicity Trigger 0 Setup    2 Cluster3 Trigger (300-3500)
+###################################
+
+#                  multiplicity trigger bit number
+#                  |    settings
+#                  |    |-------|
+#                  |    |       |
+
+VTP_HPS_MULT_EN    0    0
+
+# Minimum cluster energy
+VTP_HPS_MULT_EMIN  0    300
+
+# Maximum cluster energy
+VTP_HPS_MULT_EMAX  0    3500
+
+# Minimum hits in cluster
+VTP_HPS_MULT_NMIN  0    3
+
+# Cluster Multiplicity
+#                       TOP BOT TOT
+VTP_HPS_MULT_MIN   0    0   0   2
+
+# Cluster Multiplicity Time Window
+VTP_HPS_MULT_DT    0    16
+
+
+###################################
+# Cluster Multiplicity Trigger 1 Setup     3 Cluster3 Trigger (300-3500)
+###################################
+
+#                  multiplicity trigger bit number
+#                  |    settings
+#                  |    |-------|
+#                  |    |       |
+
+VTP_HPS_MULT_EN    1    0
+
+# Minimum cluster energy
+VTP_HPS_MULT_EMIN  1    300
+
+# Maximum cluster energy
+VTP_HPS_MULT_EMAX  1    3500
+
+# Minimum hits in cluster
+VTP_HPS_MULT_NMIN  1    3
+
+# Cluster Multiplicity
+#                       TOP BOT TOT
+VTP_HPS_MULT_MIN   1    1   1   3
+
+# Cluster Multiplicity Time Window
+VTP_HPS_MULT_DT    1    16
+
+
+###################################
+# FEE Trigger Setup
+###################################
+
+#    Note these coordinates are "GTP Cluster" coordinates: electron side -22:0, positron side: 1:23
+#    prescale region:   0 to 6 - selects which region index to define
+#    region xmin:       -31 to 31  - chooses the ECAL x coordinate to start region definition (inclusive)
+#    region xmax:       -31 to 31  - chooses the ECAL x coordinate to end region definition  (inclusive)
+#    prescale:          0 to 65535 - set the prescale value for the region (note: rate = raw_rate/(prescale+1))
+
+
+VTP_HPS_FEE_EN         1
+
+VTP_HPS_FEE_EMIN    2600
+VTP_HPS_FEE_EMAX    5200
+VTP_HPS_FEE_NMIN       3
+
+
+#                     prescale region
+#                     |   region xmin
+#                     |   |     region xmax
+#                     |   |     |     prescale
+#                     |   |     |     |
+VTP_HPS_FEE_PRESCALE  0   -22   16    0
+VTP_HPS_FEE_PRESCALE  1   -15   -9    1
+VTP_HPS_FEE_PRESCALE  2    -8   -7    10
+VTP_HPS_FEE_PRESCALE  3    -6   -4    100
+VTP_HPS_FEE_PRESCALE  4    -3   -2    10
+VTP_HPS_FEE_PRESCALE  5    -1    6    1
+VTP_HPS_FEE_PRESCALE  6     7   23    0
+
+
+
+###################################
+# Trigger Ouput Setup
+###################################
+VTP_HPS_LATENCY                1900
+
+# Prescale: 0 to 65535 (note: 0 disables the trigger output)
+
+VTP_HPS_PRESCALE               0        0   # Single 0 Top    ( 150-8191) MeV (-31,31)   Low energy cluster 
+VTP_HPS_PRESCALE               1        0   # Single 1 Top    ( 300-3000) MeV (  5,31)   e+
+VTP_HPS_PRESCALE               2        0   # Single 2 Top    ( 300-3000) MeV (  5,31)   e+ : Position dependent energy cut
+VTP_HPS_PRESCALE               3        0   # Single 3 Top    ( 300-3000) MeV (  5,31)   e+ : HODO L1*L2  Match with cluster
+VTP_HPS_PRESCALE               4        0   # Single 0 Bot    ( 150-8191) MeV (-31,31)   Low energy cluster  
+VTP_HPS_PRESCALE               5        0   # Single 1 Bot    ( 300-3000) MeV (  5,31)   e+
+VTP_HPS_PRESCALE               6        0   # Single 2 Bot    ( 300-3000) MeV (  5,31)   e+ : Position dependent energy cut
+VTP_HPS_PRESCALE               7        0   # Single 3 Bot    ( 300-3000) MeV (  5,31)   e+ : HODO L1*L2  Match with cluster
+VTP_HPS_PRESCALE               8        0   # Pair 0          A'
+VTP_HPS_PRESCALE               9        0   # Pair 1          Moller
+VTP_HPS_PRESCALE               10       0   # Pair 2          pi0
+VTP_HPS_PRESCALE               11       0   # Pair 3          -
+VTP_HPS_PRESCALE               12       0   # LED
+VTP_HPS_PRESCALE               13       0   # Cosmic
+VTP_HPS_PRESCALE               14       0   # Hodoscope
+VTP_HPS_PRESCALE               15       0   # Pulser
+VTP_HPS_PRESCALE               16       0   # Multiplicity-0 2 Cluster Trigger
+VTP_HPS_PRESCALE               17       0   # Multiplicity-1 3 Cluster trigger
+VTP_HPS_PRESCALE               18       0   # FEE Top       ( 2600-5200)
+VTP_HPS_PRESCALE               19       0   # FEE Bot       ( 2600-5200)
+
+
+VTP_CRATE end
+
+###########################################################
+# TS Crate 
+###########################################################
+TS_CRATE hps11
+
+TS_BLOCK_LEVEL 40
+TS_BUFFER_LEVEL 8
+
+#TS_HOLDOFF 1 60 1
+#TS_HOLDOFF 2 60 1
+#TS_HOLDOFF 3 60 1
+#TS_HOLDOFF 4 60 1
+TS_HOLDOFF 1 4 1
+TS_HOLDOFF 2 4 1
+TS_HOLDOFF 3 3 1
+TS_HOLDOFF 4 2 1
+
+#TS_INPUT_PRESCALE 1 0
+#TS_INPUT_PRESCALE 2 0
+#TS_INPUT_PRESCALE 3 0
+#TS_INPUT_PRESCALE 4 0
+#TS_INPUT_PRESCALE 5 0
+#TS_INPUT_PRESCALE 6 0
+
+# TS front panel inputs:  
+TS_FP_INPUT_MASK 0xFFFFFFFF
+
+# TS GTP inputs:  
+TS_GTP_INPUT_MASK 0xFFFFFFFF
+
+# first arg: 0-disable, 1-enable; second arg: prescale (9-700Hz, 7-3.5kHz, 6-6.1kHz, 5-10kHz(65%live), 3-60kHz)
+TS_RANDOM_TRIGGER 0 6
+
+TS_CRATE end
+
+###########################################################
+# TI Crate Deskewing 
+###########################################################
+TI_CRATE hps1
+TI_FIBER_DELAY_OFFSET 0x80 0x80
+TI_CRATE end
+
+TI_CRATE hps2
+TI_FIBER_DELAY_OFFSET 0x80 0x80
+TI_CRATE end
+
+TIP_CRATE clonfarm2
+TIP_FIBER_DELAY_OFFSET 0x80 0x80
+TIP_CRATE end
+
+TIP_CRATE clonfarm3
+TIP_FIBER_DELAY_OFFSET 0x80 0x80
+TIP_CRATE end
+
+
+###########################################################
+# HPS1 FADC 
+###########################################################
+
+FADC250_CRATE hps1
+
+FADC250_SLOT all
+
+FADC250_DAC  3280
+FADC250_W_OFFSET  2588
+FADC250_W_WIDTH   384
+FADC250_ALLCH_DELAY 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       20
+FADC250_NSA       100
+FADC250_NPEAK     1
+
+#pulse mode
+#FADC250_MODE      7
+#FADC250_NSB       16
+#FADC250_NSA       100
+#FADC250_NPEAK     3
+
+#       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+FADC250_TET 18
+
+# FADC Gains...
+
+# Set LED system trigger threshold
+FADC250_SLOT      20
+FADC250_CH_TET    15   500
+#       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+#FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0
+
+# HODOSCOPE Settings
+FADC250_SLOT 10
+# NSA,NSB,DELAY in nanoseconds
+FADC250_NSB  20
+FADC250_NSA  40
+FADC250_ALLCH_DELAY 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FADC250_TET  20
+
+FADC250_CRATE end
+
+###########################################################
+# HPS2 FADC 
+###########################################################
+
+FADC250_CRATE hps2
+
+FADC250_SLOT all
+
+FADC250_DAC  3280
+FADC250_W_OFFSET  2588
+FADC250_W_WIDTH   384
+FADC250_ALLCH_DELAY 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12
+
+#raw mode
+FADC250_MODE      1
+FADC250_NSB       20
+FADC250_NSA       100
+FADC250_NPEAK     1
+
+#pulse mode
+#FADC250_MODE      7
+#FADC250_NSB       16
+#FADC250_NSA       100
+#FADC250_NPEAK     3
+
+#       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+FADC250_ADC_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TRG_MASK        1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+FADC250_TET_IGNORE_MASK 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+FADC250_TET 18
+
+# Set cosmic system trigger threshold
+# 12bit -> 1V: 40 = ~10mV threshold
+# relative to pedestal
+FADC250_SLOT      20
+FADC250_CH_TET    13   40
+FADC250_CH_TET    14   40
+FADC250_CH_TET    15   40
+#       channel:        0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+#FADC250_TET_IGNORE_MASK 1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0
+
+# HODOSCOPE Settings
+FADC250_SLOT 10
+# NSA,NSB,DELAY in nanoseconds
+FADC250_NSB  20
+FADC250_NSA  40
+FADC250_ALLCH_DELAY 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+FADC250_TET  20
+
+# RF
+FADC250_SLOT 13
+FADC250_TET 400
+FADC250_ALLCH_DELAY 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+FADC250_CRATE end
+
+
+# ECAL Gain
+
+# include trigger/HPS/Run2019/ecal_gain/EcalGains.cnf
+
+FADC250_CRATE  hps1
+FADC250_SLOT  3
+FADC250_ALLCH_GAIN    0.158   0.168   0.158   0.155   0.173   0.134   0.137   0.149   0.136   0.149   0.154   0.163   0.169   0.160   0.174   0.151
+FADC250_SLOT  4
+FADC250_ALLCH_GAIN    0.156   0.145   0.159   0.149   0.158   0.147   0.159   0.149   0.157   0.165   0.148   0.153   0.160   0.179   0.137   0.155
+FADC250_SLOT  5
+FADC250_ALLCH_GAIN    0.156   0.139   0.129   0.153   0.134   0.145   0.150   0.157   0.143   0.143   0.140   0.152   0.148   0.155   0.135   0.151
+FADC250_SLOT  6
+FADC250_ALLCH_GAIN    0.149   0.137   0.167   0.132   0.138   0.122   0.165   0.156   0.158   0.141   0.153   0.153   0.153   0.132   0.152   0.151
+FADC250_SLOT  7
+FADC250_ALLCH_GAIN    0.158   0.137   0.156   0.138   0.146   0.156   0.160   0.148   0.129   0.129   0.164   0.141   0.156   0.138   0.141   0.159
+FADC250_SLOT  8
+FADC250_ALLCH_GAIN    0.138   0.145   0.139   0.152   0.146   0.152   0.143   0.158   0.145   0.144   0.149   0.165   0.172   0.153   0.146   0.155
+FADC250_SLOT  9
+FADC250_ALLCH_GAIN    0.159   0.157   0.156   0.133   0.132   0.151   0.150   0.145   0.152   0.136   0.154   0.141   0.143   0.160   0.154   0.163
+FADC250_SLOT  14
+FADC250_ALLCH_GAIN    0.146   0.150   0.155   0.226   0.142   0.156   0.164   0.123   0.135   0.152   0.142   0.164   0.150   0.159   0.136   0.161
+FADC250_SLOT  15
+FADC250_ALLCH_GAIN    0.146   0.162   0.161   0.156   0.180   0.165   0.156   0.145   0.158   0.159   0.137   0.149   0.169   0.154   0.145   0.152
+FADC250_SLOT  16
+FADC250_ALLCH_GAIN    0.141   0.136   0.151   0.145   0.170   0.133   0.138   0.142   0.150   0.161   0.145   0.160   0.152   0.160   0.158   0.141
+FADC250_SLOT  17
+FADC250_ALLCH_GAIN    0.157   0.152   0.154   0.133   0.155   0.166   0.162   0.168   0.155   0.154   0.162   0.133   0.145   0.161   0.165   0.150
+FADC250_SLOT  18
+FADC250_ALLCH_GAIN    0.136   0.159   0.137   0.144   0.162   0.153   0.133   0.136   0.135   0.151   0.145   0.150   0.143   0.148   0.159   0.148
+FADC250_SLOT  19
+FADC250_ALLCH_GAIN    0.134   0.131   0.145   0.155   0.145   0.146   0.137   0.153   0.139   0.183   0.155   0.166   0.151   0.167   0.140   0.143
+FADC250_SLOT  20
+FADC250_ALLCH_GAIN    0.141   0.146   0.124   0.142   0.139   0.149   0.155   0.149   0.129   0.161   0.164   0.159   0.146   1.000   1.000   1.000
+FADC250_CRATE end
+
+FADC250_CRATE  hps2
+FADC250_SLOT  3
+FADC250_ALLCH_GAIN    0.210   0.192   0.182   0.221   0.195   0.188   0.197   0.173   0.203   0.198   0.150   0.137   0.149   0.158   0.161   0.155
+FADC250_SLOT  4
+FADC250_ALLCH_GAIN    0.152   0.159   0.174   0.168   0.160   0.172   0.150   0.147   0.144   0.164   0.160   0.171   0.150   0.175   0.153   0.137
+FADC250_SLOT  5
+FADC250_ALLCH_GAIN    0.146   0.147   0.145   0.148   0.143   0.144   0.151   0.159   0.150   0.155   0.138   0.156   0.147   0.153   0.159   0.149
+FADC250_SLOT  6
+FADC250_ALLCH_GAIN    0.142   0.131   0.141   0.135   0.142   0.156   0.163   0.173   0.153   0.153   0.158   0.138   0.177   0.158   0.155   0.151
+FADC250_SLOT  7
+FADC250_ALLCH_GAIN    0.150   0.166   0.164   0.132   0.155   0.146   0.168   0.160   0.156   0.168   0.159   0.155   0.164   0.156   0.152   0.166
+FADC250_SLOT  8
+FADC250_ALLCH_GAIN    0.146   0.145   0.280   0.149   0.148   0.181   0.140   0.151   0.153   0.169   0.163   0.146   0.164   0.145   0.143   0.154
+FADC250_SLOT  9
+FADC250_ALLCH_GAIN    0.136   0.149   0.141   0.157   0.165   0.133   0.150   0.158   0.149   0.160   0.132   0.133   0.144   0.147   0.151   0.164
+FADC250_SLOT  14
+FADC250_ALLCH_GAIN    0.155   0.147   0.152   0.158   0.141   0.152   0.137   0.177   0.151   0.165   0.111   0.157   0.134   0.155   0.164   0.167
+FADC250_SLOT  15
+FADC250_ALLCH_GAIN    0.163   0.151   0.166   0.154   0.171   0.142   0.133   0.204   0.147   0.172   0.143   0.137   0.181   0.152   0.149   0.151
+FADC250_SLOT  16
+FADC250_ALLCH_GAIN    0.173   0.170   0.133   0.160   0.157   0.140   0.153   0.168   0.163   0.162   0.176   0.175   0.166   0.170   0.159   0.146
+FADC250_SLOT  17
+FADC250_ALLCH_GAIN    0.143   0.133   0.136   0.151   0.137   0.147   0.163   0.134   0.154   0.152   0.151   0.148   0.174   0.137   0.141   0.137
+FADC250_SLOT  18
+FADC250_ALLCH_GAIN    0.159   0.149   0.149   0.152   0.142   0.146   0.158   0.134   0.152   0.159   0.157   0.158   0.156   0.143   0.161   0.170
+FADC250_SLOT  19
+FADC250_ALLCH_GAIN    0.157   0.179   0.149   0.145   0.163   0.158   0.166   0.164   0.177   0.131   0.144   0.148   0.142   0.151   0.154   0.136
+FADC250_SLOT  20
+FADC250_ALLCH_GAIN    0.169   0.149   0.164   0.140   0.143   0.147   0.153   0.160   0.157   0.155   0.149   0.168   0.163   1.000   1.000   1.000
+FADC250_CRATE end
+
+
+# ECAL Pedestals
+
+# include trigger/HPS/Run2019/ecal_ped/EcalPeds_0nA.cnf
+
+FADC250_CRATE  hps1
+FADC250_SLOT all
+FADC250_DAC 3280
+
+FADC250_SLOT 3
+FADC250_ALLCH_PED  127.053   55.096   98.250   97.295  111.456  122.246   97.295  132.310  138.686  137.474  136.603  136.367   92.490  129.227  105.467  118.674
+FADC250_SLOT 4
+FADC250_ALLCH_PED  107.163   96.118   81.537   90.381  112.296   78.980  157.554   65.573  103.855   94.422   65.708  101.142   58.785  126.613   89.272  123.388
+FADC250_SLOT 5
+FADC250_ALLCH_PED   87.121  141.666   93.715  118.156   91.118  123.903  111.389  132.938   87.372  143.840  112.920  118.723   99.638  111.129   88.176  121.402
+FADC250_SLOT 6
+FADC250_ALLCH_PED  131.262   99.646  163.143  161.190  153.170  146.135  126.290  108.107  129.947  139.797   90.357  121.536  137.877  112.127  100.993  120.737
+FADC250_SLOT 7
+FADC250_ALLCH_PED  124.419  135.975  129.449  125.287  124.120  104.335  144.543  147.232  110.827  109.562  130.417  120.365  104.362  112.203  115.732  106.605
+FADC250_SLOT 8
+FADC250_ALLCH_PED  144.477  134.057   98.780  123.631  125.681  109.177  125.914  119.622  116.808   91.906  142.205  134.039  156.097  114.630  129.066   51.124
+FADC250_SLOT 9
+FADC250_ALLCH_PED  126.066  138.785  106.966  112.795  126.773  119.613  130.137  139.553  107.502  125.996  123.103   81.174  125.212  104.987   97.206  140.319
+FADC250_SLOT 10
+FADC250_ALLCH_PED  111.809  126.768  116.449  123.774   99.880   97.631  121.634  122.115  139.428   98.843  131.443   99.210  141.087  150.017  103.112  133.367
+FADC250_SLOT 14
+FADC250_ALLCH_PED   95.820   98.214  129.562  101.333  110.463  112.105  167.395  142.180  129.460   93.396  125.502  110.567  132.515  120.603  111.249  110.621
+FADC250_SLOT 15
+FADC250_ALLCH_PED  109.796  148.767  107.701  188.242  141.498  149.246  144.079  152.452  115.099  164.420  105.772  131.392  112.841  130.836  145.829  121.255
+FADC250_SLOT 16
+FADC250_ALLCH_PED  114.052  143.432  117.146  137.428  153.030   82.145  113.151  114.744   79.623  109.998   92.906  128.859  131.226  107.436  106.415  117.265
+FADC250_SLOT 17
+FADC250_ALLCH_PED   95.879   94.926  127.361  119.117  138.345   95.978  124.482  122.997  121.125   86.671  135.314  100.915   94.374   98.031   71.200  107.160
+FADC250_SLOT 18
+FADC250_ALLCH_PED  104.603  125.816  139.568   92.315  141.796  108.469  131.676  130.080  131.506  113.823  121.172  134.392   90.585  162.720  137.412  140.426
+FADC250_SLOT 19
+FADC250_ALLCH_PED  111.627  129.039  127.635   53.955   89.592  143.833  129.127  135.206  124.817  121.382  144.397  118.606  132.962  106.382  120.616  133.669
+FADC250_SLOT 20
+FADC250_ALLCH_PED  111.376   89.715  105.969  126.904   78.691  114.582  106.046   87.034  125.393   81.479  106.455   94.981  104.728  105.182  126.352  569.426
+
+FADC250_CRATE end
+
+FADC250_CRATE  hps2
+FADC250_SLOT all
+FADC250_DAC 3280
+
+FADC250_SLOT 3
+FADC250_ALLCH_PED  139.004  111.416   91.520  133.144  121.946   86.874  158.183  102.148  134.752  137.193  116.065  146.118  137.349  120.244  134.994  155.716
+FADC250_SLOT 4
+FADC250_ALLCH_PED  139.904  114.748  135.307  119.270  104.927  174.829  161.428  140.687  148.860  125.879  149.503  127.553  152.383  139.561  150.759  123.747
+FADC250_SLOT 5
+FADC250_ALLCH_PED   99.297   78.531   98.845  127.673  126.668  112.584  108.749  144.336  126.090  128.921  100.557  141.121  127.887  105.559  117.863  119.340
+FADC250_SLOT 6
+FADC250_ALLCH_PED   97.232  110.846  122.561  112.654  141.947  118.229   90.360   95.578  120.451  164.386  123.186  132.127   97.921  152.640  105.046  124.776
+FADC250_SLOT 7
+FADC250_ALLCH_PED  178.527  110.786  111.642  129.091  135.098  147.336  130.378  120.323  151.118  135.073  126.045  112.343  123.676  138.497  126.534  144.737
+FADC250_SLOT 8
+FADC250_ALLCH_PED  120.270  126.109   90.979  102.652  105.326   85.724  123.181  137.589   86.560  154.607  114.595   80.792  108.141   94.145   82.806   96.341
+FADC250_SLOT 9
+FADC250_ALLCH_PED  124.196  184.034  160.721  157.351  121.802  106.599  115.717  121.859  113.036  173.612  150.222  118.268  138.016  138.829  141.478  165.893
+FADC250_SLOT 10
+FADC250_ALLCH_PED  122.707  135.710  116.740  107.157  144.366  132.001  147.803  134.343  141.655  162.056  159.828  155.679  129.829  121.127  119.879  146.623
+FADC250_SLOT 13
+FADC250_ALLCH_PED 1926.260  124.957 1951.244  106.940  135.570  128.052  131.053  118.468   78.882  100.105  104.626  114.048  159.615  139.931  140.470  118.978
+FADC250_SLOT 14
+FADC250_ALLCH_PED  155.931  150.896  117.397  105.946  124.408  143.492  128.387  115.029  159.142  153.577  126.650  140.144  110.153  151.164   96.018  131.534
+FADC250_SLOT 15
+FADC250_ALLCH_PED  101.545  133.132   94.538   88.638  111.522  125.428  122.716  123.623  115.421  117.877  124.914   84.642  103.404  118.107  161.615   81.514
+FADC250_SLOT 16
+FADC250_ALLCH_PED  110.419  110.419   94.154   93.646  103.022  121.771  108.428  106.116  124.095  100.096  157.378  117.059  119.823  143.696   91.974  100.221
+FADC250_SLOT 17
+FADC250_ALLCH_PED  117.823  128.622  114.836  105.825  112.699  124.430  118.433  114.809  129.612  118.963  122.209  115.647  116.559  108.449  163.762  124.202
+FADC250_SLOT 18
+FADC250_ALLCH_PED  143.346  129.481  117.416  144.463  139.658  141.334  145.533  106.909  103.012  109.046  144.618  183.332  142.785  117.317  131.809  159.035
+FADC250_SLOT 19
+FADC250_ALLCH_PED  119.535  136.910  143.456  103.662   94.244  142.938   91.699   92.531   95.654  119.448  116.923   98.541  132.693  144.636  102.952  145.209
+FADC250_SLOT 20
+FADC250_ALLCH_PED  116.974  113.105  124.402  114.807   93.173  113.292  117.040   75.384  116.550  117.028   94.634   86.713  128.862  147.911  171.251  122.748
+
+FADC250_CRATE end
+
+# Hodoscope Gain
+
+# include trigger/HPS/Run2019/hodoscope_gain/HodoscopeGains.cnf
+
+FADC250_CRATE  hps1
+FADC250_SLOT  10
+FADC250_ALLCH_GAIN     0.64119    0.606649    0.585617    0.538909    0.679902    0.565995    0.72372    0.714158    0.862255    0.695773    0.514297    0.585617    0.708416    0.679902    0.679902    0.723589
+FADC250_CRATE end
+
+FADC250_CRATE  hps2
+FADC250_SLOT  10
+FADC250_ALLCH_GAIN    0.755972    0.739426    0.87321    0.973899    0.755972    0.679902    0.988386    0.905592    0.714158    0.623539    0.565995    0.629247    0.693866    0.666489    0.617742    0.565995
+FADC250_CRATE end
+
+
+# Hodoscope Pedestal
+
+# include trigger/HPS/Run2019/hodoscope_ped/HodoscopePeds_0nA.cnf
+
+FADC250_CRATE  hps1
+FADC250_SLOT 10
+FADC250_ALLCH_PED  111.194  126.792  114.366  124.885   99.319   97.411  121.073  121.996  139.277   98.314  131.205   99.662  139.881  149.628  102.453  132.496
+FADC250_CRATE end
+
+FADC250_CRATE  hps2
+FADC250_SLOT 10
+FADC250_ALLCH_PED  123.067  135.232  115.540  107.286  143.154  131.746  147.223  133.810  140.832  162.695  159.930  155.697  129.957  120.773  119.454  146.316
+FADC250_CRATE end
+
+###########################################################
+# TS Crate 
+###########################################################
+TS_CRATE hps11
+
+TS_BLOCK_LEVEL 10
+TS_BUFFER_LEVEL 8
+
+# TS front panel inputs: faraday cup 
+TS_FP_INPUT_MASK 0x00008000
+
+### Faraday cup prescale 5 means 17 
+TS_FP_PRESCALE  16 0
+
+# TS GTP trigger inputs: disable all, so that we can enable all VTP outputs
+#          TS will then be able record trigger type with these bits
+TS_GTP_INPUT_MASK 0x0
+
+# first arg: 0-disable, 1-enable; second arg: prescale (9-700Hz, 7-3.5kHz, 6-6.1kHz, 5-10kHz(65%live), 3-60kHz)
+TS_RANDOM_TRIGGER 0 5
+
+#!!!!!!!!!!!!!!!!!!!!
+#sergey: since faraday is not connected yet, use ts random
+#TS_FP_INPUT_MASK 0x00000000
+#TS_RANDOM_TRIGGER 1 4
+#!!!!!!!!!!!!!!!!!!!!
+
+
+TS_CRATE end
+
+
+###################################                                                                                          
+# Trigger Ouput Setup                                                                                                        
+###################################                                                                                          
+VTP_CRATE all                                                                                                                
+                                                                                                                             
+# Prescale: 0 to 65535 (note: 0 disables the trigger output)                                                                 
+VTP_HPS_PRESCALE               0        1   # Single 0 Top    ( 150-8191) MeV (-31,31)   Low energy cluster                  
+VTP_HPS_PRESCALE               1        1   # Single 1 Top    ( 300-3000) MeV (  5,31)   e+                                  
+VTP_HPS_PRESCALE               2        1   # Single 2 Top    ( 300-3000) MeV (  5,31)   e+ : Position dependent energy cut  
+VTP_HPS_PRESCALE               3        1   # Single 3 Top    ( 300-3000) MeV (  5,31)   e+ : HODO L1*L2  Match with cluster 
+VTP_HPS_PRESCALE               4        1   # Single 0 Bot    ( 150-8191) MeV (-31,31)   Low energy cluster                  
+VTP_HPS_PRESCALE               5        1   # Single 1 Bot    ( 300-3000) MeV (  5,31)   e+                                  
+VTP_HPS_PRESCALE               6        1   # Single 2 Bot    ( 300-3000) MeV (  5,31)   e+ : Position dependent energy cut  
+VTP_HPS_PRESCALE               7        1   # Single 3 Bot    ( 300-3000) MeV (  5,31)   e+ : HODO L1*L2  Match with cluster 
+VTP_HPS_PRESCALE               8        1   # Pair 0          A'                                                             
+VTP_HPS_PRESCALE               9        1   # Pair 1          Moller                                                         
+VTP_HPS_PRESCALE               10       1   # Pair 2          pi0                                                            
+VTP_HPS_PRESCALE               11       1   # Pair 3          -                                                              
+VTP_HPS_PRESCALE               12       1   # LED                                                                            
+VTP_HPS_PRESCALE               13       1   # Cosmic                                                                         
+VTP_HPS_PRESCALE               14       1   # Hodoscope                                                                      
+VTP_HPS_PRESCALE               15       1   # Pulser                                                                         
+VTP_HPS_PRESCALE               16       1   # Multiplicity-0 2 Cluster Trigger                                               
+VTP_HPS_PRESCALE               17       1   # Multiplicity-1 3 Cluster trigger                                               
+VTP_HPS_PRESCALE               18       1   # FEE Top       ( 2600-5200)                                                     
+VTP_HPS_PRESCALE               19       1   # FEE Bot       ( 2600-5200)                                                     
+                                                                                                                             
+VTP_CRATE end                                                                                                                
+
+

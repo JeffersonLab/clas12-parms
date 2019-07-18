@@ -12,12 +12,12 @@
 # first set of histograms
 ##########################
 CMON_TAB Tab1 1 1
-CMON_PAD clonpc0:test1 1 2 1 1
-#CMON_PAD clonpc0:test3 2 2 1 1
+CMON_PAD clondaq3:test1 1 2 1 1
+#CMON_PAD clondaq3:test3 2 2 1 1
 #
 CMON_TAB Tab2 2 3
-CMON_PAD clonpc0:test2 1 2 1 1
-CMON_PAD clonpc0:test4 2 2 1 1
+CMON_PAD clondaq3:test2 1 2 1 1
+CMON_PAD clondaq3:test4 2 2 1 1
 #
 # end
 #

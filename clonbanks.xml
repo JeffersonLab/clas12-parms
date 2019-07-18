@@ -600,10 +600,15 @@
                0(09:00)        "T"
                
             0(31:23)=0x10+0x0C6 "HPS_MULT_TRIG"
-               0(22:22)        "reserved"
+               0(22:22)        "INSTANCE"
                0(21:18)        "MULT_TOT"
                0(17:14)        "MULT_BOT"
                0(13:10)        "MULT_TOP"
+               0(09:00)        "T"
+
+            0(31:23)=0x10+0x0C7 "HPS_FEE_TRIG"
+               0(22:17)        "reserved"
+               0(16:10)        "REGION_MASK"
                0(09:00)        "T"
 
             0(31:27)=0x10+0x0D "TRIGGER"

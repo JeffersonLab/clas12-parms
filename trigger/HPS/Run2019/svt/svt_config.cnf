@@ -1,0 +1,11 @@
+########################################
+# JLAB HPS SVT physics production config
+########################################
+
+RCE_CRATE all
+RCE_CONFIG_FILE /usr/clas12/release/1.4.0/slac_svt/heavy-photon-daq/software/config/baseline_20190701.yml
+RCE_THR_CONFIG_FILE /usr/clas12/release/1.4.0/slac_svt/thresholds/20190707_09721_thresholds_2.0rms.dat
+RCE_EB_0_CONFIG_FILE /usr/clas12/release/1.4.0/slac_svt/eb_config0.txt
+RCE_EB_1_CONFIG_FILE /usr/clas12/release/1.4.0/slac_svt/eb_config1.txt
+RCE_CRATE end
+
